@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-01T17:11:15+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">에어릭스 환경시스템사업부 기술블로그</title><subtitle>IT기업이 아닌 에어릭스에서 살아가고 있는 개발자들</subtitle><author><name>(주)에어릭스</name></author><entry><title type="html">의료 IoMT 플랫폼 구축</title><link href="http://localhost:4000/2022/08/31/iomt_rnd.html" rel="alternate" type="text/html" title="의료 IoMT 플랫폼 구축" /><published>2022-08-31T00:00:00+09:00</published><updated>2022-08-31T00:00:00+09:00</updated><id>http://localhost:4000/2022/08/31/iomt_rnd</id><content type="html" xml:base="http://localhost:4000/2022/08/31/iomt_rnd.html"><![CDATA[<p>환경시스템사업부에서 2020년부터 수행하고 있는 정부R&amp;D과제 중 하나인 <code class="language-plaintext highlighter-rouge">의료 IoMT 플랫폼</code> 구축 사업을 소개합니다.</p>
+
+<p>저희 에어릭스에서 스마트팩토리 시스템 구축시 제조현장의 정보를 수집하기 위해서만 사용해오던 IoT기술을 의료영역이라는
+전혀 다른 분야에 적용해보는 도전적인 성격의 과제였습니다. 하지만 다행히 큰 문제없이 3년차 연구까지 진행되고 있습니다. 
+현재 저희 에어릭스가 담당한 <code class="language-plaintext highlighter-rouge">환자감시통합모니터링</code> 시스템은 개발이 끝나고, <code class="language-plaintext highlighter-rouge">신촌세브란스 병원 응급진료센터</code>에 설치되어 시범적으로 운영되고 
+있는 상황입니다.</p>
+
+<h2 id="연구개발과제-개요">연구개발과제 개요</h2>
+
+<p>본 연구개발과제의 개요는 다음과 같습니다.</p>
+
+<ul>
+  <li>과제명 : <code class="language-plaintext highlighter-rouge">환자중심 의료서비스 제공을 위한 인공지능, 클라우드, WiFi6 기반의 병원 대상 IoMT 표준 플랫폼 개발 및 임상 적용</code></li>
+  <li>내역사업 : 4차 산업혁명 및 미래 의료 환경 선도</li>
+  <li>발주처 : 범부처전주기의료기기연구개발사업단</li>
+  <li>사업기간 : 2020.09 ~ 2024.12 (4년4개월)</li>
+  <li>총 예산 : 93억원(정부출연금 67.5억)</li>
+  <li>컨소시움 구성 :
+    <ul>
+      <li>주관연구기관 - <code class="language-plaintext highlighter-rouge">헤론헬스정보시스템(구 파이디지털헬스케어)</code></li>
+      <li>공동연구기관 - <code class="language-plaintext highlighter-rouge">에어릭스</code>, 연세대학교 산학협력단, LG전자, DKI, 오성시스템, 인포마크, 라이튼테크놀로지, 메인텍, AITRICS</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="연구개발의-필요성">연구개발의 필요성</h2>
+
+<p><img src="/img/posts/iomt_rnd_03.png" alt="Image Alt 연구개발의 필요성" /></p>
+
+<h2 id="전체-시스템-구성">전체 시스템 구성</h2>
+
+<p>본 연구개발과제는 비대면 사회 변화에 맞추어 환자중심 의료서비스 제공을 위해서 끊김 없는 데이터 획득(Seamless), 실시간 통합 모니터링(Synchronous),
+정교한 예측 서비스 구현(Sophisticated), 병원정보시스템과 다양한 IoMT 기기연동이 가능하도록 <code class="language-plaintext highlighter-rouge">의료IoMT 플랫폼</code>을 구축하는 것을 목표로
+하고 있습니다.</p>
+
+<p><img src="/img/posts/iomt_rnd_01.png" alt="Image Alt 전체시스템구성" /></p>
+
+<h2 id="환자감시통합모니터링">환자감시통합모니터링</h2>
+
+<p>에어릭스는 의료IoMT 플랫폼의 핵심기능인 환자감시통합모니터링 시스템을 담당하고 있습니다. 환자감시통합모니터링 시스템을 위한 IRS서버를 구축하고,
+이를 통해서 다양한 병원 내 시스템과 연계하여 데이터를 수집/중계하고 있습니다. 이러한 데이터들을 시각화하여 웹 화면을 통해서 환자감시통합모니터링
+서비스를 제공하고 있습니다.</p>
+
+<p><img src="/img/posts/iomt_rnd_02.png" alt="Image Alt 환자감시통합모니터링" /></p>
+
+<h2 id="관련-기사-링크">관련 기사 링크</h2>
+
+<p><a href="https://www.etnews.com/20201012000147">전자신문 - 파이디지털헬스케어, 연세의료원과 환자 중심 서비스를 위한 의료 IoMT 플랫폼 구축</a></p>
+
+<p><img src="/img/posts/iomt_rnd_04.png" alt="Image Alt 에어릭스" /></p>]]></content><author><name>sanghoon.lee</name></author><summary type="html"><![CDATA[환경시스템사업부에서 2020년부터 수행하고 있는 정부R&amp;D과제 중 하나인 의료 IoMT 플랫폼 구축 사업을 소개합니다.]]></summary></entry><entry><title type="html">클린팩토리</title><link href="http://localhost:4000/2022/08/31/cleanfactory.html" rel="alternate" type="text/html" title="클린팩토리" /><published>2022-08-31T00:00:00+09:00</published><updated>2022-08-31T00:00:00+09:00</updated><id>http://localhost:4000/2022/08/31/cleanfactory</id><content type="html" xml:base="http://localhost:4000/2022/08/31/cleanfactory.html"><![CDATA[<p>환경시스템사업부에서 올해(2022년)부터 수행하고 있는 정부R&amp;D과제 중 하나인 <code class="language-plaintext highlighter-rouge">클린팩토리</code> 사업을 소개합니다.</p>
+
+<p>과제의 정식명칭은 <code class="language-plaintext highlighter-rouge">제조 사업장 내 클린팩토리 진단∙관리 서비스 제공을 위한 고성능 센서 및 AI기반의 클라우드 서비스형 산업용 IoT플랫폼 개발</code>이며, 과제명이
+길다보니 줄여서 그냥 <strong>클린팩토리</strong>과제로 부르고 있습니다.</p>
+
+<p>중기부와 과기부에서 총괄하고 있는 <code class="language-plaintext highlighter-rouge">스마트제조혁신기술개발사업</code>에 포함되어 있는 여러 세부과제 중 하나이며, DNA(Data,Network,AI) 기술 기반의 
+스마트 제조혁신 가속화와 스마트공장 공급기업의 경쟁력을 제고하기 위해서 추진되고 있는 사업입니다.</p>
+
+<hr />
+
+<h2 id="연구개발과제-개요">연구개발과제 개요</h2>
+
+<p>본 연구개발과제의 개요는 다음과 같습니다.</p>
+
+<ul>
+  <li>과제명 : <code class="language-plaintext highlighter-rouge">제조 사업장 내 클린팩토리 진단∙관리 서비스 제공을 위한 고성능 센서 및 AI기반의 클라우드 서비스형 산업용 IoT플랫폼 개발</code></li>
+  <li>과제목표 :
+    <ul>
+      <li>중소/중견 제조 사업장에 적용 가능한 클린팩토리 진단∙관리 기술 개발</li>
+      <li>클린팩토리 진단∙관리 기술을 IT서비스로 구현하고 운영할 수 있는 플랫폼을 구축</li>
+      <li>다양한 환경에서의 실증연구를 통한 클린팩토리 진단∙관리 기술 검증</li>
+    </ul>
+  </li>
+  <li>발주처 : 중기부 스마트제조혁신추진단</li>
+  <li>사업기간 : 2022.05 ~ 2025.12 (44개월)</li>
+  <li>총 예산 : 42억원(정부출연금 32억)</li>
+  <li>컨소시움 구성 :
+    <ul>
+      <li>주관연구기관 - <code class="language-plaintext highlighter-rouge">에어릭스</code></li>
+      <li>공동연구기관 - 포항산업과학연구원(RIST), 서울과학기술대학교 산학협력단, 피앤피, 오성시스템</li>
+      <li>위탁연구기관 - <code class="language-plaintext highlighter-rouge">포스코</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/img/posts/cleanfactory_01.png" alt="Image Alt 과제개요" /></p>
+
+<hr />
+
+<h2 id="연구개발의-필요성">연구개발의 필요성</h2>
+
+<p>본 과제의 연구개발 필요성은 제조 사업장의 클린팩토리 조성에 대한 수요 증가와 IT 기술을 활용한 클린팩토리 진단·관리 시스템 구축 사례 증가로 설명할 수 있습니다.</p>
+
+<h4 id="제조-사업장의-클린팩토리-조성에-대한-수요-증가">제조 사업장의 클린팩토리 조성에 대한 수요 증가</h4>
+
+<ul>
+  <li>클린팩토리란 제조 사업장에서 발생하는 미세먼지, 온실가스, 화학물질, 폐기물 등의 오염물질의 발생을 최소화한 사업장을 의미함.</li>
+  <li>대한민국 2050 탄소중립 전략과 그린뉴딜 정책으로 인한 정부의 요구와, 제조 사업장 발생 오염물질 관리에 대한 사회적 이슈의 심화로 각종 중소·중견 제조 사업장의 환경 개선에 대한 부담이 증가함.</li>
+  <li>다수의 국내 제조사업장에서는 환경 모니터링 시스템 마련 및 운영 비용의 부담, 관련 전문가의 부재, 공정 연계 기술 부족의 이유로 환경 관리에 어려움을 겪고 있음.</li>
+</ul>
+
+<p><img src="/img/posts/cleanfactory_02.png" alt="Image Alt 4대 환경 관리요소" /></p>
+
+<h4 id="it-기술을-활용한-클린팩토리-진단관리-시스템-구축-사례-증가">IT 기술을 활용한 클린팩토리 진단·관리 시스템 구축 사례 증가</h4>
+
+<ul>
+  <li>대부분의 시스템이 제조 사업장 모니터링 기능 구현에 집중되어 있음.</li>
+  <li>IoT 기술에 환경 기술과 AI 데이터 분석 기술을 접목한 클린팩토리 진단∙관리 시스템의 필요성이 제기되고 있음.</li>
+  <li>시스템 구축 및 운영 비용의 부담, 시스템 운영에 필요한 전문인력 부재, 요구사항 불충족, 기존 시스템과의 통합 문제 등 많은 중소·중견 제조 사업장에서 시스템 도입에 대해서 여전히 어려움을 겪고 있음.</li>
+</ul>
+
+<p><img src="/img/posts/cleanfactory_03.png" alt="Image Alt 제조현장" /></p>
+
+<hr />
+
+<h2 id="목표시스템">목표시스템</h2>
+
+<p><img src="/img/posts/cleanfactory_04.png" alt="Image Alt 에어릭스" /></p>
+
+<h2 id="관련-링크">관련 링크</h2>
+
+<p><a href="https://eiec.kdi.re.kr/policy/materialView.do?num=226520&amp;topic=O&amp;pp=20&amp;datecount=&amp;recommend=&amp;pg=">KDI 경제정보센터 - 중기부/과기정통부, 스마트 제조혁신 기술개발(R&amp;D) 2,418억원 지원</a></p>
+
+<p><img src="/img/posts/iomt_rnd_04.png" alt="Image Alt 에어릭스" /></p>]]></content><author><name>sanghoon.lee</name></author><summary type="html"><![CDATA[환경시스템사업부에서 올해(2022년)부터 수행하고 있는 정부R&amp;D과제 중 하나인 클린팩토리 사업을 소개합니다.]]></summary></entry><entry><title type="html">새로운 시작</title><link href="http://localhost:4000/2022/08/26/starting.html" rel="alternate" type="text/html" title="새로운 시작" /><published>2022-08-26T00:00:00+09:00</published><updated>2022-08-26T00:00:00+09:00</updated><id>http://localhost:4000/2022/08/26/starting</id><content type="html" xml:base="http://localhost:4000/2022/08/26/starting.html"><![CDATA[<p>안녕하세요? 에어릭스 환경시스템사업부의 기술연구소장과 개발팀장을 겸직하고 있는 이상훈입니다.</p>
+
+<p>저는 에어릭스에 입사하기 전 <code class="language-plaintext highlighter-rouge">스마트팩토리</code>와는 전혀 상관없는 신용(현금)카드 혹은 USIM카드로 사용되는 IC카드용 운영체제 및 어플리케이션 개발 업무를 했었습니다. 그러다가 우연히 에어릭스에 입사하게 되었는데, 벌써 2년 가까운 시간이 흘렀습니다. 정말로 시간의 흐름이 빠른 것 같습니다. 
+시간이 흘렀어도 여전히 <code class="language-plaintext highlighter-rouge">스마트팩토리</code> 는 여전히 어려운 분야인 것 같습니다.</p>
+
+<p><img src="/img/posts/starting_00.png" alt="Image Alt 어려움" /></p>
+
+<hr />
+
+<h2 id="변화를-시작해야-할-시점">변화를 시작해야 할 시점</h2>
+
+<p>에어릭스는 IT기업이 아닙니다. 그러다보니 IT기술이나 사업에 대해서 전반적으로 사내 구성원들의 이해도가 부족한 편입니다. 말만 하면 모든 것들이 알아서 마법처럼 구현될 수 있는 것이 아닌데, IT기술에 대한 이해도가 높지 않다보니 잘못된 의사결정을 내리는 경우가 많았습니다.</p>
+
+<p>면밀한 검토없이 잘못된 의사결정으로 무리하게 추진되었던 많은 사업들 때문에 저도 입사 후 최근까지도 그러한 문제들을 수습하는데 많은 에너지를 쏟아야만 했습니다. 
+답답한 현실의 벽에 부딪혀 개발인력들의 이탈이 이어지는 것을 막을 수도 없었습니다.</p>
+
+<p><img src="/img/posts/starting_01.png" alt="Image Alt 인력이탈" /></p>
+
+<p>다행히 지금은 많은 것들이 정리가 된 상황으로 안정을 찾아가고 있습니다. 이제야 비로소 그 동안 하지 못했던 일들을 하나씩 하나씩 추진해나갈 수 있는
+여유가 생긴것 같습니다. 이제는 변화를 시작해야 할 시점입니다.</p>
+
+<hr />
+
+<h2 id="블로그를-개설하는-이유">블로그를 개설하는 이유</h2>
+
+<p>그 첫 시작이 아마도 기술블로그의 개설이 될 것 같습니다. 기술블로그를 개설해서 운영하려는 이유는 <code class="language-plaintext highlighter-rouge">성장</code>과 <code class="language-plaintext highlighter-rouge">정체성</code>이라는 키워드로
+설명할 수 있을 것 같습니다.</p>
+
+<h4 id="성장">성장</h4>
+
+<p>우리 개발팀에는 아직 부족한 부분이 많이 있습니다. 우리 스스로 부족한 부분을 채워나가면서 <code class="language-plaintext highlighter-rouge">성장</code>할 수 있는 발판을 마련해야 합니다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">성장</code>을 위해서 <strong>소통</strong>과 <strong>공유</strong>는 필수적 입니다. <strong>소통</strong>과 <strong>공유</strong>를 통해서 <code class="language-plaintext highlighter-rouge">성장</code>에 필요한 지식과 경험을 채워나갈 수
+있기 때문입니다. <strong>소통</strong>과 <strong>공유</strong>에 가장 기본적이면서 효율적인 수단이 바로 글쓰기입니다. 기술블로그를 통해서 공개적으로 배포할
+수 있도록 어떤 주제에 대한 자신의 생각이나 의견, 지식 등을 간결하고 명료하게 글로 작성해보는 것은 글쓰기 능력을 향상시키는데
+많은 도움이 될 것이라고 생각합니다.</p>
+
+<p>적은 인원으로 효율적인 조직을 만들기 위해서는 무엇보다 협업이 중요합니다. 
+협업하기 위해서는 본인의 지식이나 경험, 생각 등을 잘 정리하여 상대방에게 전달할 수 있는 능력이 기본적으로 요구됩니다. 
+말로는 정보 전달의 한계가 있기에 글로 전달할 수 있어야 합니다. 그렇기 때문에 구성원들 각자가 가지고 있는 글쓰기 능력이 팀 전체의 
+역량과 효율성을 좌우하는 것입니다.</p>
+
+<p>기술블로그 운영을 통해서 우리 팀 구성원들 각자가 글쓰기 훈련을 할 수 있는 계기를 만들어주고 싶습니다.
+글쓰기 능력을 향상시켜서 타인과 <strong>소통</strong>하고 <strong>공유</strong>하는 힘을 키우고, 그것이 우리들을 <code class="language-plaintext highlighter-rouge">성장</code>으로 이끌어 주기를 기대해봅니다.</p>
+
+<h4 id="정체성">정체성</h4>
+
+<p>우리가 근무하는 에어릭스라는 회사가 IT회사가 아니다보니 일반적인 IT기업의 조직문화와는 차이가 있습니다. 개발팀도 예외가 아닙니다.
+일반적인 IT기업의 개발팀과는 차이가 있습니다. 솔직히 개발팀다운 <code class="language-plaintext highlighter-rouge">정체성</code>을 아직 가지고 있지 못하다고 생각합니다.</p>
+
+<p>기술은 빠르게 발전하고 있습니다. 기술의 발전 흐름에 뒤쳐지지 않고 쫓아가기 위해서라도 계속적으로 <strong>공부</strong>하고, <strong>연구</strong>하는 모습을 보여야 합니다. 
+그런 과정들 속에서 배우고, 고민하고, 경험한 것들을 개인의 기억속에만 남겨둔다면, 점차 시간이 흐르면서 기억이 지식으로 축적되지 못하고 결국
+사라지거나 왜곡되고 말 것입니다.</p>
+
+<p><strong>공부</strong>하고 <strong>연구</strong>하는 과정들 속에서 배우고, 고민하고, 경험한 것들 속에는 분명 타인에게 도움이 될 수 있는 정보들이 많이 포함되어
+있을 것입니다. 기억속 여기저기에 흩어져있는 단편적인 정보들을 잘 취합하고, 정리해서 유용한 지식으로 전환해내기 위해서 글로 작성해보려는
+노력을 기울일 필요가 있습니다. 그런 노력들이 모여서 에어릭스 환경시스템 사업부 소속 기술연구소&amp;개발팀의 기술 히스토리로 내재화될 것입니다.
+기술 히스토리의 내재화가 없다는 것은 결국 그 조직은 내실이 없다는 의미입니다. 지금까지 우리 기술연구소&amp;개발팀의 모습이 그랬던 것 같습니다.</p>
+
+<p>꾸준히 기술 히스토리를 내재화하면서 개인과 조직이 함께 발전할 수 있는 그런 문화가 만들어졌으면 합니다. 제가 생각하는 개발팀다운 <code class="language-plaintext highlighter-rouge">정체성</code>은
+바로 그런 문화를 가진 조직입니다.</p>
+
+<p>물론 한순간에 내실있는 조직으로 탈바꿈하는 건 불가능한 일입니다. 당연히 시간이 필요합니다. 하지만 마냥 기다릴 수도 없습니다.
+바로 시작해야 합니다. 성장에 대한 욕구가 있다면 바쁘다는 것이 핑계가 되지는 않을 것입니다. 다만, 옛날 시골마당에서 수동 펌프에 물이 안나올 때에
+물을 끌어올리기 위해서 펌프 위에 마중물을 부었던 것처럼 우리에게도 마중물 같은 것이 필요할 수는 있다고 생각합니다. 그리고 저는 기술블로그가 
+그 역할을 해줄 수 있을 것이라고 생각합니다.</p>
+
+<hr />
+
+<h2 id="깃허브github를-선택한-이유">깃허브(github)를 선택한 이유</h2>
+
+<p>사실 블로그를 운영할 플랫폼은 많이 있습니다. 사용이 편리한 티스토리나 네이버 블로그를 이용하는 것도 검토를 했었습니다. 하지만 요즘 웬만한 
+IT스타트업들이 하는 것처럼 깃허브(github)를 이용해서 기술블로그를 많이 운영하고 싶었습니다. 깃허브가 주는 개발자스러운 느낌을 에어릭스
+환경시스템사업부 기술블로그에서도 풍기고 싶었습니다.</p>
+
+<p>에어릭스가 비록 IT기업은 아니지만, 그래도 환경시스템 사업부의 개발팀에 소속된 우리들은 모두 IT개발자들입니다. 
+우리가 운영하는 기술블로그만큼에서라도 여느 IT스타트업들처럼 개발자스러움을 가득 보여주고 싶습니다.</p>
+
+<p><img src="/img/posts/starting_02.png" alt="Image Alt github" /></p>
+
+<hr />
+
+<h2 id="글을-마치면서">글을 마치면서…</h2>
+
+<p>우리의 기술블로그가 재미있고 가치있는 글들로 풍성하게 가득 채워지기를 바랍니다.</p>]]></content><author><name>sanghoon.lee</name></author><summary type="html"><![CDATA[안녕하세요? 에어릭스 환경시스템사업부의 기술연구소장과 개발팀장을 겸직하고 있는 이상훈입니다.]]></summary></entry></feed>

@@ -1,0 +1,25 @@
+title:              에어릭스 환경시스템사업부 기술블로그
+email:              sanghoon.lee@aerix.co.kr
+description:        IT기업이 아닌 에어릭스에서 살아가고 있는 개발자들
+author:             (주)에어릭스
+baseurl:            ""
+url:                "https://sanghoon-lee.github.io"
+
+# Social Profiles
+twitter_username:   SBootstrap
+github_username:    StartBootstrap
+facebook_username:  StartBootstrap
+instagram_username:  
+linkedin_username:
+
+# Add your google-analytics ID here to activate google analytics
+google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
+
+# Build settings
+markdown:           kramdown
+paginate:           5
+paginate_path:      "/posts/page:num/"
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
