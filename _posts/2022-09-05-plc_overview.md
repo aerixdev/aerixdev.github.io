@@ -1,6 +1,6 @@
 ---
 title: "(1) PLC [PLC 개요, 동작, 분류, 프로그램]"
-subtitle: PLC가 무엇인가
+subtitle: PLC란 무엇인가
 layout: post
 author: yeonggyu.kim
 ---
