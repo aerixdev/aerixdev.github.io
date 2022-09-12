@@ -1,3 +1,10 @@
+---
+title: "JMeter Remote를 통한 부하 테스트"
+subtitle: 자주 발생하는 문제 해결과 함께
+layout: post
+author: kmg0712@aerix.co.kr
+---
+
 # JMeter Remote를 통한 부하 테스트
 
 공식 문서 : [https://jmeter.apache.org/usermanual/remote-test.html](https://jmeter.apache.org/usermanual/remote-test.html)
