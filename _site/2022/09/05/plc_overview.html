@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    (1) PLC [PLC 개요, 동작, 분류, 프로그램] - 에어릭스 환경시스템사업부 기술블로그
+    
+  </title>
+
+  <meta name="description" content="(1) PLC [PLC 개요, 동작, 분류, 프로그램]">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/2022/09/05/plc_overview.html">
+  <link rel="alternate" type="application/rss+xml" title="에어릭스 환경시스템사업부 기술블로그" href="/feed.xml">
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">에어릭스 환경시스템사업부 기술블로그</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">TECH NOTE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/link">Link</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+  <header class="masthead">
+    
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>(1) PLC [PLC 개요, 동작, 분류, 프로그램]</h1>
+            
+            <h2 class="subheading">PLC란 무엇인가</h2>
+            
+            <span class="meta">Posted by
+              <a href="/author">yeonggyu.kim</a>
+              on September 05, 2022 &middot; <span class="reading-time" title="Estimated read time">
+  
+   3 mins  read </span>
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <h1 id="1-plc-plc-개요-동작-분류-프로그램">(1) PLC [PLC 개요, 동작, 분류, 프로그램]</h1>
+
+<p>PLC 통신 프로토콜을 통해서 PC와 인터페이스를 할 수 있도록 개발을 하면서 필요한 PLC에 대한 내용들을 작성해봅니다. 우선적으로, PLC가 어떤 것인지 그리고 어떻게 구성이 되어있고 동작 방식에 대해서 작성하였습니다.</p>
+
+<h3 id="plc">PLC</h3>
+
+<p><strong>Programmable Login Control</strong> 의 약자로 <code class="language-plaintext highlighter-rouge">프로그램</code> 가능한 <code class="language-plaintext highlighter-rouge">논리 제어 장치</code>를 나타내며, 과거 릴레이 회로 제어의 불편함을 개선하기 위해서 개발이 되었습니다. 배선을 프로그램이 대신해서 기계를 동작 시킵니다.</p>
+
+<p><img src="/img/posts/plc_image.png" alt="Image Alt PLC" /></p>
+
+<h3 id="동작">동작</h3>
+
+<p>동작 방식은 입력 장치(센서 정보)로 받아들인 뒤에 메모리에 작성되어 있는 프로그램에 의해서 순차적으로 논리를 처리하고 결과를 출력하여 외부 장치를 제어하는 방식으로 <code class="language-plaintext highlighter-rouge">직렬 처리 방식</code>입니다.</p>
+
+<h3 id="분류">분류</h3>
+
+<p>PLC를 분류하자면 <strong>일체형</strong>과 <strong>모듈형</strong>으로 나눌 수 있습니다.</p>
+
+<ul>
+  <li>일체형</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">하나의 장치</code>에 전원장치 , CPU , 메모리 , 입출력 기능이 모두 들어있습니다.  보통 일체형 PLC는 <strong>소형</strong>으로 제작되어 모듈형 PLC 보다 <code class="language-plaintext highlighter-rouge">저사양</code>으로 간단한 설비의 자동화나 단독 제어 설비에 사용이 되어집니다.</p>
+
+<ul>
+  <li>모듈형</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">기능에 따라서 모듈</code>로 나뉘어져 있으며 <strong>전원, 연산, 입력, 출력</strong>으로 4가지로 구성되어 있다고 볼 수 있다. 전원은 PLC에 파워를 공급해주는 파워모듈, 연산은 논리/산술 연산 처리 와 메모리 가능을 담당하는 CPU 모듈, 입력은 외부의 신호를 받을 수 있는 모듈, 출력은 연산을 처리한 뒤 결과를 외부 신호로 보내는 모듈을 나타냅니다.</p>
+
+<p>PLC 모듈을 찾다보면 <code class="language-plaintext highlighter-rouge">특수 모듈</code>이라는 것이 있는데 특수 모듈은 <code class="language-plaintext highlighter-rouge">고도화되거나 특수한 작업</code>이 필요한 경우에 대해서 사용되어 지는 모듈입니다. 예를 들어서 온도 제어 혹은 위치 결정 제어 등이 있습니다.</p>
+
+<h3 id="프로그램">프로그램</h3>
+
+<p>PLC 프로그램을 하기 위해 당연하게도 언어가 사용이 됩니다. 그 언어의 종류는 LD (래더), ST(구조 언어), FB(기능 블록) 등 존재합니다. 제가 가장 많이 본 것은 래더 언어이며 PLC 프로그램 예시를 찾다보면 흔하게 만날 수 있습니다. 래더는 아래의 이미지와 같이 생겼습니다.</p>
+
+<p><img src="/img/posts/plc_ld.png" alt="Image Alt LD" /></p>
+
+<p>여기서 가장 중요한 것은 <code class="language-plaintext highlighter-rouge">마지막에 END가 들어가야 한다는 것</code>입니다. 마지막에 END가 나타내는 것이 프로그램이 끝났다는 것을 알려주는 것 입니다.</p>
+
+<p>다음으로, 개발자의 입장에서 가장 친근하게 접근할 수 있는 ST(구조 언어)입니다. 이미지와 같이 C 언어나 Java 등 개발 언어에 사용하는 방식과 같이 사용이 된다는 것을 확인할 수 있습니다.</p>
+
+<p><img src="/img/posts/plc_st.png" alt="Image Alt ST" /></p>
+
+<p>그 외에도 언어의 종류가 더 있지만 여기에선 생략하고 넘어가도록 하겠습니다..</p>
+
+<p>프로그램을 작성하였다면 어떤 방식으로 진행이 되는 지가 궁금할 것이라고 생각이 됩니다. PLC 프로그램은 순차적으로 실행이 됩니다. 
+여기에서 LD 언어로 작성된 프로그램이 동작한다고 가정하였을 때, 프로그램은 위에서 순차적으로 내려올 것 입니다. 이때, 마지막에 만나는 END 지점에 도착했다고 끝나는 것이 아니라 다시 처음부터 시작이 됩니다. 이렇게 프로그램이 계속해서 실행이 되고 있다고 보면 될 것입니다. 
+이 부분에서 상세히 설명하면 일정한 스캔 주기마다 프로그램이 순차적으로 실행이 되고 있기 때문에 입력 신호가 변경이 되더라도 프로그램을 다시 스캔되지 않는 이상 처리되지 않고 있다가 다시 스캔이 시작되고 나서야 처리가 된다고 볼 수 있습니다. 
+여기에서 프로그램 1바퀴를 다 도는 것을 ‘<code class="language-plaintext highlighter-rouge">1 스캔</code>‘이라고 부르며 하나의 접점에 대해서는 ‘<code class="language-plaintext highlighter-rouge">1 스탭</code>‘이라고 합니다. 개발자의 입장에서 이벤트 처리 방식과는 다르다고 볼 수 있습니다. PLC 프로그램이 대기 형태를 가지고 있는 것이 아닌 지속적인 스캔이 되어서 해당 신호에 맞게 처리가 되고 있다고 이해하면 될 것 같습니다.</p>
+
+<hr />
+
+<p>여기까지 설명한 내용이 PLC가 어떤 것이고 동작 방식과 프로그램이 어떻게 동작하는 것인지에 대해서 간략하게 설명을 했습니다. 다음 내용에는 PLC 프로그램 사용에 쓰이는 도구와 PLC 메모리 구조 내용들에 대해서 설명을 하도록 하겠습니다.</p>
+
+
+        <hr>
+
+        <script src="https://utteranc.es/client.js"
+          repo="aerixdev/aerixdev.github.io"
+          issue-term="url"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+        </script>
+        
+        <div class="clearfix">
+
+          
+          <a class="btn btn-primary float-left" href="/2022/08/31/iomt_rnd.html" data-toggle="tooltip" data-placement="top" title="의료 IoMT 플랫폼 구축">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+          <a class="btn btn-primary float-right" href="/2022/09/07/plc_memory.html" data-toggle="tooltip" data-placement="top" title="(2) PLC [프로그램 툴, 메모리, 주소체계]">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
+          
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:aerix_es_dev@aerix.co.kr">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/aerixdev">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; (주)에어릭스 2022</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/startbootstrap-clean-blog/js/scripts.js"></script>
+
+<script src="/assets/scripts.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1WDQQYX0G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D1WDQQYX0G');
+</script>
+
+
+
+</body>
+
+</html>

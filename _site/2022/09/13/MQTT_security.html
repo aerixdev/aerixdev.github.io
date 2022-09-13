@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    MQTT 서버 보안성 강화하기 - 에어릭스 환경시스템사업부 기술블로그
+    
+  </title>
+
+  <meta name="description" content="문제점">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/2022/09/13/MQTT_security.html">
+  <link rel="alternate" type="application/rss+xml" title="에어릭스 환경시스템사업부 기술블로그" href="/feed.xml">
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">에어릭스 환경시스템사업부 기술블로그</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">TECH NOTE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/link">Link</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+  <header class="masthead">
+    
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>MQTT 서버 보안성 강화하기</h1>
+            
+            <h2 class="subheading">보안장치의 부재</h2>
+            
+            <span class="meta">Posted by
+              <a href="/author">sanghoon.lee</a>
+              on September 13, 2022 &middot; <span class="reading-time" title="Estimated read time">
+  
+   3 mins  read </span>
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <h2 id="문제점">문제점</h2>
+
+<hr />
+
+<p>저희 에어릭스에서는 주로 MQTT 프로토콜을 사용하여 제조현장에 설치된 센서나 PLC로부터 데이터를 수집하고 있습니다. 데이터를 수집하기 위해서 
+사내에 MQTT Broker가 설치된 서버도 운영하고 있습니다.</p>
+
+<p>MQTT Broker 서버가 에어릭스의 스마트팩토리 시스템에서 중추적인 역할을 하고 있다는 것은 부인할 수 없는 사실일 것입니다. 하지만 문제는 이렇게 
+중요한 MQTT Broker 서버를 그 어떤 보안 매커니즘도 없이 개방된 인터넷 공간에 활짝 공개해놓고 사용하고 있다는 점입니다.</p>
+
+<p>보호되지 않는 MQTT Broker서버에 대한 외부 공격이 데이터 유출을 유발하고, 시스템의 통제권을 빼앗아 이와 연동된 설비나 다른 시스템을 위험에 빠트릴 수도 있습니다.</p>
+
+<p>에어릭스에 입사하기 전에 17년 이상을 임베디드 보안 소프트웨어를 개발하던 업무를 해왔던 제 입장에서는 크나큰 위험요소로 느껴지는 것이 당연할지도 모르겠습니다.
+뉴스 기사를 보면, 에어릭스 뿐만 아니라 IoT기술을 사용하고 있는 많은 개발업체들의 공통적인 문제인것 같기는 합니다.</p>
+
+<p>사실 MQTT Broker 자체의 보안에는 큰 문제가 있습니다. 보안이라는 것 자체를 생각하지 않고, 오직 동작에만 충실한 나머지 제대로된 설정을 하지 않고
+사용하고 있는 대다수 개발업체들의 잘못인 것입니다.</p>
+
+<p><br /></p>
+<h2 id="제약사항">제약사항</h2>
+
+<hr />
+
+<p>이 문제를 해결하기 위해서 꽤 오랜시간 동안 고민을 하게 되었습니다. 왜냐하면 다음과 같은 제약사항들을 고려해야 했기 때문입니다.</p>
+
+<ul>
+  <li>개방된 인터넷망에서 MQTT Broker 서버를 계속 운영해야 함.</li>
+  <li>회사 경영진으로부터 고가의 보안장비를 구입할 예산을 승인받는 것은 거의 불가능함.</li>
+</ul>
+
+<p><br /></p>
+<h2 id="해결방안">해결방안</h2>
+
+<hr />
+
+<p>보안성을 강화하기 위해서 새로운 MQTT Broker 서버는 다음과 같은 설정으로 구성하여 운영하기로 했습니다.</p>
+
+<h3 id="1aclaccess-control-list-관리">1.ACL(Access Control List) 관리</h3>
+
+<p>MQTT Broker서버에서 사용자 계정과 비밀번호를 확인하지 않고 접속을 승인해주는 익명접속은 더 이상 허용하지 않기로 했습니다. 
+이제는 MQTT Broker서버에 접속하기 위해서 사용자 계정과 비밀번호를 확인하는 절차가 필수적으로 수행됩니다.
+따라서 앞으로 에어릭스의 MQTT Broker 서버에 접속해야 하는 모든 IoT디바이스나 시스템은 사용자 계정과 비밀번호를 먼저 발급받아야 합니다.</p>
+
+<p>그리고 사용자 계정별로 허용된 TOPIC에 해당되는 메시지에만 접근할 수 있도록 권한을 조정하기로 했습니다.</p>
+
+<p>이러한 보안 정책들은 모두 ACL 관리 기능에 해당되는 것으로 MQTT Broker에서 제공되기 떄문에 설정파일의 내용만 변경하는 것으로 쉽게 적용할 수 있습니다.</p>
+
+<h3 id="2sslsecure-sockets-layer-사용">2.SSL(Secure Sockets Layer) 사용</h3>
+
+<p>MQTT Broker서버가 SSL을 이용하여 통신을 하도록 설정을 변경하기로 했습니다. SSL을 이용하여 주고 받는 모든 데이터들은
+암호화를 통해서 기밀성(Confidentiality)과 무결성(Integrity)을 보장받을 수 있습니다.</p>
+
+<p>SSL을 이용하기 위해서 인증서 파일을 발급받아야 하는데, 비용이 발생하지 않는 OpenSSL을 사용하여 필요한 인증서 파일을 생성하기로 했습니다.</p>
+
+<p>SSL을 이용한 통신 기능도 MQTT Broker에서 제공되기 때문에 간단히 설정파일의 내용만 변경하는 것으로 쉽게 적용할 수 있습니다.</p>
+
+<h3 id="3vpnvirtual-private-network-사용">3.VPN(Virtual Private Network) 사용</h3>
+
+<p>VPN을 사용하게 되면 MQTT Broker서버와 통신하는 모든 장치들 사이에는 암호화된 보안 터널이 생성되고, 이를 통해서 안전하게 데이터가 전송되게 됩니다.
+개방된 인터넷망을 사용하더라도 암호화된 보안 터널을 통해서 연결되기 때문에 MQTT Broker서버와 장치가 개인 네트워크에 직접 연결된 것과 같은 효과를 가질 수 있습니다.</p>
+
+<p>상용 VPN솔루션을 사용하면 더 좋은 성능과 보안성을 보장받을 수도 있겠지만 필요한 예산을 승인받기 어려운 현실이기 때문에 우선 비용이 발생하지
+않는 Open Source VPN 솔루션인 WireGuard를 채택해서 사용해보기로 했습니다.</p>
+
+<p><br /></p>
+<h2 id="남은-이슈">남은 이슈</h2>
+
+<hr />
+
+<p>ACL관리, SSL사용, VPN사용을 통해서 기본적인 보안성은 확보할 수 있다고 생각됩니다. 다만 ACL관리를 위해서 MQTT Broker서버에 접속할 수 있는 사용자
+계정과 비밀번호를 관리하는 시스템과 SSL/VPN 사용에 필요한 인증서를 관리하는 시스템을 개발하는 것이 필요해졌습니다. 이런것들을 시스템으로 처리하지
+않고 사람이 수동적으로 처리하게 되면 당장은 모르겠으나 시스템 운영을 지속하는 것이 힘들어질 수도 있기 때문입니다.</p>
+
+
+        <hr>
+
+        <script src="https://utteranc.es/client.js"
+          repo="aerixdev/aerixdev.github.io"
+          issue-term="url"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+        </script>
+        
+        <div class="clearfix">
+
+          
+          <a class="btn btn-primary float-left" href="/2022/09/13/JMeter_remote.html" data-toggle="tooltip" data-placement="top" title="Jmeter_remote">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:aerix_es_dev@aerix.co.kr">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/aerixdev">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; (주)에어릭스 2022</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/startbootstrap-clean-blog/js/scripts.js"></script>
+
+<script src="/assets/scripts.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1WDQQYX0G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D1WDQQYX0G');
+</script>
+
+
+
+</body>
+
+</html>
