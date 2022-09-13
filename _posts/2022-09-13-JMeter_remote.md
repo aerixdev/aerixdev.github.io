@@ -1,88 +1,111 @@
----
-title: "JMeter Remote를 통한 부하 테스트"
-subtitle: 자주 발생하는 문제 해결과 함께
-layout: post
-author: 
----
-
 # JMeter Remote를 통한 부하 테스트
 
 공식 문서 : [https://jmeter.apache.org/usermanual/remote-test.html](https://jmeter.apache.org/usermanual/remote-test.html)
 
-## 개요
+### 개요
 
 Apache Jmeter를 이용하면 개발 중인 서버나 디바이스 등에 간단하게 부하 테스트를 진행 할 수 있다. 하지만 부하 테스트를 수행하는 PC에도 높은 부하가 걸리기 때문에 원활한 테스트가 이루어지지 않을 수 있다.
 
-이런 경우 마스터 PC는 부하 테스트 명령, 실행 결과 분석에만 이용하고 여러대의 PC나 서버를 슬레이브로 묶어 부하 대상 서버에 부하를 걸 수 있다.
+이런 경우 마스터 PC는 부하 테스트 명령, 실행 결과 분석에만 이용하고 여러대의 PC나 서버를 슬레이브로 묶어 마스터 대신 작업을 수행할 수 있다.
 
-![jmeter.png](https://github.com/aerixdev/aerixdev.github.io/blob/main/img/jmeter.png)
+![jmeter](../img/posts/jmeter.png)
 
-목차
+### 목차
 
-1. JAVA 설치
-2. JMeter의 준비
-3. JMeter의 플러그인 준비
-4. JMeter의 배포 및 실행
-5. 겪을 수 있는 문제 및 해결방법
+1. Java 버전 확인
+2. Jmeter 및 plugin 설치
+3. Jmeter 설정 및 실행
+4. 테스트 계획 설정 및 테스트
+5. 문제해결
 
-1. JAVA 설치
+### 1. Java 버전 확인
 
-## 1.1 Ubuntu에 설치
+Jmeter 설치 시 마스터와 모든 슬레이브들의 Java버전, Jmeter 버전을 동일하게 사용해야 에러를 피할 수 있다.
 
-### 자바 설치 확인 / 설치
+자바 버전을 확인하여 같은 버전으로 맞춰주고, Jmeter는 같은 압축 파일을 이용해 설치하면 실수를 피할 수 있을 것이다.
 
-```sql
-//버전 확인
+```bash
+//java 버전 확인
 java --version
-
-//자바 설치
-wget -O- https://apt.corretto.aws/corretto.key | sudo apt-key add - 
- sudo add-apt-repository 'deb https://apt.corretto.aws stable main'
-
-sudo apt-get update; sudo apt-get install -y java-17-amazon-corretto-jdk
 ```
 
-1.2 Window에 설치
+### 2. JMeter 및 plugin 설치
 
-### 2. JMeter의 준비
+Jmeter는 공식 페이지에서 받거나 wget 명령어로 가져올 수 있다. 앞서 설명한 대로 같은 버전으로 맞춰 주는것이 중요하다.
 
-```sql
-wget https://downloads.apache.org//jmeter/binaries/apache-jmeter-버전.zip
+```bash
+//설치 페이지
+https://jmeter.apache.org/download_jmeter.cgi
 
-unzip apache-jmeter-버전.zip
+//linux 다운로드, 압축해제
+wget https://downloads.apache.org//jmeter/binaries/apache-jmeter-5.5.zip
+
+unzip apache-jmeter-5.5.zip
 ```
 
-### JMeter의 플러그인 준비
+Jmeter는 다양한 plugin을 지원하여 자신에게 필요한 기능을 골라 설치하여 이용할 수 있다. plugin 또한 마스터와 슬레이브 양쪽에 동일하게 설치해줘야 에러를 피할 수 있다.
 
-```jsx
-플러그인 사이트 : [https://jmeter-plugins.org/](https://jmeter-plugins.org/)
+plugin 마다 설치법이 약간씩 다르므로 주의하여 설치하자. Jmeter 하위 폴더의 lib 또는 lib/ext에 설치한다.
+
+```bash
+//plugin 설치 페이지
+[https://jmeter-plugins.org/](https://jmeter-plugins.org/)
+
+//추천 plugin
+1. jpgc-graphs-basic-2.0 : 데이터를 그래프로 표시
+
+2. JMeter Plugins Manage : plugin 관리 매니저
 ```
 
-플러그인의 설명에 따라서 JMeter의 lib 또는 lib/ext 에 넣습니다.
+### 3. Jmeter 설정 및 실행
 
-추천하는 플러그인의 종류
+마스터의 설정 파일을 수정하여 슬레이브들의 주소를 등록한다. 포트 번호는 따로 설정하지 않으면 디폴트 값 1099로 설정된다.
 
-1. jpgc-graphs-basic-2.0
-데이터를 그래프로 표시하는 플러그인입니다.
-2. JMeter Plugins Manage
-플러그인을 관리하는 매니저 플러그인입니다.
+```bash
+// ../bin/jmeter.properties
+...
+# Remote Hosts - comma delimited
+remote_hosts=127.0.0.1,xxx.xx.xxx.xx,..
+```
 
-Remote 서버와 부하를 주는 서버의 JMeter은 플러그인까지 동일해야 합니다. 테스트 계획의 경우에는 Remote서버에서 자동으로 전달하기 떄문에 문제가 없습니다.
+이후 jmeter를 실행한다. 마스터와 슬레이브의 실행파일이 다르므로 주의하여 진행한다.
 
-### 3. 만들어진 JMeter + Plugin를 마스터 서버와 슬레이브 서버에 배포하고 실행합니다.
+```bash
+//마스터
+jmeter.bat (윈도우) / jmeter.sh (리눅스)
 
-Master 서버의 경우에는 jmeter 또는 jmeter.bat(원도우), jmeter.sh(리눅스)을 실행합니다.
+//슬레이브
+jmeter-server.bat / jmeter-server.sh(리눅스)
+```
 
-Slave 서버의 경우에는 jmeter-server 또는 jmeter-server.bat(원도우), jmeter-server.sh(리눅스)를 실행합니다.
+### 4. 테스트 계획 설정 및 테스트
 
-### 4. 마스터 서버에서 테스트 계획을 실행합니다.
+jmeter 실행 후 다음과 같은 화면을 볼 수 있으며, 테스트 계획을 설정한 후 테스트 할 수 있다.
 
-jpgc-graphs-basic-2.0 플러그인이 설치된 경우 테스트의 결과를 그래프로 확인할 수 있습니다.
+스레드 그룹을 만든 후 간단한 http request 요청을 걸어보자.
+![](../img/posts/jmeter_home.png)
+![](../img/posts/jmeter_thread.png)
 
-### 문제 해결 방법 및 자잘한 팁
 
-1. 기본적으로 JMeter의 포트는 1099번을 사용합니다. 이 포트로 양방향 통신을 수행할 수 있어야 합니다. 방화벽을 해제하거나 SSH 터널링을 사용하여 우회가 가능합니다.
-2. SSL 오류가 발생하는 경우 jmeter.properties에 다음과 같이 설정하여 문제를 해결하거나 공식 문서를 참고하여 SSL을 설정하여 진행할 수 있습니다.
+Number of Threads : 사용자 수
+
+Ramp-up Period : 사용자가 모두 생성되는데 걸리는 시간(길수록 천천히 생성)
+
+Loop Count : 반복 횟수
+
+Infinite : 무한반복
+
+이후 간단한 http 요청 설정을 한다. 
+![](../img/posts/jmeter_http.png)
+![](../img/posts/jmeter_request.png)
+
+테스트 계획 설정이 끝났으면 다음과 같이 슬레이브에 테스트를 명령한다.
+![](../img/posts/jmeter_remote.png)
+
+### 5. 문제 해결
+
+1. 기본적으로 JMeter의 포트는 1099번을 사용한다. 이 포트로 양방향 통신을 수행할 수 있어야 하기 때문에 방화벽을 해제하거나 SSH 터널링을 사용하여 우회하도록 설정하자.
+2. SSL 오류가 발생하는 경우 SSL을 아예 사용하지 않도록 jmeter.properties에 다음과 같이 설정하거나 SSL 설정 후 진행한다.
 
 ```
 server.rmi.ssl.disable=true
