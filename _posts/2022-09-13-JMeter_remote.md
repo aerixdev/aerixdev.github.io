@@ -8,7 +8,7 @@ Apache Jmeter를 이용하면 개발 중인 서버나 디바이스 등에 간단
 
 이런 경우 마스터 PC는 부하 테스트 명령, 실행 결과 분석에만 이용하고 여러대의 PC나 서버를 슬레이브로 묶어 마스터 대신 작업을 수행할 수 있다.
 
-![jmeter](../img/posts/jmeter.png)
+![jmeter](/img/posts/jmeter.png)
 
 ### 목차
 
@@ -83,8 +83,8 @@ jmeter-server.bat / jmeter-server.sh(리눅스)
 jmeter 실행 후 다음과 같은 화면을 볼 수 있으며, 테스트 계획을 설정한 후 테스트 할 수 있다.
 
 스레드 그룹을 만든 후 간단한 http request 요청을 걸어보자.
-![](../img/posts/jmeter_home.png)
-![](../img/posts/jmeter_thread.png)
+![](/img/posts/jmeter_home.png)
+![](/img/posts/jmeter_thread.png)
 
 
 Number of Threads : 사용자 수
@@ -96,11 +96,11 @@ Loop Count : 반복 횟수
 Infinite : 무한반복
 
 이후 간단한 http 요청 설정을 한다. 
-![](../img/posts/jmeter_http.png)
-![](../img/posts/jmeter_request.png)
+![](/img/posts/jmeter_http.png)
+![](/img/posts/jmeter_request.png)
 
 테스트 계획 설정이 끝났으면 다음과 같이 슬레이브에 테스트를 명령한다.
-![](../img/posts/jmeter_remote.png)
+![](/img/posts/jmeter_remote.png)
 
 ### 5. 문제 해결
 
