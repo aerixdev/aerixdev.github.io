@@ -1,53 +1,324 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-02T10:16:24+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">에어릭스 환경시스템사업부 기술블로그</title><subtitle>IT기업이 아닌 에어릭스에서 살아가고 있는 개발자들</subtitle><author><name>(주)에어릭스</name></author><entry><title type="html">의료 IoMT 플랫폼 구축</title><link href="http://localhost:4000/2022/08/31/iomt_rnd.html" rel="alternate" type="text/html" title="의료 IoMT 플랫폼 구축" /><published>2022-08-31T00:00:00+09:00</published><updated>2022-08-31T00:00:00+09:00</updated><id>http://localhost:4000/2022/08/31/iomt_rnd</id><content type="html" xml:base="http://localhost:4000/2022/08/31/iomt_rnd.html"><![CDATA[<p>환경시스템사업부에서 2020년부터 수행하고 있는 정부R&amp;D과제 중 하나인 <code class="language-plaintext highlighter-rouge">의료 IoMT 플랫폼</code> 구축 사업을 소개합니다.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-13T16:50:31+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">에어릭스 환경시스템사업부 기술블로그</title><subtitle>IT기업이 아닌 에어릭스에서 살아가고 있는 개발자들</subtitle><author><name>(주)에어릭스</name></author><entry><title type="html">JMeter Remote를 통한 부하 테스트</title><link href="http://localhost:4000/2022/09/13/JMeter_remote.html" rel="alternate" type="text/html" title="JMeter Remote를 통한 부하 테스트" /><published>2022-09-13T00:00:00+09:00</published><updated>2022-09-13T00:00:00+09:00</updated><id>http://localhost:4000/2022/09/13/JMeter_remote</id><content type="html" xml:base="http://localhost:4000/2022/09/13/JMeter_remote.html"><![CDATA[<p>test</p>
 
-<p>저희 에어릭스에서 스마트팩토리 시스템 구축시 제조현장의 정보를 수집하기 위해서만 사용해오던 IoT기술을 의료영역이라는
-전혀 다른 분야에 적용해보는 도전적인 성격의 과제였습니다. 하지만 다행히 큰 문제없이 3년차 연구까지 진행되고 있습니다. 
-현재 저희 에어릭스가 담당한 <code class="language-plaintext highlighter-rouge">환자감시통합모니터링</code> 시스템은 개발이 끝나고, <code class="language-plaintext highlighter-rouge">신촌세브란스 병원 응급진료센터</code>에 설치되어 시범적으로 운영되고 
-있는 상황입니다.</p>
+<h1 id="jmeter-remote를-통한-부하-테스트">JMeter Remote를 통한 부하 테스트</h1>
 
-<h2 id="연구개발과제-개요">연구개발과제 개요</h2>
+<p>공식 문서 : <a href="https://jmeter.apache.org/usermanual/remote-test.html">https://jmeter.apache.org/usermanual/remote-test.html</a></p>
 
-<p>본 연구개발과제의 개요는 다음과 같습니다.</p>
+<h2 id="개요">개요</h2>
+
+<p>Apache Jmeter를 이용하면 개발 중인 서버나 디바이스 등에 간단하게 부하 테스트를 진행 할 수 있다. 하지만 부하 테스트를 수행하는 PC에도 높은 부하가 걸리기 때문에 원활한 테스트가 이루어지지 않을 수 있다.</p>
+
+<p>이런 경우 마스터 PC는 부하 테스트 명령, 실행 결과 분석에만 이용하고 여러대의 PC나 서버를 슬레이브로 묶어 부하 대상 서버에 부하를 걸 수 있다.</p>
+
+<p><img src="https://github.com/aerixdev/aerixdev.github.io/blob/main/img/jmeter.png" alt="jmeter.png" /></p>
+
+<p>목차</p>
+
+<ol>
+  <li>JAVA 설치</li>
+  <li>JMeter의 준비</li>
+  <li>JMeter의 플러그인 준비</li>
+  <li>JMeter의 배포 및 실행</li>
+  <li>
+    <p>겪을 수 있는 문제 및 해결방법</p>
+  </li>
+  <li>JAVA 설치</li>
+</ol>
+
+<h2 id="11-ubuntu에-설치">1.1 Ubuntu에 설치</h2>
+
+<h3 id="자바-설치-확인--설치">자바 설치 확인 / 설치</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">//</span><span class="err">버전</span> <span class="err">확인</span>
+<span class="n">java</span> <span class="c1">--version</span>
+
+<span class="o">//</span><span class="err">자바</span> <span class="err">설치</span>
+<span class="n">wget</span> <span class="o">-</span><span class="n">O</span><span class="o">-</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">apt</span><span class="p">.</span><span class="n">corretto</span><span class="p">.</span><span class="n">aws</span><span class="o">/</span><span class="n">corretto</span><span class="p">.</span><span class="k">key</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="k">key</span> <span class="k">add</span> <span class="o">-</span> 
+ <span class="n">sudo</span> <span class="k">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span> <span class="s1">'deb https://apt.corretto.aws stable main'</span>
+
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="k">get</span> <span class="k">update</span><span class="p">;</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="k">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">java</span><span class="o">-</span><span class="mi">17</span><span class="o">-</span><span class="n">amazon</span><span class="o">-</span><span class="n">corretto</span><span class="o">-</span><span class="n">jdk</span>
+</code></pre></div></div>
+
+<p>1.2 Window에 설치</p>
+
+<h3 id="2-jmeter의-준비">2. JMeter의 준비</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">downloads</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">org</span><span class="o">//</span><span class="n">jmeter</span><span class="o">/</span><span class="n">binaries</span><span class="o">/</span><span class="n">apache</span><span class="o">-</span><span class="n">jmeter</span><span class="o">-</span><span class="err">버전</span><span class="p">.</span><span class="n">zip</span>
+
+<span class="n">unzip</span> <span class="n">apache</span><span class="o">-</span><span class="n">jmeter</span><span class="o">-</span><span class="err">버전</span><span class="p">.</span><span class="n">zip</span>
+</code></pre></div></div>
+
+<h3 id="jmeter의-플러그인-준비">JMeter의 플러그인 준비</h3>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">플러그인</span> <span class="nx">사이트</span> <span class="p">:</span> <span class="p">[</span><span class="nx">https</span><span class="p">:</span><span class="c1">//jmeter-plugins.org/](https://jmeter-plugins.org/)</span>
+</code></pre></div></div>
+
+<p>플러그인의 설명에 따라서 JMeter의 lib 또는 lib/ext 에 넣습니다.</p>
+
+<p>추천하는 플러그인의 종류</p>
+
+<ol>
+  <li>jpgc-graphs-basic-2.0
+데이터를 그래프로 표시하는 플러그인입니다.</li>
+  <li>JMeter Plugins Manage
+플러그인을 관리하는 매니저 플러그인입니다.</li>
+</ol>
+
+<p>Remote 서버와 부하를 주는 서버의 JMeter은 플러그인까지 동일해야 합니다. 테스트 계획의 경우에는 Remote서버에서 자동으로 전달하기 떄문에 문제가 없습니다.</p>
+
+<h3 id="3-만들어진-jmeter--plugin를-마스터-서버와-슬레이브-서버에-배포하고-실행합니다">3. 만들어진 JMeter + Plugin를 마스터 서버와 슬레이브 서버에 배포하고 실행합니다.</h3>
+
+<p>Master 서버의 경우에는 jmeter 또는 jmeter.bat(원도우), jmeter.sh(리눅스)을 실행합니다.</p>
+
+<p>Slave 서버의 경우에는 jmeter-server 또는 jmeter-server.bat(원도우), jmeter-server.sh(리눅스)를 실행합니다.</p>
+
+<h3 id="4-마스터-서버에서-테스트-계획을-실행합니다">4. 마스터 서버에서 테스트 계획을 실행합니다.</h3>
+
+<p>jpgc-graphs-basic-2.0 플러그인이 설치된 경우 테스트의 결과를 그래프로 확인할 수 있습니다.</p>
+
+<h3 id="문제-해결-방법-및-자잘한-팁">문제 해결 방법 및 자잘한 팁</h3>
+
+<ol>
+  <li>기본적으로 JMeter의 포트는 1099번을 사용합니다. 이 포트로 양방향 통신을 수행할 수 있어야 합니다. 방화벽을 해제하거나 SSH 터널링을 사용하여 우회가 가능합니다.</li>
+  <li>SSL 오류가 발생하는 경우 jmeter.properties에 다음과 같이 설정하여 문제를 해결하거나 공식 문서를 참고하여 SSL을 설정하여 진행할 수 있습니다.</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server.rmi.ssl.disable=true
+</code></pre></div></div>]]></content><author><name>kmg0712@aerix.co.kr, kangms@aerix.co.kr</name></author><summary type="html"><![CDATA[test]]></summary></entry><entry><title type="html">(2) PLC [프로그램 툴, 메모리, 주소체계]</title><link href="http://localhost:4000/2022/09/07/plc_memory.html" rel="alternate" type="text/html" title="(2) PLC [프로그램 툴, 메모리, 주소체계]" /><published>2022-09-07T00:00:00+09:00</published><updated>2022-09-07T00:00:00+09:00</updated><id>http://localhost:4000/2022/09/07/plc_memory</id><content type="html" xml:base="http://localhost:4000/2022/09/07/plc_memory.html"><![CDATA[<h1 id="2-plc-프로그램-툴-메모리-주소체계">(2) PLC [프로그램 툴, 메모리, 주소체계]</h1>
+
+<p>이전 장에서는 PLC 개요와 동작 방식과 구성에 대해서 설명하며 프로그램에 대해서 알아보았습니다. 이번에는 PLC 프로그램을 작성하기 위해 사용되는 툴과 PLC 메모리 영역과 주소에 대해서 알아보도록 하겠습니다.</p>
+
+<h3 id="프로그램-툴">프로그램 툴</h3>
+
+<hr />
+
+<p>PLC 프로그램을 작성하고 디버깅을 하기 위해서는 각 제조사마다 제공하는 프로그램 툴이 존재합니다. LS 산전의 경우에는 ‘XG5000’, 미쯔비시는 ‘GX Works’, 싸이먼은 ‘CICON’ 등… 존재합니다. 각 프로그램 툴은 제조사에서 제공하여 다운을 받아 사용할 수 있습니다. 소개 글에서는 LS 산전을 기준으로 설명하였습니다.</p>
+
+<p><img src="/img/posts/plc_program_main.png" alt="[ XG5000 ]" /></p>
+
+<p>[ XG5000 ]</p>
+
+<p>PC와 PLC를 USB 혹은 Ethernet으로 연결하여 프로그램 툴을 통해서 PLC 내부의 프로그램을 모니터링 하거나 불러올 수 있으며, 작성한 프로그램을 PLC에 쓸 수 있습니다.</p>
+
+<aside>
+💡 처음 연결 시 네트워크 설정이 되어 있지 않기 때문에 USB 연결
+
+</aside>
 
 <ul>
-  <li>과제명 : <code class="language-plaintext highlighter-rouge">환자중심 의료서비스 제공을 위한 인공지능, 클라우드, WiFi6 기반의 병원 대상 IoMT 표준 플랫폼 개발 및 임상 적용</code></li>
-  <li>내역사업 : 4차 산업혁명 및 미래 의료 환경 선도</li>
-  <li>발주처 : 범부처전주기의료기기연구개발사업단</li>
-  <li>사업기간 : 2020.09 ~ 2024.12 (4년4개월)</li>
-  <li>총 예산 : 93억원(정부출연금 67.5억)</li>
-  <li>컨소시움 구성 :
-    <ul>
-      <li>주관연구기관 - <code class="language-plaintext highlighter-rouge">헤론헬스정보시스템(구 파이디지털헬스케어)</code></li>
-      <li>공동연구기관 - <code class="language-plaintext highlighter-rouge">에어릭스</code>, 연세대학교 산학협력단, LG전자, DKI, 오성시스템, 인포마크, 라이튼테크놀로지, 메인텍, AITRICS</li>
-    </ul>
+  <li>PLC 네트워크 설정</li>
+</ul>
+
+<p>PLC와 통신을 하기위해서는 IP 혹은 Port 번호에 대해서 설정이 필요할 것 입니다. 그럴 때에는 아래이 그림과 같이 PLC 통신 설정을 할 수 있습니다.</p>
+
+<p><img src="/img/posts/plc_network_set.png" alt="PLC Network Setting" /></p>
+
+<p>LS PLC 경우에는 드라이버 (통신 프로토콜)에 따라서 허용 가능한 Port 번호가 달라집니다.</p>
+
+<ul>
+  <li>
+    <p>XGT 서버 (FEnet)</p>
+
+    <p>TCP : 2004</p>
+
+    <p>UDP : 2005</p>
+  </li>
+  <li>
+    <p>모드버스</p>
+
+    <p>TCP : 502</p>
   </li>
 </ul>
 
-<h2 id="연구개발의-필요성">연구개발의 필요성</h2>
+<p>① 네트워크 설정 → PLC 의 네트워크 정보 설정을 하여 ‘IP, 서브넷마스크, 게이트웨이’의 주소를 설정합니다.</p>
 
-<p><img src="/img/posts/iomt_rnd_03.png" alt="Image Alt 연구개발의 필요성" /></p>
+<p>② 전용 접속 개수 → PLC와 인터페이스를 하기 위해서 접속 허용자 수를 설정합니다.</p>
 
-<h2 id="전체-시스템-구성">전체 시스템 구성</h2>
+<p>③ 드라이버 설정 → 통해서 PLC 와 인터페이스를 하기 위한 통신 프로토콜을 결정합니다.</p>
 
-<p>본 연구개발과제는 비대면 사회 변화에 맞추어 환자중심 의료서비스 제공을 위해서 끊김 없는 데이터 획득(Seamless), 실시간 통합 모니터링(Synchronous),
-정교한 예측 서비스 구현(Sophisticated), 병원정보시스템과 다양한 IoMT 기기연동이 가능하도록 <code class="language-plaintext highlighter-rouge">의료IoMT 플랫폼</code>을 구축하는 것을 목표로
-하고 있습니다.</p>
+<ul>
+  <li>PLC 프로그램 전송</li>
+</ul>
 
-<p><img src="/img/posts/iomt_rnd_01.png" alt="Image Alt 전체시스템구성" /></p>
+<p>PLC 네트워크 설정을 하였다면, 프로그램 툴을 통해서 PLC의 프로그램을 가져와 확인(<code class="language-plaintext highlighter-rouge">읽기</code>)을 하거나 PLC 프로그램 메모리에 올려서 PLC가 프로그램 동작(<code class="language-plaintext highlighter-rouge">쓰기</code>)할 수 있도록 합니다.</p>
 
-<h2 id="환자감시통합모니터링">환자감시통합모니터링</h2>
+<p><img src="/img/posts/plc_program.png" alt="PLC Program Read Write" /></p>
 
-<p>에어릭스는 의료IoMT 플랫폼의 핵심기능인 환자감시통합모니터링 시스템을 담당하고 있습니다. 환자감시통합모니터링 시스템을 위한 IRS서버를 구축하고,
-이를 통해서 다양한 병원 내 시스템과 연계하여 데이터를 수집/중계하고 있습니다. 이러한 데이터들을 시각화하여 웹 화면을 통해서 환자감시통합모니터링
-서비스를 제공하고 있습니다.</p>
+<ul>
+  <li>모니터링</li>
+</ul>
 
-<p><img src="/img/posts/iomt_rnd_02.png" alt="Image Alt 환자감시통합모니터링" /></p>
+<p>현재 작성된 프로그램에 대해서 디버깅 혹은 동작을 볼 때 사용하게 됩니다. 이 기능을 통해서 프로그램이 내부에서 어떻게 동작을 하고 있는지 확인할 수가 있습니다.</p>
 
-<h2 id="관련-기사-링크">관련 기사 링크</h2>
+<p><img src="/img/posts/plc_monitor.png" alt="PLC Monitoring" /></p>
 
-<p><a href="https://www.etnews.com/20201012000147">전자신문 - 파이디지털헬스케어, 연세의료원과 환자 중심 서비스를 위한 의료 IoMT 플랫폼 구축</a></p>
+<p>① 모니터 → 작성된 프로그램을 디버깅 혹은 동작 과정을 확인하기 위해서 사용이 됩니다.</p>
 
-<p><img src="/img/posts/iomt_rnd_04.png" alt="Image Alt 에어릭스" /></p>]]></content><author><name>sanghoon.lee</name></author><summary type="html"><![CDATA[환경시스템사업부에서 2020년부터 수행하고 있는 정부R&amp;D과제 중 하나인 의료 IoMT 플랫폼 구축 사업을 소개합니다.]]></summary></entry><entry><title type="html">클린팩토리</title><link href="http://localhost:4000/2022/08/31/cleanfactory.html" rel="alternate" type="text/html" title="클린팩토리" /><published>2022-08-31T00:00:00+09:00</published><updated>2022-08-31T00:00:00+09:00</updated><id>http://localhost:4000/2022/08/31/cleanfactory</id><content type="html" xml:base="http://localhost:4000/2022/08/31/cleanfactory.html"><![CDATA[<p>환경시스템사업부에서 올해(2022년)부터 수행하고 있는 정부R&amp;D과제 중 하나인 <code class="language-plaintext highlighter-rouge">클린팩토리</code> 사업을 소개합니다.</p>
+<p>② 시스템 모니터 → PLC 의 메모리 데이터 및 시스템 데이터를 확인하기 위해서 사용이 됩니다.</p>
+
+<h3 id="메모리">메모리</h3>
+
+<hr />
+
+<p>PLC CPU 모듈에는 데이터를 저장하는 메모리가 존재합니다. 메모리는 사용자가 시스템을 구축하기 위해 작성한 사용자 프로그램을 저장하는 <strong>프로그램 메모리</strong>와 운전 중 데이터를 저장하는 디바이스 영역을 제공하는 <strong>데이터 메모리</strong>가 있습니다. 각 모델마다 메모리의 크기와 영역은 다를 수 있습니다. 기본적으로 각 제조사의 사이트에서 해당 제품에 대한 사양을 확인하여 어떤 영역의 메모리가 존재하는지 확인을 하실 수 있습니다. 아래의 그림은 XGI 시리즈의 데이터 메모리 사양 부분을 나타내는 그림입니다.</p>
+
+<p><img src="/img/posts/plc_memory.png" alt="PLC Memory Spec" /></p>
+
+<p>데이터 메모리 영역마다 특징이 존재하고 있습니다. 몇 가지만 알아보도록 하겠습니다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>구분</th>
+      <th>특징</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>직접 변수</td>
+      <td>프로그램에 사용되는 변수 값을 저장하기 위해서 사용할 때</td>
+    </tr>
+    <tr>
+      <td>시스템 플래그</td>
+      <td>CPU에 이미 선언되어 PLC 상태를 나타내거나 동작 설정에 대해서 나타낼 때</td>
+    </tr>
+    <tr>
+      <td>아날로그 데이터</td>
+      <td>아날로그 , 고속카운트, 온도, 위치결정 등 아날로그의 데이터를 사용할 때</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>고속 링크 플래그</td>
+      <td>고속 링크 통신 기능을 수행할 때 통신의 응답 진단을 위해서 사용할 때</td>
+    </tr>
+    <tr>
+      <td>서비스 상태와 에러 내용을 확인 가능</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P2P 파라미터</td>
+      <td>P2P에서 파라미터 측정한 내용</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>메모리 영역에 ‘리테인 설정’을 하게되면 PLC가 정지(종료) 후 재 가동을 하여도 메모리의 데이터가 지워지지 않고 계속해서 유지하고 있습니다. 이전 데이터가 계속 유지가 되어야 한다면 리테인 설정이 가능한 메모리 영역에서 작업을 하는 것이 좋습니다.</p>
+
+<h3 id="주소-체계-표현">주소 체계 표현</h3>
+
+<hr />
+
+<p>모든 PLC는 비트(Bit)로 데이터를 표현하고 계산을 하는데, 이 비트들이 모여서 단위를 다음과 같이 나타내게 됩니다.</p>
+
+<ul>
+  <li>비트 (Bit) ⇒ 1 Bit</li>
+  <li>바이드(Byte) ⇒ 1 Byte = 8 Bit</li>
+  <li>워드(Word) ⇒ 1 Word = 2 Byte = 16 Bit</li>
+  <li>더블워드(Double Word) ⇒ 1 Double Word = 2 Word = 4 Byte = 32 Bit</li>
+  <li>롱워드(Long Word) ⇒ 1 Long Word = 2 Double Word = 4 Word = 8 Byte = 64 Bit</li>
+</ul>
+
+<p>단위가 나타내는 내용은 다음과 같이 주소에서 표현을 할 수 있습니다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>단위</th>
+      <th>표현</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bit</td>
+      <td>X</td>
+    </tr>
+    <tr>
+      <td>Byte</td>
+      <td>B</td>
+    </tr>
+    <tr>
+      <td>Word</td>
+      <td>W</td>
+    </tr>
+    <tr>
+      <td>Double Word</td>
+      <td>D</td>
+    </tr>
+    <tr>
+      <td>Long Word</td>
+      <td>L</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>위에 설명한 내용을 종합적으로 합쳐서 PLC의 메모리 주소에 접근할 때 나타내는 주소의 표현을 예를 들어서 설명하겠습니다.</p>
+
+<p>예를 들어 메모리 영역 중 ‘M’의 주소 ‘1번지’의 단위는 ‘워드’를 나타낼 때 ‘%MW0001’로 표현을 하게 됩니다. 실제 PLC 프로그램에서는 ‘%’ 문구를 생략하여 사용할 수 있지만 PLC와 통신 프로토콜을 이용하여 사용할 때에는 붙여서 사용하게 됩니다.</p>
+
+<aside>
+💡 LS 산전 PLC 에서는 주소를 나타낼 때 앞에 ‘%’ 문구 포함됨
+
+</aside>
+
+<hr />
+
+<p>여기까지 설명한 내용이 PLC를 설정하거나 프로그램을 작성할 때 사용되는 툴에 대한 설명과 PLC의 메모리가 어떤 종류가 있으며 해당 메모리를 어떻게 사용이 되는지, 메모리의 데이터에 접근하기 위해서 지정되는 주소 체계 방식에 대해서 설명하였습니다. 다음 내용에는 PLC의 통신 프로토콜 구조와 통신 프로토콜을 통한 인터페이스 방식에 대해서 설명을 하도록 하겠습니다.</p>]]></content><author><name>yeonggyu.kim</name></author><summary type="html"><![CDATA[(2) PLC [프로그램 툴, 메모리, 주소체계]]]></summary></entry><entry><title type="html">(1) PLC [PLC 개요, 동작, 분류, 프로그램]</title><link href="http://localhost:4000/2022/09/05/plc_overview.html" rel="alternate" type="text/html" title="(1) PLC [PLC 개요, 동작, 분류, 프로그램]" /><published>2022-09-05T00:00:00+09:00</published><updated>2022-09-05T00:00:00+09:00</updated><id>http://localhost:4000/2022/09/05/plc_overview</id><content type="html" xml:base="http://localhost:4000/2022/09/05/plc_overview.html"><![CDATA[<h1 id="1-plc-plc-개요-동작-분류-프로그램">(1) PLC [PLC 개요, 동작, 분류, 프로그램]</h1>
+
+<p>PLC 통신 프로토콜을 통해서 PC와 인터페이스를 할 수 있도록 개발을 하면서 필요한 PLC에 대한 내용들을 작성해봅니다. 우선적으로, PLC가 어떤 것인지 그리고 어떻게 구성이 되어있고 동작 방식에 대해서 작성하였습니다.</p>
+
+<h3 id="plc">PLC</h3>
+
+<p><strong>Programmable Login Control</strong> 의 약자로 <code class="language-plaintext highlighter-rouge">프로그램</code> 가능한 <code class="language-plaintext highlighter-rouge">논리 제어 장치</code>를 나타내며, 과거 릴레이 회로 제어의 불편함을 개선하기 위해서 개발이 되었습니다. 배선을 프로그램이 대신해서 기계를 동작 시킵니다.</p>
+
+<p><img src="/img/posts/plc_image.png" alt="Image Alt PLC" /></p>
+
+<h3 id="동작">동작</h3>
+
+<p>동작 방식은 입력 장치(센서 정보)로 받아들인 뒤에 메모리에 작성되어 있는 프로그램에 의해서 순차적으로 논리를 처리하고 결과를 출력하여 외부 장치를 제어하는 방식으로 <code class="language-plaintext highlighter-rouge">직렬 처리 방식</code>입니다.</p>
+
+<h3 id="분류">분류</h3>
+
+<p>PLC를 분류하자면 <strong>일체형</strong>과 <strong>모듈형</strong>으로 나눌 수 있습니다.</p>
+
+<ul>
+  <li>일체형</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">하나의 장치</code>에 전원장치 , CPU , 메모리 , 입출력 기능이 모두 들어있습니다.  보통 일체형 PLC는 <strong>소형</strong>으로 제작되어 모듈형 PLC 보다 <code class="language-plaintext highlighter-rouge">저사양</code>으로 간단한 설비의 자동화나 단독 제어 설비에 사용이 되어집니다.</p>
+
+<ul>
+  <li>모듈형</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">기능에 따라서 모듈</code>로 나뉘어져 있으며 <strong>전원, 연산, 입력, 출력</strong>으로 4가지로 구성되어 있다고 볼 수 있다. 전원은 PLC에 파워를 공급해주는 파워모듈, 연산은 논리/산술 연산 처리 와 메모리 가능을 담당하는 CPU 모듈, 입력은 외부의 신호를 받을 수 있는 모듈, 출력은 연산을 처리한 뒤 결과를 외부 신호로 보내는 모듈을 나타냅니다.</p>
+
+<p>PLC 모듈을 찾다보면 <code class="language-plaintext highlighter-rouge">특수 모듈</code>이라는 것이 있는데 특수 모듈은 <code class="language-plaintext highlighter-rouge">고도화되거나 특수한 작업</code>이 필요한 경우에 대해서 사용되어 지는 모듈입니다. 예를 들어서 온도 제어 혹은 위치 결정 제어 등이 있습니다.</p>
+
+<h3 id="프로그램">프로그램</h3>
+
+<p>PLC 프로그램을 하기 위해 당연하게도 언어가 사용이 됩니다. 그 언어의 종류는 LD (래더), ST(구조 언어), FB(기능 블록) 등 존재합니다. 제가 가장 많이 본 것은 래더 언어이며 PLC 프로그램 예시를 찾다보면 흔하게 만날 수 있습니다. 래더는 아래의 이미지와 같이 생겼습니다.</p>
+
+<p><img src="/img/posts/plc_ld.png" alt="Image Alt LD" /></p>
+
+<p>여기서 가장 중요한 것은 <code class="language-plaintext highlighter-rouge">마지막에 END가 들어가야 한다는 것</code>입니다. 마지막에 END가 나타내는 것이 프로그램이 끝났다는 것을 알려주는 것 입니다.</p>
+
+<p>다음으로, 개발자의 입장에서 가장 친근하게 접근할 수 있는 ST(구조 언어)입니다. 이미지와 같이 C 언어나 Java 등 개발 언어에 사용하는 방식과 같이 사용이 된다는 것을 확인할 수 있습니다.</p>
+
+<p><img src="/img/posts/plc_st.png" alt="Image Alt ST" /></p>
+
+<p>그 외에도 언어의 종류가 더 있지만 여기에선 생략하고 넘어가도록 하겠습니다..</p>
+
+<p>프로그램을 작성하였다면 어떤 방식으로 진행이 되는 지가 궁금할 것이라고 생각이 됩니다. PLC 프로그램은 순차적으로 실행이 됩니다. 
+여기에서 LD 언어로 작성된 프로그램이 동작한다고 가정하였을 때, 프로그램은 위에서 순차적으로 내려올 것 입니다. 이때, 마지막에 만나는 END 지점에 도착했다고 끝나는 것이 아니라 다시 처음부터 시작이 됩니다. 이렇게 프로그램이 계속해서 실행이 되고 있다고 보면 될 것입니다. 
+이 부분에서 상세히 설명하면 일정한 스캔 주기마다 프로그램이 순차적으로 실행이 되고 있기 때문에 입력 신호가 변경이 되더라도 프로그램을 다시 스캔되지 않는 이상 처리되지 않고 있다가 다시 스캔이 시작되고 나서야 처리가 된다고 볼 수 있습니다. 
+여기에서 프로그램 1바퀴를 다 도는 것을 ‘<code class="language-plaintext highlighter-rouge">1 스캔</code>‘이라고 부르며 하나의 접점에 대해서는 ‘<code class="language-plaintext highlighter-rouge">1 스탭</code>‘이라고 합니다. 개발자의 입장에서 이벤트 처리 방식과는 다르다고 볼 수 있습니다. PLC 프로그램이 대기 형태를 가지고 있는 것이 아닌 지속적인 스캔이 되어서 해당 신호에 맞게 처리가 되고 있다고 이해하면 될 것 같습니다.</p>
+
+<hr />
+
+<p>여기까지 설명한 내용이 PLC가 어떤 것이고 동작 방식과 프로그램이 어떻게 동작하는 것인지에 대해서 간략하게 설명을 했습니다. 다음 내용에는 PLC 프로그램 사용에 쓰이는 도구와 PLC 메모리 구조 내용들에 대해서 설명을 하도록 하겠습니다.</p>]]></content><author><name>yeonggyu.kim</name></author><summary type="html"><![CDATA[(1) PLC [PLC 개요, 동작, 분류, 프로그램]]]></summary></entry><entry><title type="html">클린팩토리</title><link href="http://localhost:4000/2022/08/31/cleanfactory.html" rel="alternate" type="text/html" title="클린팩토리" /><published>2022-08-31T00:00:00+09:00</published><updated>2022-08-31T00:00:00+09:00</updated><id>http://localhost:4000/2022/08/31/cleanfactory</id><content type="html" xml:base="http://localhost:4000/2022/08/31/cleanfactory.html"><![CDATA[<p>환경시스템사업부에서 올해(2022년)부터 수행하고 있는 정부R&amp;D과제 중 하나인 <code class="language-plaintext highlighter-rouge">클린팩토리</code> 사업을 소개합니다.</p>
 
 <p>과제의 정식명칭은 <code class="language-plaintext highlighter-rouge">제조 사업장 내 클린팩토리 진단∙관리 서비스 제공을 위한 고성능 센서 및 AI기반의 클라우드 서비스형 산업용 IoT플랫폼 개발</code>이며, 과제명이
 길다보니 줄여서 그냥 <strong>클린팩토리</strong>과제로 부르고 있습니다.</p>
@@ -120,7 +391,56 @@
 
 <p><a href="https://eiec.kdi.re.kr/policy/materialView.do?num=226520&amp;topic=O&amp;pp=20&amp;datecount=&amp;recommend=&amp;pg=">KDI 경제정보센터 - 중기부/과기정통부, 스마트 제조혁신 기술개발(R&amp;D) 2,418억원 지원</a></p>
 
-<p><img src="/img/posts/iomt_rnd_04.png" alt="Image Alt 에어릭스" /></p>]]></content><author><name>sanghoon.lee</name></author><summary type="html"><![CDATA[환경시스템사업부에서 올해(2022년)부터 수행하고 있는 정부R&amp;D과제 중 하나인 클린팩토리 사업을 소개합니다.]]></summary></entry><entry><title type="html">새로운 시작</title><link href="http://localhost:4000/2022/08/26/starting.html" rel="alternate" type="text/html" title="새로운 시작" /><published>2022-08-26T00:00:00+09:00</published><updated>2022-08-26T00:00:00+09:00</updated><id>http://localhost:4000/2022/08/26/starting</id><content type="html" xml:base="http://localhost:4000/2022/08/26/starting.html"><![CDATA[<p>안녕하세요? 에어릭스 환경시스템사업부의 기술연구소장과 개발팀장을 겸직하고 있는 이상훈입니다.</p>
+<p><img src="/img/posts/iomt_rnd_04.png" alt="Image Alt 에어릭스" /></p>]]></content><author><name>sanghoon.lee</name></author><summary type="html"><![CDATA[환경시스템사업부에서 올해(2022년)부터 수행하고 있는 정부R&amp;D과제 중 하나인 클린팩토리 사업을 소개합니다.]]></summary></entry><entry><title type="html">의료 IoMT 플랫폼 구축</title><link href="http://localhost:4000/2022/08/31/iomt_rnd.html" rel="alternate" type="text/html" title="의료 IoMT 플랫폼 구축" /><published>2022-08-31T00:00:00+09:00</published><updated>2022-08-31T00:00:00+09:00</updated><id>http://localhost:4000/2022/08/31/iomt_rnd</id><content type="html" xml:base="http://localhost:4000/2022/08/31/iomt_rnd.html"><![CDATA[<p>환경시스템사업부에서 2020년부터 수행하고 있는 정부R&amp;D과제 중 하나인 <code class="language-plaintext highlighter-rouge">의료 IoMT 플랫폼</code> 구축 사업을 소개합니다.</p>
+
+<p>저희 에어릭스에서 스마트팩토리 시스템 구축시 제조현장의 정보를 수집하기 위해서만 사용해오던 IoT기술을 의료영역이라는
+전혀 다른 분야에 적용해보는 도전적인 성격의 과제였습니다. 하지만 다행히 큰 문제없이 3년차 연구까지 진행되고 있습니다. 
+현재 저희 에어릭스가 담당한 <code class="language-plaintext highlighter-rouge">환자감시통합모니터링</code> 시스템은 개발이 끝나고, <code class="language-plaintext highlighter-rouge">신촌세브란스 병원 응급진료센터</code>에 설치되어 시범적으로 운영되고 
+있는 상황입니다.</p>
+
+<h2 id="연구개발과제-개요">연구개발과제 개요</h2>
+
+<p>본 연구개발과제의 개요는 다음과 같습니다.</p>
+
+<ul>
+  <li>과제명 : <code class="language-plaintext highlighter-rouge">환자중심 의료서비스 제공을 위한 인공지능, 클라우드, WiFi6 기반의 병원 대상 IoMT 표준 플랫폼 개발 및 임상 적용</code></li>
+  <li>내역사업 : 4차 산업혁명 및 미래 의료 환경 선도</li>
+  <li>발주처 : 범부처전주기의료기기연구개발사업단</li>
+  <li>사업기간 : 2020.09 ~ 2024.12 (4년4개월)</li>
+  <li>총 예산 : 93억원(정부출연금 67.5억)</li>
+  <li>컨소시움 구성 :
+    <ul>
+      <li>주관연구기관 - <code class="language-plaintext highlighter-rouge">헤론헬스정보시스템(구 파이디지털헬스케어)</code></li>
+      <li>공동연구기관 - <code class="language-plaintext highlighter-rouge">에어릭스</code>, 연세대학교 산학협력단, LG전자, DKI, 오성시스템, 인포마크, 라이튼테크놀로지, 메인텍, AITRICS</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="연구개발의-필요성">연구개발의 필요성</h2>
+
+<p><img src="/img/posts/iomt_rnd_03.png" alt="Image Alt 연구개발의 필요성" /></p>
+
+<h2 id="전체-시스템-구성">전체 시스템 구성</h2>
+
+<p>본 연구개발과제는 비대면 사회 변화에 맞추어 환자중심 의료서비스 제공을 위해서 끊김 없는 데이터 획득(Seamless), 실시간 통합 모니터링(Synchronous),
+정교한 예측 서비스 구현(Sophisticated), 병원정보시스템과 다양한 IoMT 기기연동이 가능하도록 <code class="language-plaintext highlighter-rouge">의료IoMT 플랫폼</code>을 구축하는 것을 목표로
+하고 있습니다.</p>
+
+<p><img src="/img/posts/iomt_rnd_01.png" alt="Image Alt 전체시스템구성" /></p>
+
+<h2 id="환자감시통합모니터링">환자감시통합모니터링</h2>
+
+<p>에어릭스는 의료IoMT 플랫폼의 핵심기능인 환자감시통합모니터링 시스템을 담당하고 있습니다. 환자감시통합모니터링 시스템을 위한 IRS서버를 구축하고,
+이를 통해서 다양한 병원 내 시스템과 연계하여 데이터를 수집/중계하고 있습니다. 이러한 데이터들을 시각화하여 웹 화면을 통해서 환자감시통합모니터링
+서비스를 제공하고 있습니다.</p>
+
+<p><img src="/img/posts/iomt_rnd_02.png" alt="Image Alt 환자감시통합모니터링" /></p>
+
+<h2 id="관련-기사-링크">관련 기사 링크</h2>
+
+<p><a href="https://www.etnews.com/20201012000147">전자신문 - 파이디지털헬스케어, 연세의료원과 환자 중심 서비스를 위한 의료 IoMT 플랫폼 구축</a></p>
+
+<p><img src="/img/posts/iomt_rnd_04.png" alt="Image Alt 에어릭스" /></p>]]></content><author><name>sanghoon.lee</name></author><summary type="html"><![CDATA[환경시스템사업부에서 2020년부터 수행하고 있는 정부R&amp;D과제 중 하나인 의료 IoMT 플랫폼 구축 사업을 소개합니다.]]></summary></entry><entry><title type="html">새로운 시작</title><link href="http://localhost:4000/2022/08/26/starting.html" rel="alternate" type="text/html" title="새로운 시작" /><published>2022-08-26T00:00:00+09:00</published><updated>2022-08-26T00:00:00+09:00</updated><id>http://localhost:4000/2022/08/26/starting</id><content type="html" xml:base="http://localhost:4000/2022/08/26/starting.html"><![CDATA[<p>안녕하세요? 에어릭스 환경시스템사업부의 기술연구소장과 개발팀장을 겸직하고 있는 이상훈입니다.</p>
 
 <p>저는 에어릭스에 입사하기 전 <code class="language-plaintext highlighter-rouge">스마트팩토리</code>와는 전혀 상관없는 신용(현금)카드 혹은 USIM카드로 사용되는 IC카드용 운영체제 및 어플리케이션 개발 업무를 했었습니다. 그러다가 우연히 에어릭스에 입사하게 되었는데, 벌써 2년 가까운 시간이 흘렀습니다. 정말로 시간의 흐름이 빠른 것 같습니다. 
 시간이 흘렀어도 여전히 <code class="language-plaintext highlighter-rouge">스마트팩토리</code> 는 여전히 어려운 분야인 것 같습니다.</p>
