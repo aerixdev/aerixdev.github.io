@@ -181,15 +181,15 @@ Infinite : 무한반복
 사용하고 있는 Broker 서버에 100, 200, 400, 800, 1200개의 접속이 5분동안 발생하는 경우를 가정하여 테스트한 TPS 결과입니다.
 
 100개의 접속을 가정한 경우
-
+![](/img/posts/thingarx_100.png)
 200개의 접속을 가정한 경우
-
+![](/img/posts/thingarx_200.png)
 400개의 접속을 가정한 경우
-
+![](/img/posts/thingarx_400.png)
 800개의 접속을 가정한 경우
-
+![](/img/posts/thingarx_800.png)
 1200개의 접속을 가정한 경우
-
+![](/img/posts/thingarx_1200.png)
 ### 6. 최종 결과
 
 저희는 JMeter을 이용하여 구축한 시스템을 통하여 MQTT 서버의 TPS를 측정할 수 있었고 MQTT가 아닌 다른 서버에도 TPS를 측정할 수 있는 서버를 구축하는 경험을 할 수 있었습니다.
