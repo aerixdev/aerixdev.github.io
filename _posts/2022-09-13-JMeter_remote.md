@@ -1,8 +1,7 @@
 # Broker 서버의 TPS 측정을 위한 JMeter Remote 구축기
-
+### 강민구, 강민석
 참조한 공식 문서 : [https://jmeter.apache.org/usermanual/remote-test.html](https://jmeter.apache.org/usermanual/remote-test.html)
 
-안녕하세요. 에어릭스 환경시스템 사업부 개발팀의 강민석 사원, 강민구 사원입니다. 이번에 저희는 JMeter을 활용하여 Master(제어) - Slave(Remote) 형태로 구성된 시스템을 구축하여 MQTT 서버의 TPS를 측정하는 작업을 진행했습니다. 이 포스팅에서 저희는 진행했던 작업과 겪었던 문제들, 과정을 담고자 합니다.
 
 ## TPS 측정 배경
 
