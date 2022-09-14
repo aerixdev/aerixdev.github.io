@@ -1,5 +1,10 @@
-# Broker 서버의 TPS 측정을 위한 JMeter Remote 구축기
-### 강민구, 강민석
+---
+title: "Broker 서버의 TPS 측정을 위한 JMeter Remote 구축기"
+subtitle: 테스트 환경 구축과 결과값
+layout: post
+author: 강민구, 강민석
+---
+
 참조한 공식 문서 : [https://jmeter.apache.org/usermanual/remote-test.html](https://jmeter.apache.org/usermanual/remote-test.html)
 
 
