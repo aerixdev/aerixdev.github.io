@@ -25,6 +25,8 @@
 
 ## 구축기
 
+![jmeter](/img/posts/jmeter.png)
+
 ### 1. 부하 서버로 사용될 컴퓨터들을 모으기
 
 정확한 테스트를 위해서 부하를 거는 서버가 여러 대인 상황에서 제어 서버를 통해서 명령을 내려서 목적지의 서버에 부하를 거는 상황이 바람직하기 때문에 개발팀의 내부에서 사용하지 않는 컴퓨터를 모았습니다.
@@ -156,9 +158,8 @@ Copy the generated rmi_keystore.jks to jmeter/bin folder or reference it in prop
 
 JMeter 실행 후 다음과 같은 같은 화면을 볼 수 있으며 테스트 계획을 설정한 후에 테스트할 수 있습니다. 여기에서는 간단한 예제로써 쓰레드 그룹을 만든 후에 간단한 HTTP Request 요청을 시도하겠습니다.
 
-![https://www.notion.so/img/posts/jmeter_home.png](https://www.notion.so/img/posts/jmeter_home.png)
-
-![https://www.notion.so/img/posts/jmeter_thread.png](https://www.notion.so/img/posts/jmeter_thread.png)
+![](/img/posts/jmeter_home.png)
+![](/img/posts/jmeter_thread.png)
 
 Number of Threads : 사용자 수
 
@@ -168,13 +169,12 @@ Loop Count : 반복 횟수
 
 Infinite : 무한반복
 
-![https://www.notion.so/img/posts/jmeter_http.png](https://www.notion.so/img/posts/jmeter_http.png)
-
-![https://www.notion.so/img/posts/jmeter_request.png](https://www.notion.so/img/posts/jmeter_request.png)
+![](/img/posts/jmeter_http.png)
+![](/img/posts/jmeter_request.png)
 
 테스트 계획 설정이 끝났으면 다음과 같이 슬레이브에 테스트를 명령합니다.
 
-![https://www.notion.so/img/posts/jmeter_remote.png](https://www.notion.so/img/posts/jmeter_remote.png)
+![](/img/posts/jmeter_remote.png)
 
 ### 5. 실제 테스트 결과
 
