@@ -1,6 +1,6 @@
 ---
 title: "MQTT 서버 보안성 강화하기"
-subtitle: 보안장치의 부재
+subtitle: 잘못된 설정 바로잡기
 layout: post
 author: sanghoon.lee
 ---
