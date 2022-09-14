@@ -69,7 +69,7 @@ PLC 네트워크 설정을 하였다면, 프로그램 툴을 통해서 PLC의 �
 
 ② 시스템 모니터 → PLC 의 메모리 데이터 및 시스템 데이터를 확인하기 위해서 사용이 됩니다.
 
-프로그램 다운 링크 : https://www.ls-electric.com/ko/download/?dc_id=6
+프로그램 다운 링크 : <https://www.ls-electric.com/ko/download/?dc_id=6>
 
 ### 메모리
 
