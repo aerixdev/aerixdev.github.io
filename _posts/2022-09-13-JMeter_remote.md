@@ -1,91 +1,164 @@
-# JMeter Remote를 통한 부하 테스트
+# Broker 서버의 TPS 측정을 위한 JMeter Remote 구축기
 
-공식 문서 : [https://jmeter.apache.org/usermanual/remote-test.html](https://jmeter.apache.org/usermanual/remote-test.html)
+참조한 공식 문서 : [https://jmeter.apache.org/usermanual/remote-test.html](https://jmeter.apache.org/usermanual/remote-test.html)
 
-### 개요
+안녕하세요. 에어릭스 환경시스템 사업부 개발팀의 강민석 사원, 강민구 사원입니다. 이번에 저희는 JMeter을 활용하여 Master(제어) - Slave(Remote) 형태로 구성된 시스템을 구축하여 MQTT 서버의 TPS를 측정하는 작업을 진행했습니다. 이 포스팅에서 저희는 진행했던 작업과 겪었던 문제들, 과정을 담고자 합니다.
 
-Apache Jmeter를 이용하면 개발 중인 서버나 디바이스 등에 간단하게 부하 테스트를 진행 할 수 있다. 하지만 부하 테스트를 수행하는 PC에도 높은 부하가 걸리기 때문에 원활한 테스트가 이루어지지 않을 수 있다.
+## TPS 측정 배경
 
-이런 경우 마스터 PC는 부하 테스트 명령, 실행 결과 분석에만 이용하고 여러대의 PC나 서버를 슬레이브로 묶어 마스터 대신 작업을 수행할 수 있다.
+저희가 사용하고 있는 MQTT Broker 서버는 성능을 대략적으로만 파악하고 있는 상황이었습니다. 하지만 운용 단계에서는 생각보다 더 많은 부하가 걸리는 상황이 발생하기 때문에 서버가 최대로 처리할 수 있는 한계를 명확하게 파악하는 일이 필요했고 이를 경험이나 감에 맡기는 것은 바람직하지 않기 때문에 TPS(1초당 처리량)이라는 기준을 통해서 성능을 판단하는 방향으로 개선하기로 결정했기 때문입니다.
 
-![jmeter](/img/posts/jmeter.png)
+## TPS의 측정 도구로 JMeter을 선정한 이유
 
-### 목차
+1. 무료
+    
+    회사에서 사용하는 도구이기 때문에 라이센스는 중요한 문제입니다. JMeter의 경우 Apache 라이센스를 채택하여 공개된 오픈소스라는 장점이 있습니다.
+    
+2. 다양한 플러그인
+    
+    플러그인을 통해서 편의성을 높여주는 기능을 추가할 수 있으며 무엇보다도 MQTT 서버를 테스트하는 만큼 MQTT 프로토콜을 지원해야만 했고 JMeter의 경우 이를 MQTT 플러그인을 통하여 지원하고 있습니다. 
+    
+3. Remote를 통하여 부하 시스템을 구축할 수 있다.
+    
+    1개의 컴퓨터로 서버에 부하를 거는 것보다는 다수의 컴퓨터에 서버로 부하를 거는 것이 보다 더 정확하게 부하를 걸 수 있으며 JMeter는 Remote 기능을 통하여 이러한 시스템을 손쉽게 구축하는 것이 가능한 도구입니다.
+    
 
-1. Java 버전 확인
-2. Jmeter 및 plugin 설치
-3. Jmeter 설정 및 실행
-4. 테스트 계획 설정 및 테스트
-5. 문제해결
+## 구축기
 
-### 1. Java 버전 확인
+### 1. 부하 서버로 사용될 컴퓨터들을 모으기
 
-Jmeter 설치 시 마스터와 모든 슬레이브들의 Java버전, Jmeter 버전을 동일하게 사용해야 에러를 피할 수 있다.
+정확한 테스트를 위해서 부하를 거는 서버가 여러 대인 상황에서 제어 서버를 통해서 명령을 내려서 목적지의 서버에 부하를 거는 상황이 바람직하기 때문에 개발팀의 내부에서 사용하지 않는 컴퓨터를 모았습니다.
 
-자바 버전을 확인하여 같은 버전으로 맞춰주고, Jmeter는 같은 압축 파일을 이용해 설치하면 실수를 피할 수 있을 것이다.
+### 2. 사용될 JMeter 만들기
 
-```bash
+마스터 서버(제어)와 슬레이브 서버(Remote)에서 JMeter은 동일한 자바 버전과 동일한 플러그인, 그리고 동일한 JMeter을 가져야 합니다. 이를 위해서 플러그인을 설치하여 커스텀한 JMeter을 만들고 이 JMeter을 각 서버에 배포하는 형태로 진행되었습니다.
+
+### 2.1. 자바 버전의 확인
+
+공식 문서에서 JMeter의 자바 버전은 제어 서버와 Remote 서버가 동일한 상황을 권장하고 있습니다. 자바 버전은 다음과 같은 명령어로 확인할 수 있습니다.
+
+```jsx
 //java 버전 확인
 java --version
 ```
 
-### 2. JMeter 및 plugin 설치
+### 2.2. JMeter 플러그인의 설치 장소
 
-Jmeter는 공식 페이지에서 받거나 wget 명령어로 가져올 수 있다. 앞서 설명한 대로 같은 버전으로 맞춰 주는것이 중요하다.
+기본적으로 플러그인의 설명에 나와있으나 보통은 JMeter 폴더의 /lib 또는 /lib/ext입니다.
 
-```bash
-//설치 페이지
-https://jmeter.apache.org/download_jmeter.cgi
+### 2.3. 유용한 플러그인
 
-//linux 다운로드, 압축해제
-wget https://downloads.apache.org//jmeter/binaries/apache-jmeter-5.5.zip
+JMeter Plugins Manager : [https://jmeter-plugins.org/wiki/PluginsManager/](https://jmeter-plugins.org/wiki/PluginsManager/)
 
-unzip apache-jmeter-5.5.zip
+JMeter의 플러그인을 손쉽게 관리하고 추가할 수 있는 플러그인입니다.
+
+Response Times Over Time: [https://jmeter-plugins.org/?search=jpgc-graphs-basic](https://jmeter-plugins.org/wiki/ResponseTimesOverTime/)
+
+측정 결과를 그래프로 확인할 수 있는 플러그인입니다.
+
+mqtt-jmeter : [https://github.com/emqx/mqtt-jmeter](https://github.com/emqx/mqtt-jmeter)
+
+MQTT 프로토콜을 측정할 수 있는 플러그인입니다.
+
+### 3. JMeter 연동하기
+
+설정한 JMeter을 배포하고 슬레이브 서버들을 실행시킨 후에 연동하여 제어 서버에서 명령을 내리면 총 4대의 서버가 목적지 서버에 부하를 거는 시스템을 구성하였습니다.
+
+### 3.1. JMeter의 연동 및 실행방법
+
+마스터의 설정 파일을 수정하여 슬레이브들의 주소를 등록합니다. 포트 번호는 따로 설정하지 않으면 디폴트 값 1099로 설정됩니다.
+
 ```
-
-Jmeter는 다양한 plugin을 지원하여 자신에게 필요한 기능을 골라 설치하여 이용할 수 있다. plugin 또한 마스터와 슬레이브 양쪽에 동일하게 설치해줘야 에러를 피할 수 있다.
-
-plugin 마다 설치법이 약간씩 다르므로 주의하여 설치하자. Jmeter 하위 폴더의 lib 또는 lib/ext에 설치한다.
-
-```bash
-//plugin 설치 페이지
-[https://jmeter-plugins.org/](https://jmeter-plugins.org/)
-
-//추천 plugin
-1. jpgc-graphs-basic-2.0 : 데이터를 그래프로 표시
-
-2. JMeter Plugins Manage : plugin 관리 매니저
-```
-
-### 3. Jmeter 설정 및 실행
-
-마스터의 설정 파일을 수정하여 슬레이브들의 주소를 등록한다. 포트 번호는 따로 설정하지 않으면 디폴트 값 1099로 설정된다.
-
-```bash
 // ../bin/jmeter.properties
 ...
 # Remote Hosts - comma delimited
 remote_hosts=127.0.0.1,xxx.xx.xxx.xx,..
+
 ```
 
-이후 jmeter를 실행한다. 마스터와 슬레이브의 실행파일이 다르므로 주의하여 진행한다.
+설정을 마친 후에 jmeter을 실행합니다. 이때 마스터와 슬레이브의 실행파일이 다르므로 주의해서 진행해야 합니다.  슬레이브들의 주소들이 정상적으로 등록된 경우에 실행 - 원격란에서 확인할 수 있습니다.
 
-```bash
+```
 //마스터
 jmeter.bat (윈도우) / jmeter.sh (리눅스)
 
 //슬레이브
-jmeter-server.bat / jmeter-server.sh(리눅스)
+jmeter-server.bat / jmeter-server(리눅스)
+
+```
+
+### 3.2. Linux 관련 문제
+
+linux의 경우 다음과 같은 메시지와 함께 정상적으로 실행되지 않는 문제가 있을 수 있습니다.
+
+java.rmi.RemoteException: Cannot start. OO is a loopback address.
+
+이러한 문제가 발생하는 경우 hostname을 기기의 IP 주소로 지정하여 실행시키는 방법으로 해결할 수 있습니다.
+
+./jmeter-server -D java.rmi.server.hostname=IP 주소
+
+### 3.3. 연동이 제대로 이루어지지 않는 경우
+
+기본적으로 제어 포트에 해당하는 포트는 제어 서버와 슬레이브 서버 모두가 통신이 허용되어야만 합니다. 
+
+1. 방화벽 해제(ubuntu 기준)
+
+```
+ufw disable
+
+```
+
+1. 포트 허용(ubuntu 기준)
+
+```
+ufw allow 1099
+
+```
+
+### 3.4 SSL 문제
+
+SSL 오류가 발생하는 경우 SSL을 아예 사용하지 않도록 jmeter.properties에 다음과 같이 설정하거나 SSL 설정 후 진행합니다.
+
+### 3.4.1 SSL 해제
+
+```
+server.rmi.ssl.disable=true
+```
+
+### 3.4.2 SSL 설정
+
+```
+$ cd jmeter/bin
+$ ./create-rmi-keystore.sh
+What is your first and last name?
+  [Unknown]:  rmi
+What is the name of your organizational unit?
+  [Unknown]:  My unit name
+What is the name of your organization?
+  [Unknown]:  My organisation name
+What is the name of your City or Locality?
+  [Unknown]:  Your City
+What is the name of your State or Province?
+  [Unknown]:  Your State
+What is the two-letter country code for this unit?
+  [Unknown]:  XY
+Is CN=rmi, OU=My unit name, O=My organisation name, L=Your City, ST=Your State, C=XY correct?
+  [no]:  yes
+
+Copy the generated rmi_keystore.jks to jmeter/bin folder or reference it in property 'server.rmi.ssl.keystore.file'
 ```
 
 ### 4. 테스트 계획 설정 및 테스트
 
-jmeter 실행 후 다음과 같은 화면을 볼 수 있으며, 테스트 계획을 설정한 후 테스트 할 수 있다.
+구성된 시스템을 활용하여 목적지인 MQTT 서버의 테스트를 수행했습니다.
 
-스레드 그룹을 만든 후 간단한 http request 요청을 걸어보자.
-![](/img/posts/jmeter_home.png)
-![](/img/posts/jmeter_thread.png)
+### 4.1 JMeter의 사용법
 
+JMeter 실행 후 다음과 같은 같은 화면을 볼 수 있으며 테스트 계획을 설정한 후에 테스트할 수 있습니다. 여기에서는 간단한 예제로써 쓰레드 그룹을 만든 후에 간단한 HTTP Request 요청을 시도하겠습니다.
+
+![https://www.notion.so/img/posts/jmeter_home.png](https://www.notion.so/img/posts/jmeter_home.png)
+
+![https://www.notion.so/img/posts/jmeter_thread.png](https://www.notion.so/img/posts/jmeter_thread.png)
 
 Number of Threads : 사용자 수
 
@@ -95,18 +168,24 @@ Loop Count : 반복 횟수
 
 Infinite : 무한반복
 
-이후 간단한 http 요청 설정을 한다. 
-![](/img/posts/jmeter_http.png)
-![](/img/posts/jmeter_request.png)
+![https://www.notion.so/img/posts/jmeter_http.png](https://www.notion.so/img/posts/jmeter_http.png)
 
-테스트 계획 설정이 끝났으면 다음과 같이 슬레이브에 테스트를 명령한다.
-![](/img/posts/jmeter_remote.png)
+![https://www.notion.so/img/posts/jmeter_request.png](https://www.notion.so/img/posts/jmeter_request.png)
 
-### 5. 문제 해결
+테스트 계획 설정이 끝났으면 다음과 같이 슬레이브에 테스트를 명령합니다.
 
-1. 기본적으로 JMeter의 포트는 1099번을 사용한다. 이 포트로 양방향 통신을 수행할 수 있어야 하기 때문에 방화벽을 해제하거나 SSH 터널링을 사용하여 우회하도록 설정하자.
-2. SSL 오류가 발생하는 경우 SSL을 아예 사용하지 않도록 jmeter.properties에 다음과 같이 설정하거나 SSL 설정 후 진행한다.
+![https://www.notion.so/img/posts/jmeter_remote.png](https://www.notion.so/img/posts/jmeter_remote.png)
 
-```
-server.rmi.ssl.disable=true
-```
+### 5. 실제 테스트 결과
+
+사용하고 있는 Broker 서버에 100, 200, 400, 800, 1200개의 접속이 5분동안 발생하는 경우를 가정하여 테스트한 TPS 결과입니다.
+
+100개의 접속을 가정한 경우
+
+200개의 접속을 가정한 경우
+
+400개의 접속을 가정한 경우
+
+800개의 접속을 가정한 경우
+
+1200개의 접속을 가정한 경우
