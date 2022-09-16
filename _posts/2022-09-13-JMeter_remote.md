@@ -109,14 +109,12 @@ java.rmi.RemoteException: Cannot start. OO is a loopback address.
 
 ```
 ufw disable
-
 ```
 
 1. 포트 허용(ubuntu 기준)
 
 ```
 ufw allow 1099
-
 ```
 
 ### 3.4 SSL 문제
