@@ -2,7 +2,7 @@
 title: "(2) PLC [프로그램 툴, 메모리, 주소체계]"
 subtitle: PLC 메모리와 주소
 layout: post
-author: yeonggyu.kim
+author: 김영규
 ---
 
 # (2) PLC [프로그램 툴, 메모리, 주소체계]

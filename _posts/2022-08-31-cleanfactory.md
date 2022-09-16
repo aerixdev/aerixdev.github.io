@@ -2,7 +2,7 @@
 title: "클린팩토리"
 subtitle: "(정부R&D과제)스마트제조혁신기술개발사업"
 layout: post
-author: sanghoon.lee
+author: 이상훈
 ---
 
 환경시스템사업부에서 올해(2022년)부터 수행하고 있는 정부R&D과제 중 하나인 `클린팩토리` 사업을 소개합니다. 

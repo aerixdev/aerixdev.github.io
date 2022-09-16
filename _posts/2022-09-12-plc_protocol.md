@@ -2,7 +2,7 @@
 title: "(3) PLC [통신 프로토콜, 인터페이스]"
 subtitle: PLC 통신 프로토콜
 layout: post
-author: yeonggyu.kim
+author: 김영규
 ---
 
 # (3) PLC [통신 프로토콜, 인터페이스]
