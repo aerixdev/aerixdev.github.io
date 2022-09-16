@@ -107,8 +107,8 @@
 	],
 	"sourcesContent": [
 		"@import \"styles\";\n",
-		"// Import Core Clean Blog SCSS\r\n@import \"../assets/vendor/startbootstrap-clean-blog/scss/styles.scss\";\r\n@import \"../assets/vendor/startbootstrap-clean-blog/scss/_bootstrap-overrides.scss\";\r\n\r\n",
-		"// Import variables\r\n@import \"./variables\";\r\n\r\n// Import Bootstrap\r\n@import \"../../bootstrap/scss/bootstrap\";\r\n\r\n// Global CSS\r\n@import \"./global\";\r\n\r\n// Components\r\n@import \"./components/buttons\";\r\n@import \"./components/navbar\";\r\n\r\n// Sections\r\n@import \"./sections/contact\";\r\n@import \"./sections/footer\";\r\n@import \"./sections/masthead\";\r\n@import \"./sections/post\";",
+		"// Import Core Clean Blog SCSS\r\n@import \"../assets/vendor/startbootstrap-clean-blog/scss/styles.scss\";\r\n\r\n",
+		"// Import variables\r\n@import \"./variables\";\r\n\r\n// Import Bootstrap\r\n@import \"../../bootstrap/scss/bootstrap\";\r\n\r\n// Global CSS\r\n@import \"./global\";\r\n\r\n// Components\r\n@import \"./components/buttons\";\r\n@import \"./components/navbar\";\r\n\r\n// Sections\r\n@import \"./sections/contact\";\r\n@import \"./sections/footer\";\r\n@import \"./sections/masthead\";\r\n@import \"./sections/post\";\r\n\r\n@import \"./_bootstrap-overrides.scss\";",
 		"@import \"./variables/colors.scss\";\r\n@import \"./variables/typography.scss\";",
 		"// Custom color variables\r\n\r\n$teal: #0085A1;\r\n\r\n$primary: $teal;",
 		"// Override Bootstrap typography variables\r\n\r\n$font-family-base: \"Lora\", -apple-system, BlinkMacSystemFont, \"Segoe UI\",\r\n    Roboto, \"Helvetica Neue\", Arial, sans-serif, \"Apple Color Emoji\",\r\n    \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\";\r\n\r\n$headings-font-family: \"Open Sans\", -apple-system, BlinkMacSystemFont,\r\n    \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, \"Apple Color Emoji\",\r\n    \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\";\r\n",
