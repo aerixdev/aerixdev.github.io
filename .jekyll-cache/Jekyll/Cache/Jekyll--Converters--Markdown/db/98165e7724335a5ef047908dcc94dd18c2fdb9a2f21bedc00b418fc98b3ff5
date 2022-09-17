@@ -1,0 +1,52 @@
+I"�<p>환경시스템사업부에서 2020년부터 수행하고 있는 정부R&amp;D과제 중 하나인 <code class="language-plaintext highlighter-rouge">의료 IoMT 플랫폼</code> 구축 사업을 소개합니다.</p>
+
+<p>저희 에어릭스에서 스마트팩토리 시스템 구축시 제조현장의 정보를 수집하기 위해서만 사용해오던 IoT기술을 의료영역이라는
+전혀 다른 분야에 적용해보는 도전적인 성격의 과제였습니다. 하지만 다행히 큰 문제없이 3년차 연구까지 진행되고 있습니다. 
+현재 저희 에어릭스가 담당한 <code class="language-plaintext highlighter-rouge">환자감시통합모니터링</code> 시스템은 개발이 끝나고, <code class="language-plaintext highlighter-rouge">신촌세브란스 병원 응급진료센터</code>에 설치되어 시범적으로 운영되고 
+있는 상황입니다.</p>
+
+<h2 id="연구개발과제-개요">연구개발과제 개요</h2>
+
+<p>본 연구개발과제의 개요는 다음과 같습니다.</p>
+
+<ul>
+  <li>과제명 : <code class="language-plaintext highlighter-rouge">환자중심 의료서비스 제공을 위한 인공지능, 클라우드, WiFi6 기반의 병원 대상 IoMT 표준 플랫폼 개발 및 임상 적용</code></li>
+  <li>내역사업 : 4차 산업혁명 및 미래 의료 환경 선도</li>
+  <li>발주처 : 범부처전주기의료기기연구개발사업단</li>
+  <li>사업기간 : 2020.09 ~ 2024.12 (4년4개월)</li>
+  <li>총 예산 : 93억원(정부출연금 67.5억)</li>
+  <li>컨소시움 구성 :
+    <ul>
+      <li>주관연구기관 - <code class="language-plaintext highlighter-rouge">헤론헬스정보시스템(구 파이디지털헬스케어)</code></li>
+      <li>공동연구기관 - <code class="language-plaintext highlighter-rouge">에어릭스</code>, 연세대학교 산학협력단, LG전자, DKI, 오성시스템, 인포마크, 라이튼테크놀로지, 메인텍, AITRICS</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="연구개발의-필요성">연구개발의 필요성</h2>
+
+<p><img src="/img/posts/iomt_rnd_03.png" alt="Image Alt 연구개발의 필요성" /></p>
+
+<h2 id="전체-시스템-구성">전체 시스템 구성</h2>
+
+<p>본 연구개발과제는 비대면 사회 변화에 맞추어 환자중심 의료서비스 제공을 위해서 끊김 없는 데이터 획득(Seamless), 실시간 통합 모니터링(Synchronous),
+정교한 예측 서비스 구현(Sophisticated), 병원정보시스템과 다양한 IoMT 기기연동이 가능하도록 <code class="language-plaintext highlighter-rouge">의료IoMT 플랫폼</code>을 구축하는 것을 목표로
+하고 있습니다.</p>
+
+<p><img src="/img/posts/iomt_rnd_01.png" alt="Image Alt 전체시스템구성" /></p>
+
+<h2 id="환자감시통합모니터링">환자감시통합모니터링</h2>
+
+<p>에어릭스는 의료IoMT 플랫폼의 핵심기능인 환자감시통합모니터링 시스템을 담당하고 있습니다. 환자감시통합모니터링 시스템을 위한 IRS서버를 구축하고,
+이를 통해서 다양한 병원 내 시스템과 연계하여 데이터를 수집/중계하고 있습니다. 이러한 데이터들을 시각화하여 웹 화면을 통해서 환자감시통합모니터링
+서비스를 제공하고 있습니다.</p>
+
+<p><img src="/img/posts/iomt_rnd_02.png" alt="Image Alt 환자감시통합모니터링" /></p>
+
+<h2 id="관련-기사-링크">관련 기사 링크</h2>
+
+<p><a href="https://www.etnews.com/20201012000147">전자신문 - 파이디지털헬스케어, 연세의료원과 환자 중심 서비스를 위한 의료 IoMT 플랫폼 구축</a></p>
+
+<p><img src="/img/posts/iomt_rnd_04.png" alt="Image Alt 에어릭스" /></p>
+
+:ET

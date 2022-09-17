@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! Bootstrap v4.6.0 (https://getbootstrap.com/) Copyright 2011-2021 The Bootstrap Authors Copyright 2011-2021 Twitter, Inc. Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE) */
 :root { --blue: #007bff; --indigo: #6610f2; --purple: #6f42c1; --pink: #e83e8c; --red: #dc3545; --orange: #fd7e14; --yellow: #ffc107; --green: #28a745; --teal: #0085A1; --cyan: #17a2b8; --white: #fff; --gray: #6c757d; --gray-dark: #343a40; --primary: #0085A1; --secondary: #6c757d; --success: #28a745; --info: #17a2b8; --warning: #ffc107; --danger: #dc3545; --light: #f8f9fa; --dark: #343a40; --breakpoint-xs: 0; --breakpoint-sm: 576px; --breakpoint-md: 768px; --breakpoint-lg: 992px; --breakpoint-xl: 1200px; --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
@@ -2571,5 +2572,60 @@ header.masthead .post-heading .meta a { color: #fff; }
 .highlight .ss { color: #90a959; }
 
 pre.highlight { white-space: pre-wrap; }
+
+.category-title { background-color: #FFC; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 32px; font-weight: 700; }
+
+article .container { padding: 0; column-gap: 40px; display: grid; grid-template-columns: 1fr 3fr; }
+
+.container .img-box { margin-top: 10px; border-radius: 70%; height: 200px; overflow: hidden; width: 200px; }
+
+.container .img-box .img { height: 100%; object-fit: cover; width: 100%; }
+
+.contents { margin-top: 10px; font-size: 18px; font-weight: 600; }
+
+.contents .name { margin-bottom: 20px; }
+
+.contents .position { color: gray; font-weight: 700; margin-bottom: 10px; }
+
+.contents .timeline > hr { background-color: #e9e9e9; height: 1px; border: 0; text-align: left; margin-left: 0; width: 80px; }
+
+.timeline { margin-top: 0.5em; margin-bottom: 1em; position: relative; max-width: 46em; list-style: none; padding: 0; }
+
+.timeline:before { background-color: black; content: ''; position: absolute; top: 0; left: 0.6em; width: 2px; height: 100%; }
+
+.timeline-event { position: relative; }
+
+.timeline-event:hover .timeline-event-icon { transform: rotate(-45deg); background-color: #a83279; }
+
+.timeline-event:hover .timeline-event-thumbnail { box-shadow: inset 40em 0 0 0 #a83279; }
+
+.timeline-event-copy { position: relative; left: 2em; }
+
+.timeline-event-copy h4 { font-size: 1.2em; margin-bottom: 1em; }
+
+.timeline-event-copy strong { font-weight: 700; }
+
+.timeline-event-icon { transition: transform 0.2s ease-in; transform: rotate(45deg); background-color: black; outline: 10px solid white; display: block; margin: 0.5em 0.5em 0.5em -0.5em; position: absolute; top: 0; left: 0.75em; width: 0.75em; height: 0.75em; }
+
+.timeline-event-thumbnail { transition: box-shadow 0.5s ease-in 0.1s; color: white; font-size: 0.75em; background-color: black; box-shadow: inset 0 0 0 0em #ef795a; display: inline-block; margin-top: 0.3em; margin-bottom: 0.9em; padding: 0.25em 1em 0.2em 1em; }
+
+/* 뱃지 */
+.badge-row { margin-top: 0.5em; margin-bottom: 1em; display: flex; justify-content: flex-start; align-items: center; }
+
+.chip { padding: 6px 10px; border-radius: 3px; font-weight: 600; font-size: 12px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25); margin: 0 10px; }
+
+.chip.primary { background: #2F4058; color: whitesmoke; }
+
+.chip.secondary { background: #242933; color: whitesmoke; }
+
+.chip.warning { background: #FEB904; color: whitesmoke; }
+
+.chip.danger { background: #DA605B; color: whitesmoke; }
+
+.chip.info { background: #5FD6D4; color: whitesmoke; }
+
+.chip.green { background: #22882a; color: whitesmoke; }
+
+.comment { margin: 0.5em 0; font-size: 16px; font-weight: 500; }
 
 /*# sourceMappingURL=main.css.map */
