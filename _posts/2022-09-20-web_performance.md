@@ -13,44 +13,57 @@ author: 송기영
 
 위에서 말씀드렸듯이 웹을 이제 막 시작했던 주니어 개발자인 저에게도 눈에 보일정도였으니까요… ~~이때부터 도망을 생각한것같아요~~
 
-![1](/img/posts/2022-09-22/1.png)
+<p align="center">
+  <img src="/img/posts/2022-09-22/1.png" alt="text" width="250" />
+</p>
+
 
 3개월 이 지난 시점 기존에 계시던 팀장님은 그만두시고 솔루션을 고도화할 기미가 보이지 않아 저는 사실 도망가려고 했습니다. 하지만 지금 팀장님인 이상훈 팀장님께 ~~붙잡혔고~~ 설득당해 지금까지 잘 버텨오고 있습니다.
 
-![2](/img/posts/2022-09-22/2.png)
+<p align="center">
+  <img src="/img/posts/2022-09-22/2.png" alt="text" width="400" />
+</p>
 
 ---
 
 첫 글이라 서론이 굉장히 길었네요.. 불필요한 말 그만하고 이제 본론으로 들어가보겠습니다.
 
 저는 오늘 웹 성능지표를 측정해야하는 이유와 종류 그리고 어떻게 개선을 할 수 있는지에 관해 이야기를 하려고 합니다.
+<br/>
+<br/>
 
 ## 왜 웹사이트 성능지표를 측정해야 하는가?
 
 사람들은 빠른 서비스를 원합니다. 그리고 돈을 지불한 고객들은 더욱 더 빠른 서비스를 원합니다. 그럼 얼마나 속도가 빨라하는가? 해외 조사에 따르면 속도는 빠르면 빠를수록 좋다고 합니다.
 
-**컴퓨웨어(Compuware)**의 웹 성능 사업부에 근무하는 **고메즈(Gomez)**에 따르면 사용자의 40%가 **`3초`**동안 기다리게 되면 사이트를 `**이탈**`하는 것으로 나타났다고 합니다.
+**컴퓨웨어(Compuware)**의 웹 성능 사업부에 근무하는 **`고메즈(Gomez)`**에 따르면 사용자의 40%가 **`3초`**동안 기다리게 되면 사이트를 **`이탈`**하는 것으로 나타났다고 합니다.
 
-월마트(Walmart)는 페이지 속도를 100ms까지 개선하면 `**수익이** **1% 증가**`한다는 사실을 발견했다고 합니다. 이처럼 웹사이트의 응답 성능은 해당 `**업체의 신뢰성**`과도 직결되는 문제이고 이는 바로 `**매출**`로 연결됩니다. ~~저도 돈 많이벌고 싶어요!~~ 따라서 웹사이트 최적화는 중요합니다.
+월마트(Walmart)는 페이지 속도를 100ms까지 개선하면 **`수익이 1% 증가`**한다는 사실을 발견했다고 합니다. 이처럼 웹사이트의 응답 성능은 해당 **`업체의 신뢰성`**과도 직결되는 문제이고 이는 바로 **`매출`**로 연결됩니다. ~~저도 돈 많이벌고 싶어요!~~ 따라서 웹사이트 최적화는 중요합니다.
+<br/>
+<br/>
 
 ## 성능지표에는 어떤 항목들이 있는가?
 
 성능은 대부분의 기준은 사용자의 관점으로 맞추어져 있기 때문에 HTTP 요청 횟수, 에러 발생 비율, 커스텀 등 해당되는 웹의 성격을 하나하나 따져보면 성능지표의 수는 무궁무진하게 됩니다. 따라서 저는 구글에서 소개하는 지표 3가지를 소개하고자 합니다.
 
-- **Largest Contentful Paint (LCP)**
+- **Largest Contentful Paint (LCP)**  
   **`로딩의 성능`**을 측정합니다. 페이지가 로드되기 시작한 시점부터 가장 큰 텍스트 블록 또는 이미지 요소가 렌더링 될때까지의 시간을 측정합니다. 사용자가 느끼는 로드 속도를 측정할 수 있는 가장 중요한 지표입니다.
-- **First Input Delay (FID)**
+ 
+- **First Input Delay (FID)**  
   **`상호작용성`**을 측정합니다. 사용자가 링크, 버튼, 탭을 클릭하는 등 처음 상호작용을 시작 하는 시점부터 이에 대한 이벤트 핸들러 처리를 시작하기까지의 걸리는 시간입니다. 이벤트 핸들러 처리의 종료 시점이 아닌 시작 시점을 측정하는 이유는 비동기 이벤트 핸들러 등에서도 일관된 수치를 측정하기 위해서입니다.
-- **Cumulative Layout Shift (CLS)**
-  `**시각적 안정성**`을 측정합니다. 사용자가 예상하지 못한 레이아웃 이동 등 예기지 않은 갑작스러운 변화를 측정합니다. 시각적 안정성을 측정할 때 중요한 사용자 중심 지표입니다.
+
+- **Cumulative Layout Shift (CLS)**  
+  **`시각적 안정성`**을 측정합니다. 사용자가 예상하지 못한 레이아웃 이동 등 예기지 않은 갑작스러운 변화를 측정합니다. 시각적 안정성을 측정할 때 중요한 사용자 중심 지표입니다.
 
 다음 그림은 각 지표별 평가 기준입니다.
 
-![lcp](/img/posts/2022-09-22/lcp.png)
+<div style="display:flex;">
+  <img src="/img/posts/2022-09-22/lcp.png" alt="text" width="250" />
+  <img src="/img/posts/2022-09-22/fid.png" alt="text" width="250" />
+  <img src="/img/posts/2022-09-22/cls.png" alt="text" width="250" />
+</div>
+<br/>
 
-![fid](/img/posts/2022-09-22/fid.png)
-
-![cls](/img/posts/2022-09-22/cls.png)
 
 ## 그래서 어떻게 성능을 측정하는데?
 
@@ -58,35 +71,43 @@ author: 송기영
 
 요즘 사람들이 많이 사용하는 크롬 브라우저에서 지원하는 lighthouse로 웹 브라우저 성능지표를 정말 간단하게 측정할 수 있습니다.
 
-![3](/img/posts/2022-09-22/3.png)
+<p align="center">
+  <img src="/img/posts/2022-09-22/3.png" alt="text" width="300" />
+</p>
 
 ### 측정방법
 
 - 측정하고하자는 웹사이트를 접속한 후 크롬 브라우저에서 f12 혹은 도구 더보기- 개발자 도구를 눌러 개발자 도구를 실행합니다.
 
-![left](/img/posts/2022-09-22/left.png)
+<div style="display:flex;">
+  <img src="/img/posts/2022-09-22/left.png" alt="text" width="400" />
+  <img src="/img/posts/2022-09-22/right.png" alt="text" width="400" />
+</div>
 
-![right](/img/posts/2022-09-22/right.png)
-
+<br/>
 - 페이지 로드 분석을 클릭하여 측정을 시작합니다. 저는 네이버를 기준으로 측정하였습니다.
-  ![lighthouse](/img/posts/2022-09-22/lighthouse.png)
-    <aside>
-    💡 **Tip:** 모바일로 성능지표 측정 후 개선하면 데스크톱의 성능은 `**자동**`으로 개선이된다고 합니다.
-    
-    </aside>
-
+  <p align="center">
+    <img src="/img/posts/2022-09-22/lighthouse.png" alt="text" width="400" />
+  </p>
+  <br/>
+    💡 <strong>Tip:</strong> 모바일로 성능지표 측정 후 개선하면 데스크톱의 성능은 <strong>`자동`</strong>으로 개선이된다고 합니다.
+<br/>
 - 성능지표 결과를 확인합니다.
-  ![result](/img/posts/2022-09-22/result.png)
-    <aside>
-    💡 **Tip:** 성능지표는 여러번 측정하여 `**평균값**`을 기준으로 개선을 진행합니다.
-    
-    </aside>
+  <p align="center">
+    <img src="/img/posts/2022-09-22/result.png" alt="text" width="400" />
+  </p>
+    💡 <strong>Tip:</strong> 성능지표는 여러번 측정하여 <strong>`평균값`</strong>을 기준으로 개선을 진행합니다.
+<br/>
+<br/>
 
 ## 어떻게 성능을 개선해야 하는가?
 
 사실 저희 회사 솔루션은 10~20초사이 정말 처참한 수준입니다. 프로젝트를 고도화하여 성능을 개선해야하는데 전에 계시던 분들이 진행을 못하셨습니다. 덕분 제가 고도화를 진행할것같네요. 감사합니다.
 
-![4](/img/posts/2022-09-22/4.png)
+  <p align="center">
+    <img src="/img/posts/2022-09-22/4.png" alt="text" width="400" />
+  </p>
+  <br/>
 
 어떤 부분을 개선해야할지 성능이 개선될지 찾아보던중 성능지표를 개선 방법은 2가지가 있습니다.
 
@@ -94,7 +115,9 @@ author: 송기영
 
 성능지표 결과화면에 보시면 추천이라는 항목에 그림과 같이 친절하게 나열되어있습니다. 아래의 그림의 경우 렌더링 차단 리소스 제거하면 FCP LCP 개선에 도움을 줄 수 있다고 말해주고 있습니다. 하지만 그 밑에 보시면 성능 점수에는 직접적인 영향을 미치지는 않는다고 되어있네요. 성능지표와 성능 점수는 다르므로 저희는 추천 방법을 참고하시면 될것같습니다.
 
-![recommend](/img/posts/2022-09-22/recommend.png)
+  <p align="center">
+    <img src="/img/posts/2022-09-22/recommend.png" alt="text" width="400" />
+  </p>
 
 두번째로는 코드를 최적화하는 것입니다.
 
@@ -103,6 +126,8 @@ author: 송기영
 백엔드의 경우 DB 쿼리 최적화, 더 빠른 DB로 마이그레이션 등과 같이 프론트 API 요청에 대한 응답을 빨리 보내줄수록 웹 최적화가 될거고 성능지표의 점수는 자연스럽게 올라갈 수 있습니다.
 
 추가적인 방법으로 하드웨어 서버를 업그레이드하면 연산능력이 올라가기 때문에 성능지표의 점수를 올리는데 도움이 된다고합니다. ~~이건 꼼수같은데…~~
+<br/>
+<br/>
 
 ## 이탈 방지를 위해서는 성능지표 개선을 하는 방법밖에 없는가?
 
@@ -110,18 +135,24 @@ author: 송기영
 
 간략하게 말하면 디자인적인 측면을 이용해서 브라우저의 로딩 시간동안 사용자의 지루함을 덜어주면 사용자의 이탈은 자연스럽게 줄어들게 되겠죠. 대표적으로 크롬의 디노게임이 있습니다.
 
-![dino.gif](/img/posts/2022-09-22/dino.gif)
+
+  <p align="center">
+    <img src="/img/posts/2022-09-22/dino.gif" alt="text" width="400" />
+  </p>
 
 이부분은 UI/UX로 개선하는 방법으로 로딩 인디케이터, 애니메이션, 스켈레톤 UI, 낙관적 UI 등과 같은 키워드로 검색을 해보시면 쉽게 찾으실 수 있습니다.
-
+<br/>
+<br/>
+  
 ## 결론
 
-우리는 웹 성능지표를 측정해봤고 그로 인해 어떻게 웹을 최적화 하는지까지 알아보았습니다. 따라서 우리는
-
-미래 고객이 이탈하는 것을 방지하였습니다. ~~이글을 읽으신 여러분은 돈을 버셨으므로 저에게 양심껏 입금해주시면 됩니다.~~
+우리는 웹 성능지표를 측정해봤고 그로 인해 어떻게 웹을 최적화 하는지까지 알아보았습니다. 따라서 우리는 미래 고객이 이탈하는 것을 방지하였습니다. ~~이글을 읽으신 여러분은 돈을 버셨으므로 저에게 양심껏 입금해주시면 됩니다.~~
 
 이 글에 적힌 성능지표 이외에 정말 많은 종류의 지표들이 존재하지만 최소 3가지의 성능지표를 기준으로 웹을 최적화해도 사용자 이탈 방지에 충분히 도움이 될 수 있음을 확인하였습니다. 부족하지만 긴글 읽어주셔서 감사합니다.
 
 ## 참고
 
-> [https://velog.io/@ktthee/웹사이트-성능-지표](https://velog.io/@ktthee/%EC%9B%B9%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%84%B1%EB%8A%A5-%EC%A7%80%ED%91%9C) > [https://yceffort.kr/2021/08/core-web-vital](https://yceffort.kr/2021/08/core-web-vital) > [https://newrelic.com/kr/resources/white-papers/how-fast-does-your-website-need-to-be](https://newrelic.com/kr/resources/white-papers/how-fast-does-your-website-need-to-be) > [https://eunjinii.tistory.com/44](https://eunjinii.tistory.com/44)
+[https://velog.io/@ktthee/웹사이트-성능-지표](https://velog.io/@ktthee/%EC%9B%B9%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%84%B1%EB%8A%A5-%EC%A7%80%ED%91%9C)  
+[https://yceffort.kr/2021/08/core-web-vital](https://yceffort.kr/2021/08/core-web-vital)  
+[https://newrelic.com/kr/resources/white-papers/how-fast-does-your-website-need-to-be](https://newrelic.com/kr/resources/white-papers/how-fast-does-your-website-need-to-be)  
+[https://eunjinii.tistory.com/44](https://eunjinii.tistory.com/44)  
