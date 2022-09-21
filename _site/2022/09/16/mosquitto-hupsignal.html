@@ -73,7 +73,7 @@
               <a href="/about">이상훈</a>
               on September 16, 2022 &middot; <span class="reading-time" title="Estimated read time">
   
-   1 min  read </span>
+   2 mins  read </span>
 
             </span>
           </div>
@@ -122,13 +122,24 @@ pid의 값을 확인하면 됩니다. 제가 테스트했던 환경에서는 PID
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$sudo</span> <span class="nb">kill</span> <span class="nt">--signal</span> HUP <span class="o">[</span>PID]
 </code></pre></div></div>
 
-<p>제가 테스트했던 환경에서는 PID가 2380d이었기 떄문에 다음과 같이 명령을 실행시켜서 HUP signal을 발생시킬 수 있엇습니다.</p>
+<p>제가 테스트했던 환경에서는 PID가 2380이었기 떄문에 다음과 같이 명령을 실행시켜서 HUP signal을 발생시킬 수 있었습니다.</p>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$sudo</span> <span class="nb">kill</span> <span class="nt">--signal</span> HUP 2380
 </code></pre></div></div>
 
-<p>mosquitto의 로그 파일을 열어보면 아래 그림처럼 Reloading config메시지가 출력된 것을 확인할 수 있습니다.</p>
+<p>HUP signal이 정상적으로 발생되었다면 실행 중이던 mosquitto 프로세스가 재시작되면서 설정정보가 reload되었을 것입니다.
+mosquitto의 로그 파일을 열어보면 아래 그림처럼 Reloading config메시지가 출력된 것을 확인할 수 있습니다.</p>
 
 <p><img src="/img/posts/mosquitto_log.png" alt="log" /></p>
+
+<h2 id="hup-signal을-사용해야-하는-이유">HUP signal을 사용해야 하는 이유</h2>
+
+<p>프로세스를 직접 kill하는 방식으로 실행 중인 mosquitto를 중단시키고, 재시작시키는 방식은 구현되어 있는 종료함수가 제대로
+실행되지 못하고 즉시 프로세스가 중단될 수 있습니다. 그런 경우 중요 데이터의 유실이 발생하거나 프로세스가 사용중이던 리소스가
+제대로 반납되지 못할 수 있습니다.</p>
+
+<p>실제 서비스를 운영하는 서버라면 <code class="language-plaintext highlighter-rouge">안정성</code>을 유지해야 합니다. 그래서 설정정보가 변경되는 경우에는 
+HUP Signal을 발생시켜서 mosquitto 프로세스가 정상적으로 종료되고 재시작될 수 있도록 하는 것이 중요할 것 같습니다.</p>
 
 
         <hr>
