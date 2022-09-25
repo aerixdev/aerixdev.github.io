@@ -13,7 +13,6 @@ article  .container {
   column-gap: 40px;
   display: grid;
   grid-template-columns: 1fr 3fr;
-  
 }
 
 .container .img-box {
@@ -187,3 +186,26 @@ article  .container {
 }
 
 
+/*
+* 반응형
+*/
+
+@media (max-width: 767px){
+  /* 브라우저 사이즈 767px 이하일때*/
+  .col-lg-8 .col-md-10 .mx-auto{
+    overflow: hidden;
+  }
+  article .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+  .container .img-box {
+    margin: 0 auto;
+  }
+
+  .timeline-event-copy  {    
+    width: 92%;
+  }
+}

@@ -1,8 +1,8 @@
-I"^-<p>안녕하세요. 에어릭스 환경시스템사업부의 개발팀 프론트엔드 개발자 송기영입니다.</p>
+I"�-<p>안녕하세요. 에어릭스 환경시스템사업부의 개발팀 프론트엔드 개발자 송기영입니다.</p>
 
-<p>저는 이전 회사에서 PLC Driver 개발을 담당했고 이전 회사에서 웹프로젝트를 맡았고 그 이후로 웹개발자로 전향을 하였습니다. 전향하여 처음 입사한 곳이 지금의 회사 에어릭스입니다.</p>
+<p>저는 이전 회사에서 PLC Driver 개발을 담당했고 이전 회사에서 웹프로젝트를 맡았는데 그 이후로 웹에 흥미가 생겨 웹개발자로 전향 하였습니다. 전향 후 처음 입사한 곳이 지금의 회사 에어릭스입니다.</p>
 
-<p>회사가 한창 혼돈의 시기를 거쳐 막바지에 도달했을때 입사했고 회사의 솔루션들의 코드리뷰 결과 솔루션들의 상태는 굉장히 처참한 수준이였습니다.</p>
+<p>회사가 한창 혼돈의 시기를 거쳐 막바지에 도달했을때 입사했고 회사의 솔루션들의 코드리뷰 결과 솔루션들의 상태는 굉장히 처참한 수준이었습니다.</p>
 
 <p>위에서 말씀드렸듯이 웹을 이제 막 시작했던 주니어 개발자인 저에게도 눈에 보일정도였으니까요… <del>이때부터 도망을 생각한것같아요</del></p>
 
@@ -20,7 +20,9 @@
 
 <p>첫 글이라 서론이 굉장히 길었네요.. 불필요한 말 그만하고 이제 본론으로 들어가보겠습니다.</p>
 
-<p>저는 오늘 웹 성능지표를 측정해야하는 이유와 종류 그리고 어떻게 개선을 할 수 있는지에 관해 이야기를 하려고 합니다.</p>
+<p>저는 오늘 웹 성능지표를 측정해야하는 이유와 종류 그리고 어떻게 개선을 할 수 있는지에 관해 이야기를 하려고 합니다.
+<br />
+<br /></p>
 
 <h2 id="왜-웹사이트-성능지표를-측정해야-하는가">왜 웹사이트 성능지표를 측정해야 하는가?</h2>
 
@@ -28,7 +30,9 @@
 
 <p><strong>컴퓨웨어(Compuware)</strong>의 웹 성능 사업부에 근무하는 <strong><code class="language-plaintext highlighter-rouge">고메즈(Gomez)</code></strong>에 따르면 사용자의 40%가 <strong><code class="language-plaintext highlighter-rouge">3초</code></strong>동안 기다리게 되면 사이트를 <strong><code class="language-plaintext highlighter-rouge">이탈</code></strong>하는 것으로 나타났다고 합니다.</p>
 
-<p>월마트(Walmart)는 페이지 속도를 100ms까지 개선하면 <strong><code class="language-plaintext highlighter-rouge">수익이 1% 증가</code></strong>한다는 사실을 발견했다고 합니다. 이처럼 웹사이트의 응답 성능은 해당 <strong><code class="language-plaintext highlighter-rouge">업체의 신뢰성</code></strong>과도 직결되는 문제이고 이는 바로 <strong><code class="language-plaintext highlighter-rouge">매출</code></strong>로 연결됩니다. <del>저도 돈 많이벌고 싶어요!</del> 따라서 웹사이트 최적화는 중요합니다.</p>
+<p>월마트(Walmart)는 페이지 속도를 100ms까지 개선하면 <strong><code class="language-plaintext highlighter-rouge">수익이 1% 증가</code></strong>한다는 사실을 발견했다고 합니다. 이처럼 웹사이트의 응답 성능은 해당 <strong><code class="language-plaintext highlighter-rouge">업체의 신뢰성</code></strong>과도 직결되는 문제이고 이는 바로 <strong><code class="language-plaintext highlighter-rouge">매출</code></strong>로 연결됩니다. <del>저도 돈 많이벌고 싶어요!</del> 따라서 웹사이트 최적화는 중요합니다.
+<br />
+<br /></p>
 
 <h2 id="성능지표에는-어떤-항목들이-있는가">성능지표에는 어떤 항목들이 있는가?</h2>
 
@@ -65,7 +69,7 @@
 <p>요즘 사람들이 많이 사용하는 크롬 브라우저에서 지원하는 lighthouse로 웹 브라우저 성능지표를 정말 간단하게 측정할 수 있습니다.</p>
 
 <p align="center">
-  <img src="/img/posts/2022-09-22/3.png" alt="text" width="400" />
+  <img src="/img/posts/2022-09-22/3.png" alt="text" width="300" />
 </p>
 
 <h3 id="측정방법">측정방법</h3>
@@ -93,7 +97,9 @@
     <p align="center">
   <img src="/img/posts/2022-09-22/result.png" alt="text" width="400" />
 </p>
-    <p>💡 <strong>Tip:</strong> 성능지표는 여러번 측정하여 <strong><code class="language-plaintext highlighter-rouge">평균값</code></strong>을 기준으로 개선을 진행합니다.</p>
+    <p>💡 <strong>Tip:</strong> 성능지표는 여러번 측정하여 <strong><code class="language-plaintext highlighter-rouge">평균값</code></strong>을 기준으로 개선을 진행합니다.
+<br />
+<br /></p>
   </li>
 </ul>
 
@@ -122,7 +128,9 @@
 
 <p>백엔드의 경우 DB 쿼리 최적화, 더 빠른 DB로 마이그레이션 등과 같이 프론트 API 요청에 대한 응답을 빨리 보내줄수록 웹 최적화가 될거고 성능지표의 점수는 자연스럽게 올라갈 수 있습니다.</p>
 
-<p>추가적인 방법으로 하드웨어 서버를 업그레이드하면 연산능력이 올라가기 때문에 성능지표의 점수를 올리는데 도움이 된다고합니다. <del>이건 꼼수같은데…</del></p>
+<p>추가적인 방법으로 하드웨어 서버를 업그레이드하면 연산능력이 올라가기 때문에 성능지표의 점수를 올리는데 도움이 된다고합니다. <del>이건 꼼수같은데…</del>
+<br />
+<br /></p>
 
 <h2 id="이탈-방지를-위해서는-성능지표-개선을-하는-방법밖에-없는가">이탈 방지를 위해서는 성능지표 개선을 하는 방법밖에 없는가?</h2>
 
@@ -134,19 +142,20 @@
     <img src="/img/posts/2022-09-22/dino.gif" alt="text" width="400" />
   </p>
 
-<p>이부분은 UI/UX로 개선하는 방법으로 로딩 인디케이터, 애니메이션, 스켈레톤 UI, 낙관적 UI 등과 같은 키워드로 검색을 해보시면 쉽게 찾으실 수 있습니다.</p>
+<p>이부분은 UI/UX로 개선하는 방법으로 로딩 인디케이터, 애니메이션, 스켈레톤 UI, 낙관적 UI 등과 같은 키워드로 검색을 해보시면 쉽게 찾으실 수 있습니다.
+<br />
+<br /></p>
 
 <h2 id="결론">결론</h2>
 
-<p>우리는 웹 성능지표를 측정해봤고 그로 인해 어떻게 웹을 최적화 하는지까지 알아보았습니다. 따라서 우리는</p>
-
-<p>미래 고객이 이탈하는 것을 방지하였습니다. <del>이글을 읽으신 여러분은 돈을 버셨으므로 저에게 양심껏 입금해주시면 됩니다.</del></p>
+<p>우리는 웹 성능지표를 측정해봤고 그로 인해 어떻게 웹을 최적화 하는지까지 알아보았습니다. 따라서 우리는 미래 고객이 이탈하는 것을 방지하였습니다. <del>이글을 읽으신 여러분은 돈을 버셨으므로 저에게 양심껏 입금해주시면 됩니다.</del></p>
 
 <p>이 글에 적힌 성능지표 이외에 정말 많은 종류의 지표들이 존재하지만 최소 3가지의 성능지표를 기준으로 웹을 최적화해도 사용자 이탈 방지에 충분히 도움이 될 수 있음을 확인하였습니다. 부족하지만 긴글 읽어주셔서 감사합니다.</p>
 
 <h2 id="참고">참고</h2>
 
-<blockquote>
-  <p><a href="https://velog.io/@ktthee/%EC%9B%B9%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%84%B1%EB%8A%A5-%EC%A7%80%ED%91%9C">https://velog.io/@ktthee/웹사이트-성능-지표</a> &gt; <a href="https://yceffort.kr/2021/08/core-web-vital">https://yceffort.kr/2021/08/core-web-vital</a> &gt; <a href="https://newrelic.com/kr/resources/white-papers/how-fast-does-your-website-need-to-be">https://newrelic.com/kr/resources/white-papers/how-fast-does-your-website-need-to-be</a> &gt; <a href="https://eunjinii.tistory.com/44">https://eunjinii.tistory.com/44</a></p>
-</blockquote>
+<p><a href="https://velog.io/@ktthee/%EC%9B%B9%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%84%B1%EB%8A%A5-%EC%A7%80%ED%91%9C">https://velog.io/@ktthee/웹사이트-성능-지표</a><br />
+<a href="https://yceffort.kr/2021/08/core-web-vital">https://yceffort.kr/2021/08/core-web-vital</a><br />
+<a href="https://newrelic.com/kr/resources/white-papers/how-fast-does-your-website-need-to-be">https://newrelic.com/kr/resources/white-papers/how-fast-does-your-website-need-to-be</a><br />
+<a href="https://eunjinii.tistory.com/44">https://eunjinii.tistory.com/44</a></p>
 :ET
