@@ -1,4 +1,155 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-25T22:27:47+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">에어릭스 환경시스템사업부 기술블로그</title><subtitle>IT기업이 아닌 에어릭스에서 살아가고 있는 개발자들</subtitle><author><name>(주)에어릭스</name></author><entry><title type="html">웹 성능지표</title><link href="http://localhost:4000/2022/09/20/web_performance.html" rel="alternate" type="text/html" title="웹 성능지표" /><published>2022-09-20T00:00:00+09:00</published><updated>2022-09-20T00:00:00+09:00</updated><id>http://localhost:4000/2022/09/20/web_performance</id><content type="html" xml:base="http://localhost:4000/2022/09/20/web_performance.html"><![CDATA[<p>안녕하세요. 에어릭스 환경시스템사업부의 개발팀 프론트엔드 개발자 송기영입니다.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-27T11:34:22+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">에어릭스 환경시스템사업부 기술블로그</title><subtitle>IT기업이 아닌 에어릭스에서 살아가고 있는 개발자들</subtitle><author><name>(주)에어릭스</name></author><entry><title type="html">고가용성(High Availabilty) 확보 전략</title><link href="http://localhost:4000/2022/09/27/highavailability.html" rel="alternate" type="text/html" title="고가용성(High Availabilty) 확보 전략" /><published>2022-09-27T00:00:00+09:00</published><updated>2022-09-27T00:00:00+09:00</updated><id>http://localhost:4000/2022/09/27/highavailability</id><content type="html" xml:base="http://localhost:4000/2022/09/27/highavailability.html"><![CDATA[<h3 id="고가용성ha--high-availability이란">고가용성(HA : High Availability)이란?</h3>
+<hr />
+<p><img src="/img/posts/people.png" alt="이중화장치" /></p>
+
+<p><code class="language-plaintext highlighter-rouge">고가용성</code>이란 단어의 의미를 인터넷에서 찾아보면 “서버와 네트워크 또는 프로그램 등의 정보 시스템이 상당히 오랜 기간 동안 지속적으로 장애 없이
+정상적으로 운영 가능하도록 하는 성질”이라고 설명이 되어 있습니다. 즉, 애기치 못한 문제가 발생되더라도 장애 발생시간을 최소화해서 정보 시스템을
+운영할 수 있도록 구성하는 것을 의미합니다.</p>
+
+<h3 id="고가용성-확보와-거리가-멀었던-시스템-구성">고가용성 확보와 거리가 멀었던 시스템 구성</h3>
+<hr />
+<p>에어릭스에 입사하고 제일 놀라웠던 사실은 고객사에 구축된 스마트팩토리 시스템이 모두 단일서버로 구성되어 있다는 점이었습니다. 하나의 서버 안에서 MQTT Broker,Web서버,
+Was서버,DB서버까지 여러 컴포넌트가 실행되면서 연동되어 있는 구조였습니다. 그렇기 때문에 하나의 컴포넌트에서 장애가 발생하게 되면 다른 컴포넌트까지 연쇄적으로 영향을 끼칠
+수 밖에 없었고, 서버 전체적으로 장애가 확산되었습니다.</p>
+
+<p>더군다나 장애 발생시 임시로 가동될 수 있는 백업 서버도 없었기 때문에 서버 장애는 곧 시스템 운영 중단을 의미했습니다.</p>
+
+<p><img src="/img/posts/people2.png" alt="고객불만" /></p>
+
+<p>결국 서버 장애로 인한 잦은 시스템 운영 중단으로 고객불만은 극에 달했고, 개발팀 직원들은 고객사의 컴플레인과 A/S 요청에 시달릴 수 밖에 없었습니다.</p>
+
+<p>가장 큰 문제는 개발팀의 리더들이 근본적인 해결책은 제시하지 못하고, 대책도 없이 직원들만 반복적으로 무의미한 고객사 A/S 업무에 투입시키고 있었던 것입니다. 이로 인한 회사가
+감당해야만 했던 금전적인 손실도 상당했습니다.</p>
+
+<h3 id="고가용성-확보-방안의-고민">고가용성 확보 방안의 고민</h3>
+<hr />
+<p>시스템을 운영하다보면 여러가지 이유로 장애는 언제든지 발생할 수 있습니다. 고가용성을 확보하기 위해서는 시스템은 항상 장애를 발생시킬 수 있다는 가정을 기반으로 아키텍처를
+설계해야 합니다. 하지만 과거에 에어릭스가 구축해놓은 스마트팩토리 시스템들을 보면 장애가 발생했을 경우에 대한 고려가 전혀 없었습니다.</p>
+
+<p>고가용성을 확보하기 위해서는 서버의 이중화는 필수적으로 보였습니다. 그래서 우선은 <code class="language-plaintext highlighter-rouge">Active-Standby</code> 방식으로 서버 이중화를 구성해보기로 했습니다. 
+평소에는 <code class="language-plaintext highlighter-rouge">Active</code>서버가 동작하다가 장애가 발생하면 <code class="language-plaintext highlighter-rouge">Standby</code>가 즉시 가동되도록 함으로써 시스템 운영이 중단없이 계속될 수 있기 때문에 이 자체만으로도 
+고가용성을 크게 향상 시킬 수 있다고 생각되었기 때문입니다.</p>
+
+<p><img src="/img/posts/active_standby.png" alt="Active-Standby구조" /></p>
+
+<h3 id="오픈소스-keepalived-사용">오픈소스 Keepalived 사용</h3>
+<hr />
+<p>인프라에 대한 지식이 없었기 때문에 인터넷 검색을 통해서 찾은 정보를 기반으로 스스로 스터디를 하면서 <code class="language-plaintext highlighter-rouge">Active-Standby</code> 방식으로 서버 이중화를 구성해 볼 수 밖에
+없었습니다. 서버 이중화를 위해서 값비싼 하드웨어 장비나 S/W 솔루션을 도입할 수 있는 상황은 아니었습니다. 그래서 VRRP(Virtual Router Redundancy Protocol)을 이용하는 대표적인 오픈소스 기반의 고가용성 솔루션인 <strong>Keepalived</strong>를 활용해보기로 했습니다.</p>
+
+<p><strong>Keepalived</strong>는 오픈소스라 비용적인 측면에서 부담이 없었고 이미 많은 사용자들이 사용하고 있기 때문에 성능의 안전성도 검증이 되었습니다. 그리고 사용법에 대한 자료도 
+인터넷에서 쉽게 찾을 수가 있었습니다.</p>
+
+<p><strong>Keepalived</strong>의 동작원리를 이해하기 위해서는 먼저 VRRP에 대한 개념을 알아야 합니다.<br />
+VRRP는 Active/Standby 두 개의 서버가 각자의 Real IP뿐만 아니라 하나의 가상IP(Virtual IP)를 공유하도록 합니다. 그리고 가상IP의 소유권은 우선순위가
+높은 Active서버에게 주어집니다. VRRP는 가상IP의 소유권을 가진 서버의 연결에 문제가 없는지 지속적으로 체크(Health Check)를 하게 됩니다.</p>
+
+<p>만약, 가상IP의 소유권을 가진 서버의 연결에 문제가 생기게 되면 VRRP에 의해서 후순위의 우선순위를 가진 서버로 가상IP의 소유권이 자동으로 이전됩니다. 가상IP의 소유권을 가진 Active서버에
+문제가 생겨서 연결이 안되는 상황이 발생하게 된다면 Standby서버로 가상IP의 소유권이 이전되기 때문에 가상IP만 가지고 서버에 접속하는 클라이언트는 정상적으로 서비스를
+이용할 수 있는 것입니다.</p>
+
+<p><img src="/img/posts/vrrp.png" alt="VRRP" /></p>
+
+<p>사무실에서 라즈베리파이 2대에 <strong>Keepalived</strong>를 설치해서 <code class="language-plaintext highlighter-rouge">Active-Standby</code> 방식으로 서버 이중화를 구성하고 테스트를 진행했었습니다. 테스트를 해보니 기대했던 것처럼 잘 동작하는 
+것을 확인할 수 있었습니다.</p>
+
+<h3 id="keepalived의-한계">Keepalived의 한계</h3>
+<hr />
+<p>하지만 <strong>Keepalived</strong>를 한계도 분명히 존재했습니다. 네트워크 장애나 서버의 하드웨어에 문제가 발생해서 접속이 안되는 경우에는 Standby 서버로 가상IP가 이전되면서
+중단없이 정상적으로 서비스가 지속될 수 있었지만, 서버에서 구동중인 소프트웨어의 프로세스가 중단된 경우에는 네트워크 접속은 정상이기 때문에 <strong>Keepalived</strong>에서는 
+장애 발생 유무를 판별할 수 없었습니다.</p>
+
+<p>이런 경우를 대비하여 별도의 프로세스 매니저(예:PM2)를 활용하여 무중단 서비스를 구현할 필요가 있었습니다.</p>
+
+<h3 id="서버의-확장까지-고려">서버의 확장까지 고려</h3>
+<hr />
+<p>우리 에어릭스의 현실에서는 <strong>Keepalived</strong>와 프로세스 매니저의 조합만으로도 기존 대비 충분히 높은 가용성을 확보할 수 있다고 판단했습니다. 하지만</p>
+
+<h3 id="서버확장-방법">서버확장 방법</h3>
+<hr />
+
+<p>어떤 정보 시스템을 구축해서 운영하다보면 사용자나 데이터 처리량의 증가 등과 같은 사유로 서버의 용량과 성능을 더 높은 사양으로 확장하는 것이 
+필요해질 수 있습니다. 서버의 확장 방법은 <strong>스케일업(Scale up)</strong>과 <strong>스케일아웃(Scale out)</strong>이라는 개념으로 설명할 수 있습니다.</p>
+
+<ul>
+  <li>
+    <p>스케일업(Scale up) : 수직적 확산</p>
+
+    <p>스케일업은 서버 자체를 더 높은 사양으로 교체하거나, 기존 서버에서 일부 부품을 교환하거나 추가 장착하는 방법으로 성능을 확장하는 방식입니다. 
+  이 방식은 성능 확장에 한계가 존재하며, 성능 증가에 따른 비용의 증가폭이 크다는 단점이 있습니다.</p>
+  </li>
+  <li>
+    <p>스케일아웃(Scale out) : 수평적 확산</p>
+
+    <p>스케일아웃은 기존의 서버와 별도로 서버를 추가하여 성능을 확장하는 방식을 말합니다. 여러대의 서버가 병렬로 동작하며 분산처리를 할 수 있도록
+  Load Balancing이 필수적으로 요구됩니다. 이 방식은 성능 확장에 한계가 없이 지속적으로 확장이 가능하며, 비교적 저렴한 비용으로도 성능 확장이
+  가능하다는 장점이 있습니다.</p>
+  </li>
+</ul>]]></content><author><name>이상훈</name></author><summary type="html"><![CDATA[고가용성(HA : High Availability)이란?]]></summary></entry><entry><title type="html">신입 사원이 돌아본 에어릭스 이야기</title><link href="http://localhost:4000/2022/09/26/Newbee.html" rel="alternate" type="text/html" title="신입 사원이 돌아본 에어릭스 이야기" /><published>2022-09-26T00:00:00+09:00</published><updated>2022-09-26T00:00:00+09:00</updated><id>http://localhost:4000/2022/09/26/Newbee</id><content type="html" xml:base="http://localhost:4000/2022/09/26/Newbee.html"><![CDATA[<h3 id="1-이-이야기는">1. 이 이야기는</h3>
+
+<p>에어릭스 환경시스템사업부 개발팀의 신입사원 강민석입니다. 입사한지 벌써 4개월이 넘었는데요, 그 동안 일하면서 느낀 에어릭스에 대한 경험을 솔직하게 이야기 해보는 시간을 가지려고 합니다.</p>
+
+<h2><img src="/img/posts/2022-09-26/KangMS.jpg" alt="강민석 사원" /></h2>
+
+<h3 id="2-에어릭스와의-첫걸음">2. 에어릭스와의 첫걸음</h3>
+
+<p>오랜 시간 몸 담던 크리에이터 생활을 정리하고 백엔드 개발자 공부를 1년 가량 했습니다.  많은 기업의 면접을 보았지만 늦깎이 신입이 패기만으로 도전하기엔 호락호락한 길이 아니었습니다. 그렇게 면접장 헤매던 중, 에어릭스와 면접을 보게되었습니다.</p>
+
+<p>에어릭스는 집진기 환경 설비를 주로 만드는 기업으로 주변 선배들이 개발자 취직을 말리는 제조업 기업입니다. 하지만 회사 규모가 큰 만큼 연구&amp;개발 부서 또한 스타트업이나 작은 IT기업 이상이라는 점과 다른 회사의 외주 프로젝트가 아닌 자체적인 IoT 솔루션을 가지고 있는점에 매료되어 입사를 적극 지원하게 되었습니다.</p>
+
+<p>면접 과정을 거쳐 합격 소식을 들었을 때는 진로나 커리어에 대한 많은 고민 속에 마침내 해답을 찾을 수 있을 것 같아 후련했고 처음 해보는 직장 생활에 대한 기대감이 넘쳤습니다.</p>
+
+<hr />
+
+<h3 id="3-어떻게-일할까">3. 어떻게 일할까</h3>
+
+<ul>
+  <li>자체 기술의 장점</li>
+</ul>
+
+<p>입사 전에 공부한 내용은 주로 Spring Boot를 통한 웹개발이었습니다. 공부할 때의 생각은 웹페이지 로그인 만들고, 게시판 만들고.. 단순한 반복 작업을 하게 될 것이라고 생각했습니다. 하지만 에어릭스에서는 IoT 기술 개발 업무를 맡게 되었고 MQTT, Kafka, 시계열DB, 콤보, 게이트웨이, PLC 등 처음 들어보는 기술과 용어들에 당황했고 어떻게 공부해야 할 지 걱정이 많았습니다.</p>
+
+<p>하지만 오랜 기간 자체 기술을 닦아온 기업이다 보니 기존 솔루션들이 잘 구축되어 있었습니다. 그것들을  레퍼런스 삼아 공부하니 실전적인 경험을 효율적으로 쌓을 수 있었습니다. 공부할 수 있는 교재나 인터넷 강의도 충분히 지원되었고, 무엇보다 선배 직원들과의 커뮤니케이션을 자유롭게 할 수 있어서 모르는 부분은 물어보며 공부하니 빠르게 실력이 쌓이는 것을 느낄 수 있었습니다.</p>
+
+<ul>
+  <li>주인공이 될 수 있다</li>
+</ul>
+
+<p>신입 사원이라고 자투리 부분만 맡기는 것이 아니라 중요한 프로젝트들의 주인공으로 활약할 수 있는 환경을 만들어 주는 것도 좋았습니다. 처음엔 잘 모르는, 막연한 작업에 두려움도 느꼈지만 성공적으로 완수하고 나니 개인적인 성장은 물론이고 내가 한 사람 몫을 톡톡히 하고 있다는 자신감도 느낄 수 있었습니다.</p>
+
+<p>갈수록 더 중요하고 규모가 큰 프로젝트들을 맡고 있습니다. 꾸준히 노력하고 공부하여 회사에서 인정받고, 팀원들에게 예쁨받는 직원이 되도록 더 노력해야겠습니다.</p>
+
+<hr />
+
+<h3 id="4-근무-환경은">4. 근무 환경은</h3>
+
+<ul>
+  <li>소통하는 개발</li>
+</ul>
+
+<p>사무실에 낮은 파티션은 있지만, 팀원끼리 가까운 자리에서 꾸준히 소통하면서 일하고 있습니다. 일하는 스타일에 따라서 방해 받지 않는 조용한 환경을 선호하는 사람도 있겠지만, 늦깎이 신입으로 입사한 저로서는 선배들에게 계속 물어보고 피드백을 받을 수 있다는 점이 굉장히 좋았습니다. 대리님이나 부장님 까지도 허물 없이 의견을 주고 받으며 일하기 때문에 혼자 머리 싸매다 이상한 방향으로 프로젝트를 진행하는 일 없이 옳은 방향으로 나아갈 수 있습니다. 또한 프로젝트에서 개선할 점이 있다면 적극적으로 건의하고 또 그것을 반영 할 수 있는 것이 정말 좋았습니다.</p>
+
+<ul>
+  <li>자유롭고 달콤한 사무실</li>
+</ul>
+
+<p>사무실 분위기 이야기도 빼놓을 수 없겠습니다. 먼저 취직한 친구들의 직장 생활 이야기는 꼰대 문화와 무능한 상사들에게서 비롯된 암울한 이야기 뿐이었어서 입사 전엔 걱정이 정말 많았습니다. 하지만 막상 입사해보니 동료 직원들 나이대가 꽤나 젊은 편이고 임원진 분들도 상상이상으로 오픈 마인드를 갖고 계셨습니다. 그래서 그런지 사무실에서 웃음 소리가 끊이지 않는 것이 참 신기했습니다.</p>
+
+<p>온전히 일에 집중할 수 있도록 편안한 복장으로 출퇴근 하며 사무실에선 슬리퍼도 신고 다닙니다. 개발 업무를 하다보면 당이 떨어지는 일이 많은데, 이럴 때 빛이 되어주는 과자, 커피 등이 탕비실에 갖추어져 있어 좋았습니다. 직장 생활을 하면 집에 있을 때 보다 살이 빠질 줄 알았는데 오히려 찌고 있는게 단점이네요</p>
+
+<ul>
+  <li>좋은 회식 문화와 복지</li>
+</ul>
+
+<p>회식이 자주 있지 않습니다. 이 때는 꼭 회식을 해야겠다고 생각 날 만한 일이 있어야만 회식을 하는 것 같습니다. 회식 자리에서도 술은 먹고 싶은 사람만 먹습니다. 저도 술을 잘 먹는 편은 아니지만 안 드시는 분이 생각보다 많아 조금 심심한 느낌도 있었습니다. 그리고 1차에서 화끈하게 먹고 집에 갑니다. 회식하고 집에 갔는데 8시 밖에 안된게 참 신기했습니다.</p>
+
+<p>얼마 전 추석 명절이 있었습니다. 회사에서 소위 ‘명절 떡값’을 두둑하게 주셨습니다. 마침 친구들을 만나게 되어 이야기를 꺼냈습니다. 머릿속으로 당연히 사회 생활 오래한 친구들이 더 많이 받았을 것이라고 생각하고 자랑했는데, 아니었던 모양입니다. 얼마 못 받은 친구들 앞에서 지나치게 자랑 해버려 미안한 마음에 그 날 술값은 제가 다 결제하고 왔습니다. 아깝기도 했지만 우리 회사가 복지가 참 괜찮다는 생각을 한 계기가 되었습니다.  이 외에도 다른 회사에 있는 복지 혜택은 웬만하면 제공 하는 듯 하니 잘 활용해봐야겠습니다.</p>
+
+<hr />
+
+<h3 id="5-앞으로의-각오">5. 앞으로의 각오</h3>
+
+<p>입사 한지 얼마나 되었다고 벌써 제 모습이 게을러 보일 때가 있습니다. 아직 아는 것이 없어 나오는 근거 없는 게으름이라고 할 수 있겠습니다. 당장 출근하면 또 모르는 것들이 쏟아집니다.  컨디션 조절과 휴식도 중요하지만 ‘편하게’ 쉬려면 미래에 대한 자신감이 있어야 한다는 것을 요즘 느끼고 있습니다. 앞으로 많은 공부와 실습을 통해 그 자신감을 가질 수 있도록 노력해야겠습니다. 자신감이 있다면 더 쉽게 일하고 더 많이 쉴 수 있을 테니 말입니다. 쉽지 않은 길이겠지만 걸어 볼 만한 길인 것 같습니다.</p>]]></content><author><name>강민석</name></author><summary type="html"><![CDATA[1. 이 이야기는]]></summary></entry><entry><title type="html">웹 성능지표</title><link href="http://localhost:4000/2022/09/20/web_performance.html" rel="alternate" type="text/html" title="웹 성능지표" /><published>2022-09-20T00:00:00+09:00</published><updated>2022-09-20T00:00:00+09:00</updated><id>http://localhost:4000/2022/09/20/web_performance</id><content type="html" xml:base="http://localhost:4000/2022/09/20/web_performance.html"><![CDATA[<p>안녕하세요. 에어릭스 환경시스템사업부의 개발팀 프론트엔드 개발자 송기영입니다.</p>
 
 <p>저는 이전 회사에서 PLC Driver 개발을 담당했고 이전 회사에서 웹프로젝트를 맡았는데 그 이후로 웹에 흥미가 생겨 웹개발자로 전향 하였습니다. 전향 후 처음 입사한 곳이 지금의 회사 에어릭스입니다.</p>
 
@@ -856,138 +1007,4 @@ VPN을 사용하게 되면 MQTT Broker서버와 통신하는 모든 장치들 �
 
 <p><a href="https://eiec.kdi.re.kr/policy/materialView.do?num=226520&amp;topic=O&amp;pp=20&amp;datecount=&amp;recommend=&amp;pg=">KDI 경제정보센터 - 중기부/과기정통부, 스마트 제조혁신 기술개발(R&amp;D) 2,418억원 지원</a></p>
 
-<p><img src="/img/posts/iomt_rnd_04.png" alt="Image Alt 에어릭스" /></p>]]></content><author><name>이상훈</name></author><summary type="html"><![CDATA[환경시스템사업부에서 올해(2022년)부터 수행하고 있는 정부R&amp;D과제 중 하나인 클린팩토리 사업을 소개합니다.]]></summary></entry><entry><title type="html">의료 IoMT 플랫폼 구축</title><link href="http://localhost:4000/2022/08/31/iomt_rnd.html" rel="alternate" type="text/html" title="의료 IoMT 플랫폼 구축" /><published>2022-08-31T00:00:00+09:00</published><updated>2022-08-31T00:00:00+09:00</updated><id>http://localhost:4000/2022/08/31/iomt_rnd</id><content type="html" xml:base="http://localhost:4000/2022/08/31/iomt_rnd.html"><![CDATA[<p>환경시스템사업부에서 2020년부터 수행하고 있는 정부R&amp;D과제 중 하나인 <code class="language-plaintext highlighter-rouge">의료 IoMT 플랫폼</code> 구축 사업을 소개합니다.</p>
-
-<p>저희 에어릭스에서 스마트팩토리 시스템 구축시 제조현장의 정보를 수집하기 위해서만 사용해오던 IoT기술을 의료영역이라는
-전혀 다른 분야에 적용해보는 도전적인 성격의 과제였습니다. 하지만 다행히 큰 문제없이 3년차 연구까지 진행되고 있습니다. 
-현재 저희 에어릭스가 담당한 <code class="language-plaintext highlighter-rouge">환자감시통합모니터링</code> 시스템은 개발이 끝나고, <code class="language-plaintext highlighter-rouge">신촌세브란스 병원 응급진료센터</code>에 설치되어 시범적으로 운영되고 
-있는 상황입니다.</p>
-
-<h2 id="연구개발과제-개요">연구개발과제 개요</h2>
-
-<p>본 연구개발과제의 개요는 다음과 같습니다.</p>
-
-<ul>
-  <li>과제명 : <code class="language-plaintext highlighter-rouge">환자중심 의료서비스 제공을 위한 인공지능, 클라우드, WiFi6 기반의 병원 대상 IoMT 표준 플랫폼 개발 및 임상 적용</code></li>
-  <li>내역사업 : 4차 산업혁명 및 미래 의료 환경 선도</li>
-  <li>발주처 : 범부처전주기의료기기연구개발사업단</li>
-  <li>사업기간 : 2020.09 ~ 2024.12 (4년4개월)</li>
-  <li>총 예산 : 93억원(정부출연금 67.5억)</li>
-  <li>컨소시움 구성 :
-    <ul>
-      <li>주관연구기관 - <code class="language-plaintext highlighter-rouge">헤론헬스정보시스템(구 파이디지털헬스케어)</code></li>
-      <li>공동연구기관 - <code class="language-plaintext highlighter-rouge">에어릭스</code>, 연세대학교 산학협력단, LG전자, DKI, 오성시스템, 인포마크, 라이튼테크놀로지, 메인텍, AITRICS</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="연구개발의-필요성">연구개발의 필요성</h2>
-
-<p><img src="/img/posts/iomt_rnd_03.png" alt="Image Alt 연구개발의 필요성" /></p>
-
-<h2 id="전체-시스템-구성">전체 시스템 구성</h2>
-
-<p>본 연구개발과제는 비대면 사회 변화에 맞추어 환자중심 의료서비스 제공을 위해서 끊김 없는 데이터 획득(Seamless), 실시간 통합 모니터링(Synchronous),
-정교한 예측 서비스 구현(Sophisticated), 병원정보시스템과 다양한 IoMT 기기연동이 가능하도록 <code class="language-plaintext highlighter-rouge">의료IoMT 플랫폼</code>을 구축하는 것을 목표로
-하고 있습니다.</p>
-
-<p><img src="/img/posts/iomt_rnd_01.png" alt="Image Alt 전체시스템구성" /></p>
-
-<h2 id="환자감시통합모니터링">환자감시통합모니터링</h2>
-
-<p>에어릭스는 의료IoMT 플랫폼의 핵심기능인 환자감시통합모니터링 시스템을 담당하고 있습니다. 환자감시통합모니터링 시스템을 위한 IRS서버를 구축하고,
-이를 통해서 다양한 병원 내 시스템과 연계하여 데이터를 수집/중계하고 있습니다. 이러한 데이터들을 시각화하여 웹 화면을 통해서 환자감시통합모니터링
-서비스를 제공하고 있습니다.</p>
-
-<p><img src="/img/posts/iomt_rnd_02.png" alt="Image Alt 환자감시통합모니터링" /></p>
-
-<h2 id="관련-기사-링크">관련 기사 링크</h2>
-
-<p><a href="https://www.etnews.com/20201012000147">전자신문 - 파이디지털헬스케어, 연세의료원과 환자 중심 서비스를 위한 의료 IoMT 플랫폼 구축</a></p>
-
-<p><img src="/img/posts/iomt_rnd_04.png" alt="Image Alt 에어릭스" /></p>]]></content><author><name>이상훈</name></author><summary type="html"><![CDATA[환경시스템사업부에서 2020년부터 수행하고 있는 정부R&amp;D과제 중 하나인 의료 IoMT 플랫폼 구축 사업을 소개합니다.]]></summary></entry><entry><title type="html">새로운 시작</title><link href="http://localhost:4000/2022/08/26/starting.html" rel="alternate" type="text/html" title="새로운 시작" /><published>2022-08-26T00:00:00+09:00</published><updated>2022-08-26T00:00:00+09:00</updated><id>http://localhost:4000/2022/08/26/starting</id><content type="html" xml:base="http://localhost:4000/2022/08/26/starting.html"><![CDATA[<p>안녕하세요? 에어릭스 환경시스템사업부의 기술연구소장과 개발팀장을 겸직하고 있는 이상훈입니다.</p>
-
-<p>저는 에어릭스에 입사하기 전 <code class="language-plaintext highlighter-rouge">스마트팩토리</code>와는 전혀 상관없는 신용(현금)카드 혹은 USIM카드로 사용되는 IC카드용 운영체제 및 어플리케이션 개발 업무를 했었습니다. 그러다가 우연히 에어릭스에 입사하게 되었는데, 벌써 2년 가까운 시간이 흘렀습니다. 정말로 시간의 흐름이 빠른 것 같습니다. 
-시간이 흘렀어도 여전히 <code class="language-plaintext highlighter-rouge">스마트팩토리</code> 는 여전히 어려운 분야인 것 같습니다.</p>
-
-<p><img src="/img/posts/starting_00.png" alt="Image Alt 어려움" /></p>
-
-<hr />
-
-<h2 id="변화를-시작해야-할-시점">변화를 시작해야 할 시점</h2>
-
-<p>에어릭스는 IT기업이 아닙니다. 그러다보니 IT기술이나 사업에 대해서 전반적으로 사내 구성원들의 이해도가 부족한 편입니다. 말만 하면 모든 것들이 알아서 마법처럼 구현될 수 있는 것이 아닌데, IT기술에 대한 이해도가 높지 않다보니 잘못된 의사결정을 내리는 경우가 많았습니다.</p>
-
-<p>면밀한 검토없이 잘못된 의사결정으로 무리하게 추진되었던 많은 사업들 때문에 저도 입사 후 최근까지도 그러한 문제들을 수습하는데 많은 에너지를 쏟아야만 했습니다. 
-답답한 현실의 벽에 부딪혀 개발인력들의 이탈이 이어지는 것을 막을 수도 없었습니다.</p>
-
-<p><img src="/img/posts/starting_01.png" alt="Image Alt 인력이탈" /></p>
-
-<p>다행히 지금은 많은 것들이 정리가 된 상황으로 안정을 찾아가고 있습니다. 이제야 비로소 그 동안 하지 못했던 일들을 하나씩 하나씩 추진해나갈 수 있는
-여유가 생긴것 같습니다. 이제는 변화를 시작해야 할 시점입니다.</p>
-
-<hr />
-
-<h2 id="블로그를-개설하는-이유">블로그를 개설하는 이유</h2>
-
-<p>그 첫 시작이 아마도 기술블로그의 개설이 될 것 같습니다. 기술블로그를 개설해서 운영하려는 이유는 <code class="language-plaintext highlighter-rouge">성장</code>과 <code class="language-plaintext highlighter-rouge">정체성</code>이라는 키워드로
-설명할 수 있을 것 같습니다.</p>
-
-<h4 id="성장">성장</h4>
-
-<p>우리 개발팀에는 아직 부족한 부분이 많이 있습니다. 우리 스스로 부족한 부분을 채워나가면서 <code class="language-plaintext highlighter-rouge">성장</code>할 수 있는 발판을 마련해야 합니다.</p>
-
-<p><code class="language-plaintext highlighter-rouge">성장</code>을 위해서 <strong>소통</strong>과 <strong>공유</strong>는 필수적 입니다. <strong>소통</strong>과 <strong>공유</strong>를 통해서 <code class="language-plaintext highlighter-rouge">성장</code>에 필요한 지식과 경험을 채워나갈 수
-있기 때문입니다. <strong>소통</strong>과 <strong>공유</strong>에 가장 기본적이면서 효율적인 수단이 바로 글쓰기입니다. 기술블로그를 통해서 공개적으로 배포할
-수 있도록 어떤 주제에 대한 자신의 생각이나 의견, 지식 등을 간결하고 명료하게 글로 작성해보는 것은 글쓰기 능력을 향상시키는데
-많은 도움이 될 것이라고 생각합니다.</p>
-
-<p>적은 인원으로 효율적인 조직을 만들기 위해서는 무엇보다 협업이 중요합니다. 
-협업하기 위해서는 본인의 지식이나 경험, 생각 등을 잘 정리하여 상대방에게 전달할 수 있는 능력이 기본적으로 요구됩니다. 
-말로는 정보 전달의 한계가 있기에 글로 전달할 수 있어야 합니다. 그렇기 때문에 구성원들 각자가 가지고 있는 글쓰기 능력이 팀 전체의 
-역량과 효율성을 좌우할 수 있다고 생각합니다.</p>
-
-<p>팀의 리더로서 기술블로그 운영을 통해서 우리 팀 구성원들 각자가 글쓰기 훈련을 할 수 있는 계기를 만들어주고 싶습니다.
-글쓰기 능력을 향상시켜서 타인과 <strong>소통</strong>하고 <strong>공유</strong>하는 힘을 키우고, 그것이 우리들을 <code class="language-plaintext highlighter-rouge">성장</code>의 지름길로 이끌어 줄 수 있기를 기대해봅니다.</p>
-
-<h4 id="정체성">정체성</h4>
-
-<p>우리가 근무하는 에어릭스라는 회사가 IT회사가 아니다보니 일반적인 IT기업의 조직문화와는 차이가 있습니다. 개발팀도 예외가 아닙니다.
-일반적인 IT기업의 개발팀과는 차이가 있습니다. 솔직히 개발팀다운 <code class="language-plaintext highlighter-rouge">정체성</code>을 아직 가지고 있지 못하다고 생각합니다.</p>
-
-<p>기술은 빠르게 발전하고 있습니다. 기술의 발전 흐름에 뒤쳐지지 않고 쫓아가기 위해서라도 계속적으로 <strong>공부</strong>하고, <strong>연구</strong>하는 모습을 보여야 합니다. 
-그런 과정들 속에서 배우고, 고민하고, 경험한 것들을 개인의 기억속에만 남겨둔다면, 점차 시간이 흐르면서 기억이 지식으로 축적되지 못하고 결국
-사라지거나 왜곡되고 말 것입니다.</p>
-
-<p><strong>공부</strong>하고 <strong>연구</strong>하는 과정들 속에서 배우고, 고민하고, 경험한 것들 속에는 분명 타인에게 도움이 될 수 있는 정보들이 많이 포함되어
-있을 것입니다. 기억속 여기저기에 흩어져있는 단편적인 정보들을 잘 취합하고, 정리해서 유용한 지식으로 전환해내기 위해서 글로 작성해보려는
-노력을 기울일 필요가 있습니다. 그런 과정들을 거치면서 우리는 각자의 지식을 더욱 체계화해서 내재화할 수 있습니다. 그리고 그런 과정
-속에서 소진되는 노력들은 사라지지 않고 에어릭스 환경시스템사업부의 기술 히스토리로 남게 될 것입니다.</p>
-
-<p>제가 생각하는 개발팀다운 <code class="language-plaintext highlighter-rouge">정체성</code>은 꾸준히 기술 히스토리를 내재화하면서 개인과 조직이 함께 발전할 수 있는 바로 그런 선순환 구조를 만들어낼 수 
-있는 문화를 가지는 것을 의미합니다.</p>
-
-<p>물론 당연히 시간이 필요합니다. 그렇지만 마냥 기다릴 수도 없습니다.
-당장 변화를 위한 작은 움직임이라도 시작해야 합니다. 성장에 대한 욕구가 있다면 바쁘다는 것이 핑계가 되지는 않을 것입니다.</p>
-
-<p>옛날 시골마당에서는 수도를 사용하기 전에 먼저 수동펌프 위에 마중물을 부어 물을 끌어와야 했던 것을 기억하고 있습니다.
-우리에게도 마중물 같은 것이 필요할 수는 있다고 생각합니다. 그리고 저는 기술블로그가 그 역할을 해줄 수 있을 것이라고 생각합니다.</p>
-
-<hr />
-
-<h2 id="깃허브github를-선택한-이유">깃허브(github)를 선택한 이유</h2>
-
-<p>사실 블로그를 운영할 플랫폼은 많이 있습니다. 사용이 편리한 티스토리나 네이버 블로그를 이용하는 것도 검토를 했었습니다. 하지만 요즘 웬만한 
-IT스타트업들이 하는 것처럼 깃허브(github)를 이용해서 기술블로그를 많이 운영하고 싶었습니다. 깃허브가 주는 개발자스러운 느낌을 에어릭스
-환경시스템사업부 기술블로그에서도 풍기고 싶었습니다.</p>
-
-<p>에어릭스가 비록 IT기업은 아니지만, 그래도 환경시스템 사업부의 개발팀에 소속된 우리들은 모두 IT개발자들입니다. 
-우리가 운영하는 기술블로그만큼에서라도 여느 IT스타트업들처럼 개발자스러움을 가득 보여주고 싶습니다.</p>
-
-<p><img src="/img/posts/starting_02.png" alt="Image Alt github" /></p>
-
-<hr />
-
-<h2 id="글을-마치면서">글을 마치면서…</h2>
-
-<p>우리의 기술블로그가 재미있고 가치있는 글들로 풍성하게 가득 채워지기를 바랍니다.</p>]]></content><author><name>이상훈</name></author><summary type="html"><![CDATA[안녕하세요? 에어릭스 환경시스템사업부의 기술연구소장과 개발팀장을 겸직하고 있는 이상훈입니다.]]></summary></entry></feed>
+<p><img src="/img/posts/iomt_rnd_04.png" alt="Image Alt 에어릭스" /></p>]]></content><author><name>이상훈</name></author><summary type="html"><![CDATA[환경시스템사업부에서 올해(2022년)부터 수행하고 있는 정부R&amp;D과제 중 하나인 클린팩토리 사업을 소개합니다.]]></summary></entry></feed>
