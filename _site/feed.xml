@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-04T17:04:55+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">에어릭스 환경시스템사업부 기술블로그</title><subtitle>IT기업이 아닌 에어릭스에서 살아가고 있는 개발자들</subtitle><author><name>(주)에어릭스</name></author><entry><title type="html">GS인증에 도전</title><link href="http://localhost:4000/2022/10/04/gs.html" rel="alternate" type="text/html" title="GS인증에 도전" /><published>2022-10-04T00:00:00+09:00</published><updated>2022-10-04T00:00:00+09:00</updated><id>http://localhost:4000/2022/10/04/gs</id><content type="html" xml:base="http://localhost:4000/2022/10/04/gs.html"><![CDATA[<h2 id="품질에-대한-고민">품질에 대한 고민</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-04T17:23:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">에어릭스 환경시스템사업부 기술블로그</title><subtitle>IT기업이 아닌 에어릭스에서 살아가고 있는 개발자들</subtitle><author><name>(주)에어릭스</name></author><entry><title type="html">GS인증에 도전</title><link href="http://localhost:4000/2022/10/04/gs.html" rel="alternate" type="text/html" title="GS인증에 도전" /><published>2022-10-04T00:00:00+09:00</published><updated>2022-10-04T00:00:00+09:00</updated><id>http://localhost:4000/2022/10/04/gs</id><content type="html" xml:base="http://localhost:4000/2022/10/04/gs.html"><![CDATA[<h2 id="품질에-대한-고민">품질에 대한 고민</h2>
 <hr />
 
 <p>우리가 개발하는 소프트웨어의 품질수준을 어떻게 단기간에 끌어올릴 수 있을지 고민이 많은 개발팀장 이상훈입니다. 그 동안 우리 소프트웨어의 품질 수준은
@@ -87,7 +87,9 @@ GS인증이 끝이 아니라는 이야기를 하고 싶습니다. GS인증은 �
 
 <p>에어릭스 환경시스템사업부 개발팀의 신입사원 강민석입니다. 입사한지 벌써 4개월이 넘었는데요, 그 동안 일하면서 느낀 에어릭스에 대한 경험을 솔직하게 이야기 해보는 시간을 가지려고 합니다.</p>
 
-<h2 id="-width70"><img src="/img/posts/2022-09-26/KangMS.jpg" alt="강민석 사원" />!{: width=”70%”}</h2>
+<p><img src="/img/posts/2022-09-26/KangMS.jpg" alt="강민석 사원" width="70%" /></p>
+
+<hr />
 
 <h3 id="2-에어릭스와의-첫걸음">2. 에어릭스와의 첫걸음</h3>
 
