@@ -1,95 +1,89 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-27T11:34:22+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">에어릭스 환경시스템사업부 기술블로그</title><subtitle>IT기업이 아닌 에어릭스에서 살아가고 있는 개발자들</subtitle><author><name>(주)에어릭스</name></author><entry><title type="html">고가용성(High Availabilty) 확보 전략</title><link href="http://localhost:4000/2022/09/27/highavailability.html" rel="alternate" type="text/html" title="고가용성(High Availabilty) 확보 전략" /><published>2022-09-27T00:00:00+09:00</published><updated>2022-09-27T00:00:00+09:00</updated><id>http://localhost:4000/2022/09/27/highavailability</id><content type="html" xml:base="http://localhost:4000/2022/09/27/highavailability.html"><![CDATA[<h3 id="고가용성ha--high-availability이란">고가용성(HA : High Availability)이란?</h3>
-<hr />
-<p><img src="/img/posts/people.png" alt="이중화장치" /></p>
-
-<p><code class="language-plaintext highlighter-rouge">고가용성</code>이란 단어의 의미를 인터넷에서 찾아보면 “서버와 네트워크 또는 프로그램 등의 정보 시스템이 상당히 오랜 기간 동안 지속적으로 장애 없이
-정상적으로 운영 가능하도록 하는 성질”이라고 설명이 되어 있습니다. 즉, 애기치 못한 문제가 발생되더라도 장애 발생시간을 최소화해서 정보 시스템을
-운영할 수 있도록 구성하는 것을 의미합니다.</p>
-
-<h3 id="고가용성-확보와-거리가-멀었던-시스템-구성">고가용성 확보와 거리가 멀었던 시스템 구성</h3>
-<hr />
-<p>에어릭스에 입사하고 제일 놀라웠던 사실은 고객사에 구축된 스마트팩토리 시스템이 모두 단일서버로 구성되어 있다는 점이었습니다. 하나의 서버 안에서 MQTT Broker,Web서버,
-Was서버,DB서버까지 여러 컴포넌트가 실행되면서 연동되어 있는 구조였습니다. 그렇기 때문에 하나의 컴포넌트에서 장애가 발생하게 되면 다른 컴포넌트까지 연쇄적으로 영향을 끼칠
-수 밖에 없었고, 서버 전체적으로 장애가 확산되었습니다.</p>
-
-<p>더군다나 장애 발생시 임시로 가동될 수 있는 백업 서버도 없었기 때문에 서버 장애는 곧 시스템 운영 중단을 의미했습니다.</p>
-
-<p><img src="/img/posts/people2.png" alt="고객불만" /></p>
-
-<p>결국 서버 장애로 인한 잦은 시스템 운영 중단으로 고객불만은 극에 달했고, 개발팀 직원들은 고객사의 컴플레인과 A/S 요청에 시달릴 수 밖에 없었습니다.</p>
-
-<p>가장 큰 문제는 개발팀의 리더들이 근본적인 해결책은 제시하지 못하고, 대책도 없이 직원들만 반복적으로 무의미한 고객사 A/S 업무에 투입시키고 있었던 것입니다. 이로 인한 회사가
-감당해야만 했던 금전적인 손실도 상당했습니다.</p>
-
-<h3 id="고가용성-확보-방안의-고민">고가용성 확보 방안의 고민</h3>
-<hr />
-<p>시스템을 운영하다보면 여러가지 이유로 장애는 언제든지 발생할 수 있습니다. 고가용성을 확보하기 위해서는 시스템은 항상 장애를 발생시킬 수 있다는 가정을 기반으로 아키텍처를
-설계해야 합니다. 하지만 과거에 에어릭스가 구축해놓은 스마트팩토리 시스템들을 보면 장애가 발생했을 경우에 대한 고려가 전혀 없었습니다.</p>
-
-<p>고가용성을 확보하기 위해서는 서버의 이중화는 필수적으로 보였습니다. 그래서 우선은 <code class="language-plaintext highlighter-rouge">Active-Standby</code> 방식으로 서버 이중화를 구성해보기로 했습니다. 
-평소에는 <code class="language-plaintext highlighter-rouge">Active</code>서버가 동작하다가 장애가 발생하면 <code class="language-plaintext highlighter-rouge">Standby</code>가 즉시 가동되도록 함으로써 시스템 운영이 중단없이 계속될 수 있기 때문에 이 자체만으로도 
-고가용성을 크게 향상 시킬 수 있다고 생각되었기 때문입니다.</p>
-
-<p><img src="/img/posts/active_standby.png" alt="Active-Standby구조" /></p>
-
-<h3 id="오픈소스-keepalived-사용">오픈소스 Keepalived 사용</h3>
-<hr />
-<p>인프라에 대한 지식이 없었기 때문에 인터넷 검색을 통해서 찾은 정보를 기반으로 스스로 스터디를 하면서 <code class="language-plaintext highlighter-rouge">Active-Standby</code> 방식으로 서버 이중화를 구성해 볼 수 밖에
-없었습니다. 서버 이중화를 위해서 값비싼 하드웨어 장비나 S/W 솔루션을 도입할 수 있는 상황은 아니었습니다. 그래서 VRRP(Virtual Router Redundancy Protocol)을 이용하는 대표적인 오픈소스 기반의 고가용성 솔루션인 <strong>Keepalived</strong>를 활용해보기로 했습니다.</p>
-
-<p><strong>Keepalived</strong>는 오픈소스라 비용적인 측면에서 부담이 없었고 이미 많은 사용자들이 사용하고 있기 때문에 성능의 안전성도 검증이 되었습니다. 그리고 사용법에 대한 자료도 
-인터넷에서 쉽게 찾을 수가 있었습니다.</p>
-
-<p><strong>Keepalived</strong>의 동작원리를 이해하기 위해서는 먼저 VRRP에 대한 개념을 알아야 합니다.<br />
-VRRP는 Active/Standby 두 개의 서버가 각자의 Real IP뿐만 아니라 하나의 가상IP(Virtual IP)를 공유하도록 합니다. 그리고 가상IP의 소유권은 우선순위가
-높은 Active서버에게 주어집니다. VRRP는 가상IP의 소유권을 가진 서버의 연결에 문제가 없는지 지속적으로 체크(Health Check)를 하게 됩니다.</p>
-
-<p>만약, 가상IP의 소유권을 가진 서버의 연결에 문제가 생기게 되면 VRRP에 의해서 후순위의 우선순위를 가진 서버로 가상IP의 소유권이 자동으로 이전됩니다. 가상IP의 소유권을 가진 Active서버에
-문제가 생겨서 연결이 안되는 상황이 발생하게 된다면 Standby서버로 가상IP의 소유권이 이전되기 때문에 가상IP만 가지고 서버에 접속하는 클라이언트는 정상적으로 서비스를
-이용할 수 있는 것입니다.</p>
-
-<p><img src="/img/posts/vrrp.png" alt="VRRP" /></p>
-
-<p>사무실에서 라즈베리파이 2대에 <strong>Keepalived</strong>를 설치해서 <code class="language-plaintext highlighter-rouge">Active-Standby</code> 방식으로 서버 이중화를 구성하고 테스트를 진행했었습니다. 테스트를 해보니 기대했던 것처럼 잘 동작하는 
-것을 확인할 수 있었습니다.</p>
-
-<h3 id="keepalived의-한계">Keepalived의 한계</h3>
-<hr />
-<p>하지만 <strong>Keepalived</strong>를 한계도 분명히 존재했습니다. 네트워크 장애나 서버의 하드웨어에 문제가 발생해서 접속이 안되는 경우에는 Standby 서버로 가상IP가 이전되면서
-중단없이 정상적으로 서비스가 지속될 수 있었지만, 서버에서 구동중인 소프트웨어의 프로세스가 중단된 경우에는 네트워크 접속은 정상이기 때문에 <strong>Keepalived</strong>에서는 
-장애 발생 유무를 판별할 수 없었습니다.</p>
-
-<p>이런 경우를 대비하여 별도의 프로세스 매니저(예:PM2)를 활용하여 무중단 서비스를 구현할 필요가 있었습니다.</p>
-
-<h3 id="서버의-확장까지-고려">서버의 확장까지 고려</h3>
-<hr />
-<p>우리 에어릭스의 현실에서는 <strong>Keepalived</strong>와 프로세스 매니저의 조합만으로도 기존 대비 충분히 높은 가용성을 확보할 수 있다고 판단했습니다. 하지만</p>
-
-<h3 id="서버확장-방법">서버확장 방법</h3>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-04T16:34:58+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">에어릭스 환경시스템사업부 기술블로그</title><subtitle>IT기업이 아닌 에어릭스에서 살아가고 있는 개발자들</subtitle><author><name>(주)에어릭스</name></author><entry><title type="html">GS인증에 도전</title><link href="http://localhost:4000/2022/10/04/gs.html" rel="alternate" type="text/html" title="GS인증에 도전" /><published>2022-10-04T00:00:00+09:00</published><updated>2022-10-04T00:00:00+09:00</updated><id>http://localhost:4000/2022/10/04/gs</id><content type="html" xml:base="http://localhost:4000/2022/10/04/gs.html"><![CDATA[<h2 id="품질에-대한-고민">품질에 대한 고민</h2>
 <hr />
 
-<p>어떤 정보 시스템을 구축해서 운영하다보면 사용자나 데이터 처리량의 증가 등과 같은 사유로 서버의 용량과 성능을 더 높은 사양으로 확장하는 것이 
-필요해질 수 있습니다. 서버의 확장 방법은 <strong>스케일업(Scale up)</strong>과 <strong>스케일아웃(Scale out)</strong>이라는 개념으로 설명할 수 있습니다.</p>
+<p>우리가 개발하는 소프트웨어의 품질수준을 어떻게 단기간에 끌어올릴 수 있을지 고민이 많은 개발팀장 이상훈입니다. 그 동안 우리 소프트웨어의 품질 수준은
+너무나 참담할 정도로 엉망이었던 것은 부인할 수 없는 사실이니까요.</p>
 
-<ul>
-  <li>
-    <p>스케일업(Scale up) : 수직적 확산</p>
+<p><img src="/img/posts/starting_00.png" alt="고민" /></p>
 
-    <p>스케일업은 서버 자체를 더 높은 사양으로 교체하거나, 기존 서버에서 일부 부품을 교환하거나 추가 장착하는 방법으로 성능을 확장하는 방식입니다. 
-  이 방식은 성능 확장에 한계가 존재하며, 성능 증가에 따른 비용의 증가폭이 크다는 단점이 있습니다.</p>
-  </li>
-  <li>
-    <p>스케일아웃(Scale out) : 수평적 확산</p>
+<p>그 동안 문제투성이였던 개발팀이 이제 어느정도 재정비된 상태라고 판단되어서 얼마전부터는 단위테스트 코드 작성 의무화, 코드 커버리지 측정 등 여러가지 시도를 해보고는 있습니다.
+하지만 그것만으로는 많이 부족한 것도 사실입니다. 특히, 개발업무 프로세스가 제대로 정립되어 있지 않고 품질에 대한 기대수준이 명확하게 설정되어 있지 않은 현재의 상태에서는
+어떤 것을 시도하더라도 효과가 떨어질 수 밖에 없다고 생각됩니다.</p>
 
-    <p>스케일아웃은 기존의 서버와 별도로 서버를 추가하여 성능을 확장하는 방식을 말합니다. 여러대의 서버가 병렬로 동작하며 분산처리를 할 수 있도록
-  Load Balancing이 필수적으로 요구됩니다. 이 방식은 성능 확장에 한계가 없이 지속적으로 확장이 가능하며, 비교적 저렴한 비용으로도 성능 확장이
-  가능하다는 장점이 있습니다.</p>
-  </li>
-</ul>]]></content><author><name>이상훈</name></author><summary type="html"><![CDATA[고가용성(HA : High Availability)이란?]]></summary></entry><entry><title type="html">신입 사원이 돌아본 에어릭스 이야기</title><link href="http://localhost:4000/2022/09/26/Newbee.html" rel="alternate" type="text/html" title="신입 사원이 돌아본 에어릭스 이야기" /><published>2022-09-26T00:00:00+09:00</published><updated>2022-09-26T00:00:00+09:00</updated><id>http://localhost:4000/2022/09/26/Newbee</id><content type="html" xml:base="http://localhost:4000/2022/09/26/Newbee.html"><![CDATA[<h3 id="1-이-이야기는">1. 이 이야기는</h3>
+<h2 id="gs인증에-도전하는-이유">GS인증에 도전하는 이유</h2>
+<hr />
+
+<p>우선은 개발팀이 지향하고 있는 품질수준에 대한 가이드라인부터 명확하게 설정하는 것이 필요하다고 생각되었습니다. 그래서 국가공인 소프트웨어 품질인증제도인 
+GS(Good Software)인증에 도전해보기로 했습니다.</p>
+
+<p>아직 우리 스스로 품질수준에 대한 가이드라인을 명확하게 설정할 수 있을만큼 역량을 충분히 갖추지 못했기 때문에, 우선은 공인시험기관을 통해서 객관적인 성능측정과 품질검증이 
+이루어지는 GS품질인증기준을 우리 제품의 품질기준점으로 삼아보려고 합니다.</p>
+
+<p><img src="/img/posts/gs/test.png" alt="시험" width="50%" /></p>
+
+<p>첫 인증 대상제품은 현재 개발팀 내부에서 한참 개발이 진행되고 있는 PLC컨트롤러라는 미들웨어 성격의 소프트웨어로 선택했습니다.</p>
+
+<p>비슷한 타사 제품과의 차별성을 부각시키고, 고객의 신뢰성을 확보하는 측면에서도 이런 종류의 국가공인 품질인증 획득은 충분히 활용가치가 있는 일이라고 생각됩니다.
+물론 PLC컨트롤러 개발을 담당하고 있는 김영규 대리님은 GS인증 때문에 앞으로 할일이 더 많아 질 수 밖에 없습니다. 그냥 운이 없다고 생각하세요…^_^</p>
+
+<h2 id="tta-방문상담">TTA 방문상담</h2>
+<hr />
+
+<p>어쩌면 <strong>“안그래도 바쁜데 왜 쓸모없는 일을 벌이는거지?”</strong>라고 생각할 수도 있겠습니다. 그래도 한번 마음먹은 이상 추진해버려야 직성이 풀리는 이상한 성격이라
+김영규 대리님을 압박해서 밀어붙이고 있습니다.</p>
+
+<p><img src="/img/posts/gs/dozer.png" alt="불도저" /></p>
+
+<p>지난주 상암동 누리꿈스퀘어에 위치한 TTA소프트웨어시험인증연구소를 김영규 대리, 강민구 사원과 함께 방문해서 GS인증 상담을 받고 왔습니다. 
+개인적으로는 GS인증과 관련해서 궁금증이 많이 해소된 의미있는 자리였던 것 같습니다. 그리고 GS인증을 추진해야 하는 이유가 더 명확해졌습니다.</p>
+
+<h2 id="gs인증은-어떤-등급으로-신청해야-하나">GS인증은 어떤 등급으로 신청해야 하나?</h2>
+<hr />
+
+<p>GS인증에는 1등급과 2등급 2가지 등급이 있습니다. 사실 어떤 등급으로 인증을 신청해야 할지 방문 상담전까지도 고민이 있었습니다. 등급에 따라서 시험난이도에
+차이가 존재할 것이기 때문입니다.
+하지만 TTA에서 상담을 해주신 연구원님께서 명쾌하게 정리를 해주셨습니다. 
+자체적으로 개발하는 소프트웨어는 선택의 여지없이 1등급으로 신청해서 인증을 받아야 된다고요.</p>
+
+<p><img src="/img/posts/gs/gs_mark.png" alt="GS인증" /></p>
+
+<h2 id="사용자-메뉴얼의-수준향상도-기대">사용자 메뉴얼의 수준향상도 기대</h2>
+<hr />
+
+<p>방문 상담전까지는 GS인증을 통해서 우리가 개발하는 소프트웨어 그 자체에 대한 품질 향상만 기대할 수 있다고 생각했습니다. 하지만 상담 과정에서 소프트웨어뿐만
+아니라 사용자에게 제공되는 메뉴얼에 대한 검증도 같이 이루어진다는 사실을 알게 되었습니다.</p>
+
+<p>Technical Writer 직무가 따로 없는 에어릭스에서는 개발자가 사용자 메뉴얼도 작성해야 합니다. 개발자들이 직접 작성하다보니 메뉴얼 작성에 대한 전문성도 부족하고,
+충분히 고민하지 않고 작성하다보니 내용이 많이 부실한 것이 현실입니다. 최소한 GS인증에서 요구하는 요건구성에 맞춰서 사용자 메뉴얼을 작성하려고 노력하다보면
+지금보다는 사용자 메뉴얼의 수준이 향상될 수 있을 것이라고 생각했습니다.</p>
+
+<h2 id="인증시험-가능시기">인증시험 가능시기</h2>
+<hr />
+
+<p>정부과제 R&amp;D지원금을 사용해서 GS인증시험으로 발생하는 비용을 처리할 수 있을 것 같아서, 최대한 빨리 계약을 진행하려고 합니다. 계약 진행하고 1개월정도 대기후에
+시험이 시작될 수 있을 것이라고 기대합니다. 그렇다면 시험시작은 11월초나 중순정도가 될 것 같습니다. 그동안 PLC컨트롤러의 제품개발을 서둘러 마무리해야 합니다.</p>
+
+<h2 id="후속-조치">후속 조치</h2>
+<hr />
+
+<p>오늘 개발팀 주간회의 시간에도 이야기를 했습니다. 개발의 끝은 없다고 생각됩니다. 
+GS인증이 끝이 아니라는 이야기를 하고 싶습니다. GS인증은 우리의 품질을 객관적으로 검증해보는 절차일뿐, 그 제품이 100% 완전무결하다는 것을 보장하는 것은 아닙니다.
+제품을 개선하고자 하는 노력은 계속 되어야 합니다.</p>
+
+<p>또한, GS인증은 화이트박스 테스트가 아니라 블랙박스 테스트로 진행됩니다. 즉, 소스코드와 설계문서까지는 들여다보지 않는다는 의미이죠. 그렇기 때문에
+소스코드와 설계문서의 품질을 끌어올릴 수 있는 방안도 계속 고민을 해야할 것입니다.</p>
+
+<h2 id="gs인증-관련-내부-세미나">GS인증 관련 내부 세미나</h2>
+
+<p>GS인증을 사내에서 처음 시도하는 만큼 최소한 개발팀 내부에는 GS인증이 무엇이고, 어떤것을 어떻게 준비해야 할지에 대해서 공유가 되어야 할 것 같습니다.
+이미 공지했던 것처럼 내일 김영규 대리님께서 세미나를 진행해주실 것입니다. 세미나가 완료된 이후에 세미나 관련 내용도 여기에 포스팅할 계획입니다.</p>
+
+<p>이 포스팅은 내일 세미나에 앞서 GS인증을 추진하는 이유에 대해서 개발팀 구성원들에게 설명하기 위해서 작성했습니다.
+감사합니다.</p>]]></content><author><name>이상훈</name></author><summary type="html"><![CDATA[품질에 대한 고민]]></summary></entry><entry><title type="html">신입 사원이 돌아본 에어릭스 이야기</title><link href="http://localhost:4000/2022/09/26/Newbee.html" rel="alternate" type="text/html" title="신입 사원이 돌아본 에어릭스 이야기" /><published>2022-09-26T00:00:00+09:00</published><updated>2022-09-26T00:00:00+09:00</updated><id>http://localhost:4000/2022/09/26/Newbee</id><content type="html" xml:base="http://localhost:4000/2022/09/26/Newbee.html"><![CDATA[<h3 id="1-이-이야기는">1. 이 이야기는</h3>
 
 <p>에어릭스 환경시스템사업부 개발팀의 신입사원 강민석입니다. 입사한지 벌써 4개월이 넘었는데요, 그 동안 일하면서 느낀 에어릭스에 대한 경험을 솔직하게 이야기 해보는 시간을 가지려고 합니다.</p>
 
-<h2><img src="/img/posts/2022-09-26/KangMS.jpg" alt="강민석 사원" /></h2>
+<h2 id="-width70"><img src="/img/posts/2022-09-26/KangMS.jpg" alt="강민석 사원" />!{: width=”70%”}</h2>
 
 <h3 id="2-에어릭스와의-첫걸음">2. 에어릭스와의 첫걸음</h3>
 
