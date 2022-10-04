@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-04T16:34:58+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">에어릭스 환경시스템사업부 기술블로그</title><subtitle>IT기업이 아닌 에어릭스에서 살아가고 있는 개발자들</subtitle><author><name>(주)에어릭스</name></author><entry><title type="html">GS인증에 도전</title><link href="http://localhost:4000/2022/10/04/gs.html" rel="alternate" type="text/html" title="GS인증에 도전" /><published>2022-10-04T00:00:00+09:00</published><updated>2022-10-04T00:00:00+09:00</updated><id>http://localhost:4000/2022/10/04/gs</id><content type="html" xml:base="http://localhost:4000/2022/10/04/gs.html"><![CDATA[<h2 id="품질에-대한-고민">품질에 대한 고민</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-04T17:04:55+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">에어릭스 환경시스템사업부 기술블로그</title><subtitle>IT기업이 아닌 에어릭스에서 살아가고 있는 개발자들</subtitle><author><name>(주)에어릭스</name></author><entry><title type="html">GS인증에 도전</title><link href="http://localhost:4000/2022/10/04/gs.html" rel="alternate" type="text/html" title="GS인증에 도전" /><published>2022-10-04T00:00:00+09:00</published><updated>2022-10-04T00:00:00+09:00</updated><id>http://localhost:4000/2022/10/04/gs</id><content type="html" xml:base="http://localhost:4000/2022/10/04/gs.html"><![CDATA[<h2 id="품질에-대한-고민">품질에 대한 고민</h2>
 <hr />
 
 <p>우리가 개발하는 소프트웨어의 품질수준을 어떻게 단기간에 끌어올릴 수 있을지 고민이 많은 개발팀장 이상훈입니다. 그 동안 우리 소프트웨어의 품질 수준은
@@ -70,8 +70,12 @@ GS(Good Software)인증에 도전해보기로 했습니다.</p>
 GS인증이 끝이 아니라는 이야기를 하고 싶습니다. GS인증은 우리의 품질을 객관적으로 검증해보는 절차일뿐, 그 제품이 100% 완전무결하다는 것을 보장하는 것은 아닙니다.
 제품을 개선하고자 하는 노력은 계속 되어야 합니다.</p>
 
+<p><img src="/img/posts/gs/agile.png" alt="애자일" width="40%" /></p>
+
 <p>또한, GS인증은 화이트박스 테스트가 아니라 블랙박스 테스트로 진행됩니다. 즉, 소스코드와 설계문서까지는 들여다보지 않는다는 의미이죠. 그렇기 때문에
 소스코드와 설계문서의 품질을 끌어올릴 수 있는 방안도 계속 고민을 해야할 것입니다.</p>
+
+<p><img src="/img/posts/gs/blackboxtesting.png" alt="블랙박스테스팅" width="50%" /></p>
 
 <h2 id="gs인증-관련-내부-세미나">GS인증 관련 내부 세미나</h2>
 
