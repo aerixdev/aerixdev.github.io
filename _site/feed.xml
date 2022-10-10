@@ -1,14 +1,79 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-04T17:27:14+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">에어릭스 환경시스템사업부 기술블로그</title><subtitle>IT기업이 아닌 에어릭스에서 살아가고 있는 개발자들</subtitle><author><name>(주)에어릭스</name></author><entry><title type="html">GS인증에 도전</title><link href="http://localhost:4000/2022/10/04/gs.html" rel="alternate" type="text/html" title="GS인증에 도전" /><published>2022-10-04T00:00:00+09:00</published><updated>2022-10-04T00:00:00+09:00</updated><id>http://localhost:4000/2022/10/04/gs</id><content type="html" xml:base="http://localhost:4000/2022/10/04/gs.html"><![CDATA[<h2 id="품질에-대한-고민">품질에 대한 고민</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-10T13:43:59+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">에어릭스 환경시스템사업부 기술블로그</title><subtitle>IT기업이 아닌 에어릭스에서 살아가고 있는 개발자들</subtitle><author><name>(주)에어릭스</name></author><entry><title type="html">에어릭스 워크샵 후기</title><link href="http://localhost:4000/2022/10/05/workshop.html" rel="alternate" type="text/html" title="에어릭스 워크샵 후기" /><published>2022-10-05T00:00:00+09:00</published><updated>2022-10-05T00:00:00+09:00</updated><id>http://localhost:4000/2022/10/05/workshop</id><content type="html" xml:base="http://localhost:4000/2022/10/05/workshop.html"><![CDATA[<p>에어릭스 환경시스템사업부 개발팀의 손민철입니다. 첫글을 기술관련 글을 쓰고 싶었지만… 
+어찌하다 보니 워크샵 후기를 작성하게 되었습니다.
+입사한지 3년만에 첫 워크샵이었습니다. 기존에는 팀장급인사들만 워크샵에 참여하였으나, 
+팀원들까지 전부 참여하는 워크샵은 처음이었네요. 
+게다가 일정이 화~수요일… 대표님의 센스에 감탄…!! 앞으로의 워크샵이 기대됩니다.</p>
+
+<p align="center">
+  <img src="/img/posts/2022-10-05/반가워.png" alt="text" width="250" />
+</p>
+
+<hr />
+
+<h3 id="제부도-도착">제부도 도착</h3>
+
+<p><img src="/img/posts/2022-10-05/펜션1.jpg" alt="펜션 내부1" width="100%" class="center" /></p>
+
+<p><img src="/img/posts/2022-10-05/펜션2.jpg" alt="펜션 내부2" width="100%" class="center" /></p>
+
+<p><img src="/img/posts/2022-10-05/펜션3.jpg" alt="펜션 내부3" width="100%" class="center" /></p>
+
+<hr />
+
+<p>제부도에 있는 단체 전용 펜션인데 이렇게 큰 펜션은 처음 봅니다. 자 이제 짐 풀고 놀아봅시다!!</p>
+
+<p><img src="/img/posts/2022-10-05/놀이1.jpg" alt="놀이1" width="100%" class="center" /></p>
+
+<p><img src="/img/posts/2022-10-05/놀이2.jpg" alt="놀이2" width="100%" class="center" /></p>
+
+<p><img src="/img/posts/2022-10-05/놀이3.jpg" alt="놀이3" width="100%" class="center" /></p>
+
+<hr />
+
+<p>사실.. 본 워크샵은 팀장급분들만 진행하고 팀원들은 일찍와서 자유시간을 가졌습니다. 와서 노래방에서 노래부르고 족구하고 쉬고 놀았습니다.(진짜 오랫만에 공을 찼네요) 일과시간에 이렇게 놀 수 있는 에어릭스 짱! 에어릭스로 오세요!!</p>
+
+<hr />
+
+<h3 id="바베큐-파티">바베큐 파티</h3>
+
+<p>워크샵의 꽃은 바베큐party가 아닐까…? 살면서 저렇게 큰 철판은 처음 보는 것 같습니다. 신나게 쉬다가
+진짜 워크샵(?)이 끝나고 대표님,팀장님들 도착 시간에 맞춰 바베큐파티를 준비했습니다. 다 같이 준비하니 뭐 하나도 힘들지 않네요.(내가 일을 안한건가)</p>
+
+<p><img src="/img/posts/2022-10-05/바베큐0.jpg" alt="바베큐0" width="100%" class="center" /></p>
+
+<p><img src="/img/posts/2022-10-05/바베큐1.jpg" alt="바베큐1" width="100%" class="center" /></p>
+
+<p><img src="/img/posts/2022-10-05/바베큐2.jpg" alt="바베큐2" width="100%" class="center" /></p>
+
+<p><img src="/img/posts/2022-10-05/바베큐3.jpg" alt="바베큐3" width="100%" class="center" /></p>
+
+<p><img src="/img/posts/2022-10-05/바베큐4.jpg" alt="바베큐4" width="100%" class="center" /></p>
+
+<p><img src="/img/posts/2022-10-05/단체사진.jpg" alt="단체사진" width="100%" class="center" /></p>
+
+<hr />
+
+<p>이럴 경우가 제일 좋습니다. 회사에 고기 굽기 장인이 있는 경우…(다들 상원대리님에게 배워보자) 솔직히.. 대표님이랑 마주앉아서 먹어서 고기는 많이 못먹었지만…(술을 많이 먹었지) 재밌었습니다. 한 8시까지 바베큐를 즐기고 펜션 안에서 노래부를 사람들은 노래부르고 술 더먹을 사람은 더먹고 한 것같네요. 저는 초반에 많이 먹어서 일찍 잤답니다. 그래서 바베큐party 이 후 사진이 없네유…</p>
+
+<hr />
+
+<h3 id="마치며">마치며</h3>
+
+<p><img src="/img/posts/2022-10-05/락큰롤.jpg" alt="라큰롤" width="100%" class="center" /></p>
+
+<p>즐거운 시간이었고 일년에 한 번 쯤은 다 같이 공기 좋고 물좋은 곳에서 시간 보내는 것도 참 좋은 것같습니다. 다음 번엔 다음 날 액티비티까지 할 수 있었으면 좋겠습니다.</p>]]></content><author><name>손민철</name></author><summary type="html"><![CDATA[에어릭스 환경시스템사업부 개발팀의 손민철입니다. 첫글을 기술관련 글을 쓰고 싶었지만… 어찌하다 보니 워크샵 후기를 작성하게 되었습니다. 입사한지 3년만에 첫 워크샵이었습니다. 기존에는 팀장급인사들만 워크샵에 참여하였으나, 팀원들까지 전부 참여하는 워크샵은 처음이었네요. 게다가 일정이 화~수요일… 대표님의 센스에 감탄…!! 앞으로의 워크샵이 기대됩니다.]]></summary></entry><entry><title type="html">GS인증에 도전</title><link href="http://localhost:4000/2022/10/04/gs.html" rel="alternate" type="text/html" title="GS인증에 도전" /><published>2022-10-04T00:00:00+09:00</published><updated>2022-10-04T00:00:00+09:00</updated><id>http://localhost:4000/2022/10/04/gs</id><content type="html" xml:base="http://localhost:4000/2022/10/04/gs.html"><![CDATA[<h2 id="품질에-대한-고민">품질에 대한 고민</h2>
 <hr />
 
 <p>우리가 개발하는 소프트웨어의 품질수준을 어떻게 단기간에 끌어올릴 수 있을지 고민이 많은 개발팀장 이상훈입니다. 그 동안 우리 소프트웨어의 품질 수준은
-너무나 참담할 정도로 엉망이었던 것은 부인할 수 없는 사실이니까요.</p>
+참담할 정도로 엉망이었던 것은 부인할 수 없는 사실이니까요. 당연히 고민을 할 수 밖에 없습니다.</p>
 
 <p><img src="/img/posts/starting_00.png" alt="고민" /></p>
 
-<p>그 동안 문제투성이였던 개발팀이 이제 어느정도 재정비된 상태라고 판단되어서 얼마전부터는 단위테스트 코드 작성 의무화, 코드 커버리지 측정 등 여러가지 시도를 해보고는 있습니다.
-하지만 그것만으로는 많이 부족한 것도 사실입니다. 특히, 개발업무 프로세스가 제대로 정립되어 있지 않고 품질에 대한 기대수준이 명확하게 설정되어 있지 않은 현재의 상태에서는
-어떤 것을 시도하더라도 효과가 떨어질 수 밖에 없다고 생각됩니다.</p>
+<p>문제투성이 개발팀이 이제 재정비되고, 안정을 찾아가고 있는 상황입니다. 이제 다시 도약할 수 있는 에너지를 비축해야 할 시점인 것 같습니다.
+다시 도약하기 위해서 해야할 일들이 많이 있겠으나, 품질수준의 향상이 제일 우선되어야 한다고 생각합니다.
+그래서 얼마전부터 단위테스트 코드 작성 의무화, 코드 커버리지 측정 등 여러가지 시도를 해보고 있는 것입니다.
+하지만 그것만으로는 부족한 것도 사실입니다. 특히, 개발업무 프로세스가 제대로 정립되어 있지 않고 품질에 대한 기대수준이 명확하게 설정되어 있지 않은 현재의 상태에서는
+어떤 것을 시도하더라도 큰 효과를 기대하기는 어려울 것 같습니다.</p>
 
 <h2 id="gs인증에-도전하는-이유">GS인증에 도전하는 이유</h2>
 <hr />
@@ -16,8 +81,8 @@
 <p>우선은 개발팀이 지향하고 있는 품질수준에 대한 가이드라인부터 명확하게 설정하는 것이 필요하다고 생각되었습니다. 그래서 국가공인 소프트웨어 품질인증제도인 
 GS(Good Software)인증에 도전해보기로 했습니다.</p>
 
-<p>아직 우리 스스로 품질수준에 대한 가이드라인을 명확하게 설정할 수 있을만큼 역량을 충분히 갖추지 못했기 때문에, 우선은 공인시험기관을 통해서 객관적인 성능측정과 품질검증이 
-이루어지는 GS품질인증기준을 우리 제품의 품질기준점으로 삼아보려고 합니다.</p>
+<p>아직 우리 스스로 품질수준에 대한 가이드라인을 명확하게 설정할 수 있을만큼 역량을 충분히 갖추지 못했기 때문에, 공인시험기관을 통해서 객관적인 성능측정과 품질검증이 
+이루어지는 GS품질인증기준을 우리 제품의 품질기준점으로 삼아볼 생각입니다.</p>
 
 <p><img src="/img/posts/gs/test.png" alt="시험" width="50%" /></p>
 
@@ -63,7 +128,7 @@ GS(Good Software)인증에 도전해보기로 했습니다.</p>
 <p>정부과제 R&amp;D지원금을 사용해서 GS인증시험으로 발생하는 비용을 처리할 수 있을 것 같아서, 최대한 빨리 계약을 진행하려고 합니다. 계약 진행하고 1개월정도 대기후에
 시험이 시작될 수 있을 것이라고 기대합니다. 그렇다면 시험시작은 11월초나 중순정도가 될 것 같습니다. 그동안 PLC컨트롤러의 제품개발을 서둘러 마무리해야 합니다.</p>
 
-<h2 id="후속-조치">후속 조치</h2>
+<h2 id="잔존-이슈">잔존 이슈</h2>
 <hr />
 
 <p>오늘 개발팀 주간회의 시간에도 이야기를 했습니다. 개발의 끝은 없다고 생각됩니다. 
@@ -77,7 +142,8 @@ GS인증이 끝이 아니라는 이야기를 하고 싶습니다. GS인증은 �
 
 <p><img src="/img/posts/gs/blackboxtesting.png" alt="블랙박스테스팅" width="50%" /></p>
 
-<h2 id="gs인증-관련-내부-세미나">GS인증 관련 내부 세미나</h2>
+<h2 id="글을-마치며">글을 마치며</h2>
+<hr />
 
 <p>GS인증을 사내에서 처음 시도하는 만큼 최소한 개발팀 내부에는 GS인증이 무엇이고, 어떤것을 어떻게 준비해야 할지에 대해서 공유가 되어야 할 것 같습니다.
 이미 공지했던 것처럼 내일 김영규 대리님께서 세미나를 진행해주실 것입니다. 세미나가 완료된 이후에 세미나 관련 내용도 여기에 포스팅할 계획입니다.</p>
@@ -87,7 +153,7 @@ GS인증이 끝이 아니라는 이야기를 하고 싶습니다. GS인증은 �
 
 <p>에어릭스 환경시스템사업부 개발팀의 신입사원 강민석입니다. 입사한지 벌써 4개월이 넘었는데요, 그 동안 일하면서 느낀 에어릭스에 대한 경험을 솔직하게 이야기 해보는 시간을 가지려고 합니다.</p>
 
-<p><img src="/img/posts/2022-09-26/KangMS.jpg" alt="강민석 사원" width="70%" /></p>
+<p><img src="/img/posts/2022-09-26/KangMS.jpg" alt="강민석 사원" /></p>
 
 <hr />
 
@@ -158,13 +224,13 @@ GS인증이 끝이 아니라는 이야기를 하고 싶습니다. GS인증은 �
 <p>위에서 말씀드렸듯이 웹을 이제 막 시작했던 주니어 개발자인 저에게도 눈에 보일정도였으니까요… <del>이때부터 도망을 생각한것같아요</del></p>
 
 <p align="center">
-  <img src="/img/posts/2022-09-22/1.png" alt="text" width="250" />
+  <img src="/img/posts/2022-09-22/1.png" alt="text" width="50%" />
 </p>
 
 <p>3개월 이 지난 시점 기존에 계시던 팀장님은 그만두시고 솔루션을 고도화할 기미가 보이지 않아 저는 사실 도망가려고 했습니다. 하지만 지금 팀장님인 이상훈 팀장님께 <del>붙잡혔고</del> 설득당해 지금까지 잘 버텨오고 있습니다.</p>
 
 <p align="center">
-  <img src="/img/posts/2022-09-22/2.png" alt="text" width="400" />
+  <img src="/img/posts/2022-09-22/2.png" alt="text" width="70%" />
 </p>
 
 <hr />
@@ -207,9 +273,9 @@ GS인증이 끝이 아니라는 이야기를 하고 싶습니다. GS인증은 �
 <p>다음 그림은 각 지표별 평가 기준입니다.</p>
 
 <div style="display:flex;">
-  <img src="/img/posts/2022-09-22/lcp.png" alt="text" width="250" />
-  <img src="/img/posts/2022-09-22/fid.png" alt="text" width="250" />
-  <img src="/img/posts/2022-09-22/cls.png" alt="text" width="250" />
+  <img src="/img/posts/2022-09-22/lcp.png" alt="text" width="33%" />
+  <img src="/img/posts/2022-09-22/fid.png" alt="text" width="33%" />
+  <img src="/img/posts/2022-09-22/cls.png" alt="text" width="33%" />
 </div>
 <p><br /></p>
 
@@ -220,7 +286,7 @@ GS인증이 끝이 아니라는 이야기를 하고 싶습니다. GS인증은 �
 <p>요즘 사람들이 많이 사용하는 크롬 브라우저에서 지원하는 lighthouse로 웹 브라우저 성능지표를 정말 간단하게 측정할 수 있습니다.</p>
 
 <p align="center">
-  <img src="/img/posts/2022-09-22/3.png" alt="text" width="300" />
+  <img src="/img/posts/2022-09-22/3.png" alt="text" width="60%" />
 </p>
 
 <h3 id="측정방법">측정방법</h3>
@@ -230,36 +296,43 @@ GS인증이 끝이 아니라는 이야기를 하고 싶습니다. GS인증은 �
 </ul>
 
 <div style="display:flex;">
-  <img src="/img/posts/2022-09-22/left.png" alt="text" width="400" />
-  <img src="/img/posts/2022-09-22/right.png" alt="text" width="400" />
+  <img src="/img/posts/2022-09-22/left.png" alt="text" width="50%" />
+  <img src="/img/posts/2022-09-22/right.png" alt="text" width="50%" />
 </div>
-
 <p><br /></p>
+
 <ul>
   <li>페이지 로드 분석을 클릭하여 측정을 시작합니다. 저는 네이버를 기준으로 측정하였습니다.
     <p align="center">
-  <img src="/img/posts/2022-09-22/lighthouse.png" alt="text" width="400" />
+  <img src="/img/posts/2022-09-22/lighthouse.png" alt="text" width="70%" />
 </p>
-    <p><br />
-  💡 <strong>Tip:</strong> 모바일로 성능지표 측정 후 개선하면 데스크톱의 성능은 <strong><code class="language-plaintext highlighter-rouge">자동</code></strong>으로 개선이된다고 합니다.
+    <p><br /></p>
+
+    <p>💡 <strong>Tip:</strong> 모바일로 성능지표 측정 후 개선하면 데스크톱의 성능은 <strong><code class="language-plaintext highlighter-rouge">자동</code></strong>으로 개선이된다고 합니다.
 <br /></p>
   </li>
   <li>성능지표 결과를 확인합니다.
     <p align="center">
-  <img src="/img/posts/2022-09-22/result.png" alt="text" width="400" />
+  <img src="/img/posts/2022-09-22/result.png" alt="text" width="70%" />
 </p>
     <p>💡 <strong>Tip:</strong> 성능지표는 여러번 측정하여 <strong><code class="language-plaintext highlighter-rouge">평균값</code></strong>을 기준으로 개선을 진행합니다.
-<br />
 <br /></p>
   </li>
+  <li>글을 작성 하다가 저희 회사의 사내 그룹웨어의 성능 지표도 함께 측정해보았습니다.</li>
 </ul>
+<p align="center">
+  <img src="/img/posts/2022-09-22/group-ware-lcp.png" alt="group-ware" width="70%" />
+</p>
+
+<p>굉장히 처첨한 수준이네요.. 사실 프론트엔드 개발자로써 부끄럽긴하네요. 😅
+어..어어….? 거기! 입사지원 하시려던분 도망가지마세요! 당신에게 LCP를 개선할 수 있는 기회를 드리겠습니다! 이미지를 위해 LCP 측정은 여기까지 하겠습니다. 😥
+<br /></p>
 
 <h2 id="어떻게-성능을-개선해야-하는가">어떻게 성능을 개선해야 하는가?</h2>
 
 <p>사실 저희 회사 솔루션은 10~20초사이 정말 처참한 수준입니다. 프로젝트를 고도화하여 성능을 개선해야하는데 전에 계시던 분들이 진행을 못하셨습니다. 덕분 제가 고도화를 진행할것같네요. 감사합니다.</p>
-
 <p align="center">
-    <img src="/img/posts/2022-09-22/4.png" alt="text" width="400" />
+    <img src="/img/posts/2022-09-22/4.png" alt="text" width="70%" />
   </p>
 <p><br /></p>
 
@@ -270,7 +343,7 @@ GS인증이 끝이 아니라는 이야기를 하고 싶습니다. GS인증은 �
 <p>성능지표 결과화면에 보시면 추천이라는 항목에 그림과 같이 친절하게 나열되어있습니다. 아래의 그림의 경우 렌더링 차단 리소스 제거하면 FCP LCP 개선에 도움을 줄 수 있다고 말해주고 있습니다. 하지만 그 밑에 보시면 성능 점수에는 직접적인 영향을 미치지는 않는다고 되어있네요. 성능지표와 성능 점수는 다르므로 저희는 추천 방법을 참고하시면 될것같습니다.</p>
 
 <p align="center">
-    <img src="/img/posts/2022-09-22/recommend.png" alt="text" width="400" />
+    <img src="/img/posts/2022-09-22/recommend.png" alt="text" width="80%" />
   </p>
 
 <p>두번째로는 코드를 최적화하는 것입니다.</p>
@@ -290,7 +363,7 @@ GS인증이 끝이 아니라는 이야기를 하고 싶습니다. GS인증은 �
 <p>간략하게 말하면 디자인적인 측면을 이용해서 브라우저의 로딩 시간동안 사용자의 지루함을 덜어주면 사용자의 이탈은 자연스럽게 줄어들게 되겠죠. 대표적으로 크롬의 디노게임이 있습니다.</p>
 
 <p align="center">
-    <img src="/img/posts/2022-09-22/dino.gif" alt="text" width="400" />
+    <img src="/img/posts/2022-09-22/dino.gif" alt="text" width="70%" />
   </p>
 
 <p>이부분은 UI/UX로 개선하는 방법으로 로딩 인디케이터, 애니메이션, 스켈레톤 UI, 낙관적 UI 등과 같은 키워드로 검색을 해보시면 쉽게 찾으실 수 있습니다.
@@ -361,7 +434,98 @@ mosquitto의 로그 파일을 열어보면 아래 그림처럼 Reloading config�
 제대로 반납되지 못할 수 있습니다.</p>
 
 <p>실제 서비스를 운영하는 서버라면 <code class="language-plaintext highlighter-rouge">안정성</code>을 유지해야 합니다. 그래서 설정정보가 변경되는 경우에는 
-HUP Signal을 발생시켜서 mosquitto 프로세스가 정상적으로 종료되고 재시작될 수 있도록 하는 것이 중요할 것 같습니다.</p>]]></content><author><name>이상훈</name></author><summary type="html"><![CDATA[mosquitto는 open source기반의 대표적인 MQTT Broker로 저희 에어릭스에서도 센서 데이터를 수집하는 용도로 사용하고 있습니다.]]></summary></entry><entry><title type="html">Broker 서버의 TPS 측정을 위한 JMeter Remote 구축기</title><link href="http://localhost:4000/2022/09/13/JMeter_remote.html" rel="alternate" type="text/html" title="Broker 서버의 TPS 측정을 위한 JMeter Remote 구축기" /><published>2022-09-13T00:00:00+09:00</published><updated>2022-09-13T00:00:00+09:00</updated><id>http://localhost:4000/2022/09/13/JMeter_remote</id><content type="html" xml:base="http://localhost:4000/2022/09/13/JMeter_remote.html"><![CDATA[<p>참조한 공식 문서 : <a href="https://jmeter.apache.org/usermanual/remote-test.html">https://jmeter.apache.org/usermanual/remote-test.html</a></p>
+HUP Signal을 발생시켜서 mosquitto 프로세스가 정상적으로 종료되고 재시작될 수 있도록 하는 것이 중요할 것 같습니다.</p>]]></content><author><name>이상훈</name></author><summary type="html"><![CDATA[mosquitto는 open source기반의 대표적인 MQTT Broker로 저희 에어릭스에서도 센서 데이터를 수집하는 용도로 사용하고 있습니다.]]></summary></entry><entry><title type="html">MQTT 서버 보안성 강화하기</title><link href="http://localhost:4000/2022/09/13/MQTT_security.html" rel="alternate" type="text/html" title="MQTT 서버 보안성 강화하기" /><published>2022-09-13T00:00:00+09:00</published><updated>2022-09-13T00:00:00+09:00</updated><id>http://localhost:4000/2022/09/13/MQTT_security</id><content type="html" xml:base="http://localhost:4000/2022/09/13/MQTT_security.html"><![CDATA[<p>안녕하세요? 에어릭스 환경시스템 사업부 개발팀장 이상훈입니다. 이번에는 MQTT Broker서버의 보안성을 강화하는 것에 대한 주제로 포스팅을 하게 되었습니다.
+이미 보안에 대한 문제점이 있는 것은 오래전부터 인지하고 있었으나, 그 동안 여러가지 긴급한 문제들을 대응하다보니 빠르게 조치를 취하지 못했습니다.</p>
+
+<p>다행히 올해 5월부터 수행하고 있는 클린팩토리 정부R&amp;D과제를 통해서 기존 에어릭스의 스마트팩토리 솔루션들이 가지고 있던 문제점들을 대대적으로 개선할 수
+있는 기회를 가지게 되었습니다.</p>
+
+<p>그 중에서도 가장 우선적으로 개선된 부분이 MQTT Broker서버의 보안성 강화인데, 이번 포스팅을 통해서 그 과정을 정리해보기로 했습니다.</p>
+
+<h2 id="문제점">문제점</h2>
+
+<hr />
+
+<p>저희 에어릭스에서는 주로 MQTT 프로토콜을 사용하여 제조현장에 설치된 센서나 PLC로부터 데이터를 수집하고 있습니다. 데이터를 수집하기 위해서 
+사내에 MQTT Broker가 설치된 서버도 운영하고 있습니다.</p>
+
+<p>MQTT Broker 서버가 에어릭스의 스마트팩토리 시스템에서 중추적인 역할을 하고 있다는 것은 부인할 수 없는 사실일 것입니다. 하지만 문제는 이렇게 
+중요한 MQTT Broker 서버를 그 어떤 보안 매커니즘도 없이 개방된 인터넷 공간에 활짝 공개해놓고 사용하고 있다는 점입니다.</p>
+
+<p>보호되지 않는 MQTT Broker서버에 대한 외부 공격이 데이터 유출을 유발하고, 시스템의 통제권을 빼앗아 이와 연동된 설비나 다른 시스템을 위험에 빠트릴 수도 있습니다.<br />
+뉴스 기사에서도 이미 여러차례 이런 문제점들이 지적된 것을 찾아볼 수 있었습니다. 그런 점에서 보면 에어릭스 뿐만 아니라 IoT기술을 사용하고 있는 대다수 업체들이 가지고 
+있는 만연한 문제일지도 모르겠습니다.</p>
+
+<p>에어릭스에 입사하기 전에 17년 이상을 임베디드 보안 소프트웨어를 개발하던 업무를 해왔던 제 입장에서는 크나큰 위험요소로 
+느껴지는 것이 당연할지도 모르겠습니다.</p>
+
+<p>사실 MQTT Broker 자체의 보안에는 큰 문제가 있습니다. 보안이라는 것 자체를 생각하지 않고, 오직 동작에만 충실한 나머지 제대로된 설정을 하지 않고
+사용하고 있는 대다수 업체들의 잘못인 것입니다.</p>
+
+<h2 id="제약사항">제약사항</h2>
+
+<hr />
+
+<ul>
+  <li>개방된 인터넷망에서 MQTT Broker 서버를 계속 운영해야 함.</li>
+  <li>회사 경영진으로부터 고가의 보안장비를 구입할 예산을 승인받는 것은 거의 불가능함.</li>
+  <li>사내 개발자들의 보안기술에 대한 이해도가 부족함.</li>
+</ul>
+
+<p><img src="/img/posts/solution.png" alt="Image Alt github" /></p>
+
+<h2 id="해결과정">해결과정</h2>
+
+<hr />
+
+<p>위와 같은 제약사항이 존재하는 상태에서 MQTT Broker서버의 보안성을 강화하기 위해서 아래와 같은 조치를 취했습니다.</p>
+
+<h3 id="1익명접속-금지-및-aclaccess-control-list-관리">1.익명접속 금지 및 ACL(Access Control List) 관리</h3>
+
+<p>사용자 계정과 비밀번호의 확인없이 접속을 허용하는 익명접속을 더 이상 허용하지 않도록 MQTT Broker서버의 설정을 변경하였습니다.
+익명접속을 허용한 상태에서 개방된 인터넷망에서 MQTT Broker서버를 사용하는 것은 집에서 인터넷 공유기의 Password를 설정하지 않은 상태에서
+사용하는 것과 마찮가지로 다양한 보안 위협에 그대로 노출될 수 있습니다.
+충분하지는 않겠지만 익명접속을 허용하지 않고, 사용자 계정과 비밀번호를 확인하도록 하는 것만으로도 1차적인 방어선을 갖출 수 있습니다.</p>
+
+<p>또한, MQTT Broker서버가 제공하는 ACL 관리 기능을 사용하도록 설정을 변경하기도 했습니다.
+ACL 관리 기능을 통해서 사용자 계정별로 허용된 TOPIC을 가진 메시지에만 접근(메시지 구독 or 발행)할 수 있도록 권한을 부여했습니다.</p>
+
+<p>기존에는 누구나 제약없이 자유롭게 MQTT Broker서버로 발행되는 메시지를 가져갈 수 있었습니다. 하지만 이렇게 설정을 변경함으로써 이제는 
+사용자 계정과 비밀번호를 통해서 서버 접근 권한이 있는지 확인하고, 해당 계정에 허용된 TOPIC을 가진 메시지만 가져가도록 제어할 수 있게 되었습니다.</p>
+
+<h3 id="2sslsecure-sockets-layer-통신-프로토콜-사용">2.SSL(Secure Sockets Layer) 통신 프로토콜 사용</h3>
+
+<p>MQTT Broker서버가 SSL통신 프로토콜을 사용하여 전송 데이터를 암호화할 수 있도록 했습니다. SSL을 사용하지 않는 경우에는 평문 그대로 데이터가
+전송되기 때문에 민감한 정보들이 그대로 외부에 노출될 수 있다는 문제가 있습니다.</p>
+
+<p>SSL은 전송 데이터의 암호화를 위해서 비대칭키 암호화 알고리즘을 사용합니다. 서버의 키를 공개키를 클라이언트로 전달하기 위해서 신뢰할 수 있는
+CA로부터 발급받은 서버 인증서가 사용됩니다. 서버 인증서를 검증하고 서버의 공개키를 추출하기 위해서는 CA인증서의 발급도 필요합니다.</p>
+
+<p>하지만 제약사항에 있는 것처럼 별도의 예산을 승인받기는 어려운 상황이었기 때문에 우선은 비용이 발생하지 않는 OpenSSL을 사용해서 필요한 인증서
+파일들을 생성해서 사용했습니다.</p>
+
+<p>MQTT Broker서버가 SSL을 사용하여 통신을 할 수 있도록 필요한 인증서 파일들을 등록해주고, 설정을 변경했습니다.</p>
+
+<p>이렇게 SSL을 사용하도록 MQTT Broker서버의 설정을 변경함으로써 데이터의 기밀성(Confidentiality)과 무결성(Integrity)을 보장받을 수 있게 되었습니다.</p>
+
+<h3 id="3vpnvirtual-private-network-사용">3.VPN(Virtual Private Network) 사용</h3>
+
+<p>익명접속 금지 및 ACL관리, 그리고 SSL 통신 프로토콜 사용만으로도 기존 대비 MQTT Broker서버의 보안은 한층 강화되었습니다. 하지만 이것만으로는
+충분하지 않다고 생각되었습니다.</p>
+
+<p>원천적으로 MQTT Broker서버가 사용하는 네트워크에 외부의 접속을 차단하고 싶었습니다. 그래서 VPN 사용을 생각했습니다.
+VPN을 사용하게 되면 MQTT Broker서버와 통신하는 모든 장치들 사이에는 암호화된 보안 터널이 생성되고, 이를 통해서 안전하게 데이터가 전송되게 됩니다.
+개방된 인터넷망을 사용하더라도 암호화된 보안 터널을 통해서 연결되기 때문에 MQTT Broker서버와 장치가 개인 네트워크에 직접 연결된 것과 같은 효과를 가질 수 있습니다.</p>
+
+<p>물론 시중에 나와있는 상용 VPN솔루션을 사용하면 더 좋은 성능과 높은 보안성을 보장받을 수도 있을 것입니다. 하지만 그럴 수 없는 상황이었기 때문에 
+비용이 발생하지 않는 OpenSource VPN 솔루션인 WireGuard를 채택해서 사용했습니다.</p>
+
+<h2 id="남은-이슈">남은 이슈</h2>
+
+<hr />
+
+<p>보안성 강화를 위해서 여러가지 조치들을 취했는데 과연 객관적으로 어느 정도 보안성의 강화가 이루어졌는지 측정해 볼 필요가 있을 것 같습니다. 
+나중에 기회가 된다면 모의해킹 업체에 의뢰해서 확인해볼 예정입니다.</p>]]></content><author><name>이상훈</name></author><summary type="html"><![CDATA[안녕하세요? 에어릭스 환경시스템 사업부 개발팀장 이상훈입니다. 이번에는 MQTT Broker서버의 보안성을 강화하는 것에 대한 주제로 포스팅을 하게 되었습니다. 이미 보안에 대한 문제점이 있는 것은 오래전부터 인지하고 있었으나, 그 동안 여러가지 긴급한 문제들을 대응하다보니 빠르게 조치를 취하지 못했습니다.]]></summary></entry><entry><title type="html">Broker 서버의 TPS 측정을 위한 JMeter Remote 구축기</title><link href="http://localhost:4000/2022/09/13/JMeter_remote.html" rel="alternate" type="text/html" title="Broker 서버의 TPS 측정을 위한 JMeter Remote 구축기" /><published>2022-09-13T00:00:00+09:00</published><updated>2022-09-13T00:00:00+09:00</updated><id>http://localhost:4000/2022/09/13/JMeter_remote</id><content type="html" xml:base="http://localhost:4000/2022/09/13/JMeter_remote.html"><![CDATA[<p>참조한 공식 문서 : <a href="https://jmeter.apache.org/usermanual/remote-test.html">https://jmeter.apache.org/usermanual/remote-test.html</a></p>
 
 <h2 id="tps-측정-배경">TPS 측정 배경</h2>
 
@@ -550,98 +714,7 @@ Copy the generated rmi_keystore.jks to jmeter/bin folder or reference it in prop
 
 <h3 id="6-결론">6. 결론</h3>
 
-<p>저희가 사용하고 있는 서버는 최대 800의 사용자가 동시에 접근하는 MQTT 접속을 처리할 수 있으며 TPS의 경우 1600~2800정도가 나온다는 것을 확인할 수 있었습니다. 또한 JMeter을 이용하여 구축함으로써 MQTT가 아닌 다른 프로토콜을 측정하는 것이 가능한 시스템을 만들 수 있었습니다.</p>]]></content><author><name>강민구,강민석</name></author><summary type="html"><![CDATA[참조한 공식 문서 : https://jmeter.apache.org/usermanual/remote-test.html]]></summary></entry><entry><title type="html">MQTT 서버 보안성 강화하기</title><link href="http://localhost:4000/2022/09/13/MQTT_security.html" rel="alternate" type="text/html" title="MQTT 서버 보안성 강화하기" /><published>2022-09-13T00:00:00+09:00</published><updated>2022-09-13T00:00:00+09:00</updated><id>http://localhost:4000/2022/09/13/MQTT_security</id><content type="html" xml:base="http://localhost:4000/2022/09/13/MQTT_security.html"><![CDATA[<p>안녕하세요? 에어릭스 환경시스템 사업부 개발팀장 이상훈입니다. 이번에는 MQTT Broker서버의 보안성을 강화하는 것에 대한 주제로 포스팅을 하게 되었습니다.
-이미 보안에 대한 문제점이 있는 것은 오래전부터 인지하고 있었으나, 그 동안 여러가지 긴급한 문제들을 대응하다보니 빠르게 조치를 취하지 못했습니다.</p>
-
-<p>다행히 올해 5월부터 수행하고 있는 클린팩토리 정부R&amp;D과제를 통해서 기존 에어릭스의 스마트팩토리 솔루션들이 가지고 있던 문제점들을 대대적으로 개선할 수
-있는 기회를 가지게 되었습니다.</p>
-
-<p>그 중에서도 가장 우선적으로 개선된 부분이 MQTT Broker서버의 보안성 강화인데, 이번 포스팅을 통해서 그 과정을 정리해보기로 했습니다.</p>
-
-<h2 id="문제점">문제점</h2>
-
-<hr />
-
-<p>저희 에어릭스에서는 주로 MQTT 프로토콜을 사용하여 제조현장에 설치된 센서나 PLC로부터 데이터를 수집하고 있습니다. 데이터를 수집하기 위해서 
-사내에 MQTT Broker가 설치된 서버도 운영하고 있습니다.</p>
-
-<p>MQTT Broker 서버가 에어릭스의 스마트팩토리 시스템에서 중추적인 역할을 하고 있다는 것은 부인할 수 없는 사실일 것입니다. 하지만 문제는 이렇게 
-중요한 MQTT Broker 서버를 그 어떤 보안 매커니즘도 없이 개방된 인터넷 공간에 활짝 공개해놓고 사용하고 있다는 점입니다.</p>
-
-<p>보호되지 않는 MQTT Broker서버에 대한 외부 공격이 데이터 유출을 유발하고, 시스템의 통제권을 빼앗아 이와 연동된 설비나 다른 시스템을 위험에 빠트릴 수도 있습니다.<br />
-뉴스 기사에서도 이미 여러차례 이런 문제점들이 지적된 것을 찾아볼 수 있었습니다. 그런 점에서 보면 에어릭스 뿐만 아니라 IoT기술을 사용하고 있는 대다수 업체들이 가지고 
-있는 만연한 문제일지도 모르겠습니다.</p>
-
-<p>에어릭스에 입사하기 전에 17년 이상을 임베디드 보안 소프트웨어를 개발하던 업무를 해왔던 제 입장에서는 크나큰 위험요소로 
-느껴지는 것이 당연할지도 모르겠습니다.</p>
-
-<p>사실 MQTT Broker 자체의 보안에는 큰 문제가 있습니다. 보안이라는 것 자체를 생각하지 않고, 오직 동작에만 충실한 나머지 제대로된 설정을 하지 않고
-사용하고 있는 대다수 업체들의 잘못인 것입니다.</p>
-
-<h2 id="제약사항">제약사항</h2>
-
-<hr />
-
-<ul>
-  <li>개방된 인터넷망에서 MQTT Broker 서버를 계속 운영해야 함.</li>
-  <li>회사 경영진으로부터 고가의 보안장비를 구입할 예산을 승인받는 것은 거의 불가능함.</li>
-  <li>사내 개발자들의 보안기술에 대한 이해도가 부족함.</li>
-</ul>
-
-<p><img src="/img/posts/solution.png" alt="Image Alt github" /></p>
-
-<h2 id="해결과정">해결과정</h2>
-
-<hr />
-
-<p>위와 같은 제약사항이 존재하는 상태에서 MQTT Broker서버의 보안성을 강화하기 위해서 아래와 같은 조치를 취했습니다.</p>
-
-<h3 id="1익명접속-금지-및-aclaccess-control-list-관리">1.익명접속 금지 및 ACL(Access Control List) 관리</h3>
-
-<p>사용자 계정과 비밀번호의 확인없이 접속을 허용하는 익명접속을 더 이상 허용하지 않도록 MQTT Broker서버의 설정을 변경하였습니다.
-익명접속을 허용한 상태에서 개방된 인터넷망에서 MQTT Broker서버를 사용하는 것은 집에서 인터넷 공유기의 Password를 설정하지 않은 상태에서
-사용하는 것과 마찮가지로 다양한 보안 위협에 그대로 노출될 수 있습니다.
-충분하지는 않겠지만 익명접속을 허용하지 않고, 사용자 계정과 비밀번호를 확인하도록 하는 것만으로도 1차적인 방어선을 갖출 수 있습니다.</p>
-
-<p>또한, MQTT Broker서버가 제공하는 ACL 관리 기능을 사용하도록 설정을 변경하기도 했습니다.
-ACL 관리 기능을 통해서 사용자 계정별로 허용된 TOPIC을 가진 메시지에만 접근(메시지 구독 or 발행)할 수 있도록 권한을 부여했습니다.</p>
-
-<p>기존에는 누구나 제약없이 자유롭게 MQTT Broker서버로 발행되는 메시지를 가져갈 수 있었습니다. 하지만 이렇게 설정을 변경함으로써 이제는 
-사용자 계정과 비밀번호를 통해서 서버 접근 권한이 있는지 확인하고, 해당 계정에 허용된 TOPIC을 가진 메시지만 가져가도록 제어할 수 있게 되었습니다.</p>
-
-<h3 id="2sslsecure-sockets-layer-통신-프로토콜-사용">2.SSL(Secure Sockets Layer) 통신 프로토콜 사용</h3>
-
-<p>MQTT Broker서버가 SSL통신 프로토콜을 사용하여 전송 데이터를 암호화할 수 있도록 했습니다. SSL을 사용하지 않는 경우에는 평문 그대로 데이터가
-전송되기 때문에 민감한 정보들이 그대로 외부에 노출될 수 있다는 문제가 있습니다.</p>
-
-<p>SSL은 전송 데이터의 암호화를 위해서 비대칭키 암호화 알고리즘을 사용합니다. 서버의 키를 공개키를 클라이언트로 전달하기 위해서 신뢰할 수 있는
-CA로부터 발급받은 서버 인증서가 사용됩니다. 서버 인증서를 검증하고 서버의 공개키를 추출하기 위해서는 CA인증서의 발급도 필요합니다.</p>
-
-<p>하지만 제약사항에 있는 것처럼 별도의 예산을 승인받기는 어려운 상황이었기 때문에 우선은 비용이 발생하지 않는 OpenSSL을 사용해서 필요한 인증서
-파일들을 생성해서 사용했습니다.</p>
-
-<p>MQTT Broker서버가 SSL을 사용하여 통신을 할 수 있도록 필요한 인증서 파일들을 등록해주고, 설정을 변경했습니다.</p>
-
-<p>이렇게 SSL을 사용하도록 MQTT Broker서버의 설정을 변경함으로써 데이터의 기밀성(Confidentiality)과 무결성(Integrity)을 보장받을 수 있게 되었습니다.</p>
-
-<h3 id="3vpnvirtual-private-network-사용">3.VPN(Virtual Private Network) 사용</h3>
-
-<p>익명접속 금지 및 ACL관리, 그리고 SSL 통신 프로토콜 사용만으로도 기존 대비 MQTT Broker서버의 보안은 한층 강화되었습니다. 하지만 이것만으로는
-충분하지 않다고 생각되었습니다.</p>
-
-<p>원천적으로 MQTT Broker서버가 사용하는 네트워크에 외부의 접속을 차단하고 싶었습니다. 그래서 VPN 사용을 생각했습니다.
-VPN을 사용하게 되면 MQTT Broker서버와 통신하는 모든 장치들 사이에는 암호화된 보안 터널이 생성되고, 이를 통해서 안전하게 데이터가 전송되게 됩니다.
-개방된 인터넷망을 사용하더라도 암호화된 보안 터널을 통해서 연결되기 때문에 MQTT Broker서버와 장치가 개인 네트워크에 직접 연결된 것과 같은 효과를 가질 수 있습니다.</p>
-
-<p>물론 시중에 나와있는 상용 VPN솔루션을 사용하면 더 좋은 성능과 높은 보안성을 보장받을 수도 있을 것입니다. 하지만 그럴 수 없는 상황이었기 때문에 
-비용이 발생하지 않는 OpenSource VPN 솔루션인 WireGuard를 채택해서 사용했습니다.</p>
-
-<h2 id="남은-이슈">남은 이슈</h2>
-
-<hr />
-
-<p>보안성 강화를 위해서 여러가지 조치들을 취했는데 과연 객관적으로 어느 정도 보안성의 강화가 이루어졌는지 측정해 볼 필요가 있을 것 같습니다. 
-나중에 기회가 된다면 모의해킹 업체에 의뢰해서 확인해볼 예정입니다.</p>]]></content><author><name>이상훈</name></author><summary type="html"><![CDATA[안녕하세요? 에어릭스 환경시스템 사업부 개발팀장 이상훈입니다. 이번에는 MQTT Broker서버의 보안성을 강화하는 것에 대한 주제로 포스팅을 하게 되었습니다. 이미 보안에 대한 문제점이 있는 것은 오래전부터 인지하고 있었으나, 그 동안 여러가지 긴급한 문제들을 대응하다보니 빠르게 조치를 취하지 못했습니다.]]></summary></entry><entry><title type="html">(3) PLC [통신 프로토콜, 인터페이스]</title><link href="http://localhost:4000/2022/09/12/plc_protocol.html" rel="alternate" type="text/html" title="(3) PLC [통신 프로토콜, 인터페이스]" /><published>2022-09-12T00:00:00+09:00</published><updated>2022-09-12T00:00:00+09:00</updated><id>http://localhost:4000/2022/09/12/plc_protocol</id><content type="html" xml:base="http://localhost:4000/2022/09/12/plc_protocol.html"><![CDATA[<h1 id="3-plc-통신-프로토콜-인터페이스">(3) PLC [통신 프로토콜, 인터페이스]</h1>
+<p>저희가 사용하고 있는 서버는 최대 800의 사용자가 동시에 접근하는 MQTT 접속을 처리할 수 있으며 TPS의 경우 1600~2800정도가 나온다는 것을 확인할 수 있었습니다. 또한 JMeter을 이용하여 구축함으로써 MQTT가 아닌 다른 프로토콜을 측정하는 것이 가능한 시스템을 만들 수 있었습니다.</p>]]></content><author><name>강민구,강민석</name></author><summary type="html"><![CDATA[참조한 공식 문서 : https://jmeter.apache.org/usermanual/remote-test.html]]></summary></entry><entry><title type="html">(3) PLC [통신 프로토콜, 인터페이스]</title><link href="http://localhost:4000/2022/09/12/plc_protocol.html" rel="alternate" type="text/html" title="(3) PLC [통신 프로토콜, 인터페이스]" /><published>2022-09-12T00:00:00+09:00</published><updated>2022-09-12T00:00:00+09:00</updated><id>http://localhost:4000/2022/09/12/plc_protocol</id><content type="html" xml:base="http://localhost:4000/2022/09/12/plc_protocol.html"><![CDATA[<h1 id="3-plc-통신-프로토콜-인터페이스">(3) PLC [통신 프로토콜, 인터페이스]</h1>
 
 <p>이전 장에서는 PLC 프로그램을 작성하기 위해 사용되는 툴과 PLC 메모리 영역과 주소에 대해서 설명하며 알아보았습니다. 이번에는 PLC의 통신 프로토콜 구조와 통신 프로토콜을 통한 인터페이스 방식에 대해서 알아보도록 하겠습니다.</p>
 
@@ -934,77 +1007,4 @@ VPN을 사용하게 되면 MQTT Broker서버와 통신하는 모든 장치들 �
 
 <hr />
 
-<p>여기까지 설명한 내용이 PLC가 어떤 것이고 동작 방식과 프로그램이 어떻게 동작하는 것인지에 대해서 간략하게 설명을 했습니다. 다음 내용에는 PLC 프로그램 사용에 쓰이는 도구와 PLC 메모리 구조 내용들에 대해서 설명을 하도록 하겠습니다.</p>]]></content><author><name>김영규</name></author><summary type="html"><![CDATA[(1) PLC [PLC 개요, 동작, 분류, 프로그램]]]></summary></entry><entry><title type="html">클린팩토리</title><link href="http://localhost:4000/2022/08/31/cleanfactory.html" rel="alternate" type="text/html" title="클린팩토리" /><published>2022-08-31T00:00:00+09:00</published><updated>2022-08-31T00:00:00+09:00</updated><id>http://localhost:4000/2022/08/31/cleanfactory</id><content type="html" xml:base="http://localhost:4000/2022/08/31/cleanfactory.html"><![CDATA[<p>환경시스템사업부에서 올해(2022년)부터 수행하고 있는 정부R&amp;D과제 중 하나인 <code class="language-plaintext highlighter-rouge">클린팩토리</code> 사업을 소개합니다.</p>
-
-<p>과제의 정식명칭은 <code class="language-plaintext highlighter-rouge">제조 사업장 내 클린팩토리 진단∙관리 서비스 제공을 위한 고성능 센서 및 AI기반의 클라우드 서비스형 산업용 IoT플랫폼 개발</code>이며, 과제명이
-길다보니 줄여서 그냥 <strong>클린팩토리</strong>과제로 부르고 있습니다.</p>
-
-<p>중기부와 과기부에서 총괄하고 있는 <code class="language-plaintext highlighter-rouge">스마트제조혁신기술개발사업</code>에 포함되어 있는 여러 세부과제 중 하나이며, DNA(Data,Network,AI) 기술 기반의 
-스마트 제조혁신 가속화와 스마트공장 공급기업의 경쟁력을 제고하기 위해서 추진되고 있는 사업입니다.</p>
-
-<hr />
-
-<h2 id="연구개발과제-개요">연구개발과제 개요</h2>
-
-<p>본 연구개발과제의 개요는 다음과 같습니다.</p>
-
-<ul>
-  <li>과제명 : <code class="language-plaintext highlighter-rouge">제조 사업장 내 클린팩토리 진단∙관리 서비스 제공을 위한 고성능 센서 및 AI기반의 클라우드 서비스형 산업용 IoT플랫폼 개발</code></li>
-  <li>과제목표 :
-    <ul>
-      <li>중소/중견 제조 사업장에 적용 가능한 클린팩토리 진단∙관리 기술 개발</li>
-      <li>클린팩토리 진단∙관리 기술을 IT서비스로 구현하고 운영할 수 있는 플랫폼을 구축</li>
-      <li>다양한 환경에서의 실증연구를 통한 클린팩토리 진단∙관리 기술 검증</li>
-    </ul>
-  </li>
-  <li>발주처 : 중기부 스마트제조혁신추진단</li>
-  <li>사업기간 : 2022.05 ~ 2025.12 (44개월)</li>
-  <li>총 예산 : 42억원(정부출연금 32억)</li>
-  <li>컨소시움 구성 :
-    <ul>
-      <li>주관연구기관 - <code class="language-plaintext highlighter-rouge">에어릭스</code></li>
-      <li>공동연구기관 - 포항산업과학연구원(RIST), 서울과학기술대학교 산학협력단, 피앤피, 오성시스템</li>
-      <li>위탁연구기관 - <code class="language-plaintext highlighter-rouge">포스코</code></li>
-    </ul>
-  </li>
-</ul>
-
-<p><img src="/img/posts/cleanfactory_01.png" alt="Image Alt 과제개요" /></p>
-
-<hr />
-
-<h2 id="연구개발의-필요성">연구개발의 필요성</h2>
-
-<p>본 과제의 연구개발 필요성은 제조 사업장의 클린팩토리 조성에 대한 수요 증가와 IT 기술을 활용한 클린팩토리 진단·관리 시스템 구축 사례 증가로 설명할 수 있습니다.</p>
-
-<h4 id="제조-사업장의-클린팩토리-조성에-대한-수요-증가">제조 사업장의 클린팩토리 조성에 대한 수요 증가</h4>
-
-<ul>
-  <li>클린팩토리란 제조 사업장에서 발생하는 미세먼지, 온실가스, 화학물질, 폐기물 등의 오염물질의 발생을 최소화한 사업장을 의미함.</li>
-  <li>대한민국 2050 탄소중립 전략과 그린뉴딜 정책으로 인한 정부의 요구와, 제조 사업장 발생 오염물질 관리에 대한 사회적 이슈의 심화로 각종 중소·중견 제조 사업장의 환경 개선에 대한 부담이 증가함.</li>
-  <li>다수의 국내 제조사업장에서는 환경 모니터링 시스템 마련 및 운영 비용의 부담, 관련 전문가의 부재, 공정 연계 기술 부족의 이유로 환경 관리에 어려움을 겪고 있음.</li>
-</ul>
-
-<p><img src="/img/posts/cleanfactory_02.png" alt="Image Alt 4대 환경 관리요소" /></p>
-
-<h4 id="it-기술을-활용한-클린팩토리-진단관리-시스템-구축-사례-증가">IT 기술을 활용한 클린팩토리 진단·관리 시스템 구축 사례 증가</h4>
-
-<ul>
-  <li>대부분의 시스템이 제조 사업장 모니터링 기능 구현에 집중되어 있음.</li>
-  <li>IoT 기술에 환경 기술과 AI 데이터 분석 기술을 접목한 클린팩토리 진단∙관리 시스템의 필요성이 제기되고 있음.</li>
-  <li>시스템 구축 및 운영 비용의 부담, 시스템 운영에 필요한 전문인력 부재, 요구사항 불충족, 기존 시스템과의 통합 문제 등 많은 중소·중견 제조 사업장에서 시스템 도입에 대해서 여전히 어려움을 겪고 있음.</li>
-</ul>
-
-<p><img src="/img/posts/cleanfactory_03.png" alt="Image Alt 제조현장" /></p>
-
-<hr />
-
-<h2 id="목표시스템">목표시스템</h2>
-
-<p><img src="/img/posts/cleanfactory_04.png" alt="Image Alt 에어릭스" /></p>
-
-<h2 id="관련-링크">관련 링크</h2>
-
-<p><a href="https://eiec.kdi.re.kr/policy/materialView.do?num=226520&amp;topic=O&amp;pp=20&amp;datecount=&amp;recommend=&amp;pg=">KDI 경제정보센터 - 중기부/과기정통부, 스마트 제조혁신 기술개발(R&amp;D) 2,418억원 지원</a></p>
-
-<p><img src="/img/posts/iomt_rnd_04.png" alt="Image Alt 에어릭스" /></p>]]></content><author><name>이상훈</name></author><summary type="html"><![CDATA[환경시스템사업부에서 올해(2022년)부터 수행하고 있는 정부R&amp;D과제 중 하나인 클린팩토리 사업을 소개합니다.]]></summary></entry></feed>
+<p>여기까지 설명한 내용이 PLC가 어떤 것이고 동작 방식과 프로그램이 어떻게 동작하는 것인지에 대해서 간략하게 설명을 했습니다. 다음 내용에는 PLC 프로그램 사용에 쓰이는 도구와 PLC 메모리 구조 내용들에 대해서 설명을 하도록 하겠습니다.</p>]]></content><author><name>김영규</name></author><summary type="html"><![CDATA[(1) PLC [PLC 개요, 동작, 분류, 프로그램]]]></summary></entry></feed>

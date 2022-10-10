@@ -14,14 +14,14 @@ author: 송기영
 위에서 말씀드렸듯이 웹을 이제 막 시작했던 주니어 개발자인 저에게도 눈에 보일정도였으니까요… ~~이때부터 도망을 생각한것같아요~~
 
 <p align="center">
-  <img src="/img/posts/2022-09-22/1.png" alt="text" width="250" />
+  <img src="/img/posts/2022-09-22/1.png" alt="text" width="50%" />
 </p>
 
 
 3개월 이 지난 시점 기존에 계시던 팀장님은 그만두시고 솔루션을 고도화할 기미가 보이지 않아 저는 사실 도망가려고 했습니다. 하지만 지금 팀장님인 이상훈 팀장님께 ~~붙잡혔고~~ 설득당해 지금까지 잘 버텨오고 있습니다.
 
 <p align="center">
-  <img src="/img/posts/2022-09-22/2.png" alt="text" width="400" />
+  <img src="/img/posts/2022-09-22/2.png" alt="text" width="70%" />
 </p>
 
 ---
@@ -58,9 +58,9 @@ author: 송기영
 다음 그림은 각 지표별 평가 기준입니다.
 
 <div style="display:flex;">
-  <img src="/img/posts/2022-09-22/lcp.png" alt="text" width="250" />
-  <img src="/img/posts/2022-09-22/fid.png" alt="text" width="250" />
-  <img src="/img/posts/2022-09-22/cls.png" alt="text" width="250" />
+  <img src="/img/posts/2022-09-22/lcp.png" alt="text" width="33%" />
+  <img src="/img/posts/2022-09-22/fid.png" alt="text" width="33%" />
+  <img src="/img/posts/2022-09-22/cls.png" alt="text" width="33%" />
 </div>
 <br/>
 
@@ -72,7 +72,7 @@ author: 송기영
 요즘 사람들이 많이 사용하는 크롬 브라우저에서 지원하는 lighthouse로 웹 브라우저 성능지표를 정말 간단하게 측정할 수 있습니다.
 
 <p align="center">
-  <img src="/img/posts/2022-09-22/3.png" alt="text" width="300" />
+  <img src="/img/posts/2022-09-22/3.png" alt="text" width="60%" />
 </p>
 
 ### 측정방법
@@ -80,32 +80,41 @@ author: 송기영
 - 측정하고하자는 웹사이트를 접속한 후 크롬 브라우저에서 f12 혹은 도구 더보기- 개발자 도구를 눌러 개발자 도구를 실행합니다.
 
 <div style="display:flex;">
-  <img src="/img/posts/2022-09-22/left.png" alt="text" width="400" />
-  <img src="/img/posts/2022-09-22/right.png" alt="text" width="400" />
+  <img src="/img/posts/2022-09-22/left.png" alt="text" width="50%" />
+  <img src="/img/posts/2022-09-22/right.png" alt="text" width="50%" />
 </div>
-
 <br/>
+
 - 페이지 로드 분석을 클릭하여 측정을 시작합니다. 저는 네이버를 기준으로 측정하였습니다.
   <p align="center">
-    <img src="/img/posts/2022-09-22/lighthouse.png" alt="text" width="400" />
+    <img src="/img/posts/2022-09-22/lighthouse.png" alt="text" width="70%" />
   </p>
   <br/>
-    💡 <strong>Tip:</strong> 모바일로 성능지표 측정 후 개선하면 데스크톱의 성능은 <strong>`자동`</strong>으로 개선이된다고 합니다.
-<br/>
+
+  💡 <strong>Tip:</strong> 모바일로 성능지표 측정 후 개선하면 데스크톱의 성능은 <strong>`자동`</strong>으로 개선이된다고 합니다.
+  <br/>
+
 - 성능지표 결과를 확인합니다.
   <p align="center">
-    <img src="/img/posts/2022-09-22/result.png" alt="text" width="400" />
+    <img src="/img/posts/2022-09-22/result.png" alt="text" width="70%" />
   </p>
-    💡 <strong>Tip:</strong> 성능지표는 여러번 측정하여 <strong>`평균값`</strong>을 기준으로 개선을 진행합니다.
+  💡 <strong>Tip:</strong> 성능지표는 여러번 측정하여 <strong>`평균값`</strong>을 기준으로 개선을 진행합니다.
 <br/>
+
+- 글을 작성 하다가 저희 회사의 사내 그룹웨어의 성능 지표도 함께 측정해보았습니다.
+<p align="center">
+  <img src="/img/posts/2022-09-22/group-ware-lcp.png" alt="group-ware" width="70%">
+</p>
+
+굉장히 처첨한 수준이네요.. 사실 프론트엔드 개발자로써 부끄럽긴하네요. 😅
+어..어어....? 거기! 입사지원 하시려던분 도망가지마세요! 당신에게 LCP를 개선할 수 있는 기회를 드리겠습니다! 이미지를 위해 LCP 측정은 여기까지 하겠습니다. 😥
 <br/>
 
 ## 어떻게 성능을 개선해야 하는가?
 
 사실 저희 회사 솔루션은 10~20초사이 정말 처참한 수준입니다. 프로젝트를 고도화하여 성능을 개선해야하는데 전에 계시던 분들이 진행을 못하셨습니다. 덕분 제가 고도화를 진행할것같네요. 감사합니다.
-
   <p align="center">
-    <img src="/img/posts/2022-09-22/4.png" alt="text" width="400" />
+    <img src="/img/posts/2022-09-22/4.png" alt="text" width="70%" />
   </p>
   <br/>
 
@@ -116,7 +125,7 @@ author: 송기영
 성능지표 결과화면에 보시면 추천이라는 항목에 그림과 같이 친절하게 나열되어있습니다. 아래의 그림의 경우 렌더링 차단 리소스 제거하면 FCP LCP 개선에 도움을 줄 수 있다고 말해주고 있습니다. 하지만 그 밑에 보시면 성능 점수에는 직접적인 영향을 미치지는 않는다고 되어있네요. 성능지표와 성능 점수는 다르므로 저희는 추천 방법을 참고하시면 될것같습니다.
 
   <p align="center">
-    <img src="/img/posts/2022-09-22/recommend.png" alt="text" width="400" />
+    <img src="/img/posts/2022-09-22/recommend.png" alt="text" width="80%" />
   </p>
 
 두번째로는 코드를 최적화하는 것입니다.
@@ -137,7 +146,7 @@ author: 송기영
 
 
   <p align="center">
-    <img src="/img/posts/2022-09-22/dino.gif" alt="text" width="400" />
+    <img src="/img/posts/2022-09-22/dino.gif" alt="text" width="70%" />
   </p>
 
 이부분은 UI/UX로 개선하는 방법으로 로딩 인디케이터, 애니메이션, 스켈레톤 UI, 낙관적 UI 등과 같은 키워드로 검색을 해보시면 쉽게 찾으실 수 있습니다.
