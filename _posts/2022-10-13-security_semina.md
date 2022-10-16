@@ -23,11 +23,11 @@ author: 강민석
 
 웹 보안 스캐너 OWASP-ZAP(Zed Attack Proxy)을 통한 웹페이지 취약점을 분석법에 대해 알아보았다. Spider, 강제 검색 등의 기법으로 웹페이지에서 사용자에게 공개되지 않은 페이지들이 손쉽게 노출될 수 있는 상황에 대해 알아보았다.
 
-![sql_injection](/img/posts/2022-10-13/sql_injection.png.jpg)
+![sql_injection](/img/posts/2022-10-13/sql_injection.png)
 
 또한 주요 취약점으로로 경로 탐색 취약점, SQL 인젝션, 크로스 사이트 스크립팅(XSS) 사례를 알아보고 그에 대처법을 공유했다. 이 중 SQL 인젝션이 우리 개발에 있어 가장 취약한 부분이며 대처하기도 쉽지 않은 부분이다. 기본적인 SQL 인젝션에 대한 대비부터 먼저 실시하고, 고도의 인젝션 공격들에 대해서는 앞으로 개발자로서 발전하면서 끊임없이 싸워야 할 부분이라는 것을 체감했다.
   
-![security_onion](/img/posts/2022-10-13/security_onion.png.jpg)
+![security_onion](/img/posts/2022-10-13/security_onion.png)
 
 마지막 순서로 NSM(Network Security Monitoring) 도구인 Security Onion에 대해 알아보았다. 앞서 SQL 인젝션 상황과 같이 개발을 하면서 모든 취약점에 대해 대비할 수 는 없기 때문에 필요한 것이 NSM이다. 제품 운영 단계에서 실시간으로 공격을 감지하고 이에 대해 적절한 대처를 해주도록 도와준다. 제품 출시 후 NSM을 통한 중앙 관제를 도입하는 것도 좋은 방안이 될 수 있겠다.
 
