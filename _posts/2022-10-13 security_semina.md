@@ -11,7 +11,7 @@ author: 강민석
 
 ### 1. 주제 - 웹 취약점 분석과 해킹 대응
 
-  <img src="/img/posts/2022-10-13/security_semina.jpg" width="30%"/>
+![security_semina](/img/posts/2022-10-13/security_semina.jpg)
 
 여태까지 우리 개발팀의 방향은 기능에 충실하고 에러, 버그가 없는 제품을 만드는 것을 중점으로 하고있었다. 보안에 있어서는 중요하다는 생각은 가지고 있지만, 취약점 사례들을 알 지 못하고 실제로 어떤 피해로 다가올 수 있는지 체감하지 못하고 있었던 실정이라 크게 신경 쓰지 못하고 있는 상황이다. 이번 세미나를 통해 웹 보안의 주요 취약점 사례들과 대처 방법을 알아보면서 보안에 대한 관심을 환기할 수 있는 시간을 가져보았다.
 
@@ -19,15 +19,15 @@ author: 강민석
 
 이번 세미나는 웹 보안을 위한 툴들의 기초 사용법과 주요 취약점 사례들에 대해 알아보는 것이 주요 내용이었다. 
 
-  <img src="/img/posts/2022-10-13/owasp_zap.png" width="30%"/>
+![owasp_zap](/img/posts/2022-10-13/owasp_zap.png)
 
 웹 보안 스캐너 OWASP-ZAP(Zed Attack Proxy)을 통한 웹페이지 취약점을 분석법에 대해 알아보았다. Spider, 강제 검색 등의 기법으로 웹페이지에서 사용자에게 공개되지 않은 페이지들이 손쉽게 노출될 수 있는 상황에 대해 알아보았다.
 
-  <img src="/img/posts/2022-10-13/sql_injection.png.jpg" width="30%"/>
+![sql_injection](/img/posts/2022-10-13/sql_injection.png.jpg)
 
 또한 주요 취약점으로로 경로 탐색 취약점, SQL 인젝션, 크로스 사이트 스크립팅(XSS) 사례를 알아보고 그에 대처법을 공유했다. 이 중 SQL 인젝션이 우리 개발에 있어 가장 취약한 부분이며 대처하기도 쉽지 않은 부분이다. 기본적인 SQL 인젝션에 대한 대비부터 먼저 실시하고, 고도의 인젝션 공격들에 대해서는 앞으로 개발자로서 발전하면서 끊임없이 싸워야 할 부분이라는 것을 체감했다.
   
-  <img src="/img/posts/2022-10-13/security_onion.png.jpg" width="30%"/>
+![security_onion](/img/posts/2022-10-13/security_onion.png.jpg)
 
 마지막 순서로 NSM(Network Security Monitoring) 도구인 Security Onion에 대해 알아보았다. 앞서 SQL 인젝션 상황과 같이 개발을 하면서 모든 취약점에 대해 대비할 수 는 없기 때문에 필요한 것이 NSM이다. 제품 운영 단계에서 실시간으로 공격을 감지하고 이에 대해 적절한 대처를 해주도록 도와준다. 제품 출시 후 NSM을 통한 중앙 관제를 도입하는 것도 좋은 방안이 될 수 있겠다.
 
