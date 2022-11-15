@@ -1,4 +1,411 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-11T11:02:00+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">에어릭스 환경시스템사업부 기술블로그</title><subtitle>IT기업이 아닌 에어릭스에서 살아가고 있는 개발자들</subtitle><author><name>(주)에어릭스</name></author><entry><title type="html">GS 인증 세미나</title><link href="http://localhost:4000/2022/10/11/gs_seminar.html" rel="alternate" type="text/html" title="GS 인증 세미나" /><published>2022-10-11T00:00:00+09:00</published><updated>2022-10-11T00:00:00+09:00</updated><id>http://localhost:4000/2022/10/11/gs_seminar</id><content type="html" xml:base="http://localhost:4000/2022/10/11/gs_seminar.html"><![CDATA[<h1 id="gs-인증-세미나">GS 인증 세미나</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-11-16T00:03:49+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">에어릭스 환경시스템사업부 기술블로그</title><subtitle>IT기업이 아닌 에어릭스에서 살아가고 있는 개발자들</subtitle><author><name>(주)에어릭스</name></author><entry><title type="html">새로운 만남 - New Face from Viet Nam</title><link href="http://localhost:4000/2022/11/15/new_face.html" rel="alternate" type="text/html" title="새로운 만남 - New Face from Viet Nam" /><published>2022-11-15T00:00:00+09:00</published><updated>2022-11-15T00:00:00+09:00</updated><id>http://localhost:4000/2022/11/15/new_face</id><content type="html" xml:base="http://localhost:4000/2022/11/15/new_face.html"><![CDATA[<p>에어릭스 개발팀에 새로운 얼굴들이 나타났습니다. 바다 건너 베트남에서 온 개발자 Dang Quang Tuan(당꾸안투안, Lex)씨와 Ngo khanh Duy(응옥한유이, Tommy)씨를 환영합니다.</p>
+
+<p>한국이 익숙하지않은 두 분을 위해 직접 인천공항으로 픽업을 나갔습니다. 영어에 유창하지만, 울렁증이 있다는 김영규 대리님을 위해, 의리 있는 제가 함께 공항으로 갔습니다.</p>
+
+<p><img src="/img/posts/2022-11-15/nse-5502856638730671901-693.jpg" alt="panel" width="100%" class="center" /></p>
+
+<p>준비성이 무척이나 철저한 모습입니다.</p>
+
+<p><img src="/img/posts/2022-11-15/nse-1015362486945153275-691.jpg" alt="baseball" width="100%" class="center" /></p>
+
+<p>입국 수속이 늦어지며 힘들어지던 때에 유명 야구선수 최지만 선수가 입국하는 모습도 보았습니다. 취재 열기가 장난이 아니었습니다.</p>
+
+<p><del>사실 저와 김영규 대리님 둘 다 누구인지 몰라서 두리번거렸습니다…</del></p>
+
+<p><img src="/img/posts/2022-11-15/nse-3466361857878663043-686.jpg" alt="chicken" width="100%" class="center" />
+시간이 늦어진 만큼 재빠르게 이동해 저녁 식사를 함께했습니다. 원래 맛초킹을 시키려고 했는데, 매운 치킨을 강력히 주장하는 Lex씨 덕에 김영규 대리님은 매운맛에 고통받았습니다. 😆😆😆</p>
+
+<p>손님 맞이한 두 명도 정신이 없어 많은 사진을 남기지 못한 것이 아쉽습니다. 앞으로 두 개발자분에 대한 더 많은 이야기를 남겨보겠습니다.
+두 개발자 분의 활약을 응원해주세요!</p>]]></content><author><name>강민석</name></author><summary type="html"><![CDATA[에어릭스 개발팀에 새로운 얼굴들이 나타났습니다. 바다 건너 베트남에서 온 개발자 Dang Quang Tuan(당꾸안투안, Lex)씨와 Ngo khanh Duy(응옥한유이, Tommy)씨를 환영합니다.]]></summary></entry><entry><title type="html">전원 ON/OFF 반복 테스트 장치 개발구상</title><link href="http://localhost:4000/2022/11/15/power_test.html" rel="alternate" type="text/html" title="전원 ON/OFF 반복 테스트 장치 개발구상" /><published>2022-11-15T00:00:00+09:00</published><updated>2022-11-15T00:00:00+09:00</updated><id>http://localhost:4000/2022/11/15/power_test</id><content type="html" xml:base="http://localhost:4000/2022/11/15/power_test.html"><![CDATA[<p>에어릭스 개발팀장 이상훈입니다. 앞선 포스팅에서도 몇번 언급했던 것처럼 저희 제품의 품질향상을 위해서도 
+여러가지 고민을 하고 있으며, 그에 따라서 다양한 시도를 해보고 있는 중입니다.</p>
+
+<p><img src="/img/posts/tryitnow.png" alt="Try It Now" /></p>
+
+<p>제 나름대로 최소한의 필요한 테스트 환경들을 갖춰보려고 하는 것도 그 시도의 일환이라고 볼 수 있겠습니다.
+얼마전 오픈소스인 Apache JMeter를 활용해서 서버의 성능을 측정할 수 있는 테스트 환경을 구축해 놓았고,
+이어서 디바이스에 전원을 반복적으로 ON/OFF해보면서 디바이스가 손상되지 않고 정상적으로 동작할 수 있는지 
+확인해볼 수 있도록 테스트 환경구축을 구축해보고자 합니다.</p>
+
+<hr />
+
+<h2 id="릴레이모듈">릴레이모듈</h2>
+
+<p>디바이스에 공급되고 있는 전원을 어떻게 내가 원하는대로 제어할 수 있을까? 방법을 몰라서 무작정 인터넷을 뒤적거리면서
+찾아봤는데, 릴레이모듈이라는 부품을 사용하면 될 것 같습니다. 가격도 비싸지 않아서 바로 구입해버렸습니다. 
+제가 구입한 릴레이모듈은 채널이 2개인 제품인데 아래 사진에 있는 제품입니다.</p>
+
+<p><img src="/img/posts/relay.png" alt="2채널 릴레이모듈" /></p>
+
+<p><img src="/img/posts/relay_pin.png" alt="2채널 릴레이모듈" /></p>
+
+<p>판매처 사이트(https://eduino.kr)에 릴레이모듈에 대해서 설명이 잘되어 있어서 아래에 첨부해봤습니다.</p>
+
+<p><img src="/img/posts/relay_info.png" alt="릴레이모듈 설명" width="100%" class="center" /></p>
+
+<hr />
+
+<h2 id="라즈베리파이의-gpio-단자">라즈베리파이의 GPIO 단자</h2>
+
+<p>릴레이모듈의 공통단자에 디바이스 전원의 GND를 연결하고, NO단자에 VCC선을 연결하면 제어신호 단자에 입력되는
+신호를 통해서 원하는대로 전원 ON/OFF를 제어하는 것이 가능할 것 같습니다. 문제는 제어신호 단자에 어떻게
+내가 원하는 신호를 줄 수 있느냐인데 이것도 라즈베리파이의 GPIO 단자를 통해서 해결하면 될 것 같습니다.</p>
+
+<p>릴레이모듈의 제어신호 단자를 라즈베리파이의 GPIO 단자와 연결합니다. 그리고 라즈베리파이에서 GPIO 단자의 출력값을
+변경하면서 전원 ON/OFF 테스트를 반복적으로 수행할 수 있도록 어플리케이션을 개발해서 구동시키면 됩니다.
+단, 라즈베리파이의 GPIO 단자 출력이 DC 3.3V이기 때문에 릴레이모듈의 제어신호 단자에 그대로 연결할 수는 없습니다.
+제어신호 단자에서는 DC 5V가 필요하기 때문입니다. 라즈베리파이의 GPIO단자와 릴레이모듈의 제어신호 단자 사이에 
+전압증폭 회로가 필요할 것 같은데, 회사 하드웨어 팀에 도움을 받는다면 쉽게 해결할 수 있을 것 같습니다.</p>
+
+<p><img src="/img/posts/raspberry.png" alt="라즈베리파이" /></p>
+
+<hr />
+
+<h2 id="디바이스의-정상동작-유무-판별">디바이스의 정상동작 유무 판별</h2>
+
+<p>저희 디바이스들은 공통적으로 MQTT 프로토콜을 이용해서 데이터를 전송하는 기능을 가지고 있습니다.
+MQTT 프로토콜을 통해서 데이터를 정상적으로 서버에 전송하고 있다면 일단은 해당 디바이스가 동작하고 있다고
+볼 수 있을 것 같습니다. 물론 테스트 종료 이후에 육안으로 디바이스를 점검하면서 동작을 확인해보는 것도 필요해보이기는 합니다.</p>
+
+<hr />
+
+<h2 id="목표시스템">목표시스템</h2>
+
+<p>결론적으로 목표했던 것처럼 전원 ON/OFF 반복 테스트가 가능한 환경을 위해서는 다음과 같은 구조로 장치를 구성해야 할 것 같습니다.</p>
+
+<p><img src="/img/posts/arch.png" alt="구성도" width="100%" class="center" /></p>
+
+<hr />
+
+<h2 id="글을-마치며">글을 마치며</h2>
+
+<p>이 글의 포스팅 때문에 저녁먹고 아이와 놀아주지 못해서 미안하기는 했지만, 그래도 머리속에 단순히 구상만 하고 있던 테스트 장치 개발에 대해서
+생각을 조금 더 다듬고 구체화시킬 수 있었던 의미있는 시간이었던 것 같습니다.
+주문한 릴레이모듈이 도착하면 팀원들과 함께 바로 장치 개발을 시작해볼 예정이고, 그 결과 또한 포스팅을 하도록 하겠습니다.</p>
+
+<p>감사합니다.</p>]]></content><author><name>이상훈</name></author><summary type="html"><![CDATA[에어릭스 개발팀장 이상훈입니다. 앞선 포스팅에서도 몇번 언급했던 것처럼 저희 제품의 품질향상을 위해서도 여러가지 고민을 하고 있으며, 그에 따라서 다양한 시도를 해보고 있는 중입니다.]]></summary></entry><entry><title type="html">데이터 분석 - 개발팀 세미나</title><link href="http://localhost:4000/2022/10/28/data_semina.html" rel="alternate" type="text/html" title="데이터 분석 - 개발팀 세미나" /><published>2022-10-28T00:00:00+09:00</published><updated>2022-10-28T00:00:00+09:00</updated><id>http://localhost:4000/2022/10/28/data_semina</id><content type="html" xml:base="http://localhost:4000/2022/10/28/data_semina.html"><![CDATA[<p>안녕하세요. 에어릭스 환경시스템사업부의 개발팀 프론트엔드 개발자 송기영입니다.</p>
+
+<p>오늘은 제가 진행했던 데이터 분석 세미나에 대해서 이야기를 해보려고 합니다.</p>
+
+<h2 id="데이터-분석의-필요성">데이터 분석의 필요성</h2>
+
+<p>현재 에어릭스 개발팀의 솔루션은 PLC나 블루투스 센서의 데이터들을 이용해 집진기의 상태를 제어 혹은 모니터링하는 시스템입니다. 하지만 수집된 데이터를 우리는 제대로 활용하지 못하고 있습니다.</p>
+
+<p>현재 솔루션중 하나인 ISDC의 경우에도 3년치의 데이터를 쌓아두고 그저 지켜보고만 있습니다.</p>
+
+<p align="center">
+  <img src="/img/posts/2022-10-28/look.jpg" alt="look" width="70%" />
+</p>
+
+<p>저희 개발팀은 이 데이터를 어떻게 활용을 할 수 있을까를 생각해 보았고 데이터 활용을 하기 위해서는 데이터 분석이 무엇인지를 알아야 활용을 할 수 있다고 결론을 내리게 되었습니다.</p>
+
+<h2 id="세미나-진행">세미나 진행</h2>
+
+<p>세미나는 의견을 주고받으면서 약 1시간정도 진행되었지만 이 글에서는 최대한 간략하게 소개해보려고합니다.</p>
+
+<p align="center">
+  <img src="/img/posts/2022-10-28/1.jpeg" alt="semina_start" width="70%" />
+</p>
+
+<p align="center">
+  <img src="/img/posts/2022-10-28/3.jpeg" alt="semina_start" width="70%" />
+</p>
+
+<p><a href="https://aerixdev.github.io/download/data_semina.pptx">교안 다운로드 : 데이터 분석 - 개발팀 세미나 자료.pptx</a></p>
+
+<h3 id="데이터-분석이란">데이터 분석이란?</h3>
+
+<p>사실 데이터 분석은 말 그래도 데이터를 분석하는 것입니다. 그리고 이 분석은 수학, 머신러닝, 컴퓨터사이언스, 통계연구, 데이터 처리, 도메인 전문서의 집합들의 지식이 있어야 비로소 데이터 분석의 기반이 됩니다.</p>
+
+<p align="center">
+  <img src="/img/posts/2022-10-28/data_science.png" alt="semina_start" width="70%" />
+</p>
+
+<p>데이터 분석의 핵심은 데이터 추출이 아닌 의사결정입니다.
+이는 아래와 같이 정의할 수 있습니다.</p>
+<ul>
+  <li>수집한 데이터에서 어떤 가치를 뽑아내는가?</li>
+  <li>데이터 분석을 해서 무엇을 얻고싶은가?</li>
+  <li>데이터를 통한 올바른 의사결정을 할 수 있는가?</li>
+</ul>
+
+<p>이러한 의사결정들을 통해 추출된 데이터를 어떻게 활용하는지는 데이터를 사용하는 사용자에 따라 결정됩니다.</p>
+
+<h3 id="데이터-분석-툴">데이터 분석 툴?</h3>
+
+<p>데이터 분석을 위해서는 파이썬, R, 엑셀, SQL, 태블로, Power BI, 구글애널리틱스 등 다양한 방법이 있습니다. 이중에 저는 가장 많이 사용되는 파이썬과 R을 비교해보았습니다. 아래의 표와 같은 이유로 저는 <strong><code class="language-plaintext highlighter-rouge">개발자</code></strong>이기 때문에 파이썬을 이용해 데이터를 분석해보았습니다.</p>
+
+<p align="center">
+  <img src="/img/posts/2022-10-28/tool.png" alt="semina_start" width="70%" />
+</p>
+
+<h3 id="데이터-분석-과정">데이터 분석 과정</h3>
+<p>데이터 분석과정은 수집, 탐색, 시각화, 목적으로 진행됩니다.</p>
+<ul>
+  <li><strong>수집</strong> : 데이터를 수집하는 단계</li>
+  <li><strong>탐색</strong> : 로우 데이터에서 인사이트를 발견</li>
+  <li><strong>시각화</strong> : 탐색을 통해 발견된 내용을 시각화</li>
+  <li><strong>목적</strong> : 데이터를 분석하는 목적</li>
+</ul>
+
+<p>그리고 탐색부터 목적까지는 계속 반복됩니다. 예로 하나의 데이터 셋에서 한가지의 목적을 찾는 것이 아닌 데이터 분석을 반복하면서 구체화된 목적을 찾을수 있으니까요.</p>
+
+<h3 id="실-데이터-분석">실 데이터 분석</h3>
+<p>세미나에서는 다양한 자료들로 데이터를 분석하였지만 이 글에서는 저희회사의 진동센서 데이터를 가지고 데이터 분석 예를 이야기해보겠습니다.</p>
+
+<ul>
+  <li>
+    <p><strong>탐색</strong>
+수집된 데이터를 보고 다음과 같은 인사이트를 찾을 수 있습니다.</p>
+
+    <ul>
+      <li>X값이 클때 Y값도 클까?</li>
+      <li>진동이 발생했을때 X와 Y가 모두 값이 클까?</li>
+      <li>특정시간에 진동이 쎄지고 약해질까?</li>
+    </ul>
+  </li>
+</ul>
+
+<p align="center">
+  <img src="/img/posts/2022-10-28/find.png" alt="semina_start" width="70%" />
+</p>
+
+<ul>
+  <li><strong>시각화</strong>
+수집된 데이터를 가지고 시각화를 하면 아래와 같이 생성됩니다. 인사이트된 데이터를 시각화를 한것이 아닌 단순히 수집된 데이터를 시각화 했습니다.</li>
+</ul>
+
+<p align="center">
+  <img src="/img/posts/2022-10-28/graph.png" alt="semina_start" width="70%" />
+</p>
+
+<ul>
+  <li><strong>목적</strong>
+시각화된 데이터를 가지고 우리는 특정 시간에 x,y,z 값이 비정상적인 것을 확인 할 수 있습니다. 이를 통해 저 시간대에는 어떤 이슈가 발생했었는지를 파악할 수 있고 우리는 이를 해결하기 위한 방향성을 정할 수 있게됩니다.</li>
+</ul>
+
+<h3 id="데이터-검정">데이터 검정</h3>
+<p>데이터를 뽑아왔는데 어떤 정보를 신뢰할 수 있을까라는 의심이 생깁니다.
+지금까지는 그림을 보거나 평균값을 통해 데이터를 검정했습니다. 하지만 데이터 분석에서는 이를 정밀하게 검증할 수 있으면 검증을 진행합니다. 대표적인 예로 T-TEST
+가 있습니다.</p>
+
+<h4 id="t-test-란">T-TEST 란?</h4>
+<p>두 집단간의 평균의 차이에 대한 검정 방법으로
+귀무가설과 대립가설 중 하나를 선택하는 검정방법입니다.</p>
+
+<p align="center">
+  <img src="/img/posts/2022-10-28/test.png" alt="semina_start" width="70%" />
+</p>
+
+<p>여기서 귀무가설은 버려질 것으로 예상되는 가설로, t-test 이후에 가설을 수용할지 기각할지를 결정합니다.</p>
+
+<h3 id="데이터-검정-예시">데이터 검정 예시</h3>
+
+<p>진동센서 X값과 Y값 차이 검정 예시(귀무가설)</p>
+<p align="center">
+  <img src="/img/posts/2022-10-28/test-result1.png" alt="semina_start" width="70%" />
+</p>
+
+<p>진동센서 X값과 Z값 차이 검정 예시(대립가설)</p>
+<p align="center">
+  <img src="/img/posts/2022-10-28/test-result2.png" alt="semina_start" width="70%" />
+</p>
+
+<p>T-TEST를 통한 p-value 값이 0에 가까우면 귀무가설 기준값 0.5보다 크면 대립가설이 됩니다.</p>
+
+<p>여기서의 기준값은 평균적으로 0.5를 기준으로 하며 데이터에 따라 기준값이 변동됩니다.</p>
+
+<h3 id="질문">질문</h3>
+
+<p>세미나 후에 다양한 질문과 토론들이 있었습니다. 예를 들어 분석된 데이터를 통해 어떤식으로 우리는 활용할 수 있을지에 대한 내용이 있었고 현재 ISDC 솔루션의 데이터를 활용할 수 있는 방안 등에 대한 내용들에 관한 내용이 오갔습니다.</p>
+
+<p align="center">
+  <img src="/img/posts/2022-10-28/2.jpeg" alt="semina_start" width="60%" />
+</p>
+
+<h3 id="마치며">마치며</h3>
+
+<p>저는 이번 세미나를 통해 데이터 분석에 대한 제 나름대로 결론을 내렸습니다.</p>
+
+<ol>
+  <li>
+    <p>데이터 분석은 탐색된 데이터를 바탕으로 특정 데이터의 <strong><code class="language-plaintext highlighter-rouge">가치</code></strong>를 찾는 과정이다.</p>
+  </li>
+  <li>
+    <p>데이터 분석은 탐색, 시각화, 목적을 계속 반복하면서 <strong><code class="language-plaintext highlighter-rouge">구체화된 방향성과 결론</code></strong>을 도출하는 것이다.</p>
+  </li>
+  <li>
+    <p>인사이트는 데이터 분석가의 생각과 데이터의 형태에 따라 유연하게 도출된다.</p>
+  </li>
+  <li>
+    <p>데이터 분석은 <strong><code class="language-plaintext highlighter-rouge">이윤</code></strong>을 창출하기 위함이다.</p>
+  </li>
+</ol>
+
+<p>블로그 글을 작성하면서 이번만큼 어려웠던적이 없었던것 같습니다. 최대한 쉽게 설명하려고 노력했는데 이해되지 않는 부분이 있으시면 질문 남겨주시면 답변드리겠습니다.</p>
+
+<p>부족하지만 긴 글 읽어주셔서 감사합니다.</p>]]></content><author><name>송기영</name></author><summary type="html"><![CDATA[안녕하세요. 에어릭스 환경시스템사업부의 개발팀 프론트엔드 개발자 송기영입니다.]]></summary></entry><entry><title type="html">웹 취약점 분석과 해킹 대응 - 개발팀 세미나</title><link href="http://localhost:4000/2022/10/13/security_semina-copy.html" rel="alternate" type="text/html" title="웹 취약점 분석과 해킹 대응 - 개발팀 세미나" /><published>2022-10-13T00:00:00+09:00</published><updated>2022-10-13T00:00:00+09:00</updated><id>http://localhost:4000/2022/10/13/security_semina%20copy</id><content type="html" xml:base="http://localhost:4000/2022/10/13/security_semina-copy.html"><![CDATA[<h3 id="0-개발팀-세미나">0. 개발팀 세미나</h3>
+
+<p>개발팀 인원들 모두 맡은 업무에 성실하면서도 자기 개발에 힘쓰고 있습니다. 하지만 새로이 습득한 지식과 기술들이 팀원들과 공유되지 않아, 활용되지 못하고 개인의 것으로 남아있거나 소실 경우가 많은 것이 사실입니다. 이에 우리 에어릭스 개발팀에서는 내부 세미나를 열어 서로가 얻은 기술을 공유하고 의견을 나눔을 통해 실제 개발에 적용될 수 있도록 하고있습니다.</p>
+
+<h3 id="1-주제--웹-취약점-분석과-해킹-대응---22년-10월-13일">1. 주제 : 웹 취약점 분석과 해킹 대응 - 22년 10월 13일</h3>
+
+<p><img src="/img/posts/2022-10-13/security_semina.jpg" alt="security_semina" /></p>
+
+<p><a href="https://aerixdev.github.io/download/security_semina.pptx">교안 다운로드 : 웹 취약점 분석과 해킹 대응 - 개발팀 세미나 자료.pptx</a></p>
+
+<p>여태까지 우리 개발팀의 방향은 기능에 충실하고 에러, 버그가 없는 제품을 만드는 것을 중점으로 하고있었습니다. 보안에 있어서는 중요하다는 생각은 가지고 있지만, 취약점 사례들을 알 지 못하고 실제로 어떤 피해로 다가올 수 있는지 체감하지 못하고 있었던 실정이라 크게 신경 쓰지 못하고 있는 상황입니다. 이번 세미나를 통해 웹 보안의 주요 취약점 사례들과 대처 방법을 알아보면서 보안에 대한 관심을 환기할 수 있는 시간을 가져보았습니다.</p>
+
+<h3 id="2-세미나-진행">2. 세미나 진행</h3>
+
+<p>이번 세미나는 웹 보안을 위한 툴들의 기초 사용법과 주요 취약점 사례들에 대해 알아보는 것이 주요 내용이었습니다.</p>
+
+<p><img src="/img/posts/2022-10-13/owasp_zap.png" alt="owasp_zap" /></p>
+
+<p>웹 보안 스캐너 OWASP-ZAP(Zed Attack Proxy)을 통한 웹페이지 취약점을 분석법에 대해 알아보았습니다. Spider, 강제 검색 등의 기법으로 웹페이지에서 사용자에게 공개되지 않은 페이지들이 손쉽게 노출될 수 있는 상황에 대해 알아보았습니다.</p>
+
+<p><img src="/img/posts/2022-10-13/sql_injection.png" alt="sql_injection" /></p>
+
+<p>또한 주요 취약점으로 경로 탐색 취약점, SQL 인젝션, 크로스 사이트 스크립팅(XSS) 사례를 알아보고 그에 대처법을 공유했습니다. 이 중 SQL 인젝션이 우리 개발에 있어 가장 취약한 부분이며 대처하기도 쉽지 않은 부분이었습니다. 기본적인 SQL 인젝션에 대한 대비부터 먼저 실시하고, 고도의 인젝션 공격들에 대해서는 앞으로 개발자로서 발전하면서 끊임없이 싸워야 할 부분이라는 것을 체감했습니다.</p>
+
+<p><img src="/img/posts/2022-10-13/security_onion.png" alt="security_onion" /></p>
+
+<p>마지막 순서로 NSM(Network Security Monitoring) 도구인 Security Onion에 대해 알아보았습니다. 앞서 SQL 인젝션 상황과 같이 개발을 하면서 모든 취약점에 대해 대비할 수 는 없기 때문에 필요한 것이 NSM입니다. 제품 운영 단계에서 실시간으로 공격을 감지하고 이에 대해 적절한 대처를 하도록 도와줍니다. 제품 출시 후 NSM을 통한 중앙 관제를 도입하는 것도 좋은 방안이 될 수 있겠습니다.</p>
+
+<h3 id="3-마치며">3. 마치며</h3>
+
+<p>이번 세미나를 통해 웹 보안에 대한 깊은 지식을 가졌다고 보긴 힘들 것 같습니다. 하지만 보안에 대한 관심을 환기하고 앞으로 과업에 대한 마음가짐을 가지는 데에는 충분한 시간이었습니다.  실제로 쿼리문 작성에도 더 신경을 쓰게 되고, 보안 자동화 관련 API 도입에도 관심을 가지게 되었습니다. 우리 개발 팀 모두 한걸음 나아가는 시간이 되었던 것 같습니다.</p>]]></content><author><name>강민석</name></author><summary type="html"><![CDATA[0. 개발팀 세미나]]></summary></entry><entry><title type="html">Notion을 도입하다.</title><link href="http://localhost:4000/2022/10/12/notion.html" rel="alternate" type="text/html" title="Notion을 도입하다." /><published>2022-10-12T00:00:00+09:00</published><updated>2022-10-12T00:00:00+09:00</updated><id>http://localhost:4000/2022/10/12/notion</id><content type="html" xml:base="http://localhost:4000/2022/10/12/notion.html"><![CDATA[<p>안녕하세요. 에어릭스 환경시스템사업부의 개발팀 프론트엔드 개발자 송기영입니다.</p>
+
+<p>오늘은 환경시스템사업부에 협업툴인 Notion을 도입한 이야기를 하면서 간단하게 노션의 기능들을 소개해보려고 합니다.</p>
+
+<h2 id="그냥-쓰면-되는거-아니야-왜-이글을-작성했지">그냥 쓰면 되는거 아니야? 왜 이글을 작성했지?</h2>
+
+<p>저는 이 글중에 제가 지금 작성하는 이 부분이 가장 중요하다고 생각합니다. 글이 좀 길어질수도 있을거 같네요.<del>지루해도 제 솔직한 생각이 담겨있으니 읽어주시기 바랍니다!</del></p>
+
+<p><strong>맞습니다. 구입해서 그냥 쓰면됩니다.</strong> 이건 제 생각이지 회사에서는 그것을 쉽게 허락하지 않더라구요. <del>사용하던 Slack(슬랙)도 금지 당했습니다. 노션을 쓰게되서 다행입니다.</del> 🤣</p>
+<p align="center">
+  <img src="/img/posts/2022-10-12/nope.gif" width="30%" />
+</p>
+
+<p>사실 이부분에 대해서 회사 내부적으로 굉장히 말이 많았던걸로 기억합니다. 사내 클라우드하고 그룹웨어를 사용하면 되는데 왜 굳이 새로운 것을 도입하느냐… 보안은 어떻게 할거냐…  <del>혹시…꼰대…?</del></p>
+
+<p>위에 대해서 할말이 많지만 최대한 간략하게 이야기 해보려고합니다.
+<br /></p>
+
+<h4 id="새로운게-왜-필요해">새로운게 왜 필요해?</h4>
+
+<p>개발자는 기술 트렌드에 굉장히 민감합니다. 새로운 기술을 익히고 그 기술을 적용하면 개발 퍼포먼스가 증가하게 되고 다른 불필요한 부분에 공들일 필요가 없어지게 되니까요. 특히 프론트를 다루는 저의 경우 다른 개발 분야보다 더 빠르게 기술이 변화합니다. 그래서 더욱 민감해질수 밖에 없는것같아요. 쉽게말하면 결과는 정해져있지만 1개와 여러개를 쓰는 차이로 이야기를 할 수 있겠네요.</p>
+<p align="center">
+  <img src="/img/posts/2022-10-12/easy.gif" width="40%" />
+</p>
+<p><br /></p>
+
+<p>그런데 개발자만 기술 트렌트에 굉장히 민감할까요? 아니요 <strong>모든 분야가 기술 트렌드에 굉장히 민감합니다.</strong> <del>사실 IT계열이 기술 트렌드에 더 민감한 편인것같아요.</del></p>
+
+<p>저는 IT를 다루는 회사는 기술 트렌드에 대해서 더 민감하게 반응해야 한다고 생각합니다. .<strong>변화가 없으면 어떻게 회사가 성장할까요..?.</strong> 세상은 빠르게 변해서 미리 변화를 예측해서 준비해도 모자란데 변화를 하지않으면 성장은 하지못하고 정체될겁니다.</p>
+
+<p>제가 자동차를 좋아해서 자동차를 예로 한가지 이야기를 해보려고합니다.</p>
+
+<p>일본 자동차 기업 도요타는 전기차가 시기상조라고 엔진과 배터리를 합친 하이브리드 기술에 집중을 한다고 이야기를 했었습니다. 세계의 다른 자동차 기업들은 모두 전기차 시장에 투자를 했습니다. 몇년 후 도요타는 이상함을 감지해 뒤 늦게 전기차에 투자를 합니다. 그리고 2022년 5월에 전기차를 한종 출시합니다. 
+그 결과 하이브리드의 정점에 있었던 도요타는 망신살을 당하게됩니다. 일본 내에서도 거의 팔리지 않는 정도니까요. <del>국내에서도 안팔리는데 해외에서는 누가살까요</del></p>
+<p align="center">
+  <img src="/img/posts/2022-10-12/report.png" width="30%" />
+</p>
+
+<p>도요타는 다른 기업들과 다르게 정체되었고 이로써 뒤처진 것 처럼 보입니다. 하지만 뒤처진 것 일뿐 기회는 아직있습니다. 변화하기로 마음을 먹었으니까요. 미래에는 어떻게 될지 아무도 모릅니다. <del>도요타 하기나름이니까요.</del></p>
+
+<p>제가 위에서 예시로 들었던 내용이 사실 Notion도입과 무슨상관이 있냐라고 생각하시는 분이 계실지도 모릅니다. <strong>저는 나무만 보라고 예시를 쓴게 아닌 숲을 보시라고 예시를 든겁니다.</strong> 제가 쓴 예시가 변화로 인한 많은 득과 실중 빙산의 일각일지도 모르지만 충분히 저의 의도가 충분히 전달이 되었을거라고 믿고있습니다. <strong>저는 제가 다니는 회사가 트렌디하게 움직여 많은 성장했으면 좋겠습니다.</strong> <del>이것도 우리회사 하기 나름이네요..</del>
+<br /></p>
+
+<h4 id="그럼-보안은">그럼 보안은?</h4>
+
+<p>회사에서 제일 우려했던 부분은 보안적인 부분으로 생각됩니다. 그만큼 보안을 강조하고 있다는 건데 회사 사내에서 사용하는 그룹웨어 LCP를 측정한것을 보면 그냥 웹보안은 뚫릴거같네요. 😭</p>
+
+<p>저는 보안은 100%는 없다고 생각합니다. 물론 소프트웨어 판매하는 회사측에서도 비용을 더 지불하면 보안이 되어있는 소프트웨어를 제공할거고 어느정도의 보안을 막을 수는 있습니다. 하지만 모든 보안을 막을 수는 없습니다. <strong>이미 검토해서 사용하고 있는 소프트웨어도 마찬가지입니다.</strong> 아래는 아파트 공동현관문 보안장치입니다. 🤣</p>
+<p align="center">
+<img src="/img/posts/2022-10-12/security.png" width="30%" />
+</p>
+
+<p>예로 특정 문서에만 접근이 가능하게 한다던지 다운로드 권한을 준다던지 하지만 사용자가 핸드폰으로 화면을 찍어간다면? 하드디스크를 빼서 개인컴퓨터에 시동디스크로 데이터를 빼간다면? 등 보안적인 부분을 모두 막기는 쉽지않을겁니다. 사람이 마음만 먹으면 다 ~ 빼갈 수 있습니다. <del>사실 저와 같은 개발자들은 더욱쉽지요. 확 그냥 다 뚫어버려?</del> 🤐</p>
+
+<p>따라서 보안적인 부분에서는 회사의 직원들을 믿는 방법밖에 없다고 저는 생각합니다. 물론 피해를 최소화하기 위해서는 최소한의 조치는 필요하겠지만요.</p>
+
+<hr />
+
+<p>사설이 굉~장히 길었습니다. 저는 우리 개발팀이 노션을 도입하기 위해 얼마나 노력을 했는지 알려드리고 싶었습니다. 그만하고 이제 Notion에 대해서 이야기 해보겠습니다.</p>
+
+<h2 id="notion이란">Notion이란?</h2>
+
+<p>Notion Labs, Inc에서 개발한 메모, 문서, 지식 정리, 작업, 프로젝트, 데이터베이스를 하나의 서비스로 통합한 종합 메모 서비스 입니다. 문서를 수정하면 실시간으로 동기화가 되어 팀원들과의 협업 시에 굉장히 유리한 장점을 가지고 있습니다. 요즘 스타트업 회사들이 모두 노션을 사용하는 이유라고 할 수 있습니다. 저희가 알만한 큰 회사는 효성, GS, 당근마켓, 쏘카 등이 사용하고 있습니다.</p>
+
+<h4 id="구글-문서와-다른점">구글 문서와 다른점?</h4>
+<p>물론 구글 문서도 실시간 동기화을 지원합니다. 하지만 구글 문서는 문서라는 단어에 박혀있는 느낌이 강합니다. 그냥 단순히 기존 데스크탑 어플리케이션을 사용자 접근성이 좋게 웹으로 이동시켜놓고 그것을 사용할 수 있게 옮겨 놓고 실시간 기능을 추가한 정도니까요.</p>
+
+<p>하지만 노션의 경우 블록이라는 단어를 사용합니다. 블록이란 페이지에서 사용 가능한 모든 객체를 블록이라고 이야기를 합니다. 아래에 보이는 그림, 글자, 구분선, 아이콘 하나하나가 모두 하나의 블록이라고 생각하시면 됩니다. 이 블록들은 다양한 유형을 지원하고 있어서 굉장히 자유롭게 사용이 가능합니다.</p>
+<p align="center">
+<img src="/img/posts/2022-10-12/block.png" width="60%" />
+</p>
+
+<h2 id="notion-기능">Notion 기능</h2>
+<p>Notion에는 굉장히 많은 기능들이 있습니다. 제가 모든 기능들을 다 소개할 수 없고 제가 자주 사용하는 기능과 특별한 기능들 몇가지를 소개해드리도록 하겠습니다.</p>
+<ul>
+  <li><strong>블록</strong>
+위에서도 잠깐 설명했지만 Notion의 페이지를 구성하는 기본이며 가장 중요한 부분입니다. 페이지에서 “/”를 입력할 경우 블록의 메뉴들이 표시해주며 원하는 블록을 선택 후 사용하면 됩니다.
+    <p align="center">
+  <img src="/img/posts/2022-10-12/blockmenu.png" width="40%" />
+</p>
+
+    <p>블록과 블록을 구분하는법은 드래그로 블록의 영역을 선택했을때 다음과같이 블록과 블록사이에 흰색 구분선이 나타나게 됩니다.</p>
+    <p align="center">
+  <img src="/img/posts/2022-10-12/blockexample.png" width="40%" />
+</p>
+    <p><br /></p>
+  </li>
+  <li><strong>템플릿</strong>
+문서를 작성할때 한번쯤은 <strong><code class="language-plaintext highlighter-rouge">양식이 있었으면 좋겠는데..?</code></strong>라는 생각을 한번씩은 해보셨을겁니다. Notion에서는 이를 해결하고자 분야별로 다양한 템플릿들을 지원합니다. 카테고리에서 원하는 템플릿을 선택해서 본인 스타일대로 변경해서 작성하면됩니다.
+    <p align="center">
+  <img src="/img/posts/2022-10-12/template.png" width="90%" />
+</p>
+    <p><br /></p>
+  </li>
+  <li><strong>댓글</strong>
+블록 하나하나에 모두 댓글을 추가할 수 있습니다. 댓글을 추가하게 되면 블록의 텍스트 색상이 변경이되고 블록 오른쪽에 댓글아이콘 표시가 나타나게됩니다. 이를 클릭할 경우 댓글을 확인할 수 있습니다.
+    <p align="center">
+  <img src="/img/posts/2022-10-12/comment.png" width="40%" />
+</p>
+    <p><br /></p>
+  </li>
+  <li><strong>페이지 히스토리</strong>
+페이지의 수정 사항을 최신순으로 확인할 수 있습니다. 사용자가 어떤내용을 편집했고 언제 편집했는지 시간도 자세하게 표현해줍니다. 다른 사용자가 삭제한 블록의 내용도 이 기능을 통해 확인이 가능합니다. <del>팀내에서 트롤잡을때 굉장히 유용하겠네요.</del>
+    <p align="center">
+  <img src="/img/posts/2022-10-12/history.png" width="40%" />
+</p>
+    <p><br /></p>
+  </li>
+  <li><strong>공유</strong>
+이메일, 사용자를 추가해 특정인원에게만 페이지를 공유하거나 전체 공유할 수 있습니다. 편집, 댓글, 템플릿 복제, 링크 만료일 등 요금제 따라 다양한 기능을 지원합니다.
+    <p align="center">
+  <img src="/img/posts/2022-10-12/share.png" width="40%" />
+</p>
+    <p><br /></p>
+  </li>
+  <li><strong>파일화</strong>
+작성된 페이지를 PDF, HTML, Markdown으로 파일화하여 다운로드 할 수 있습니다.
+요금제에 따라 페이지에 다운로드 권한을 부여할 수 있습니다.
+    <p align="center">
+  <img src="/img/posts/2022-10-12/file.png" width="20%" />
+</p>
+    <p><br /></p>
+  </li>
+</ul>
+
+<p>위에서 다루지 않은 내용과 자세한 내용은 <a href="https://www.notion.so/ko-kr/help/guides/types-of-content-blocks">노션가이드</a>에서 확인가능합니다</p>
+
+<h2 id="결론">결론</h2>
+<p>이렇게 회사에 Notion을 도입한 이야기와 간단한 소개에 대해 이야기가 끝났습니다. Notion을 도입을 시작으로 회사성장에 도움이 될수있는 어플리케이션이 있으면 이와 같은 우열곡절이 있겠지만 도입하도록 최선을 다하겠습니다. 긴글 읽어주셔서 감사합니다.</p>
+
+<h2 id="참고">참고</h2>
+<p>https://www.chosun.com/economy/int_economy/2022/06/30/IW6EI654HRF4NB7YLV35BGLTDU/
+https://www.notion.so/ko-kr/help/guides/types-of-content-blocks</p>]]></content><author><name>송기영</name></author><summary type="html"><![CDATA[안녕하세요. 에어릭스 환경시스템사업부의 개발팀 프론트엔드 개발자 송기영입니다.]]></summary></entry><entry><title type="html">GS 인증 세미나</title><link href="http://localhost:4000/2022/10/11/gs_seminar.html" rel="alternate" type="text/html" title="GS 인증 세미나" /><published>2022-10-11T00:00:00+09:00</published><updated>2022-10-11T00:00:00+09:00</updated><id>http://localhost:4000/2022/10/11/gs_seminar</id><content type="html" xml:base="http://localhost:4000/2022/10/11/gs_seminar.html"><![CDATA[<h1 id="gs-인증-세미나">GS 인증 세미나</h1>
 
 <p>안녕하세요, 에어릭스 환경시스템사업부 개발팀의 김영규 대리입니다. 이전에 ‘PLC’에 대한 소개 글을 작성한 이후에 이렇게 GS 세미나를 진행한 내용들을 포스팅하는 글을 쓰면서 인사를 드립니다.</p>
 
@@ -224,7 +631,7 @@ GS인증이 끝이 아니라는 이야기를 하고 싶습니다. GS인증은 �
 <p>GS인증을 사내에서 처음 시도하는 만큼 최소한 개발팀 내부에는 GS인증이 무엇이고, 어떤것을 어떻게 준비해야 할지에 대해서 공유가 되어야 할 것 같습니다.
 이미 공지했던 것처럼 내일 김영규 대리님께서 세미나를 진행해주실 것입니다. 세미나가 완료된 이후에 세미나 관련 내용도 여기에 포스팅할 계획입니다.</p>
 
-<p>이 포스팅은 내일 세미나에 앞서 GS인증을 추진하는 이유에 대해서 개발팀 구성원들에게 설명하기 위해서 작성했습니다.
+<p>이 포스팅은 내일(10월5일) GS인증과 관련된 내부 세미나를 진행하기 전에 GS인증을 추진하는 이유에 대해서 개발팀 구성원들에게 설명하기 위해서 작성했습니다.
 감사합니다.</p>]]></content><author><name>이상훈</name></author><summary type="html"><![CDATA[품질에 대한 고민]]></summary></entry><entry><title type="html">신입 사원이 돌아본 에어릭스 이야기</title><link href="http://localhost:4000/2022/09/26/Newbee.html" rel="alternate" type="text/html" title="신입 사원이 돌아본 에어릭스 이야기" /><published>2022-09-26T00:00:00+09:00</published><updated>2022-09-26T00:00:00+09:00</updated><id>http://localhost:4000/2022/09/26/Newbee</id><content type="html" xml:base="http://localhost:4000/2022/09/26/Newbee.html"><![CDATA[<h3 id="1-이-이야기는">1. 이 이야기는</h3>
 
 <p>에어릭스 환경시스템사업부 개발팀의 신입사원 강민석입니다. 입사한지 벌써 4개월이 넘었는데요, 그 동안 일하면서 느낀 에어릭스에 대한 경험을 솔직하게 이야기 해보는 시간을 가지려고 합니다.</p>
@@ -457,577 +864,4 @@ GS인증이 끝이 아니라는 이야기를 하고 싶습니다. GS인증은 �
 <p><a href="https://velog.io/@ktthee/%EC%9B%B9%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%84%B1%EB%8A%A5-%EC%A7%80%ED%91%9C">https://velog.io/@ktthee/웹사이트-성능-지표</a><br />
 <a href="https://yceffort.kr/2021/08/core-web-vital">https://yceffort.kr/2021/08/core-web-vital</a><br />
 <a href="https://newrelic.com/kr/resources/white-papers/how-fast-does-your-website-need-to-be">https://newrelic.com/kr/resources/white-papers/how-fast-does-your-website-need-to-be</a><br />
-<a href="https://eunjinii.tistory.com/44">https://eunjinii.tistory.com/44</a></p>]]></content><author><name>송기영</name></author><summary type="html"><![CDATA[안녕하세요. 에어릭스 환경시스템사업부의 개발팀 프론트엔드 개발자 송기영입니다.]]></summary></entry><entry><title type="html">mosquitto에 설정정보 변경 반영하기</title><link href="http://localhost:4000/2022/09/16/mosquitto-hupsignal.html" rel="alternate" type="text/html" title="mosquitto에 설정정보 변경 반영하기" /><published>2022-09-16T00:00:00+09:00</published><updated>2022-09-16T00:00:00+09:00</updated><id>http://localhost:4000/2022/09/16/mosquitto-hupsignal</id><content type="html" xml:base="http://localhost:4000/2022/09/16/mosquitto-hupsignal.html"><![CDATA[<p>mosquitto는 open source기반의 대표적인 MQTT Broker로 저희 에어릭스에서도 센서 데이터를 수집하는 용도로 사용하고 있습니다.</p>
-
-<p>오늘은 mosquitto의 설정정보가 변경되었을 때, 서버를 직접 재시작시키지 않고 HUP signal을 전송하여 변경된 설정내용을 Reload하는 방법에 대해서 포스팅하려고 합니다.</p>
-
-<p>의외로 방법은 간단합니다.</p>
-
-<h2 id="hup-signal란">HUP signal란?</h2>
-
-<p>리눅스 운영체제에서 HUP hangup의 약자로 프로세스를 재시작시키는 시그널을 의미합니다.</p>
-
-<h2 id="mosquitto의-pid확인">mosquitto의 PID확인</h2>
-
-<p>HUP signal을 mosquitto에 전송시켜서 설정정보를 Reload하게 하려면 mosquitto의 PID(프로세스 ID)를 먼저 확인해야 합니다.
-mosquitto의 PID는 pid_file에 저장되어 있습니다. pid_file의 경로는 mosquitto.conf 파일을 열어서 확인할 수 있습니다.</p>
-
-<p><strong>아래는 제가 테스트에 사용했던 mosquitto.conf파일의 내용입니다.</strong></p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pid_file /run/mosquitto/mosquitto.pid
-
-persistence <span class="nb">true
-</span>persistence_location /var/lib/mosquitto/
-
-log_dest file /var/log/mosquitto/mosquitto.log
-
-include_dir /etc/mosquitto/conf.d
-</code></pre></div></div>
-
-<p>파일의 내용을 보니 pid_file의 경로가 /run/mosquitto/mosquitto.pid로 지정되어 있는 것을 알 수 있었습니다. /run/mosquitto/mosquitto.pid 파일을 열어서
-pid의 값을 확인하면 됩니다. 제가 테스트했던 환경에서는 PID가 2380으로 저장되어 있었습니다.</p>
-
-<h2 id="hup-signal-발생">HUP signal 발생</h2>
-
-<p>우분투 리눅스 기준으로 HUP Signal을 발생시키는 방법은 다음과 같습니다.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$sudo</span> <span class="nb">kill</span> <span class="nt">--signal</span> HUP <span class="o">[</span>PID]
-</code></pre></div></div>
-
-<p>제가 테스트했던 환경에서는 PID가 2380이었기 떄문에 다음과 같이 명령을 실행시켜서 HUP signal을 발생시킬 수 있었습니다.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$sudo</span> <span class="nb">kill</span> <span class="nt">--signal</span> HUP 2380
-</code></pre></div></div>
-
-<p>HUP signal이 정상적으로 발생되었다면 실행 중이던 mosquitto 프로세스가 재시작되면서 설정정보가 reload되었을 것입니다.
-mosquitto의 로그 파일을 열어보면 아래 그림처럼 Reloading config메시지가 출력된 것을 확인할 수 있습니다.</p>
-
-<p><img src="/img/posts/mosquitto_log.png" alt="log" /></p>
-
-<h2 id="hup-signal을-사용해야-하는-이유">HUP signal을 사용해야 하는 이유</h2>
-
-<p>프로세스를 직접 kill하는 방식으로 실행 중인 mosquitto를 중단시키고, 재시작시키는 방식은 구현되어 있는 종료함수가 제대로
-실행되지 못하고 즉시 프로세스가 중단될 수 있습니다. 그런 경우 중요 데이터의 유실이 발생하거나 프로세스가 사용중이던 리소스가
-제대로 반납되지 못할 수 있습니다.</p>
-
-<p>실제 서비스를 운영하는 서버라면 <code class="language-plaintext highlighter-rouge">안정성</code>을 유지해야 합니다. 그래서 설정정보가 변경되는 경우에는 
-HUP Signal을 발생시켜서 mosquitto 프로세스가 정상적으로 종료되고 재시작될 수 있도록 하는 것이 중요할 것 같습니다.</p>]]></content><author><name>이상훈</name></author><summary type="html"><![CDATA[mosquitto는 open source기반의 대표적인 MQTT Broker로 저희 에어릭스에서도 센서 데이터를 수집하는 용도로 사용하고 있습니다.]]></summary></entry><entry><title type="html">Broker 서버의 TPS 측정을 위한 JMeter Remote 구축기</title><link href="http://localhost:4000/2022/09/13/JMeter_remote.html" rel="alternate" type="text/html" title="Broker 서버의 TPS 측정을 위한 JMeter Remote 구축기" /><published>2022-09-13T00:00:00+09:00</published><updated>2022-09-13T00:00:00+09:00</updated><id>http://localhost:4000/2022/09/13/JMeter_remote</id><content type="html" xml:base="http://localhost:4000/2022/09/13/JMeter_remote.html"><![CDATA[<p>참조한 공식 문서 : <a href="https://jmeter.apache.org/usermanual/remote-test.html">https://jmeter.apache.org/usermanual/remote-test.html</a></p>
-
-<h2 id="tps-측정-배경">TPS 측정 배경</h2>
-
-<p>저희가 사용하고 있는 MQTT Broker 서버는 성능을 대략적으로만 파악하고 있는 상황이었습니다. 하지만 운용 단계에서는 생각보다 더 많은 부하가 걸리는 상황이 발생하기 때문에 서버가 최대로 처리할 수 있는 한계를 명확하게 파악하는 일이 필요했고 이를 경험이나 감에 맡기는 것은 바람직하지 않기 때문에 TPS(1초당 처리량)이라는 기준을 통해서 성능을 판단하는 방향으로 개선하기로 결정했기 때문입니다.</p>
-
-<h2 id="tps의-측정-도구로-jmeter을-선정한-이유">TPS의 측정 도구로 JMeter을 선정한 이유</h2>
-
-<ol>
-  <li>
-    <p>무료</p>
-
-    <p>회사에서 사용하는 도구이기 때문에 라이센스는 중요한 문제입니다. JMeter의 경우 Apache 라이센스를 채택하여 공개된 오픈소스라는 장점이 있습니다.</p>
-  </li>
-  <li>
-    <p>다양한 플러그인</p>
-
-    <p>플러그인을 통해서 편의성을 높여주는 기능을 추가할 수 있으며 무엇보다도 MQTT 서버를 테스트하는 만큼 MQTT 프로토콜을 지원해야만 했고 JMeter의 경우 이를 MQTT 플러그인을 통하여 지원하고 있습니다.</p>
-  </li>
-  <li>
-    <p>Remote를 통하여 부하 시스템을 구축할 수 있다.</p>
-
-    <p>1개의 컴퓨터로 서버에 부하를 거는 것보다는 다수의 컴퓨터에 서버로 부하를 거는 것이 보다 더 정확하게 부하를 걸 수 있으며 JMeter는 Remote 기능을 통하여 이러한 시스템을 손쉽게 구축하는 것이 가능한 도구입니다.</p>
-  </li>
-</ol>
-
-<h2 id="구축기">구축기</h2>
-
-<p><img src="/img/posts/jmeter.png" alt="jmeter" /></p>
-
-<h3 id="1-부하-서버로-사용될-컴퓨터들을-모으기">1. 부하 서버로 사용될 컴퓨터들을 모으기</h3>
-
-<p>정확한 테스트를 위해서 부하를 거는 서버가 여러 대인 상황에서 제어 서버를 통해서 명령을 내려서 목적지의 서버에 부하를 거는 상황이 바람직하기 때문에 개발팀의 내부에서 사용하지 않는 컴퓨터를 모았습니다.</p>
-
-<h3 id="2-사용될-jmeter-만들기">2. 사용될 JMeter 만들기</h3>
-
-<p>마스터 서버(제어)와 슬레이브 서버(Remote)에서 JMeter은 동일한 자바 버전과 동일한 플러그인, 그리고 동일한 JMeter을 가져야 합니다. 이를 위해서 플러그인을 설치하여 커스텀한 JMeter을 만들고 이 JMeter을 각 서버에 배포하는 형태로 진행되었습니다.</p>
-
-<h3 id="21-자바-버전의-확인">2.1. 자바 버전의 확인</h3>
-
-<p>공식 문서에서 JMeter의 자바 버전은 제어 서버와 Remote 서버가 동일한 상황을 권장하고 있습니다. 자바 버전은 다음과 같은 명령어로 확인할 수 있습니다.</p>
-
-<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//java 버전 확인</span>
-<span class="nx">java</span> <span class="o">--</span><span class="nx">version</span>
-</code></pre></div></div>
-
-<h3 id="22-jmeter-플러그인의-설치-장소">2.2. JMeter 플러그인의 설치 장소</h3>
-
-<p>기본적으로 플러그인의 설명에 나와있으나 보통은 JMeter 폴더의 /lib 또는 /lib/ext입니다.</p>
-
-<h3 id="23-유용한-플러그인">2.3. 유용한 플러그인</h3>
-
-<p>JMeter Plugins Manager : <a href="https://jmeter-plugins.org/wiki/PluginsManager/">https://jmeter-plugins.org/wiki/PluginsManager/</a></p>
-
-<p>JMeter의 플러그인을 손쉽게 관리하고 추가할 수 있는 플러그인입니다.</p>
-
-<p>Response Times Over Time: <a href="https://jmeter-plugins.org/wiki/ResponseTimesOverTime/">https://jmeter-plugins.org/?search=jpgc-graphs-basic</a></p>
-
-<p>측정 결과를 그래프로 확인할 수 있는 플러그인입니다.</p>
-
-<p>mqtt-jmeter : <a href="https://github.com/emqx/mqtt-jmeter">https://github.com/emqx/mqtt-jmeter</a></p>
-
-<p>MQTT 프로토콜을 측정할 수 있는 플러그인입니다.</p>
-
-<h3 id="3-jmeter-연동하기">3. JMeter 연동하기</h3>
-
-<p>설정한 JMeter을 배포하고 슬레이브 서버들을 실행시킨 후에 연동하여 제어 서버에서 명령을 내리면 총 4대의 서버가 목적지 서버에 부하를 거는 시스템을 구성하였습니다.</p>
-
-<h3 id="31-jmeter의-연동-및-실행방법">3.1. JMeter의 연동 및 실행방법</h3>
-
-<p>마스터의 설정 파일을 수정하여 슬레이브들의 주소를 등록합니다. 포트 번호는 따로 설정하지 않으면 디폴트 값 1099로 설정됩니다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// ../bin/jmeter.properties
-...
-# Remote Hosts - comma delimited
-remote_hosts=127.0.0.1,xxx.xx.xxx.xx,..
-</code></pre></div></div>
-
-<p>설정을 마친 후에 jmeter을 실행합니다. 이때 마스터와 슬레이브의 실행파일이 다르므로 주의해서 진행해야 합니다.  슬레이브들의 주소들이 정상적으로 등록된 경우에 실행 - 원격란에서 확인할 수 있습니다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//마스터
-jmeter.bat (윈도우) / jmeter.sh (리눅스)
-
-//슬레이브
-jmeter-server.bat / jmeter-server(리눅스)
-</code></pre></div></div>
-
-<h3 id="32-linux-관련-문제">3.2. Linux 관련 문제</h3>
-
-<p>linux의 경우 다음과 같은 메시지와 함께 정상적으로 실행되지 않는 문제가 있을 수 있습니다.</p>
-
-<p>java.rmi.RemoteException: Cannot start. OO is a loopback address.</p>
-
-<p>이러한 문제가 발생하는 경우 hostname을 기기의 IP 주소로 지정하여 실행시키는 방법으로 해결할 수 있습니다.</p>
-
-<p>./jmeter-server -D java.rmi.server.hostname=IP 주소</p>
-
-<h3 id="33-연동이-제대로-이루어지지-않는-경우">3.3. 연동이 제대로 이루어지지 않는 경우</h3>
-
-<p>기본적으로 제어 포트에 해당하는 포트는 제어 서버와 슬레이브 서버 모두가 통신이 허용되어야만 합니다.</p>
-
-<ol>
-  <li>방화벽 해제(ubuntu 기준)</li>
-</ol>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ufw disable
-</code></pre></div></div>
-
-<ol>
-  <li>포트 허용(ubuntu 기준)</li>
-</ol>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ufw allow 1099
-</code></pre></div></div>
-
-<h3 id="34-ssl-문제">3.4 SSL 문제</h3>
-
-<p>SSL 오류가 발생하는 경우 SSL을 아예 사용하지 않도록 jmeter.properties에 다음과 같이 설정하거나 SSL 설정 후 진행합니다.</p>
-
-<h3 id="341-ssl-해제">3.4.1 SSL 해제</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server.rmi.ssl.disable=true
-</code></pre></div></div>
-
-<h3 id="342-ssl-설정">3.4.2 SSL 설정</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd jmeter/bin
-$ ./create-rmi-keystore.sh
-What is your first and last name?
-  [Unknown]:  rmi
-What is the name of your organizational unit?
-  [Unknown]:  My unit name
-What is the name of your organization?
-  [Unknown]:  My organisation name
-What is the name of your City or Locality?
-  [Unknown]:  Your City
-What is the name of your State or Province?
-  [Unknown]:  Your State
-What is the two-letter country code for this unit?
-  [Unknown]:  XY
-Is CN=rmi, OU=My unit name, O=My organisation name, L=Your City, ST=Your State, C=XY correct?
-  [no]:  yes
-
-Copy the generated rmi_keystore.jks to jmeter/bin folder or reference it in property 'server.rmi.ssl.keystore.file'
-</code></pre></div></div>
-
-<h3 id="4-테스트-계획-설정-및-테스트">4. 테스트 계획 설정 및 테스트</h3>
-
-<p>구성된 시스템을 활용하여 목적지인 MQTT 서버의 테스트를 수행했습니다.</p>
-
-<h3 id="41-jmeter의-사용법">4.1 JMeter의 사용법</h3>
-
-<p>JMeter 실행 후 다음과 같은 같은 화면을 볼 수 있으며 테스트 계획을 설정한 후에 테스트할 수 있습니다. 여기에서는 간단한 예제로써 쓰레드 그룹을 만든 후에 간단한 HTTP Request 요청을 시도하겠습니다.</p>
-
-<p><img src="/img/posts/jmeter_home.png" alt="" />
-<img src="/img/posts/jmeter_thread.png" alt="" /></p>
-
-<p>Number of Threads : 사용자 수</p>
-
-<p>Ramp-up Period : 사용자가 모두 생성되는데 걸리는 시간(길수록 천천히 생성)</p>
-
-<p>Loop Count : 반복 횟수</p>
-
-<p>Infinite : 무한반복</p>
-
-<p><img src="/img/posts/jmeter_http.png" alt="" />
-<img src="/img/posts/jmeter_request.png" alt="" /></p>
-
-<p>테스트 계획 설정이 끝났으면 다음과 같이 슬레이브에 테스트를 명령합니다.</p>
-
-<p><img src="/img/posts/jmeter_remote.png" alt="" /></p>
-
-<h3 id="5-실제-테스트-결과">5. 실제 테스트 결과</h3>
-
-<p>사용하고 있는 Broker 서버에 100, 200, 400, 800, 1200개의 접속이 5분동안 발생하는 경우를 가정하여 테스트한 TPS 결과입니다.</p>
-
-<p>100개의 접속을 가정한 경우
-<img src="/img/posts/thingarx_100.png" alt="" />
-200개의 접속을 가정한 경우
-<img src="/img/posts/thingarx_200.png" alt="" />
-400개의 접속을 가정한 경우
-<img src="/img/posts/thingarx_400.png" alt="" />
-800개의 접속을 가정한 경우
-<img src="/img/posts/thingarx_800.png" alt="" />
-1200개의 접속을 가정한 경우
-<img src="/img/posts/thingarx_1200.png" alt="" /></p>
-
-<h3 id="6-결론">6. 결론</h3>
-
-<p>저희가 사용하고 있는 서버는 최대 800의 사용자가 동시에 접근하는 MQTT 접속을 처리할 수 있으며 TPS의 경우 1600~2800정도가 나온다는 것을 확인할 수 있었습니다. 또한 JMeter을 이용하여 구축함으로써 MQTT가 아닌 다른 프로토콜을 측정하는 것이 가능한 시스템을 만들 수 있었습니다.</p>]]></content><author><name>강민구,강민석</name></author><summary type="html"><![CDATA[참조한 공식 문서 : https://jmeter.apache.org/usermanual/remote-test.html]]></summary></entry><entry><title type="html">MQTT 서버 보안성 강화하기</title><link href="http://localhost:4000/2022/09/13/MQTT_security.html" rel="alternate" type="text/html" title="MQTT 서버 보안성 강화하기" /><published>2022-09-13T00:00:00+09:00</published><updated>2022-09-13T00:00:00+09:00</updated><id>http://localhost:4000/2022/09/13/MQTT_security</id><content type="html" xml:base="http://localhost:4000/2022/09/13/MQTT_security.html"><![CDATA[<p>안녕하세요? 에어릭스 환경시스템 사업부 개발팀장 이상훈입니다. 이번에는 MQTT Broker서버의 보안성을 강화하는 것에 대한 주제로 포스팅을 하게 되었습니다.
-이미 보안에 대한 문제점이 있는 것은 오래전부터 인지하고 있었으나, 그 동안 여러가지 긴급한 문제들을 대응하다보니 빠르게 조치를 취하지 못했습니다.</p>
-
-<p>다행히 올해 5월부터 수행하고 있는 클린팩토리 정부R&amp;D과제를 통해서 기존 에어릭스의 스마트팩토리 솔루션들이 가지고 있던 문제점들을 대대적으로 개선할 수
-있는 기회를 가지게 되었습니다.</p>
-
-<p>그 중에서도 가장 우선적으로 개선된 부분이 MQTT Broker서버의 보안성 강화인데, 이번 포스팅을 통해서 그 과정을 정리해보기로 했습니다.</p>
-
-<h2 id="문제점">문제점</h2>
-
-<hr />
-
-<p>저희 에어릭스에서는 주로 MQTT 프로토콜을 사용하여 제조현장에 설치된 센서나 PLC로부터 데이터를 수집하고 있습니다. 데이터를 수집하기 위해서 
-사내에 MQTT Broker가 설치된 서버도 운영하고 있습니다.</p>
-
-<p>MQTT Broker 서버가 에어릭스의 스마트팩토리 시스템에서 중추적인 역할을 하고 있다는 것은 부인할 수 없는 사실일 것입니다. 하지만 문제는 이렇게 
-중요한 MQTT Broker 서버를 그 어떤 보안 매커니즘도 없이 개방된 인터넷 공간에 활짝 공개해놓고 사용하고 있다는 점입니다.</p>
-
-<p>보호되지 않는 MQTT Broker서버에 대한 외부 공격이 데이터 유출을 유발하고, 시스템의 통제권을 빼앗아 이와 연동된 설비나 다른 시스템을 위험에 빠트릴 수도 있습니다.<br />
-뉴스 기사에서도 이미 여러차례 이런 문제점들이 지적된 것을 찾아볼 수 있었습니다. 그런 점에서 보면 에어릭스 뿐만 아니라 IoT기술을 사용하고 있는 대다수 업체들이 가지고 
-있는 만연한 문제일지도 모르겠습니다.</p>
-
-<p>에어릭스에 입사하기 전에 17년 이상을 임베디드 보안 소프트웨어를 개발하던 업무를 해왔던 제 입장에서는 크나큰 위험요소로 
-느껴지는 것이 당연할지도 모르겠습니다.</p>
-
-<p>사실 MQTT Broker 자체의 보안에는 큰 문제가 있습니다. 보안이라는 것 자체를 생각하지 않고, 오직 동작에만 충실한 나머지 제대로된 설정을 하지 않고
-사용하고 있는 대다수 업체들의 잘못인 것입니다.</p>
-
-<h2 id="제약사항">제약사항</h2>
-
-<hr />
-
-<ul>
-  <li>개방된 인터넷망에서 MQTT Broker 서버를 계속 운영해야 함.</li>
-  <li>회사 경영진으로부터 고가의 보안장비를 구입할 예산을 승인받는 것은 거의 불가능함.</li>
-  <li>사내 개발자들의 보안기술에 대한 이해도가 부족함.</li>
-</ul>
-
-<p><img src="/img/posts/solution.png" alt="Image Alt github" /></p>
-
-<h2 id="해결과정">해결과정</h2>
-
-<hr />
-
-<p>위와 같은 제약사항이 존재하는 상태에서 MQTT Broker서버의 보안성을 강화하기 위해서 아래와 같은 조치를 취했습니다.</p>
-
-<h3 id="1익명접속-금지-및-aclaccess-control-list-관리">1.익명접속 금지 및 ACL(Access Control List) 관리</h3>
-
-<p>사용자 계정과 비밀번호의 확인없이 접속을 허용하는 익명접속을 더 이상 허용하지 않도록 MQTT Broker서버의 설정을 변경하였습니다.
-익명접속을 허용한 상태에서 개방된 인터넷망에서 MQTT Broker서버를 사용하는 것은 집에서 인터넷 공유기의 Password를 설정하지 않은 상태에서
-사용하는 것과 마찮가지로 다양한 보안 위협에 그대로 노출될 수 있습니다.
-충분하지는 않겠지만 익명접속을 허용하지 않고, 사용자 계정과 비밀번호를 확인하도록 하는 것만으로도 1차적인 방어선을 갖출 수 있습니다.</p>
-
-<p>또한, MQTT Broker서버가 제공하는 ACL 관리 기능을 사용하도록 설정을 변경하기도 했습니다.
-ACL 관리 기능을 통해서 사용자 계정별로 허용된 TOPIC을 가진 메시지에만 접근(메시지 구독 or 발행)할 수 있도록 권한을 부여했습니다.</p>
-
-<p>기존에는 누구나 제약없이 자유롭게 MQTT Broker서버로 발행되는 메시지를 가져갈 수 있었습니다. 하지만 이렇게 설정을 변경함으로써 이제는 
-사용자 계정과 비밀번호를 통해서 서버 접근 권한이 있는지 확인하고, 해당 계정에 허용된 TOPIC을 가진 메시지만 가져가도록 제어할 수 있게 되었습니다.</p>
-
-<h3 id="2sslsecure-sockets-layer-통신-프로토콜-사용">2.SSL(Secure Sockets Layer) 통신 프로토콜 사용</h3>
-
-<p>MQTT Broker서버가 SSL통신 프로토콜을 사용하여 전송 데이터를 암호화할 수 있도록 했습니다. SSL을 사용하지 않는 경우에는 평문 그대로 데이터가
-전송되기 때문에 민감한 정보들이 그대로 외부에 노출될 수 있다는 문제가 있습니다.</p>
-
-<p>SSL은 전송 데이터의 암호화를 위해서 비대칭키 암호화 알고리즘을 사용합니다. 서버의 키를 공개키를 클라이언트로 전달하기 위해서 신뢰할 수 있는
-CA로부터 발급받은 서버 인증서가 사용됩니다. 서버 인증서를 검증하고 서버의 공개키를 추출하기 위해서는 CA인증서의 발급도 필요합니다.</p>
-
-<p>하지만 제약사항에 있는 것처럼 별도의 예산을 승인받기는 어려운 상황이었기 때문에 우선은 비용이 발생하지 않는 OpenSSL을 사용해서 필요한 인증서
-파일들을 생성해서 사용했습니다.</p>
-
-<p>MQTT Broker서버가 SSL을 사용하여 통신을 할 수 있도록 필요한 인증서 파일들을 등록해주고, 설정을 변경했습니다.</p>
-
-<p>이렇게 SSL을 사용하도록 MQTT Broker서버의 설정을 변경함으로써 데이터의 기밀성(Confidentiality)과 무결성(Integrity)을 보장받을 수 있게 되었습니다.</p>
-
-<h3 id="3vpnvirtual-private-network-사용">3.VPN(Virtual Private Network) 사용</h3>
-
-<p>익명접속 금지 및 ACL관리, 그리고 SSL 통신 프로토콜 사용만으로도 기존 대비 MQTT Broker서버의 보안은 한층 강화되었습니다. 하지만 이것만으로는
-충분하지 않다고 생각되었습니다.</p>
-
-<p>원천적으로 MQTT Broker서버가 사용하는 네트워크에 외부의 접속을 차단하고 싶었습니다. 그래서 VPN 사용을 생각했습니다.
-VPN을 사용하게 되면 MQTT Broker서버와 통신하는 모든 장치들 사이에는 암호화된 보안 터널이 생성되고, 이를 통해서 안전하게 데이터가 전송되게 됩니다.
-개방된 인터넷망을 사용하더라도 암호화된 보안 터널을 통해서 연결되기 때문에 MQTT Broker서버와 장치가 개인 네트워크에 직접 연결된 것과 같은 효과를 가질 수 있습니다.</p>
-
-<p>물론 시중에 나와있는 상용 VPN솔루션을 사용하면 더 좋은 성능과 높은 보안성을 보장받을 수도 있을 것입니다. 하지만 그럴 수 없는 상황이었기 때문에 
-비용이 발생하지 않는 OpenSource VPN 솔루션인 WireGuard를 채택해서 사용했습니다.</p>
-
-<h2 id="남은-이슈">남은 이슈</h2>
-
-<hr />
-
-<p>보안성 강화를 위해서 여러가지 조치들을 취했는데 과연 객관적으로 어느 정도 보안성의 강화가 이루어졌는지 측정해 볼 필요가 있을 것 같습니다. 
-나중에 기회가 된다면 모의해킹 업체에 의뢰해서 확인해볼 예정입니다.</p>]]></content><author><name>이상훈</name></author><summary type="html"><![CDATA[안녕하세요? 에어릭스 환경시스템 사업부 개발팀장 이상훈입니다. 이번에는 MQTT Broker서버의 보안성을 강화하는 것에 대한 주제로 포스팅을 하게 되었습니다. 이미 보안에 대한 문제점이 있는 것은 오래전부터 인지하고 있었으나, 그 동안 여러가지 긴급한 문제들을 대응하다보니 빠르게 조치를 취하지 못했습니다.]]></summary></entry><entry><title type="html">(3) PLC [통신 프로토콜, 인터페이스]</title><link href="http://localhost:4000/2022/09/12/plc_protocol.html" rel="alternate" type="text/html" title="(3) PLC [통신 프로토콜, 인터페이스]" /><published>2022-09-12T00:00:00+09:00</published><updated>2022-09-12T00:00:00+09:00</updated><id>http://localhost:4000/2022/09/12/plc_protocol</id><content type="html" xml:base="http://localhost:4000/2022/09/12/plc_protocol.html"><![CDATA[<h1 id="3-plc-통신-프로토콜-인터페이스">(3) PLC [통신 프로토콜, 인터페이스]</h1>
-
-<p>이전 장에서는 PLC 프로그램을 작성하기 위해 사용되는 툴과 PLC 메모리 영역과 주소에 대해서 설명하며 알아보았습니다. 이번에는 PLC의 통신 프로토콜 구조와 통신 프로토콜을 통한 인터페이스 방식에 대해서 알아보도록 하겠습니다.</p>
-
-<h3 id="plc-통신-프로토콜">PLC 통신 프로토콜</h3>
-
-<hr />
-
-<p>PLC와 통신을 하기 위해 사용되는 프로토콜이며, 제조사 별로 구성이 되어있습니다. LS 산전 ‘<code class="language-plaintext highlighter-rouge">FEnet(FastEthernet)</code>’, 미쯔비시 ‘<code class="language-plaintext highlighter-rouge">MC(MelsecCommunication)</code> 프로토콜’ 등이 있으며, 범용적으로 사용되고 있는 ‘<code class="language-plaintext highlighter-rouge">Modbus</code>’ 프로토콜이 있습니다. 이번 장에서는 FEnet 프로토콜을 대표적으로 설명을 하도록 하겠습니다.</p>
-
-<p>FEnet은 XGT 전용 프로토콜이며, PLC와 통신하여 PLC 메모리에 데이터를 읽거나 쓰기 위해서 사용합니다. FEnet은 TCP와 UDP 2가지 방식으로 사용이 가능하며 TCP 경우에는 2004번 포트를 사용하고, UDP 경우에는 2005번 포트를 사용하도록 되어 있습니다.</p>
-
-<p>FEnet 프로토콜이  구성은 다음과 같습니다. 이더넷 프레임이 구조를 먼저 살펴보면, 이더넷 통신을 위한 MAC, IP 헤더, TCP 헤더와 데이터를 포함한 LS IS 프레임으로 구성되어 있습니다. PLC와 인터페이스를 하기 위해서 필요한 정보들은 LS IS 프레임에 들어있다고 보시면 될 것 같습니다.</p>
-
-<p><img src="/img/posts/plc_ethernet_frame.png" alt="Ethernet Frame" /></p>
-
-<p>Ethernet Frame</p>
-
-<p>여기에서 LS IS 프레임의 구조를 살펴보면 LS 산전 고유 데이터를 나타내는 Company Header,  요청 명령어를 나타내는 Command, PLC 데이터 타입을 나타내는 Data Type, 데이터를 나타내는 Data가 포함되어 있습니다. 자세한 구조와 나타내는 정보들은 아래 그림과 같습니다.</p>
-
-<p><img src="/img/posts/plc_ls_frame.png" alt="LS IS Frame Format" /></p>
-
-<p>LS IS Frame Format</p>
-
-<p>좀 더 자세하게 설명해야 할 부분들은 Company Header 영역에서 프레임 방향과 길이, Data 영역에서 블록 개수, 변수 길이, 데이터 주소에 대해서 설명하겠습니다.</p>
-
-<p>Company Header 영역의 프레임 방향은 ‘Host → PLC , PLC → Host’ 즉, 요청과 응답에 대해서 나타내고 있고, 길이의 경우에는 Company Header를 제외한 나머지 프레임 정보에 대한 길이의 정보를 나타내고 있습니다.</p>
-
-<p>데이터 영역의 블록 개수는 변수 길이부터 데이터 개수까지 요청되는 정보가 몇개가 있는지를 나타내는 정보입니다. 사진에서 확인이 가능하듯이 여러 개의 요청은 16개 정도로 제한을 두고있습니다. 변수 길이는 데이터 주소의 길이를 표현합니다. 예를 들어서 데이터 주소가 ‘%MW0001’일 경우, 7글자를 나타내는 h’07이 들어가게 되는 것입니다. 데이터 주소는 이전 장에서 설명하였던 PLC 메모리 주소에 대한 정보를 나타내고 있습니다.</p>
-
-<p>읽기 명령을 구성할 때 개별 주소 읽기와 주소 연속 읽기로 구분이 되어질 수 있습니다. 개별 주소는 읽고 싶은 메모리 주소들을 특정하여 요청하는 것이고 주소 연속은 처음 메모리 주소에서부터 주소의 길이 만큼 한번에 읽는 것을 의미합니다. 쓰기 명령의 요청 또한 동일합니다.</p>
-
-<aside>
-💡 변수 연속은 데이터 타입이 바이트 타입의 주소만 사용이 가능합니다.
-
-</aside>
-
-<p>해당 프로토콜을 통해서 PLC 메모리의 데이터에 읽기와 쓰기의 명령을 통해서 PLC와 인터페이스를 합니다.</p>
-
-<hr />
-
-<p>통신 프로토콜을 통해서 PLC와 <code class="language-plaintext highlighter-rouge">요청</code>과 <code class="language-plaintext highlighter-rouge">응답</code>에 대해 차이점이 있는지에 대해서 살펴보도록 하겠습니다.</p>
-
-<p>PLC 에게 통신 프로토콜 형식에 맞추어서 요청을 보내게 되면 PLC 에서는 명령어 수행에 대한 응답을 보내주게 되어있습니다. 응답 프레임에서는 데이터 영역에 요청 프레임의 형식이 잘못되었는지 혹은 PLC에 이상이 있는지에 대한 ‘오류 코드’와 정상적으로 수행이 되었다면 요청에 대한 ‘데이터’가 담겨져 있습니다.</p>
-
-<p><img src="/img/posts/plc_response_data.png" alt="응답 프레임 Data 영역" /></p>
-
-<p>응답 프레임 Data 영역</p>
-
-<p>그림에서와 같이 Data 영역의 에러 상태에는 오류 코드가 담겨있으며, 정상일 경우에는 ‘0’으로 보내지며, 그 외의 경우에는 각 상태를 나타내는 정보가 담겨져 있습니다.</p>
-
-<p>데이터에는 읽기 명령어와 쓰기 명령어에 따라 형태가 달라지게 됩니다. 읽기의 경우에는 ‘요청한 블록 수, 데이터 크기, 데이터 정보’가 반복되어 표시되는 반면에 쓰기의 경우에는 요청한 ‘블록 수’의 정보만 있습니다.</p>
-
-<p>이렇게 에러 상태를 확인하여 정상인 경우에는 데이터가 표시되는 정보를 확인하여 원하는 정보를 얻을 수가 있습니다.</p>
-
-<hr />
-
-<p>여기까지 설명한 내용이 PLC 통신 프로토콜과 인터페이스의 과정에 대해서 설명을 하였습니다. 기본적으로 모든 PLC 통신 프로토콜의 필요한 구성과 인터페이스의 과정은 동일하다고 생각합니다. 설명 글을 쓰면서 이해하기 쉽도록 최대한 정리를 해서 설명을 하다보니 빠진 부분도 많을 수 있다고 생각을 합니다. 부족한 부분들에 대해서는 앞으로 채워나갈 수 있도록 노력해보겠습니다. 여기까지 읽어주셔서 감사합니다.</p>]]></content><author><name>김영규</name></author><summary type="html"><![CDATA[(3) PLC [통신 프로토콜, 인터페이스]]]></summary></entry><entry><title type="html">(2) PLC [프로그램 툴, 메모리, 주소체계]</title><link href="http://localhost:4000/2022/09/07/plc_memory.html" rel="alternate" type="text/html" title="(2) PLC [프로그램 툴, 메모리, 주소체계]" /><published>2022-09-07T00:00:00+09:00</published><updated>2022-09-07T00:00:00+09:00</updated><id>http://localhost:4000/2022/09/07/plc_memory</id><content type="html" xml:base="http://localhost:4000/2022/09/07/plc_memory.html"><![CDATA[<h1 id="2-plc-프로그램-툴-메모리-주소체계">(2) PLC [프로그램 툴, 메모리, 주소체계]</h1>
-
-<p>이전 장에서는 PLC 개요와 동작 방식과 구성에 대해서 설명하며 프로그램에 대해서 알아보았습니다. 이번에는 PLC 프로그램을 작성하기 위해 사용되는 툴과 PLC 메모리 영역과 주소에 대해서 알아보도록 하겠습니다.</p>
-
-<h3 id="프로그램-툴">프로그램 툴</h3>
-
-<hr />
-
-<p>PLC 프로그램을 작성하고 디버깅을 하기 위해서는 각 제조사마다 제공하는 프로그램 툴이 존재합니다. LS 산전의 경우에는 ‘XG5000’, 미쯔비시는 ‘GX Works’, 싸이먼은 ‘CICON’ 등… 존재합니다. 각 프로그램 툴은 제조사에서 제공하여 다운을 받아 사용할 수 있습니다. 소개 글에서는 LS 산전을 기준으로 설명하였습니다.</p>
-
-<p><img src="/img/posts/plc_program_main.png" alt="[ XG5000 ]" /></p>
-
-<p>[ XG5000 ]</p>
-
-<p>PC와 PLC를 USB 혹은 Ethernet으로 연결하여 프로그램 툴을 통해서 PLC 내부의 프로그램을 모니터링 하거나 불러올 수 있으며, 작성한 프로그램을 PLC에 쓸 수 있습니다.</p>
-
-<aside>
-💡 처음 연결 시 네트워크 설정이 되어 있지 않기 때문에 USB 연결
-
-</aside>
-
-<ul>
-  <li>PLC 네트워크 설정</li>
-</ul>
-
-<p>PLC와 통신을 하기위해서는 IP 혹은 Port 번호에 대해서 설정이 필요할 것 입니다. 그럴 때에는 아래이 그림과 같이 PLC 통신 설정을 할 수 있습니다.</p>
-
-<p><img src="/img/posts/plc_network_set.png" alt="PLC Network Setting" /></p>
-
-<p>LS PLC 경우에는 드라이버 (통신 프로토콜)에 따라서 허용 가능한 Port 번호가 달라집니다.</p>
-
-<ul>
-  <li>
-    <p>XGT 서버 (FEnet)</p>
-
-    <p>TCP : 2004</p>
-
-    <p>UDP : 2005</p>
-  </li>
-  <li>
-    <p>모드버스</p>
-
-    <p>TCP : 502</p>
-  </li>
-</ul>
-
-<p>① 네트워크 설정 → PLC 의 네트워크 정보 설정을 하여 ‘IP, 서브넷마스크, 게이트웨이’의 주소를 설정합니다.</p>
-
-<p>② 전용 접속 개수 → PLC와 인터페이스를 하기 위해서 접속 허용자 수를 설정합니다.</p>
-
-<p>③ 드라이버 설정 → 통해서 PLC 와 인터페이스를 하기 위한 통신 프로토콜을 결정합니다.</p>
-
-<ul>
-  <li>PLC 프로그램 전송</li>
-</ul>
-
-<p>PLC 네트워크 설정을 하였다면, 프로그램 툴을 통해서 PLC의 프로그램을 가져와 확인(<code class="language-plaintext highlighter-rouge">읽기</code>)을 하거나 PLC 프로그램 메모리에 올려서 PLC가 프로그램 동작(<code class="language-plaintext highlighter-rouge">쓰기</code>)할 수 있도록 합니다.</p>
-
-<p><img src="/img/posts/plc_program.png" alt="PLC Program Read Write" /></p>
-
-<ul>
-  <li>모니터링</li>
-</ul>
-
-<p>현재 작성된 프로그램에 대해서 디버깅 혹은 동작을 볼 때 사용하게 됩니다. 이 기능을 통해서 프로그램이 내부에서 어떻게 동작을 하고 있는지 확인할 수가 있습니다.</p>
-
-<p><img src="/img/posts/plc_monitor.png" alt="PLC Monitoring" /></p>
-
-<p>① 모니터 → 작성된 프로그램을 디버깅 혹은 동작 과정을 확인하기 위해서 사용이 됩니다.</p>
-
-<p>② 시스템 모니터 → PLC 의 메모리 데이터 및 시스템 데이터를 확인하기 위해서 사용이 됩니다.</p>
-
-<p>프로그램 다운 링크 : <a href="https://www.ls-electric.com/ko/download/?dc_id=6">https://www.ls-electric.com/ko/download/?dc_id=6</a></p>
-
-<h3 id="메모리">메모리</h3>
-
-<hr />
-
-<p>PLC CPU 모듈에는 데이터를 저장하는 메모리가 존재합니다. 메모리는 사용자가 시스템을 구축하기 위해 작성한 사용자 프로그램을 저장하는 <strong>프로그램 메모리</strong>와 운전 중 데이터를 저장하는 디바이스 영역을 제공하는 <strong>데이터 메모리</strong>가 있습니다. 각 모델마다 메모리의 크기와 영역은 다를 수 있습니다. 기본적으로 각 제조사의 사이트에서 해당 제품에 대한 사양을 확인하여 어떤 영역의 메모리가 존재하는지 확인을 하실 수 있습니다. 아래의 그림은 XGI 시리즈의 데이터 메모리 사양 부분을 나타내는 그림입니다.</p>
-
-<p><img src="/img/posts/plc_memory.png" alt="PLC Memory Spec" /></p>
-
-<p>데이터 메모리 영역마다 특징이 존재하고 있습니다. 몇 가지만 알아보도록 하겠습니다.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>구분</th>
-      <th>특징</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>직접 변수</td>
-      <td>프로그램에 사용되는 변수 값을 저장하기 위해서 사용할 때</td>
-    </tr>
-    <tr>
-      <td>시스템 플래그</td>
-      <td>CPU에 이미 선언되어 PLC 상태를 나타내거나 동작 설정에 대해서 나타낼 때</td>
-    </tr>
-    <tr>
-      <td>아날로그 데이터</td>
-      <td>아날로그 , 고속카운트, 온도, 위치결정 등 아날로그의 데이터를 사용할 때</td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>고속 링크 플래그</td>
-      <td>고속 링크 통신 기능을 수행할 때 통신의 응답 진단을 위해서 사용할 때</td>
-    </tr>
-    <tr>
-      <td>서비스 상태와 에러 내용을 확인 가능</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>P2P 파라미터</td>
-      <td>P2P에서 파라미터 측정한 내용</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>메모리 영역에 ‘리테인 설정’을 하게되면 PLC가 정지(종료) 후 재 가동을 하여도 메모리의 데이터가 지워지지 않고 계속해서 유지하고 있습니다. 이전 데이터가 계속 유지가 되어야 한다면 리테인 설정이 가능한 메모리 영역에서 작업을 하는 것이 좋습니다.</p>
-
-<h3 id="주소-체계-표현">주소 체계 표현</h3>
-
-<hr />
-
-<p>모든 PLC는 비트(Bit)로 데이터를 표현하고 계산을 하는데, 이 비트들이 모여서 단위를 다음과 같이 나타내게 됩니다.</p>
-
-<ul>
-  <li>비트 (Bit) ⇒ 1 Bit</li>
-  <li>바이드(Byte) ⇒ 1 Byte = 8 Bit</li>
-  <li>워드(Word) ⇒ 1 Word = 2 Byte = 16 Bit</li>
-  <li>더블워드(Double Word) ⇒ 1 Double Word = 2 Word = 4 Byte = 32 Bit</li>
-  <li>롱워드(Long Word) ⇒ 1 Long Word = 2 Double Word = 4 Word = 8 Byte = 64 Bit</li>
-</ul>
-
-<p>단위가 나타내는 내용은 다음과 같이 주소에서 표현을 할 수 있습니다.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>단위</th>
-      <th>표현</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Bit</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>Byte</td>
-      <td>B</td>
-    </tr>
-    <tr>
-      <td>Word</td>
-      <td>W</td>
-    </tr>
-    <tr>
-      <td>Double Word</td>
-      <td>D</td>
-    </tr>
-    <tr>
-      <td>Long Word</td>
-      <td>L</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>위에 설명한 내용을 종합적으로 합쳐서 PLC의 메모리 주소에 접근할 때 나타내는 주소의 표현을 예를 들어서 설명하겠습니다.</p>
-
-<p>예를 들어 메모리 영역 중 ‘M’의 주소 ‘1번지’의 단위는 ‘워드’를 나타낼 때 ‘%MW0001’로 표현을 하게 됩니다. 실제 PLC 프로그램에서는 ‘%’ 문구를 생략하여 사용할 수 있지만 PLC와 통신 프로토콜을 이용하여 사용할 때에는 붙여서 사용하게 됩니다.</p>
-
-<aside>
-💡 LS 산전 PLC 에서는 주소를 나타낼 때 앞에 ‘%’ 문구 포함됨
-
-</aside>
-
-<hr />
-
-<p>여기까지 설명한 내용이 PLC를 설정하거나 프로그램을 작성할 때 사용되는 툴에 대한 설명과 PLC의 메모리가 어떤 종류가 있으며 해당 메모리를 어떻게 사용이 되는지, 메모리의 데이터에 접근하기 위해서 지정되는 주소 체계 방식에 대해서 설명하였습니다. 다음 내용에는 PLC의 통신 프로토콜 구조와 통신 프로토콜을 통한 인터페이스 방식에 대해서 설명을 하도록 하겠습니다.</p>]]></content><author><name>김영규</name></author><summary type="html"><![CDATA[(2) PLC [프로그램 툴, 메모리, 주소체계]]]></summary></entry></feed>
+<a href="https://eunjinii.tistory.com/44">https://eunjinii.tistory.com/44</a></p>]]></content><author><name>송기영</name></author><summary type="html"><![CDATA[안녕하세요. 에어릭스 환경시스템사업부의 개발팀 프론트엔드 개발자 송기영입니다.]]></summary></entry></feed>
