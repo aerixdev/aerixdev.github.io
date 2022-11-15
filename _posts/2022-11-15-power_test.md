@@ -25,7 +25,7 @@ author: 이상훈
 
 ![2채널 릴레이모듈](/img/posts/relay.png)
 
-![2채널 릴레이모듈](/img/posts/relay_pin.png)
+![릴레이모듈 PIN맵](/img/posts/relay_pin.png){: width="100%" height="100%"0}{: .center}
 
 판매처 사이트(https://eduino.kr)에 릴레이모듈에 대해서 설명이 잘되어 있어서 아래에 첨부해봤습니다.
 
