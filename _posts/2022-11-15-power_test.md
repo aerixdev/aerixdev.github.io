@@ -1,6 +1,6 @@
 ---
 title: 전원 ON/OFF 반복 테스트 장치 개발구상
-subtitle: 릴레이모듈과 라즈베리파이의 GPIO 단자를 활용
+subtitle: 릴레이모듈과 라즈베리파이를 활용
 layout: post
 author: 이상훈
 ---
