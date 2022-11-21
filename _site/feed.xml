@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-11-16T00:03:49+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">에어릭스 환경시스템사업부 기술블로그</title><subtitle>IT기업이 아닌 에어릭스에서 살아가고 있는 개발자들</subtitle><author><name>(주)에어릭스</name></author><entry><title type="html">새로운 만남 - New Face from Viet Nam</title><link href="http://localhost:4000/2022/11/15/new_face.html" rel="alternate" type="text/html" title="새로운 만남 - New Face from Viet Nam" /><published>2022-11-15T00:00:00+09:00</published><updated>2022-11-15T00:00:00+09:00</updated><id>http://localhost:4000/2022/11/15/new_face</id><content type="html" xml:base="http://localhost:4000/2022/11/15/new_face.html"><![CDATA[<p>에어릭스 개발팀에 새로운 얼굴들이 나타났습니다. 바다 건너 베트남에서 온 개발자 Dang Quang Tuan(당꾸안투안, Lex)씨와 Ngo khanh Duy(응옥한유이, Tommy)씨를 환영합니다.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-11-21T15:05:32+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">에어릭스 환경시스템사업부 기술블로그</title><subtitle>IT기업이 아닌 에어릭스에서 살아가고 있는 개발자들</subtitle><author><name>(주)에어릭스</name></author><entry><title type="html">새로운 만남 - New Face from Viet Nam</title><link href="http://localhost:4000/2022/11/15/new_face.html" rel="alternate" type="text/html" title="새로운 만남 - New Face from Viet Nam" /><published>2022-11-15T00:00:00+09:00</published><updated>2022-11-15T00:00:00+09:00</updated><id>http://localhost:4000/2022/11/15/new_face</id><content type="html" xml:base="http://localhost:4000/2022/11/15/new_face.html"><![CDATA[<p>에어릭스 개발팀에 새로운 얼굴들이 나타났습니다. 바다 건너 베트남에서 온 개발자 Dang Quang Tuan(당꾸안투안, Lex)씨와 Ngo khanh Duy(응옥한유이, Tommy)씨를 환영합니다.</p>
 
 <p>한국이 익숙하지않은 두 분을 위해 직접 인천공항으로 픽업을 나갔습니다. 영어에 유창하지만, 울렁증이 있다는 김영규 대리님을 위해, 의리 있는 제가 함께 공항으로 갔습니다.</p>
 
@@ -36,7 +36,7 @@
 
 <p><img src="/img/posts/relay.png" alt="2채널 릴레이모듈" /></p>
 
-<p><img src="/img/posts/relay_pin.png" alt="2채널 릴레이모듈" /></p>
+<p><img src="/img/posts/relay_pin.png" alt="릴레이모듈 PIN맵" width="100%" class="center" /></p>
 
 <p>판매처 사이트(https://eduino.kr)에 릴레이모듈에 대해서 설명이 잘되어 있어서 아래에 첨부해봤습니다.</p>
 
