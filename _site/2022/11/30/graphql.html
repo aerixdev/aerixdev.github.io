@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    GRAPHQL - 효율적인 데이터사용 웹서비스 아키텍처 - 에어릭스 환경시스템사업부 기술블로그
+    
+  </title>
+
+  <meta name="description" content="안녕하세요. 에어릭스 개발팀 손민철입니다. 기존에 임베디드 분야에 몸을 담다가 이렇게 백엔드관련 지식을 습득하고 글을 쓰려고 하니 감회가 새롭습니다. 공부를 하면할 수록 기존에 안보이던 부분들이 이해가 되는 것이 참 기분이 좋습니다. 요번 Posting에서 작성할 내용은 GRAPH...">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/2022/11/30/graphql.html">
+  <link rel="alternate" type="application/rss+xml" title="에어릭스 환경시스템사업부 기술블로그" href="/feed.xml">
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">에어릭스 환경시스템사업부 기술블로그</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">TECH NOTE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/link">Link</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+  <header class="masthead">
+    
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>GRAPHQL - 효율적인 데이터사용 웹서비스 아키텍처</h1>
+            
+            <h2 class="subheading">GRAPHQL이란? 어떻게 사용할까?</h2>
+            
+            <span class="meta">Posted by
+              <!--<a href="/author">손민철</a>-->
+              <a href="/about">손민철</a>
+              on November 30, 2022 &middot; <span class="reading-time" title="Estimated read time">
+  
+   4 mins  read </span>
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <p>안녕하세요. 에어릭스 개발팀 손민철입니다. 기존에 임베디드 분야에 몸을 담다가 이렇게 백엔드관련 지식을 습득하고 글을 쓰려고 하니 감회가 새롭습니다. 공부를 하면할 수록 기존에 안보이던 부분들이 이해가 되는 것이 참 기분이 좋습니다. 요번 Posting에서 작성할 내용은 GRAPHQL 아키텍처이고 기존에 산업에서 많이 사용되는 Rest api 아키텍처를 대체할 수 있는 웹서비스 아키텍처입니다. 어떠한 장,단점이 있고 어떻게 사용해야 하는 지 같이 보시죠.</p>
+
+<hr />
+
+<h2 id="graphql이란">GRAPHQL이란?</h2>
+
+<p><img src="/img/posts/2022-11-30/facebook.png" alt="Facebook" width="100%" class="center" /></p>
+
+<p>GRAPHQL이란 Facebook에서 2015년에 개발한 데이터 질의어로 웹서비스 아키텍처을 대체할 수 있습니다. 이에 대중적으로 사용되는 웹서비스 아키텍처인 rest api와 비교가 되고 rest api가 가지고 있는 overfetching, underfetching 문제(아래에서 다룰 예정)를 개선하였습니다.</p>
+
+<p><img src="/img/posts/2022-11-30/graphql.png" alt="Graphql" width="100%" class="center" /></p>
+
+<p><img src="/img/posts/2022-11-30/query.png" alt="query" width="100%" class="center" /></p>
+
+<p>위 첫번째 사진은 GRAPHQL의 homepage Main에 있는 것을 캡처한 것으로 GRAPHQL의 동작을 단적으로 나타냅니다. 데이터타입을 작성하고(Describe) 데이터를 요청하고(Ask for) 적절한 대답을 응답받는 것(get predictable results)입니다. 두번째 사진에서는 직접 구현한 동작의 예시입니다. 원하는 데이터타입을 작성하고(Describe) 그에 상응하는 적절한 데이터 요청합니다.(Ask for) 그리고 response로 적절한 응답을 받습니다.(get predictable results)</p>
+
+<h2 id="vs-rest-api">vs Rest API</h2>
+
+<p>웹서비스 아키텍처로 많이 사용되는 Rest API에는 두가지 문제점이 있습니다. Overfetching, Underfetching인데 각 개념과 GRAPHQL에서 어떻게 개선되었는 지 보겠습니다.</p>
+
+<ul>
+  <li>overfetching</li>
+</ul>
+
+<p><img src="/img/posts/2022-11-30/overfetching.png" alt="overfetching" width="100%" class="center" /></p>
+
+<p>Rest api에서는 하나의 url에 요청(Request)을 보내면 응답 전체를 무조건적으로 응답(Response)받아야 합니다. 즉, 불필요한 데이터까지 응답받아야 하기 때문에 필요이상으로 데이터 전송량이 늘어 납니다. GRAPHQL에서는 작성한 데이터타입 중에서도 필요한 데이터만 마치 SQL문에서 Query를 날리듯이 작성하면 필요한 데이터만 수집할 수 있습니다.</p>
+
+<ul>
+  <li>underfetching</li>
+</ul>
+
+<p><img src="/img/posts/2022-11-30/underfetching.png" alt="underfetching" width="100%" class="center" /></p>
+
+<p>또한, Rest api에서는 여러 계층으로 나눠진 데이터들을 한 번에 요청하여 수집할 수 없습니다. 예를 들어, url:port/getdata1. url:port/getdata2 두 개의 계층의 데이터를 얻기 위해서는 각각 다른 요청을 보내야 합니다. 그런데 GRAPHQL에서는 하나의 query요청에 여러 계층을 포함하여 데이터 전송횟수를 감소시킬 수 있습니다.</p>
+
+<p>하나 더, GRAPHQL은 하나의 endpoint만 이용합니다. 즉 url작성으로 시간을 낭비할 필요가 없습니다!!</p>
+
+<h2 id="graphql-작성">GRAPHQL 작성</h2>
+
+<p><img src="/img/posts/2022-11-30/apolo.png" alt="apolo" width="100%" class="center" /></p>
+
+<p>자, 이제까지 GRAPHQL이란 무엇인가에 대해 살펴보았고 실제 GRAPHQL을 어떻게 사용하는 지 구현해보겠습니다. GRAPHQL도 REST API와 같이 개발자간의 명세,형식을 뿐입니다. 따라서 실제 이 규정에 맞에 데이터를 요청하고 응답할 수 있는 solution이 필요합니다. 저는 이번 예제에서 APOLO 솔루션을 사용할 예정입니다. javascript에 모듈형식으로 사용할 수 있어 쉽고 FRONT, BACK-END Solution을 전부 제공하기에 편리하여 이 솔루션을 선정하였습니다.</p>
+
+<p><img src="/img/posts/2022-11-30/datatype.png" alt="datatype" width="100%" class="center" /></p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">describe your data</code></strong> : 데이터/요청 타입, 요청에 대한 Action을 작성합니다. Apolo server를 구동하기 위해서는 typeDefs, resolvers 인자가 필요합니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>typeDefs : Graphql에 사용될 데이터, 요청타입을 작성합니다. 여기 요청타입이란 query, mutation 명세타입을 말하고 어떤 식으로 요청을 보낼 것인지를 결정합니다.
+resolvers : 실제 Graphql요청이 왔을 때의 동작(Action)을 작성합니다.
+</code></pre></div></div>
+
+<p><img src="/img/posts/2022-11-30/query2.png" alt="query" width="100%" class="center" /></p>
+
+<p><img src="/img/posts/2022-11-30/mutation.png" alt="mutation" width="100%" class="center" /></p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ask for what you want &amp; get predictable results</code></strong> : 실제 데이터 요청(query, mutation)을 하고 적절한 응답을 받습니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>query : 원하는 데이터를 요청합니다.
+mutation : 원하는 데이터를 삭제,수정,추가합니다.
+</code></pre></div></div>
+
+<p>간단히 어떻게 GRAPHQL 작성을 하는 지 살펴보았는데 더 구체적인 내용은 내용이 길어지는 관계로 다루지 않겠습니다.</p>
+
+<h2 id="마치며">마치며</h2>
+<p>실제 GRAPHQL로 구현을 해보니 데이터,요청 타입을 작성하는 과정이 생각보다 쉽지는 않았습니다. 이는 GRAPHQL에 단점이라고 생각합니다. 다만, 이런 처음 작성의 불편함에도 불구하고 데이터 전송량 감소, 데이터 요청 횟수 감소, 하나의 end-point로만 요청이라는 장점을 가지고 있어 매력적인 웹서비스 아키텍처라고 생각합니다. 또한 GRAPHQL기반 BACK-END개발자가 스키마 DOC을 FRONT개발자에게 제공한다면 특정데이터가 필요할 때 API를 새로 만드는 것이 아니라, 그에 맞게 Query를 요청하기만 하면 되서 업무적인 효율도 올라갈 것이라고 생각합니다. 다만 특정데이터를 항상 요청하고 응답받아야 한다면 오히려 Rest Api가 좋은 성능을 보입니다. 따라서 상황에 맞게 Rest API, GRAPHQL을 사용하는 것이 좋아보이고 추 후에 그 후기를 작성해보도록 하겠습니다.</p>
+
+
+
+        <hr>
+
+        <script src="https://utteranc.es/client.js"
+          repo="aerixdev/aerixdev.github.io"
+          issue-term="url"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+        </script>
+        
+        <div class="clearfix">
+
+          
+          <a class="btn btn-primary float-left" href="/2022/11/16/redis.html" data-toggle="tooltip" data-placement="top" title="Redis란?">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+          <a class="btn btn-primary float-right" href="/2022/12/22/self_reflection.html" data-toggle="tooltip" data-placement="top" title="한해를 돌아보며.....">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
+          
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:aerix_es_dev@aerix.co.kr">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/aerixdev">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; (주)에어릭스 2022</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/startbootstrap-clean-blog/js/scripts.js"></script>
+
+<script src="/assets/scripts.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1WDQQYX0G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D1WDQQYX0G');
+</script>
+
+
+
+</body>
+
+</html>

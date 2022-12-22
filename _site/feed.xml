@@ -1,4 +1,183 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-11-21T15:05:32+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">에어릭스 환경시스템사업부 기술블로그</title><subtitle>IT기업이 아닌 에어릭스에서 살아가고 있는 개발자들</subtitle><author><name>(주)에어릭스</name></author><entry><title type="html">새로운 만남 - New Face from Viet Nam</title><link href="http://localhost:4000/2022/11/15/new_face.html" rel="alternate" type="text/html" title="새로운 만남 - New Face from Viet Nam" /><published>2022-11-15T00:00:00+09:00</published><updated>2022-11-15T00:00:00+09:00</updated><id>http://localhost:4000/2022/11/15/new_face</id><content type="html" xml:base="http://localhost:4000/2022/11/15/new_face.html"><![CDATA[<p>에어릭스 개발팀에 새로운 얼굴들이 나타났습니다. 바다 건너 베트남에서 온 개발자 Dang Quang Tuan(당꾸안투안, Lex)씨와 Ngo khanh Duy(응옥한유이, Tommy)씨를 환영합니다.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-12-22T15:38:11+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">에어릭스 환경시스템사업부 기술블로그</title><subtitle>IT기업이 아닌 에어릭스에서 살아가고 있는 개발자들</subtitle><author><name>(주)에어릭스</name></author><entry><title type="html">한해를 돌아보며…..</title><link href="http://localhost:4000/2022/12/22/self_reflection.html" rel="alternate" type="text/html" title="한해를 돌아보며….." /><published>2022-12-22T00:00:00+09:00</published><updated>2022-12-22T00:00:00+09:00</updated><id>http://localhost:4000/2022/12/22/self_reflection</id><content type="html" xml:base="http://localhost:4000/2022/12/22/self_reflection.html"><![CDATA[<p>아침에 출근해보니 책상 위에 2023년 다이어리가 놓여져 있는 것이 보였습니다. 
+짧은 순간이기는 했지만, <code class="language-plaintext highlighter-rouge">올 한해도 벌써 다 지나갔구나</code>라는 아쉬움을 찐하게 마주할 수 있었습니다.</p>
+
+<p><img src="/img/posts/2022-12-22/2023_diary.jpg" alt="2023년 다이어리" width="30%" class="left" /></p>
+
+<p>돌이켜보면 2022년 우리 개발팀 팀원분들 모두 정말 바쁘게 열심히 살았던 것 같습니다. 물론, 죽어라 열심히 일만 하면서 살았던 
+것은 아니겠지요. 적당히 분위기 보면서 게으름도 피우면서 지내기도 했습니다. 그렇지만, 집중해야 할 순간이 오면 자신이 가지고 있는
+모든 역량을 쏟아 최선을 다하는 모습도 보였습니다. 그리고 실제로 좋은 성과들로 이어졌습니다.</p>
+
+<p>클린팩토리 정부R&amp;D과제 수주, P사 ISDC DB서버 증설완료, P사 집진기 건전성 모니터링 시스템 준공 등등 올해 했던 많은 일들을 
+자랑스럽게 생각하셔도 될 것 같습니다.</p>
+
+<p>현재에 만족하지 않고 내년에도 계속 노력해주실 것이라 믿습니다. 내년에는 올해보다 더 즐겁게 일할 수 있는 환경을
+만들어보겠습니다.</p>
+
+<p><img src="/img/posts/2022-12-22/thanks.gif" alt="감사합니다." width="30%" class="left" /></p>]]></content><author><name>이상훈</name></author><summary type="html"><![CDATA[아침에 출근해보니 책상 위에 2023년 다이어리가 놓여져 있는 것이 보였습니다. 짧은 순간이기는 했지만, 올 한해도 벌써 다 지나갔구나라는 아쉬움을 찐하게 마주할 수 있었습니다.]]></summary></entry><entry><title type="html">GRAPHQL - 효율적인 데이터사용 웹서비스 아키텍처</title><link href="http://localhost:4000/2022/11/30/graphql.html" rel="alternate" type="text/html" title="GRAPHQL - 효율적인 데이터사용 웹서비스 아키텍처" /><published>2022-11-30T00:00:00+09:00</published><updated>2022-11-30T00:00:00+09:00</updated><id>http://localhost:4000/2022/11/30/graphql</id><content type="html" xml:base="http://localhost:4000/2022/11/30/graphql.html"><![CDATA[<p>안녕하세요. 에어릭스 개발팀 손민철입니다. 기존에 임베디드 분야에 몸을 담다가 이렇게 백엔드관련 지식을 습득하고 글을 쓰려고 하니 감회가 새롭습니다. 공부를 하면할 수록 기존에 안보이던 부분들이 이해가 되는 것이 참 기분이 좋습니다. 요번 Posting에서 작성할 내용은 GRAPHQL 아키텍처이고 기존에 산업에서 많이 사용되는 Rest api 아키텍처를 대체할 수 있는 웹서비스 아키텍처입니다. 어떠한 장,단점이 있고 어떻게 사용해야 하는 지 같이 보시죠.</p>
+
+<hr />
+
+<h2 id="graphql이란">GRAPHQL이란?</h2>
+
+<p><img src="/img/posts/2022-11-30/facebook.png" alt="Facebook" width="100%" class="center" /></p>
+
+<p>GRAPHQL이란 Facebook에서 2015년에 개발한 데이터 질의어로 웹서비스 아키텍처을 대체할 수 있습니다. 이에 대중적으로 사용되는 웹서비스 아키텍처인 rest api와 비교가 되고 rest api가 가지고 있는 overfetching, underfetching 문제(아래에서 다룰 예정)를 개선하였습니다.</p>
+
+<p><img src="/img/posts/2022-11-30/graphql.png" alt="Graphql" width="100%" class="center" /></p>
+
+<p><img src="/img/posts/2022-11-30/query.png" alt="query" width="100%" class="center" /></p>
+
+<p>위 첫번째 사진은 GRAPHQL의 homepage Main에 있는 것을 캡처한 것으로 GRAPHQL의 동작을 단적으로 나타냅니다. 데이터타입을 작성하고(Describe) 데이터를 요청하고(Ask for) 적절한 대답을 응답받는 것(get predictable results)입니다. 두번째 사진에서는 직접 구현한 동작의 예시입니다. 원하는 데이터타입을 작성하고(Describe) 그에 상응하는 적절한 데이터 요청합니다.(Ask for) 그리고 response로 적절한 응답을 받습니다.(get predictable results)</p>
+
+<h2 id="vs-rest-api">vs Rest API</h2>
+
+<p>웹서비스 아키텍처로 많이 사용되는 Rest API에는 두가지 문제점이 있습니다. Overfetching, Underfetching인데 각 개념과 GRAPHQL에서 어떻게 개선되었는 지 보겠습니다.</p>
+
+<ul>
+  <li>overfetching</li>
+</ul>
+
+<p><img src="/img/posts/2022-11-30/overfetching.png" alt="overfetching" width="100%" class="center" /></p>
+
+<p>Rest api에서는 하나의 url에 요청(Request)을 보내면 응답 전체를 무조건적으로 응답(Response)받아야 합니다. 즉, 불필요한 데이터까지 응답받아야 하기 때문에 필요이상으로 데이터 전송량이 늘어 납니다. GRAPHQL에서는 작성한 데이터타입 중에서도 필요한 데이터만 마치 SQL문에서 Query를 날리듯이 작성하면 필요한 데이터만 수집할 수 있습니다.</p>
+
+<ul>
+  <li>underfetching</li>
+</ul>
+
+<p><img src="/img/posts/2022-11-30/underfetching.png" alt="underfetching" width="100%" class="center" /></p>
+
+<p>또한, Rest api에서는 여러 계층으로 나눠진 데이터들을 한 번에 요청하여 수집할 수 없습니다. 예를 들어, url:port/getdata1. url:port/getdata2 두 개의 계층의 데이터를 얻기 위해서는 각각 다른 요청을 보내야 합니다. 그런데 GRAPHQL에서는 하나의 query요청에 여러 계층을 포함하여 데이터 전송횟수를 감소시킬 수 있습니다.</p>
+
+<p>하나 더, GRAPHQL은 하나의 endpoint만 이용합니다. 즉 url작성으로 시간을 낭비할 필요가 없습니다!!</p>
+
+<h2 id="graphql-작성">GRAPHQL 작성</h2>
+
+<p><img src="/img/posts/2022-11-30/apolo.png" alt="apolo" width="100%" class="center" /></p>
+
+<p>자, 이제까지 GRAPHQL이란 무엇인가에 대해 살펴보았고 실제 GRAPHQL을 어떻게 사용하는 지 구현해보겠습니다. GRAPHQL도 REST API와 같이 개발자간의 명세,형식을 뿐입니다. 따라서 실제 이 규정에 맞에 데이터를 요청하고 응답할 수 있는 solution이 필요합니다. 저는 이번 예제에서 APOLO 솔루션을 사용할 예정입니다. javascript에 모듈형식으로 사용할 수 있어 쉽고 FRONT, BACK-END Solution을 전부 제공하기에 편리하여 이 솔루션을 선정하였습니다.</p>
+
+<p><img src="/img/posts/2022-11-30/datatype.png" alt="datatype" width="100%" class="center" /></p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">describe your data</code></strong> : 데이터/요청 타입, 요청에 대한 Action을 작성합니다. Apolo server를 구동하기 위해서는 typeDefs, resolvers 인자가 필요합니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>typeDefs : Graphql에 사용될 데이터, 요청타입을 작성합니다. 여기 요청타입이란 query, mutation 명세타입을 말하고 어떤 식으로 요청을 보낼 것인지를 결정합니다.
+resolvers : 실제 Graphql요청이 왔을 때의 동작(Action)을 작성합니다.
+</code></pre></div></div>
+
+<p><img src="/img/posts/2022-11-30/query2.png" alt="query" width="100%" class="center" /></p>
+
+<p><img src="/img/posts/2022-11-30/mutation.png" alt="mutation" width="100%" class="center" /></p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ask for what you want &amp; get predictable results</code></strong> : 실제 데이터 요청(query, mutation)을 하고 적절한 응답을 받습니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>query : 원하는 데이터를 요청합니다.
+mutation : 원하는 데이터를 삭제,수정,추가합니다.
+</code></pre></div></div>
+
+<p>간단히 어떻게 GRAPHQL 작성을 하는 지 살펴보았는데 더 구체적인 내용은 내용이 길어지는 관계로 다루지 않겠습니다.</p>
+
+<h2 id="마치며">마치며</h2>
+<p>실제 GRAPHQL로 구현을 해보니 데이터,요청 타입을 작성하는 과정이 생각보다 쉽지는 않았습니다. 이는 GRAPHQL에 단점이라고 생각합니다. 다만, 이런 처음 작성의 불편함에도 불구하고 데이터 전송량 감소, 데이터 요청 횟수 감소, 하나의 end-point로만 요청이라는 장점을 가지고 있어 매력적인 웹서비스 아키텍처라고 생각합니다. 또한 GRAPHQL기반 BACK-END개발자가 스키마 DOC을 FRONT개발자에게 제공한다면 특정데이터가 필요할 때 API를 새로 만드는 것이 아니라, 그에 맞게 Query를 요청하기만 하면 되서 업무적인 효율도 올라갈 것이라고 생각합니다. 다만 특정데이터를 항상 요청하고 응답받아야 한다면 오히려 Rest Api가 좋은 성능을 보입니다. 따라서 상황에 맞게 Rest API, GRAPHQL을 사용하는 것이 좋아보이고 추 후에 그 후기를 작성해보도록 하겠습니다.</p>]]></content><author><name>손민철</name></author><summary type="html"><![CDATA[안녕하세요. 에어릭스 개발팀 손민철입니다. 기존에 임베디드 분야에 몸을 담다가 이렇게 백엔드관련 지식을 습득하고 글을 쓰려고 하니 감회가 새롭습니다. 공부를 하면할 수록 기존에 안보이던 부분들이 이해가 되는 것이 참 기분이 좋습니다. 요번 Posting에서 작성할 내용은 GRAPHQL 아키텍처이고 기존에 산업에서 많이 사용되는 Rest api 아키텍처를 대체할 수 있는 웹서비스 아키텍처입니다. 어떠한 장,단점이 있고 어떻게 사용해야 하는 지 같이 보시죠.]]></summary></entry><entry><title type="html">Redis란?</title><link href="http://localhost:4000/2022/11/16/redis.html" rel="alternate" type="text/html" title="Redis란?" /><published>2022-11-16T00:00:00+09:00</published><updated>2022-11-16T00:00:00+09:00</updated><id>http://localhost:4000/2022/11/16/redis</id><content type="html" xml:base="http://localhost:4000/2022/11/16/redis.html"><![CDATA[<h1 id="redis란">Redis란?</h1>
+
+<h2 id="목차">목차</h2>
+
+<ol>
+  <li>Redis란?</li>
+  <li>Redis - NoSQL</li>
+  <li>Redis - 영속성</li>
+  <li>자료형과 기본적인 명령어들</li>
+</ol>
+
+<h2 id="redis란-1">Redis란?</h2>
+
+<ol>
+  <li>기본적으로 키-값의 형태로 데이터를 저장하는 데이터베이스입니다.</li>
+  <li>메모리에 데이터가 저장되는 인메모리 데이터베이스로 빠른 응답속도를 가지며 동시에 주기적으로 데이터를 디스크에 저장함으로써 영속성을 보장하는 데이터베이스입니다.</li>
+  <li>싱글 쓰레드로 작동하기 때문에 긴 트랜젝션이 들어오는 경우에는 그 요청을 처리하는 동안 다른 요청을 처리할 수 없다는 단점이 있으나 원자성을 자동적으로 보장해주는 장점이 있는 데이터베이스 입니다.</li>
+</ol>
+
+<p>종합적으로 Redis는 빠른 응답속도를 가지고 있으면서도 데이터를 영구적으로 NoSQL 방식으로 다양한 형식으로 저장할 수 있는 데이터베이스입니다.</p>
+
+<h2 id="redis---nosql">Redis - NoSQL</h2>
+
+<p>고정된 열과 행을 가지는 테이블을 이용하는 관계형 데이터베이스 모델을 따르지 않는 모든 데이터 베이스 모델을 의미합니다. 주로 사용되는 NoSQL의 종류로는 키-값 데이터베이스 모델, 와이어 컬럼 모델, 그래프 데이터베이스 모델이 있습니다.</p>
+
+<h2 id="redis가-영속성을-보장하는-방법">Redis가 영속성을 보장하는 방법</h2>
+
+<p>Redis는 인메모리 데이터베이스이지만 동시에 영속성을 보장하고 있습니다. 이러한 장점은 메모리에 저장되는 데이터를 주기적으로 DISK에 저장하는 형태로 이루어지며 저장하는 방식에 따라서 분류되는 RDB 방식과 AOF 방식을 사용하고 있습니다.</p>
+
+<h3 id="rdb--방식">RDB  방식</h3>
+
+<p>메모리의 스냅샷을 찍는 형태로 현재 메모리에 있는 정보를 그대로 디스크에 저장하고 불러오는 방식입니다. 메모리의 값을 그대로 사용하므로 불러오는 속도가 빠르며 크기가 작다는 장점이 있습니다. 반면에 백업이 진행되는 도중에 서버가 비정상적으로 종료되는 상황이 발생한다면 복원 지점의 데이터가 그대로 소실되는 단점이 있습니다.</p>
+
+<h3 id="aof-방식">AOF 방식</h3>
+
+<p>Redis에 일어난 쓰기/갱신 연산을 log에 저장하고 서버가 부팅되는 경우에 log에 기록된 연산을 다시 수행하는 방식입니다. 장점은 연산을 지속적으로 기록하기 때문에 서버가 비정상적으로 종료되더라도 데이터의 유실이 적으며 TEXT 형식으로 저장되기 떄문에 일어났던 연산을 수정하거나 확인하는 작업이 수월합니다. 단점은 로그를 모두 기록하므로 크기가 크며 불러오는 경우에는 일어났던 모든 연산을 다시 수행하여 최종 상태로 만들어야 하기 때문에 속도가 느립니다. 이때 AOF 방식의 경우 단점을 보완하기 위해서 로그를 연산을 수행한 특정 상태로 만드는 REWRITE 명령어가 있습니다.</p>
+
+<p>RDB 방식과 AOF 방식, 그리고 관련된 설정은 Redis의 설정파일인 /etc/redis/redis.conf에서 확인하고 수정할 수 있습니다.</p>
+
+<h2 id="redis에서-자주-사용되는-자료형과-명령어">Redis에서 자주 사용되는 자료형과 명령어</h2>
+
+<h3 id="데이터베이스-명령어">데이터베이스 명령어</h3>
+
+<p>SELECT : 데이터베이스를 설정하는 명령어이며 Redis의 경우 기본 값으로 16개의 데이터베이스를 지원하며 기본값으로 시작할 경우 0번째 데이터베이스로 시작합니다.</p>
+
+<p>FLUSHDB : 데이터베이스의 모든 데이터를 제거하는 명령어 입니다.</p>
+
+<h3 id="set">Set</h3>
+
+<p>SET : 데이터베이스에 키, 값으로 저장</p>
+
+<p>GET : 데이터베이스에서 키를 기반으로 데이터를 불러오기</p>
+
+<p>DELETE : 데이터베이스에서 키를 기반으로 삭제</p>
+
+<h3 id="list">List</h3>
+
+<p>PUSH와 POP 연산을 기반으로 작동합니다.</p>
+
+<p>LPUSH : 왼쪽으로 데이터를 추가</p>
+
+<p>RPUSH : 오른쪽으로 데이터를 추가</p>
+
+<p>LPOP : 왼쪽의 데이터를 가져오고 삭제</p>
+
+<p>RPOP : 오른쪽의 데이터를 가져오고 삭제</p>
+
+<p>LINSERT : 왼쪽을 기준으로 데이터 값을 저장</p>
+
+<p>LSET : 왼쪽을 기준으로 데이터 값을 변경</p>
+
+<p>LRANGE : 리스트 값을 조회</p>
+
+<h3 id="sets-sorted-sets">Sets, Sorted sets</h3>
+
+<p>SADD : 집합에 데이터를 추가</p>
+
+<p>SMEMBERS : 집합의 데이터를 조회</p>
+
+<p>SREM : 집합의 데이터를 삭제</p>
+
+<h3 id="hashes">Hashes</h3>
+
+<p>HSET : hashes에 데이터를 추가</p>
+
+<p>HDEL : hashes의 데이터를 삭제</p>
+
+<p>HGETALL : hashes의 데이터를 조회</p>
+
+<h2 id="참조-사이트">참조 사이트</h2>
+
+<p><a href="http://www.redisgate.com/redis/command/sets.php">http://www.redisgate.com/redis/command/sets.php</a></p>
+
+<p><a href="https://ryu-e.tistory.com/m/9">https://ryu-e.tistory.com/m/9</a></p>
+
+<p><a href="https://codingmania.tistory.com/m/25">https://codingmania.tistory.com/m/25</a></p>
+
+<p><a href="https://redis.io/commands/">https://redis.io/commands/</a></p>
+
+<p><a href="http://www.redisgate.com/redis/command/sets.php">http://www.redisgate.com/redis/command/</a></p>]]></content><author><name>강민구</name></author><summary type="html"><![CDATA[Redis란?]]></summary></entry><entry><title type="html">새로운 만남 - New Face from Viet Nam</title><link href="http://localhost:4000/2022/11/15/new_face.html" rel="alternate" type="text/html" title="새로운 만남 - New Face from Viet Nam" /><published>2022-11-15T00:00:00+09:00</published><updated>2022-11-15T00:00:00+09:00</updated><id>http://localhost:4000/2022/11/15/new_face</id><content type="html" xml:base="http://localhost:4000/2022/11/15/new_face.html"><![CDATA[<p>에어릭스 개발팀에 새로운 얼굴들이 나타났습니다. 바다 건너 베트남에서 온 개발자 Dang Quang Tuan(당꾸안투안, Lex)씨와 Ngo khanh Duy(응옥한유이, Tommy)씨를 환영합니다.</p>
 
 <p>한국이 익숙하지않은 두 분을 위해 직접 인천공항으로 픽업을 나갔습니다. 영어에 유창하지만, 울렁증이 있다는 김영규 대리님을 위해, 의리 있는 제가 함께 공항으로 갔습니다.</p>
 
@@ -544,324 +723,4 @@ https://www.notion.so/ko-kr/help/guides/types-of-content-blocks</p>]]></content>
 
 <p><img src="/img/posts/2022-10-05/락큰롤.jpg" alt="라큰롤" width="100%" class="center" /></p>
 
-<p>즐거운 시간이었고 일년에 한 번 쯤은 다 같이 공기 좋고 물좋은 곳에서 시간 보내는 것도 참 좋은 것같습니다. 다음 번엔 다음 날 액티비티까지 할 수 있었으면 좋겠습니다.</p>]]></content><author><name>손민철</name></author><summary type="html"><![CDATA[에어릭스 환경시스템사업부 개발팀의 손민철입니다. 첫글을 기술관련 글을 쓰고 싶었지만… 어찌하다 보니 워크샵 후기를 작성하게 되었습니다. 입사한지 3년만에 첫 워크샵이었습니다. 기존에는 팀장급인사들만 워크샵에 참여하였으나, 팀원들까지 전부 참여하는 워크샵은 처음이었네요. 게다가 일정이 화~수요일… 대표님의 센스에 감탄…!! 앞으로의 워크샵이 기대됩니다.]]></summary></entry><entry><title type="html">GS인증에 도전</title><link href="http://localhost:4000/2022/10/04/gs.html" rel="alternate" type="text/html" title="GS인증에 도전" /><published>2022-10-04T00:00:00+09:00</published><updated>2022-10-04T00:00:00+09:00</updated><id>http://localhost:4000/2022/10/04/gs</id><content type="html" xml:base="http://localhost:4000/2022/10/04/gs.html"><![CDATA[<h2 id="품질에-대한-고민">품질에 대한 고민</h2>
-<hr />
-
-<p>우리가 개발하는 소프트웨어의 품질수준을 어떻게 단기간에 끌어올릴 수 있을지 고민이 많은 개발팀장 이상훈입니다. 그 동안 우리 소프트웨어의 품질 수준은
-참담할 정도로 엉망이었던 것은 부인할 수 없는 사실이니까요. 당연히 고민을 할 수 밖에 없습니다.</p>
-
-<p><img src="/img/posts/starting_00.png" alt="고민" /></p>
-
-<p>문제투성이 개발팀이 이제 재정비되고, 안정을 찾아가고 있는 상황입니다. 이제 다시 도약할 수 있는 에너지를 비축해야 할 시점인 것 같습니다.
-다시 도약하기 위해서 해야할 일들이 많이 있겠으나, 품질수준의 향상이 제일 우선되어야 한다고 생각합니다.
-그래서 얼마전부터 단위테스트 코드 작성 의무화, 코드 커버리지 측정 등 여러가지 시도를 해보고 있는 것입니다.
-하지만 그것만으로는 부족한 것도 사실입니다. 특히, 개발업무 프로세스가 제대로 정립되어 있지 않고 품질에 대한 기대수준이 명확하게 설정되어 있지 않은 현재의 상태에서는
-어떤 것을 시도하더라도 큰 효과를 기대하기는 어려울 것 같습니다.</p>
-
-<h2 id="gs인증에-도전하는-이유">GS인증에 도전하는 이유</h2>
-<hr />
-
-<p>우선은 개발팀이 지향하고 있는 품질수준에 대한 가이드라인부터 명확하게 설정하는 것이 필요하다고 생각되었습니다. 그래서 국가공인 소프트웨어 품질인증제도인 
-GS(Good Software)인증에 도전해보기로 했습니다.</p>
-
-<p>아직 우리 스스로 품질수준에 대한 가이드라인을 명확하게 설정할 수 있을만큼 역량을 충분히 갖추지 못했기 때문에, 공인시험기관을 통해서 객관적인 성능측정과 품질검증이 
-이루어지는 GS품질인증기준을 우리 제품의 품질기준점으로 삼아볼 생각입니다.</p>
-
-<p><img src="/img/posts/gs/test.png" alt="시험" width="50%" /></p>
-
-<p>첫 인증 대상제품은 현재 개발팀 내부에서 한참 개발이 진행되고 있는 PLC컨트롤러라는 미들웨어 성격의 소프트웨어로 선택했습니다.</p>
-
-<p>비슷한 타사 제품과의 차별성을 부각시키고, 고객의 신뢰성을 확보하는 측면에서도 이런 종류의 국가공인 품질인증 획득은 충분히 활용가치가 있는 일이라고 생각됩니다.
-물론 PLC컨트롤러 개발을 담당하고 있는 김영규 대리님은 GS인증 때문에 앞으로 할일이 더 많아 질 수 밖에 없습니다. 그냥 운이 없다고 생각하세요…^_^</p>
-
-<h2 id="tta-방문상담">TTA 방문상담</h2>
-<hr />
-
-<p>어쩌면 <strong>“안그래도 바쁜데 왜 쓸모없는 일을 벌이는거지?”</strong>라고 생각할 수도 있겠습니다. 그래도 한번 마음먹은 이상 추진해버려야 직성이 풀리는 이상한 성격이라
-김영규 대리님을 압박해서 밀어붙이고 있습니다.</p>
-
-<p><img src="/img/posts/gs/dozer.png" alt="불도저" /></p>
-
-<p>지난주 상암동 누리꿈스퀘어에 위치한 TTA소프트웨어시험인증연구소를 김영규 대리, 강민구 사원과 함께 방문해서 GS인증 상담을 받고 왔습니다. 
-개인적으로는 GS인증과 관련해서 궁금증이 많이 해소된 의미있는 자리였던 것 같습니다. 그리고 GS인증을 추진해야 하는 이유가 더 명확해졌습니다.</p>
-
-<h2 id="gs인증은-어떤-등급으로-신청해야-하나">GS인증은 어떤 등급으로 신청해야 하나?</h2>
-<hr />
-
-<p>GS인증에는 1등급과 2등급 2가지 등급이 있습니다. 사실 어떤 등급으로 인증을 신청해야 할지 방문 상담전까지도 고민이 있었습니다. 등급에 따라서 시험난이도에
-차이가 존재할 것이기 때문입니다.
-하지만 TTA에서 상담을 해주신 연구원님께서 명쾌하게 정리를 해주셨습니다. 
-자체적으로 개발하는 소프트웨어는 선택의 여지없이 1등급으로 신청해서 인증을 받아야 된다고요.</p>
-
-<p><img src="/img/posts/gs/gs_mark.png" alt="GS인증" /></p>
-
-<h2 id="사용자-메뉴얼의-수준향상도-기대">사용자 메뉴얼의 수준향상도 기대</h2>
-<hr />
-
-<p>방문 상담전까지는 GS인증을 통해서 우리가 개발하는 소프트웨어 그 자체에 대한 품질 향상만 기대할 수 있다고 생각했습니다. 하지만 상담 과정에서 소프트웨어뿐만
-아니라 사용자에게 제공되는 메뉴얼에 대한 검증도 같이 이루어진다는 사실을 알게 되었습니다.</p>
-
-<p>Technical Writer 직무가 따로 없는 에어릭스에서는 개발자가 사용자 메뉴얼도 작성해야 합니다. 개발자들이 직접 작성하다보니 메뉴얼 작성에 대한 전문성도 부족하고,
-충분히 고민하지 않고 작성하다보니 내용이 많이 부실한 것이 현실입니다. 최소한 GS인증에서 요구하는 요건구성에 맞춰서 사용자 메뉴얼을 작성하려고 노력하다보면
-지금보다는 사용자 메뉴얼의 수준이 향상될 수 있을 것이라고 생각했습니다.</p>
-
-<h2 id="인증시험-가능시기">인증시험 가능시기</h2>
-<hr />
-
-<p>정부과제 R&amp;D지원금을 사용해서 GS인증시험으로 발생하는 비용을 처리할 수 있을 것 같아서, 최대한 빨리 계약을 진행하려고 합니다. 계약 진행하고 1개월정도 대기후에
-시험이 시작될 수 있을 것이라고 기대합니다. 그렇다면 시험시작은 11월초나 중순정도가 될 것 같습니다. 그동안 PLC컨트롤러의 제품개발을 서둘러 마무리해야 합니다.</p>
-
-<h2 id="잔존-이슈">잔존 이슈</h2>
-<hr />
-
-<p>오늘 개발팀 주간회의 시간에도 이야기를 했습니다. 개발의 끝은 없다고 생각됩니다. 
-GS인증이 끝이 아니라는 이야기를 하고 싶습니다. GS인증은 우리의 품질을 객관적으로 검증해보는 절차일뿐, 그 제품이 100% 완전무결하다는 것을 보장하는 것은 아닙니다.
-제품을 개선하고자 하는 노력은 계속 되어야 합니다.</p>
-
-<p><img src="/img/posts/gs/agile.png" alt="애자일" width="40%" /></p>
-
-<p>또한, GS인증은 화이트박스 테스트가 아니라 블랙박스 테스트로 진행됩니다. 즉, 소스코드와 설계문서까지는 들여다보지 않는다는 의미이죠. 그렇기 때문에
-소스코드와 설계문서의 품질을 끌어올릴 수 있는 방안도 계속 고민을 해야할 것입니다.</p>
-
-<p><img src="/img/posts/gs/blackboxtesting.png" alt="블랙박스테스팅" width="50%" /></p>
-
-<h2 id="글을-마치며">글을 마치며</h2>
-<hr />
-
-<p>GS인증을 사내에서 처음 시도하는 만큼 최소한 개발팀 내부에는 GS인증이 무엇이고, 어떤것을 어떻게 준비해야 할지에 대해서 공유가 되어야 할 것 같습니다.
-이미 공지했던 것처럼 내일 김영규 대리님께서 세미나를 진행해주실 것입니다. 세미나가 완료된 이후에 세미나 관련 내용도 여기에 포스팅할 계획입니다.</p>
-
-<p>이 포스팅은 내일(10월5일) GS인증과 관련된 내부 세미나를 진행하기 전에 GS인증을 추진하는 이유에 대해서 개발팀 구성원들에게 설명하기 위해서 작성했습니다.
-감사합니다.</p>]]></content><author><name>이상훈</name></author><summary type="html"><![CDATA[품질에 대한 고민]]></summary></entry><entry><title type="html">신입 사원이 돌아본 에어릭스 이야기</title><link href="http://localhost:4000/2022/09/26/Newbee.html" rel="alternate" type="text/html" title="신입 사원이 돌아본 에어릭스 이야기" /><published>2022-09-26T00:00:00+09:00</published><updated>2022-09-26T00:00:00+09:00</updated><id>http://localhost:4000/2022/09/26/Newbee</id><content type="html" xml:base="http://localhost:4000/2022/09/26/Newbee.html"><![CDATA[<h3 id="1-이-이야기는">1. 이 이야기는</h3>
-
-<p>에어릭스 환경시스템사업부 개발팀의 신입사원 강민석입니다. 입사한지 벌써 4개월이 넘었는데요, 그 동안 일하면서 느낀 에어릭스에 대한 경험을 솔직하게 이야기 해보는 시간을 가지려고 합니다.</p>
-
-<p><img src="/img/posts/2022-09-26/KangMS.jpg" alt="강민석 사원" /></p>
-
-<hr />
-
-<h3 id="2-에어릭스와의-첫걸음">2. 에어릭스와의 첫걸음</h3>
-
-<p>오랜 시간 몸 담던 크리에이터 생활을 정리하고 백엔드 개발자 공부를 1년 가량 했습니다.  많은 기업의 면접을 보았지만 늦깎이 신입이 패기만으로 도전하기엔 호락호락한 길이 아니었습니다. 그렇게 면접장 헤매던 중, 에어릭스와 면접을 보게되었습니다.</p>
-
-<p>에어릭스는 집진기 환경 설비를 주로 만드는 기업으로 주변 선배들이 개발자 취직을 말리는 제조업 기업입니다. 하지만 회사 규모가 큰 만큼 연구&amp;개발 부서 또한 스타트업이나 작은 IT기업 이상이라는 점과 다른 회사의 외주 프로젝트가 아닌 자체적인 IoT 솔루션을 가지고 있는점에 매료되어 입사를 적극 지원하게 되었습니다.</p>
-
-<p>면접 과정을 거쳐 합격 소식을 들었을 때는 진로나 커리어에 대한 많은 고민 속에 마침내 해답을 찾을 수 있을 것 같아 후련했고 처음 해보는 직장 생활에 대한 기대감이 넘쳤습니다.</p>
-
-<hr />
-
-<h3 id="3-어떻게-일할까">3. 어떻게 일할까</h3>
-
-<ul>
-  <li>자체 기술의 장점</li>
-</ul>
-
-<p>입사 전에 공부한 내용은 주로 Spring Boot를 통한 웹개발이었습니다. 공부할 때의 생각은 웹페이지 로그인 만들고, 게시판 만들고.. 단순한 반복 작업을 하게 될 것이라고 생각했습니다. 하지만 에어릭스에서는 IoT 기술 개발 업무를 맡게 되었고 MQTT, Kafka, 시계열DB, 콤보, 게이트웨이, PLC 등 처음 들어보는 기술과 용어들에 당황했고 어떻게 공부해야 할 지 걱정이 많았습니다.</p>
-
-<p>하지만 오랜 기간 자체 기술을 닦아온 기업이다 보니 기존 솔루션들이 잘 구축되어 있었습니다. 그것들을  레퍼런스 삼아 공부하니 실전적인 경험을 효율적으로 쌓을 수 있었습니다. 공부할 수 있는 교재나 인터넷 강의도 충분히 지원되었고, 무엇보다 선배 직원들과의 커뮤니케이션을 자유롭게 할 수 있어서 모르는 부분은 물어보며 공부하니 빠르게 실력이 쌓이는 것을 느낄 수 있었습니다.</p>
-
-<ul>
-  <li>주인공이 될 수 있다</li>
-</ul>
-
-<p>신입 사원이라고 자투리 부분만 맡기는 것이 아니라 중요한 프로젝트들의 주인공으로 활약할 수 있는 환경을 만들어 주는 것도 좋았습니다. 처음엔 잘 모르는, 막연한 작업에 두려움도 느꼈지만 성공적으로 완수하고 나니 개인적인 성장은 물론이고 내가 한 사람 몫을 톡톡히 하고 있다는 자신감도 느낄 수 있었습니다.</p>
-
-<p>갈수록 더 중요하고 규모가 큰 프로젝트들을 맡고 있습니다. 꾸준히 노력하고 공부하여 회사에서 인정받고, 팀원들에게 예쁨받는 직원이 되도록 더 노력해야겠습니다.</p>
-
-<hr />
-
-<h3 id="4-근무-환경은">4. 근무 환경은</h3>
-
-<ul>
-  <li>소통하는 개발</li>
-</ul>
-
-<p>사무실에 낮은 파티션은 있지만, 팀원끼리 가까운 자리에서 꾸준히 소통하면서 일하고 있습니다. 일하는 스타일에 따라서 방해 받지 않는 조용한 환경을 선호하는 사람도 있겠지만, 늦깎이 신입으로 입사한 저로서는 선배들에게 계속 물어보고 피드백을 받을 수 있다는 점이 굉장히 좋았습니다. 대리님이나 부장님 까지도 허물 없이 의견을 주고 받으며 일하기 때문에 혼자 머리 싸매다 이상한 방향으로 프로젝트를 진행하는 일 없이 옳은 방향으로 나아갈 수 있습니다. 또한 프로젝트에서 개선할 점이 있다면 적극적으로 건의하고 또 그것을 반영 할 수 있는 것이 정말 좋았습니다.</p>
-
-<ul>
-  <li>자유롭고 달콤한 사무실</li>
-</ul>
-
-<p>사무실 분위기 이야기도 빼놓을 수 없겠습니다. 먼저 취직한 친구들의 직장 생활 이야기는 꼰대 문화와 무능한 상사들에게서 비롯된 암울한 이야기 뿐이었어서 입사 전엔 걱정이 정말 많았습니다. 하지만 막상 입사해보니 동료 직원들 나이대가 꽤나 젊은 편이고 임원진 분들도 상상이상으로 오픈 마인드를 갖고 계셨습니다. 그래서 그런지 사무실에서 웃음 소리가 끊이지 않는 것이 참 신기했습니다.</p>
-
-<p>온전히 일에 집중할 수 있도록 편안한 복장으로 출퇴근 하며 사무실에선 슬리퍼도 신고 다닙니다. 개발 업무를 하다보면 당이 떨어지는 일이 많은데, 이럴 때 빛이 되어주는 과자, 커피 등이 탕비실에 갖추어져 있어 좋았습니다. 직장 생활을 하면 집에 있을 때 보다 살이 빠질 줄 알았는데 오히려 찌고 있는게 단점이네요</p>
-
-<ul>
-  <li>좋은 회식 문화와 복지</li>
-</ul>
-
-<p>회식이 자주 있지 않습니다. 이 때는 꼭 회식을 해야겠다고 생각 날 만한 일이 있어야만 회식을 하는 것 같습니다. 회식 자리에서도 술은 먹고 싶은 사람만 먹습니다. 저도 술을 잘 먹는 편은 아니지만 안 드시는 분이 생각보다 많아 조금 심심한 느낌도 있었습니다. 그리고 1차에서 화끈하게 먹고 집에 갑니다. 회식하고 집에 갔는데 8시 밖에 안된게 참 신기했습니다.</p>
-
-<p>얼마 전 추석 명절이 있었습니다. 회사에서 소위 ‘명절 떡값’을 두둑하게 주셨습니다. 마침 친구들을 만나게 되어 이야기를 꺼냈습니다. 머릿속으로 당연히 사회 생활 오래한 친구들이 더 많이 받았을 것이라고 생각하고 자랑했는데, 아니었던 모양입니다. 얼마 못 받은 친구들 앞에서 지나치게 자랑 해버려 미안한 마음에 그 날 술값은 제가 다 결제하고 왔습니다. 아깝기도 했지만 우리 회사가 복지가 참 괜찮다는 생각을 한 계기가 되었습니다.  이 외에도 다른 회사에 있는 복지 혜택은 웬만하면 제공 하는 듯 하니 잘 활용해봐야겠습니다.</p>
-
-<hr />
-
-<h3 id="5-앞으로의-각오">5. 앞으로의 각오</h3>
-
-<p>입사 한지 얼마나 되었다고 벌써 제 모습이 게을러 보일 때가 있습니다. 아직 아는 것이 없어 나오는 근거 없는 게으름이라고 할 수 있겠습니다. 당장 출근하면 또 모르는 것들이 쏟아집니다.  컨디션 조절과 휴식도 중요하지만 ‘편하게’ 쉬려면 미래에 대한 자신감이 있어야 한다는 것을 요즘 느끼고 있습니다. 앞으로 많은 공부와 실습을 통해 그 자신감을 가질 수 있도록 노력해야겠습니다. 자신감이 있다면 더 쉽게 일하고 더 많이 쉴 수 있을 테니 말입니다. 쉽지 않은 길이겠지만 걸어 볼 만한 길인 것 같습니다.</p>]]></content><author><name>강민석</name></author><summary type="html"><![CDATA[1. 이 이야기는]]></summary></entry><entry><title type="html">웹 성능지표</title><link href="http://localhost:4000/2022/09/20/web_performance.html" rel="alternate" type="text/html" title="웹 성능지표" /><published>2022-09-20T00:00:00+09:00</published><updated>2022-09-20T00:00:00+09:00</updated><id>http://localhost:4000/2022/09/20/web_performance</id><content type="html" xml:base="http://localhost:4000/2022/09/20/web_performance.html"><![CDATA[<p>안녕하세요. 에어릭스 환경시스템사업부의 개발팀 프론트엔드 개발자 송기영입니다.</p>
-
-<p>저는 이전 회사에서 PLC Driver 개발을 담당했고 이전 회사에서 웹프로젝트를 맡았는데 그 이후로 웹에 흥미가 생겨 웹개발자로 전향 하였습니다. 전향 후 처음 입사한 곳이 지금의 회사 에어릭스입니다.</p>
-
-<p>회사가 한창 혼돈의 시기를 거쳐 막바지에 도달했을때 입사했고 회사의 솔루션들의 코드리뷰 결과 솔루션들의 상태는 굉장히 처참한 수준이었습니다.</p>
-
-<p>위에서 말씀드렸듯이 웹을 이제 막 시작했던 주니어 개발자인 저에게도 눈에 보일정도였으니까요… <del>이때부터 도망을 생각한것같아요</del></p>
-
-<p align="center">
-  <img src="/img/posts/2022-09-22/1.png" alt="text" width="50%" />
-</p>
-
-<p>3개월 이 지난 시점 기존에 계시던 팀장님은 그만두시고 솔루션을 고도화할 기미가 보이지 않아 저는 사실 도망가려고 했습니다. 하지만 지금 팀장님인 이상훈 팀장님께 <del>붙잡혔고</del> 설득당해 지금까지 잘 버텨오고 있습니다.</p>
-
-<p align="center">
-  <img src="/img/posts/2022-09-22/2.png" alt="text" width="70%" />
-</p>
-
-<hr />
-
-<p>첫 글이라 서론이 굉장히 길었네요.. 불필요한 말 그만하고 이제 본론으로 들어가보겠습니다.</p>
-
-<p>저는 오늘 웹 성능지표를 측정해야하는 이유와 종류 그리고 어떻게 개선을 할 수 있는지에 관해 이야기를 하려고 합니다.
-<br />
-<br /></p>
-
-<h2 id="왜-웹사이트-성능지표를-측정해야-하는가">왜 웹사이트 성능지표를 측정해야 하는가?</h2>
-
-<p>사람들은 빠른 서비스를 원합니다. 그리고 돈을 지불한 고객들은 더욱 더 빠른 서비스를 원합니다. 그럼 얼마나 속도가 빨라하는가? 해외 조사에 따르면 속도는 빠르면 빠를수록 좋다고 합니다.</p>
-
-<p><strong>컴퓨웨어(Compuware)</strong>의 웹 성능 사업부에 근무하는 <strong><code class="language-plaintext highlighter-rouge">고메즈(Gomez)</code></strong>에 따르면 사용자의 40%가 <strong><code class="language-plaintext highlighter-rouge">3초</code></strong>동안 기다리게 되면 사이트를 <strong><code class="language-plaintext highlighter-rouge">이탈</code></strong>하는 것으로 나타났다고 합니다.</p>
-
-<p>월마트(Walmart)는 페이지 속도를 100ms까지 개선하면 <strong><code class="language-plaintext highlighter-rouge">수익이 1% 증가</code></strong>한다는 사실을 발견했다고 합니다. 이처럼 웹사이트의 응답 성능은 해당 <strong><code class="language-plaintext highlighter-rouge">업체의 신뢰성</code></strong>과도 직결되는 문제이고 이는 바로 <strong><code class="language-plaintext highlighter-rouge">매출</code></strong>로 연결됩니다. <del>저도 돈 많이벌고 싶어요!</del> 따라서 웹사이트 최적화는 중요합니다.
-<br />
-<br /></p>
-
-<h2 id="성능지표에는-어떤-항목들이-있는가">성능지표에는 어떤 항목들이 있는가?</h2>
-
-<p>성능은 대부분의 기준은 사용자의 관점으로 맞추어져 있기 때문에 HTTP 요청 횟수, 에러 발생 비율, 커스텀 등 해당되는 웹의 성격을 하나하나 따져보면 성능지표의 수는 무궁무진하게 됩니다. 따라서 저는 구글에서 소개하는 지표 3가지를 소개하고자 합니다.</p>
-
-<ul>
-  <li>
-    <p><strong>Largest Contentful Paint (LCP)</strong><br />
-<strong><code class="language-plaintext highlighter-rouge">로딩의 성능</code></strong>을 측정합니다. 페이지가 로드되기 시작한 시점부터 가장 큰 텍스트 블록 또는 이미지 요소가 렌더링 될때까지의 시간을 측정합니다. 사용자가 느끼는 로드 속도를 측정할 수 있는 가장 중요한 지표입니다.</p>
-  </li>
-  <li>
-    <p><strong>First Input Delay (FID)</strong><br />
-<strong><code class="language-plaintext highlighter-rouge">상호작용성</code></strong>을 측정합니다. 사용자가 링크, 버튼, 탭을 클릭하는 등 처음 상호작용을 시작 하는 시점부터 이에 대한 이벤트 핸들러 처리를 시작하기까지의 걸리는 시간입니다. 이벤트 핸들러 처리의 종료 시점이 아닌 시작 시점을 측정하는 이유는 비동기 이벤트 핸들러 등에서도 일관된 수치를 측정하기 위해서입니다.</p>
-  </li>
-  <li>
-    <p><strong>Cumulative Layout Shift (CLS)</strong><br />
-<strong><code class="language-plaintext highlighter-rouge">시각적 안정성</code></strong>을 측정합니다. 사용자가 예상하지 못한 레이아웃 이동 등 예기지 않은 갑작스러운 변화를 측정합니다. 시각적 안정성을 측정할 때 중요한 사용자 중심 지표입니다.</p>
-  </li>
-</ul>
-
-<p>다음 그림은 각 지표별 평가 기준입니다.</p>
-
-<div style="display:flex;">
-  <img src="/img/posts/2022-09-22/lcp.png" alt="text" width="33%" />
-  <img src="/img/posts/2022-09-22/fid.png" alt="text" width="33%" />
-  <img src="/img/posts/2022-09-22/cls.png" alt="text" width="33%" />
-</div>
-<p><br /></p>
-
-<h2 id="그래서-어떻게-성능을-측정하는데">그래서 어떻게 성능을 측정하는데?</h2>
-
-<p>이글을 보는분들 대부분은 이부분이 가장 궁금해 하실것같은데요.</p>
-
-<p>요즘 사람들이 많이 사용하는 크롬 브라우저에서 지원하는 lighthouse로 웹 브라우저 성능지표를 정말 간단하게 측정할 수 있습니다.</p>
-
-<p align="center">
-  <img src="/img/posts/2022-09-22/3.png" alt="text" width="60%" />
-</p>
-
-<h3 id="측정방법">측정방법</h3>
-
-<ul>
-  <li>측정하고하자는 웹사이트를 접속한 후 크롬 브라우저에서 f12 혹은 도구 더보기- 개발자 도구를 눌러 개발자 도구를 실행합니다.</li>
-</ul>
-
-<div style="display:flex;">
-  <img src="/img/posts/2022-09-22/left.png" alt="text" width="50%" />
-  <img src="/img/posts/2022-09-22/right.png" alt="text" width="50%" />
-</div>
-<p><br /></p>
-
-<ul>
-  <li>페이지 로드 분석을 클릭하여 측정을 시작합니다. 저는 네이버를 기준으로 측정하였습니다.
-    <p align="center">
-  <img src="/img/posts/2022-09-22/lighthouse.png" alt="text" width="70%" />
-</p>
-    <p><br /></p>
-
-    <p>💡 <strong>Tip:</strong> 모바일로 성능지표 측정 후 개선하면 데스크톱의 성능은 <strong><code class="language-plaintext highlighter-rouge">자동</code></strong>으로 개선이된다고 합니다.
-<br /></p>
-  </li>
-  <li>성능지표 결과를 확인합니다.
-    <p align="center">
-  <img src="/img/posts/2022-09-22/result.png" alt="text" width="70%" />
-</p>
-    <p>💡 <strong>Tip:</strong> 성능지표는 여러번 측정하여 <strong><code class="language-plaintext highlighter-rouge">평균값</code></strong>을 기준으로 개선을 진행합니다.
-<br /></p>
-  </li>
-  <li>글을 작성 하다가 저희 회사의 사내 그룹웨어의 성능 지표도 함께 측정해보았습니다.</li>
-</ul>
-<p align="center">
-  <img src="/img/posts/2022-09-22/group-ware-lcp.png" alt="group-ware" width="70%" />
-</p>
-
-<p>굉장히 처첨한 수준이네요.. 사실 프론트엔드 개발자로써 부끄럽긴하네요. 😅
-어..어어….? 거기! 입사지원 하시려던분 도망가지마세요! 당신에게 LCP를 개선할 수 있는 기회를 드리겠습니다! 이미지를 위해 LCP 측정은 여기까지 하겠습니다. 😥
-<br /></p>
-
-<h2 id="어떻게-성능을-개선해야-하는가">어떻게 성능을 개선해야 하는가?</h2>
-
-<p>사실 저희 회사 솔루션은 10~20초사이 정말 처참한 수준입니다. 프로젝트를 고도화하여 성능을 개선해야하는데 전에 계시던 분들이 진행을 못하셨습니다. 덕분 제가 고도화를 진행할것같네요. 감사합니다.</p>
-<p align="center">
-    <img src="/img/posts/2022-09-22/4.png" alt="text" width="70%" />
-  </p>
-<p><br /></p>
-
-<p>어떤 부분을 개선해야할지 성능이 개선될지 찾아보던중 성능지표를 개선 방법은 2가지가 있습니다.</p>
-
-<p>첫번째로는 위에서 성능측정시 사용했던 lighthghouse 결과를 이용하는 방법입니다. 고맙게도 lighthouse는 어느 부분을 개선하면 어떤 지표의 성능이 개선되는지 친절하게 알려주고있습니다. 여러분들은 시간을 아끼시라고 제가 친절하게 알려드리겠습니다. <del>저는 시간버렸어요😞</del></p>
-
-<p>성능지표 결과화면에 보시면 추천이라는 항목에 그림과 같이 친절하게 나열되어있습니다. 아래의 그림의 경우 렌더링 차단 리소스 제거하면 FCP LCP 개선에 도움을 줄 수 있다고 말해주고 있습니다. 하지만 그 밑에 보시면 성능 점수에는 직접적인 영향을 미치지는 않는다고 되어있네요. 성능지표와 성능 점수는 다르므로 저희는 추천 방법을 참고하시면 될것같습니다.</p>
-
-<p align="center">
-    <img src="/img/posts/2022-09-22/recommend.png" alt="text" width="80%" />
-  </p>
-
-<p>두번째로는 코드를 최적화하는 것입니다.</p>
-
-<p>프론트의 경우 불필요한 HTML, CSS, JS 코드 등을 삭제, 동영상 파일은 이미지 파일로 대체, API 요청 횟수 줄이기 등과 같이 소스코드를 최적화 하는 방법이 있습니다.</p>
-
-<p>백엔드의 경우 DB 쿼리 최적화, 더 빠른 DB로 마이그레이션 등과 같이 프론트 API 요청에 대한 응답을 빨리 보내줄수록 웹 최적화가 될거고 성능지표의 점수는 자연스럽게 올라갈 수 있습니다.</p>
-
-<p>추가적인 방법으로 하드웨어 서버를 업그레이드하면 연산능력이 올라가기 때문에 성능지표의 점수를 올리는데 도움이 된다고합니다. <del>이건 꼼수같은데…</del>
-<br />
-<br /></p>
-
-<h2 id="이탈-방지를-위해서는-성능지표-개선을-하는-방법밖에-없는가">이탈 방지를 위해서는 성능지표 개선을 하는 방법밖에 없는가?</h2>
-
-<p>몇몇 분들은 다음과 같은 생각을 할 수 있습니다. 저도 그랬고요. 사실 이탈 방지를 위해서는 다른방법도 있습니다.</p>
-
-<p>간략하게 말하면 디자인적인 측면을 이용해서 브라우저의 로딩 시간동안 사용자의 지루함을 덜어주면 사용자의 이탈은 자연스럽게 줄어들게 되겠죠. 대표적으로 크롬의 디노게임이 있습니다.</p>
-
-<p align="center">
-    <img src="/img/posts/2022-09-22/dino.gif" alt="text" width="70%" />
-  </p>
-
-<p>이부분은 UI/UX로 개선하는 방법으로 로딩 인디케이터, 애니메이션, 스켈레톤 UI, 낙관적 UI 등과 같은 키워드로 검색을 해보시면 쉽게 찾으실 수 있습니다.
-<br />
-<br /></p>
-
-<h2 id="결론">결론</h2>
-
-<p>우리는 웹 성능지표를 측정해봤고 그로 인해 어떻게 웹을 최적화 하는지까지 알아보았습니다. 따라서 우리는 미래 고객이 이탈하는 것을 방지하였습니다. <del>이글을 읽으신 여러분은 돈을 버셨으므로 저에게 양심껏 입금해주시면 됩니다.</del></p>
-
-<p>이 글에 적힌 성능지표 이외에 정말 많은 종류의 지표들이 존재하지만 최소 3가지의 성능지표를 기준으로 웹을 최적화해도 사용자 이탈 방지에 충분히 도움이 될 수 있음을 확인하였습니다. 부족하지만 긴글 읽어주셔서 감사합니다.</p>
-
-<h2 id="참고">참고</h2>
-
-<p><a href="https://velog.io/@ktthee/%EC%9B%B9%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%84%B1%EB%8A%A5-%EC%A7%80%ED%91%9C">https://velog.io/@ktthee/웹사이트-성능-지표</a><br />
-<a href="https://yceffort.kr/2021/08/core-web-vital">https://yceffort.kr/2021/08/core-web-vital</a><br />
-<a href="https://newrelic.com/kr/resources/white-papers/how-fast-does-your-website-need-to-be">https://newrelic.com/kr/resources/white-papers/how-fast-does-your-website-need-to-be</a><br />
-<a href="https://eunjinii.tistory.com/44">https://eunjinii.tistory.com/44</a></p>]]></content><author><name>송기영</name></author><summary type="html"><![CDATA[안녕하세요. 에어릭스 환경시스템사업부의 개발팀 프론트엔드 개발자 송기영입니다.]]></summary></entry></feed>
+<p>즐거운 시간이었고 일년에 한 번 쯤은 다 같이 공기 좋고 물좋은 곳에서 시간 보내는 것도 참 좋은 것같습니다. 다음 번엔 다음 날 액티비티까지 할 수 있었으면 좋겠습니다.</p>]]></content><author><name>손민철</name></author><summary type="html"><![CDATA[에어릭스 환경시스템사업부 개발팀의 손민철입니다. 첫글을 기술관련 글을 쓰고 싶었지만… 어찌하다 보니 워크샵 후기를 작성하게 되었습니다. 입사한지 3년만에 첫 워크샵이었습니다. 기존에는 팀장급인사들만 워크샵에 참여하였으나, 팀원들까지 전부 참여하는 워크샵은 처음이었네요. 게다가 일정이 화~수요일… 대표님의 센스에 감탄…!! 앞으로의 워크샵이 기대됩니다.]]></summary></entry></feed>
