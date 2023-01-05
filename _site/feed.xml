@@ -1,4 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-01-04T11:19:27+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">에어릭스 환경시스템사업부 기술블로그</title><subtitle>IT기업이 아닌 에어릭스에서 살아가고 있는 개발자들</subtitle><author><name>(주)에어릭스</name></author><entry><title type="html">한해를 돌아보며…..</title><link href="http://localhost:4000/2022/12/22/self_reflection.html" rel="alternate" type="text/html" title="한해를 돌아보며….." /><published>2022-12-22T00:00:00+09:00</published><updated>2022-12-22T00:00:00+09:00</updated><id>http://localhost:4000/2022/12/22/self_reflection</id><content type="html" xml:base="http://localhost:4000/2022/12/22/self_reflection.html"><![CDATA[<p>아침에 출근해보니 책상 위에 2023년 다이어리가 놓여져 있는 것이 보였습니다. 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-01-05T22:12:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">에어릭스 환경시스템사업부 기술블로그</title><subtitle>IT기업이 아닌 에어릭스에서 살아가고 있는 개발자들</subtitle><author><name>(주)에어릭스</name></author><entry><title type="html">혼공스터디9기 활동시작</title><link href="http://localhost:4000/2023/01/05/hongong9th.html" rel="alternate" type="text/html" title="혼공스터디9기 활동시작" /><published>2023-01-05T00:00:00+09:00</published><updated>2023-01-05T00:00:00+09:00</updated><id>http://localhost:4000/2023/01/05/hongong9th</id><content type="html" xml:base="http://localhost:4000/2023/01/05/hongong9th.html"><![CDATA[<h2 id="혼공스터디-9기-활동을-시작하다">혼공스터디 9기 활동을 시작하다</h2>
+
+<p>2023년 새해가 시작되었습니다. 개발팀 내부 세미나를 올해에는 다양한 방식으로 진행해보고 싶었습니다.
+그래서 1월과 2월은 IT서적 전문 출판사에서 주관하는 <혼공스터디>라는 프로그램에 참여해서 활동하는 방식으로
+세미나를 진행하려고 합니다.</혼공스터디></p>
+
+<p><img src="/img/posts/2023-01-05/hongong1.jpg" alt="혼공학습단" width="100%" /></p>
+
+<p>혼공학습단 활동은 간단합니다. 도서를 선택하고, 학습스케줄에 맞춰서 6주동안 공부하고 미션을 수행한 내용을
+SNS에 올려서 확인을 받으면 됩니다. 관련된 자세한 정보는 아래에 있는 페이스북 혼공스터디 그룹에 가시면 확인하실 수 있습니다.</p>
+
+<p><strong><a href="https://www.facebook.com/groups/hongong/permalink/1185966548987467">페이스북 혼공스터디 그룹</a></strong>
+https://www.facebook.com/groups/hongong/permalink/1185966548987467</p>
+
+<hr />
+
+<h2 id="혼자공부하는-데이터분석-with-파이썬">혼자공부하는 데이터분석 with 파이썬</h2>
+
+<p>저희 개발팀이 혼공스터디 활동을 통해서 공부하려고 선택한 도서는 <code class="language-plaintext highlighter-rouge">혼자공부하는 데이터분석 with 파이썬</code>입니다.</p>
+
+<p><img src="/img/posts/2023-01-05/hongong2.jpg" alt="혼자공부하는 데이터분석 with 파이썬" width="30%" /></p>
+
+<p>사실 회사 생활하다보면 이런저런 핑계를 대면서 아무리 쉬운 내용이라도 책 한권을 온전히 읽어보면서
+공부한다는게 쉬운 일은 아닐 것입니다. 특별한 노력이 뒷받침된다면 모르겠지만요. 혼공스터디 활동을 통해서 2023년 
+시작부터 책 한권 공부를 끝낸다면 뿌듯하기도 할 것 같습니다.</p>
+
+<p>아래는 저희가 활동할 혼공학습단9기의 학습스케줄입니다. 중도탈락하지 않고 모두 완주할 수 있도록 노력하겠습니다.</p>
+
+<p><img src="/img/posts/2023-01-05/hongong3.png" alt="학습일정" width="100%" /></p>
+
+<hr />
+
+<h2 id="개발팀-세미나---혼공학습단-학습-내용-토의">개발팀 세미나 - 혼공학습단 학습 내용 토의</h2>
+
+<p>개발팀 세미나는 혼공학습단 활동을 통해서 학습한 내용을 가지고 토의하는 시간이 될 것 같습니다. 이런 활동들 모두
+블로그를 통해서 공개할 예정입니다.</p>
+
+<p>감사합니다.</p>]]></content><author><name>이상훈</name></author><summary type="html"><![CDATA[혼공스터디 9기 활동을 시작하다]]></summary></entry><entry><title type="html">한해를 돌아보며…..</title><link href="http://localhost:4000/2022/12/22/self_reflection.html" rel="alternate" type="text/html" title="한해를 돌아보며….." /><published>2022-12-22T00:00:00+09:00</published><updated>2022-12-22T00:00:00+09:00</updated><id>http://localhost:4000/2022/12/22/self_reflection</id><content type="html" xml:base="http://localhost:4000/2022/12/22/self_reflection.html"><![CDATA[<p>아침에 출근해보니 책상 위에 2023년 다이어리가 놓여져 있는 것이 보였습니다. 
 짧은 순간이기는 했지만, <code class="language-plaintext highlighter-rouge">올 한해도 벌써 다 지나갔구나</code>라는 아쉬움을 찐하게 마주할 수 있었습니다.</p>
 
 <p><img src="/img/posts/2022-12-22/2023_diary.jpg" alt="2023년 다이어리" width="30%" class="left" /></p>
@@ -177,25 +214,7 @@ mutation : 원하는 데이터를 삭제,수정,추가합니다.
 
 <p><a href="https://redis.io/commands/">https://redis.io/commands/</a></p>
 
-<p><a href="http://www.redisgate.com/redis/command/sets.php">http://www.redisgate.com/redis/command/</a></p>]]></content><author><name>강민구</name></author><summary type="html"><![CDATA[Redis란?]]></summary></entry><entry><title type="html">새로운 만남 - New Face from Viet Nam</title><link href="http://localhost:4000/2022/11/15/new_face.html" rel="alternate" type="text/html" title="새로운 만남 - New Face from Viet Nam" /><published>2022-11-15T00:00:00+09:00</published><updated>2022-11-15T00:00:00+09:00</updated><id>http://localhost:4000/2022/11/15/new_face</id><content type="html" xml:base="http://localhost:4000/2022/11/15/new_face.html"><![CDATA[<p>에어릭스 개발팀에 새로운 얼굴들이 나타났습니다. 바다 건너 베트남에서 온 개발자 Dang Quang Tuan(당꾸안투안, Lex)씨와 Ngo khanh Duy(응옥한유이, Tommy)씨를 환영합니다.</p>
-
-<p>한국이 익숙하지않은 두 분을 위해 직접 인천공항으로 픽업을 나갔습니다. 영어에 유창하지만, 울렁증이 있다는 김영규 대리님을 위해, 의리 있는 제가 함께 공항으로 갔습니다.</p>
-
-<p><img src="/img/posts/2022-11-15/nse-5502856638730671901-693.jpg" alt="panel" width="100%" class="center" /></p>
-
-<p>준비성이 무척이나 철저한 모습입니다.</p>
-
-<p><img src="/img/posts/2022-11-15/nse-1015362486945153275-691.jpg" alt="baseball" width="100%" class="center" /></p>
-
-<p>입국 수속이 늦어지며 힘들어지던 때에 유명 야구선수 최지만 선수가 입국하는 모습도 보았습니다. 취재 열기가 장난이 아니었습니다.</p>
-
-<p><del>사실 저와 김영규 대리님 둘 다 누구인지 몰라서 두리번거렸습니다…</del></p>
-
-<p><img src="/img/posts/2022-11-15/nse-3466361857878663043-686.jpg" alt="chicken" width="100%" class="center" />
-시간이 늦어진 만큼 재빠르게 이동해 저녁 식사를 함께했습니다. 원래 맛초킹을 시키려고 했는데, 매운 치킨을 강력히 주장하는 Lex씨 덕에 김영규 대리님은 매운맛에 고통받았습니다. 😆😆😆</p>
-
-<p>손님 맞이한 두 명도 정신이 없어 많은 사진을 남기지 못한 것이 아쉽습니다. 앞으로 두 개발자분에 대한 더 많은 이야기를 남겨보겠습니다.
-두 개발자 분의 활약을 응원해주세요!</p>]]></content><author><name>강민석</name></author><summary type="html"><![CDATA[에어릭스 개발팀에 새로운 얼굴들이 나타났습니다. 바다 건너 베트남에서 온 개발자 Dang Quang Tuan(당꾸안투안, Lex)씨와 Ngo khanh Duy(응옥한유이, Tommy)씨를 환영합니다.]]></summary></entry><entry><title type="html">전원 ON/OFF 반복 테스트 장치 개발구상</title><link href="http://localhost:4000/2022/11/15/power_test.html" rel="alternate" type="text/html" title="전원 ON/OFF 반복 테스트 장치 개발구상" /><published>2022-11-15T00:00:00+09:00</published><updated>2022-11-15T00:00:00+09:00</updated><id>http://localhost:4000/2022/11/15/power_test</id><content type="html" xml:base="http://localhost:4000/2022/11/15/power_test.html"><![CDATA[<p>에어릭스 개발팀장 이상훈입니다. 앞선 포스팅에서도 몇번 언급했던 것처럼 저희 제품의 품질향상을 위해서도 
+<p><a href="http://www.redisgate.com/redis/command/sets.php">http://www.redisgate.com/redis/command/</a></p>]]></content><author><name>강민구</name></author><summary type="html"><![CDATA[Redis란?]]></summary></entry><entry><title type="html">전원 ON/OFF 반복 테스트 장치 개발구상</title><link href="http://localhost:4000/2022/11/15/power_test.html" rel="alternate" type="text/html" title="전원 ON/OFF 반복 테스트 장치 개발구상" /><published>2022-11-15T00:00:00+09:00</published><updated>2022-11-15T00:00:00+09:00</updated><id>http://localhost:4000/2022/11/15/power_test</id><content type="html" xml:base="http://localhost:4000/2022/11/15/power_test.html"><![CDATA[<p>에어릭스 개발팀장 이상훈입니다. 앞선 포스팅에서도 몇번 언급했던 것처럼 저희 제품의 품질향상을 위해서도 
 여러가지 고민을 하고 있으며, 그에 따라서 다양한 시도를 해보고 있는 중입니다.</p>
 
 <p><img src="/img/posts/tryitnow.png" alt="Try It Now" /></p>
@@ -261,7 +280,25 @@ MQTT 프로토콜을 통해서 데이터를 정상적으로 서버에 전송하�
 생각을 조금 더 다듬고 구체화시킬 수 있었던 의미있는 시간이었던 것 같습니다.
 주문한 릴레이모듈이 도착하면 팀원들과 함께 바로 장치 개발을 시작해볼 예정이고, 그 결과 또한 포스팅을 하도록 하겠습니다.</p>
 
-<p>감사합니다.</p>]]></content><author><name>이상훈</name></author><summary type="html"><![CDATA[에어릭스 개발팀장 이상훈입니다. 앞선 포스팅에서도 몇번 언급했던 것처럼 저희 제품의 품질향상을 위해서도 여러가지 고민을 하고 있으며, 그에 따라서 다양한 시도를 해보고 있는 중입니다.]]></summary></entry><entry><title type="html">데이터 분석 - 개발팀 세미나</title><link href="http://localhost:4000/2022/10/28/data_semina.html" rel="alternate" type="text/html" title="데이터 분석 - 개발팀 세미나" /><published>2022-10-28T00:00:00+09:00</published><updated>2022-10-28T00:00:00+09:00</updated><id>http://localhost:4000/2022/10/28/data_semina</id><content type="html" xml:base="http://localhost:4000/2022/10/28/data_semina.html"><![CDATA[<p>안녕하세요. 에어릭스 환경시스템사업부의 개발팀 프론트엔드 개발자 송기영입니다.</p>
+<p>감사합니다.</p>]]></content><author><name>이상훈</name></author><summary type="html"><![CDATA[에어릭스 개발팀장 이상훈입니다. 앞선 포스팅에서도 몇번 언급했던 것처럼 저희 제품의 품질향상을 위해서도 여러가지 고민을 하고 있으며, 그에 따라서 다양한 시도를 해보고 있는 중입니다.]]></summary></entry><entry><title type="html">새로운 만남 - New Face from Viet Nam</title><link href="http://localhost:4000/2022/11/15/new_face.html" rel="alternate" type="text/html" title="새로운 만남 - New Face from Viet Nam" /><published>2022-11-15T00:00:00+09:00</published><updated>2022-11-15T00:00:00+09:00</updated><id>http://localhost:4000/2022/11/15/new_face</id><content type="html" xml:base="http://localhost:4000/2022/11/15/new_face.html"><![CDATA[<p>에어릭스 개발팀에 새로운 얼굴들이 나타났습니다. 바다 건너 베트남에서 온 개발자 Dang Quang Tuan(당꾸안투안, Lex)씨와 Ngo khanh Duy(응옥한유이, Tommy)씨를 환영합니다.</p>
+
+<p>한국이 익숙하지않은 두 분을 위해 직접 인천공항으로 픽업을 나갔습니다. 영어에 유창하지만, 울렁증이 있다는 김영규 대리님을 위해, 의리 있는 제가 함께 공항으로 갔습니다.</p>
+
+<p><img src="/img/posts/2022-11-15/nse-5502856638730671901-693.jpg" alt="panel" width="100%" class="center" /></p>
+
+<p>준비성이 무척이나 철저한 모습입니다.</p>
+
+<p><img src="/img/posts/2022-11-15/nse-1015362486945153275-691.jpg" alt="baseball" width="100%" class="center" /></p>
+
+<p>입국 수속이 늦어지며 힘들어지던 때에 유명 야구선수 최지만 선수가 입국하는 모습도 보았습니다. 취재 열기가 장난이 아니었습니다.</p>
+
+<p><del>사실 저와 김영규 대리님 둘 다 누구인지 몰라서 두리번거렸습니다…</del></p>
+
+<p><img src="/img/posts/2022-11-15/nse-3466361857878663043-686.jpg" alt="chicken" width="100%" class="center" />
+시간이 늦어진 만큼 재빠르게 이동해 저녁 식사를 함께했습니다. 원래 맛초킹을 시키려고 했는데, 매운 치킨을 강력히 주장하는 Lex씨 덕에 김영규 대리님은 매운맛에 고통받았습니다. 😆😆😆</p>
+
+<p>손님 맞이한 두 명도 정신이 없어 많은 사진을 남기지 못한 것이 아쉽습니다. 앞으로 두 개발자분에 대한 더 많은 이야기를 남겨보겠습니다.
+두 개발자 분의 활약을 응원해주세요!</p>]]></content><author><name>강민석</name></author><summary type="html"><![CDATA[에어릭스 개발팀에 새로운 얼굴들이 나타났습니다. 바다 건너 베트남에서 온 개발자 Dang Quang Tuan(당꾸안투안, Lex)씨와 Ngo khanh Duy(응옥한유이, Tommy)씨를 환영합니다.]]></summary></entry><entry><title type="html">데이터 분석 - 개발팀 세미나</title><link href="http://localhost:4000/2022/10/28/data_semina.html" rel="alternate" type="text/html" title="데이터 분석 - 개발팀 세미나" /><published>2022-10-28T00:00:00+09:00</published><updated>2022-10-28T00:00:00+09:00</updated><id>http://localhost:4000/2022/10/28/data_semina</id><content type="html" xml:base="http://localhost:4000/2022/10/28/data_semina.html"><![CDATA[<p>안녕하세요. 에어릭스 환경시스템사업부의 개발팀 프론트엔드 개발자 송기영입니다.</p>
 
 <p>오늘은 제가 진행했던 데이터 분석 세미나에 대해서 이야기를 해보려고 합니다.</p>
 
@@ -660,67 +697,4 @@ https://www.notion.so/ko-kr/help/guides/types-of-content-blocks</p>]]></content>
 
 <p>GS 인증 시험을 잘 준비해서 준비한 과정과 내용들이 앞으로 개발되는 제품들에 대해서 가이드 라인을 제시할 수 있는 수준이 되었으면하는 마음으로 임해야 할 것 같습니다. 지금도 많이 부족한 부분들이 있겠지만 계속해서 개선되어 갈 수 있도록 노력하겠습니다.</p>
 
-<p>이 글을 읽어주셔서 감사합니다.</p>]]></content><author><name>김영규</name></author><summary type="html"><![CDATA[GS 인증 세미나]]></summary></entry><entry><title type="html">에어릭스 워크샵 후기</title><link href="http://localhost:4000/2022/10/05/workshop.html" rel="alternate" type="text/html" title="에어릭스 워크샵 후기" /><published>2022-10-05T00:00:00+09:00</published><updated>2022-10-05T00:00:00+09:00</updated><id>http://localhost:4000/2022/10/05/workshop</id><content type="html" xml:base="http://localhost:4000/2022/10/05/workshop.html"><![CDATA[<p>에어릭스 환경시스템사업부 개발팀의 손민철입니다. 첫글을 기술관련 글을 쓰고 싶었지만… 
-어찌하다 보니 워크샵 후기를 작성하게 되었습니다.
-입사한지 3년만에 첫 워크샵이었습니다. 기존에는 팀장급인사들만 워크샵에 참여하였으나, 
-팀원들까지 전부 참여하는 워크샵은 처음이었네요. 
-게다가 일정이 화~수요일… 대표님의 센스에 감탄…!! 앞으로의 워크샵이 기대됩니다.</p>
-
-<p align="center">
-  <img src="/img/posts/2022-10-05/반가워.png" alt="text" width="250" />
-</p>
-
-<hr />
-
-<h3 id="제부도-도착">제부도 도착</h3>
-
-<p><img src="/img/posts/2022-10-05/펜션1.jpg" alt="펜션 내부1" width="100%" class="center" /></p>
-
-<p><img src="/img/posts/2022-10-05/펜션2.jpg" alt="펜션 내부2" width="100%" class="center" /></p>
-
-<p><img src="/img/posts/2022-10-05/펜션3.jpg" alt="펜션 내부3" width="100%" class="center" /></p>
-
-<hr />
-
-<p>제부도에 있는 단체 전용 펜션인데 이렇게 큰 펜션은 처음 봅니다. 자 이제 짐 풀고 놀아봅시다!!</p>
-
-<p><img src="/img/posts/2022-10-05/놀이1.jpg" alt="놀이1" width="100%" class="center" /></p>
-
-<p><img src="/img/posts/2022-10-05/놀이2.jpg" alt="놀이2" width="100%" class="center" /></p>
-
-<p><img src="/img/posts/2022-10-05/놀이3.jpg" alt="놀이3" width="100%" class="center" /></p>
-
-<hr />
-
-<p>사실.. 본 워크샵은 팀장급분들만 진행하고 팀원들은 일찍와서 자유시간을 가졌습니다. 와서 노래방에서 노래부르고 족구하고 쉬고 놀았습니다.(진짜 오랫만에 공을 찼네요) 일과시간에 이렇게 놀 수 있는 에어릭스 짱! 에어릭스로 오세요!!</p>
-
-<hr />
-
-<h3 id="바베큐-파티">바베큐 파티</h3>
-
-<p>워크샵의 꽃은 바베큐party가 아닐까…? 살면서 저렇게 큰 철판은 처음 보는 것 같습니다. 신나게 쉬다가
-진짜 워크샵(?)이 끝나고 대표님,팀장님들 도착 시간에 맞춰 바베큐파티를 준비했습니다. 다 같이 준비하니 뭐 하나도 힘들지 않네요.(내가 일을 안한건가)</p>
-
-<p><img src="/img/posts/2022-10-05/바베큐0.jpg" alt="바베큐0" width="100%" class="center" /></p>
-
-<p><img src="/img/posts/2022-10-05/바베큐1.jpg" alt="바베큐1" width="100%" class="center" /></p>
-
-<p><img src="/img/posts/2022-10-05/바베큐2.jpg" alt="바베큐2" width="100%" class="center" /></p>
-
-<p><img src="/img/posts/2022-10-05/바베큐3.jpg" alt="바베큐3" width="100%" class="center" /></p>
-
-<p><img src="/img/posts/2022-10-05/바베큐4.jpg" alt="바베큐4" width="100%" class="center" /></p>
-
-<p><img src="/img/posts/2022-10-05/단체사진.jpg" alt="단체사진" width="100%" class="center" /></p>
-
-<hr />
-
-<p>이럴 경우가 제일 좋습니다. 회사에 고기 굽기 장인이 있는 경우…(다들 상원대리님에게 배워보자) 솔직히.. 대표님이랑 마주앉아서 먹어서 고기는 많이 못먹었지만…(술을 많이 먹었지) 재밌었습니다. 한 8시까지 바베큐를 즐기고 펜션 안에서 노래부를 사람들은 노래부르고 술 더먹을 사람은 더먹고 한 것같네요. 저는 초반에 많이 먹어서 일찍 잤답니다. 그래서 바베큐party 이 후 사진이 없네유…</p>
-
-<hr />
-
-<h3 id="마치며">마치며</h3>
-
-<p><img src="/img/posts/2022-10-05/락큰롤.jpg" alt="라큰롤" width="100%" class="center" /></p>
-
-<p>즐거운 시간이었고 일년에 한 번 쯤은 다 같이 공기 좋고 물좋은 곳에서 시간 보내는 것도 참 좋은 것같습니다. 다음 번엔 다음 날 액티비티까지 할 수 있었으면 좋겠습니다.</p>]]></content><author><name>손민철</name></author><summary type="html"><![CDATA[에어릭스 환경시스템사업부 개발팀의 손민철입니다. 첫글을 기술관련 글을 쓰고 싶었지만… 어찌하다 보니 워크샵 후기를 작성하게 되었습니다. 입사한지 3년만에 첫 워크샵이었습니다. 기존에는 팀장급인사들만 워크샵에 참여하였으나, 팀원들까지 전부 참여하는 워크샵은 처음이었네요. 게다가 일정이 화~수요일… 대표님의 센스에 감탄…!! 앞으로의 워크샵이 기대됩니다.]]></summary></entry></feed>
+<p>이 글을 읽어주셔서 감사합니다.</p>]]></content><author><name>김영규</name></author><summary type="html"><![CDATA[GS 인증 세미나]]></summary></entry></feed>
