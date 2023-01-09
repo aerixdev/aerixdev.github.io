@@ -41,9 +41,6 @@ tar xvf $파일
 
 # 명령어를 통한 바로 실행을 위해 심볼릭 링크 등록
 ln -s /usr/local/lib/$노드폴더/bin/* /usr/local/bin/
-
-# 압축파일 삭제
-rm -f $
 ```
 
 ## 2. PM2 설치 파일 제작
