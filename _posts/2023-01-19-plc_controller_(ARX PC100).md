@@ -297,9 +297,14 @@ PLC와 서버 어플리케이션 사이에서 통신을 중계하는 기능이 �
 
 # 소프트웨어 품질 인증
 
-[추후 업데이트 예정입니다.. ㅠ (연휴 이후 시험 성적서 및 인증서 발급 가능..)]
+<div class="pull-left">
+    <img src="/img/posts/2023-01-19/gs_certificate_korean.png" alt="[GS 인증서]" width="80%">
+</div>
+<div class="pull-right">
+    <img src="/img/posts/2023-01-19/gs_certificate_english.jpg" alt="[GS 인증서]" width="80%">
+</div>
 
-(GS 인증) - 자체 개발 ‘피엘씨컨트롤러’로 소프트웨어 품질 인증 GS 인증 획득 [한국정보통신기술협회 - 23.01.xx]
+(GS 인증) - 자체 개발 ‘피엘씨컨트롤러’로 소프트웨어 품질 인증 GS 인증 획득 [한국정보통신기술협회 - 23.01.16]
 
 # 제품 납품 목록
 
