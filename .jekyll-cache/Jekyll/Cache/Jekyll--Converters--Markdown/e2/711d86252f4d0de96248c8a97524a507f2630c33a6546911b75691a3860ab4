@@ -1,0 +1,101 @@
+I"q<h1 id="redis란">Redis란?</h1>
+
+<h2 id="목차">목차</h2>
+
+<ol>
+  <li>Redis란?</li>
+  <li>Redis - NoSQL</li>
+  <li>Redis - 영속성</li>
+  <li>자료형과 기본적인 명령어들</li>
+</ol>
+
+<h2 id="redis란-1">Redis란?</h2>
+
+<ol>
+  <li>기본적으로 키-값의 형태로 데이터를 저장하는 데이터베이스입니다.</li>
+  <li>메모리에 데이터가 저장되는 인메모리 데이터베이스로 빠른 응답속도를 가지며 동시에 주기적으로 데이터를 디스크에 저장함으로써 영속성을 보장하는 데이터베이스입니다.</li>
+  <li>싱글 쓰레드로 작동하기 때문에 긴 트랜젝션이 들어오는 경우에는 그 요청을 처리하는 동안 다른 요청을 처리할 수 없다는 단점이 있으나 원자성을 자동적으로 보장해주는 장점이 있는 데이터베이스 입니다.</li>
+</ol>
+
+<p>종합적으로 Redis는 빠른 응답속도를 가지고 있으면서도 데이터를 영구적으로 NoSQL 방식으로 다양한 형식으로 저장할 수 있는 데이터베이스입니다.</p>
+
+<h2 id="redis---nosql">Redis - NoSQL</h2>
+
+<p>고정된 열과 행을 가지는 테이블을 이용하는 관계형 데이터베이스 모델을 따르지 않는 모든 데이터 베이스 모델을 의미합니다. 주로 사용되는 NoSQL의 종류로는 키-값 데이터베이스 모델, 와이어 컬럼 모델, 그래프 데이터베이스 모델이 있습니다.</p>
+
+<h2 id="redis가-영속성을-보장하는-방법">Redis가 영속성을 보장하는 방법</h2>
+
+<p>Redis는 인메모리 데이터베이스이지만 동시에 영속성을 보장하고 있습니다. 이러한 장점은 메모리에 저장되는 데이터를 주기적으로 DISK에 저장하는 형태로 이루어지며 저장하는 방식에 따라서 분류되는 RDB 방식과 AOF 방식을 사용하고 있습니다.</p>
+
+<h3 id="rdb--방식">RDB  방식</h3>
+
+<p>메모리의 스냅샷을 찍는 형태로 현재 메모리에 있는 정보를 그대로 디스크에 저장하고 불러오는 방식입니다. 메모리의 값을 그대로 사용하므로 불러오는 속도가 빠르며 크기가 작다는 장점이 있습니다. 반면에 백업이 진행되는 도중에 서버가 비정상적으로 종료되는 상황이 발생한다면 복원 지점의 데이터가 그대로 소실되는 단점이 있습니다.</p>
+
+<h3 id="aof-방식">AOF 방식</h3>
+
+<p>Redis에 일어난 쓰기/갱신 연산을 log에 저장하고 서버가 부팅되는 경우에 log에 기록된 연산을 다시 수행하는 방식입니다. 장점은 연산을 지속적으로 기록하기 때문에 서버가 비정상적으로 종료되더라도 데이터의 유실이 적으며 TEXT 형식으로 저장되기 떄문에 일어났던 연산을 수정하거나 확인하는 작업이 수월합니다. 단점은 로그를 모두 기록하므로 크기가 크며 불러오는 경우에는 일어났던 모든 연산을 다시 수행하여 최종 상태로 만들어야 하기 때문에 속도가 느립니다. 이때 AOF 방식의 경우 단점을 보완하기 위해서 로그를 연산을 수행한 특정 상태로 만드는 REWRITE 명령어가 있습니다.</p>
+
+<p>RDB 방식과 AOF 방식, 그리고 관련된 설정은 Redis의 설정파일인 /etc/redis/redis.conf에서 확인하고 수정할 수 있습니다.</p>
+
+<h2 id="redis에서-자주-사용되는-자료형과-명령어">Redis에서 자주 사용되는 자료형과 명령어</h2>
+
+<h3 id="데이터베이스-명령어">데이터베이스 명령어</h3>
+
+<p>SELECT : 데이터베이스를 설정하는 명령어이며 Redis의 경우 기본 값으로 16개의 데이터베이스를 지원하며 기본값으로 시작할 경우 0번째 데이터베이스로 시작합니다.</p>
+
+<p>FLUSHDB : 데이터베이스의 모든 데이터를 제거하는 명령어 입니다.</p>
+
+<h3 id="set">Set</h3>
+
+<p>SET : 데이터베이스에 키, 값으로 저장</p>
+
+<p>GET : 데이터베이스에서 키를 기반으로 데이터를 불러오기</p>
+
+<p>DELETE : 데이터베이스에서 키를 기반으로 삭제</p>
+
+<h3 id="list">List</h3>
+
+<p>PUSH와 POP 연산을 기반으로 작동합니다.</p>
+
+<p>LPUSH : 왼쪽으로 데이터를 추가</p>
+
+<p>RPUSH : 오른쪽으로 데이터를 추가</p>
+
+<p>LPOP : 왼쪽의 데이터를 가져오고 삭제</p>
+
+<p>RPOP : 오른쪽의 데이터를 가져오고 삭제</p>
+
+<p>LINSERT : 왼쪽을 기준으로 데이터 값을 저장</p>
+
+<p>LSET : 왼쪽을 기준으로 데이터 값을 변경</p>
+
+<p>LRANGE : 리스트 값을 조회</p>
+
+<h3 id="sets-sorted-sets">Sets, Sorted sets</h3>
+
+<p>SADD : 집합에 데이터를 추가</p>
+
+<p>SMEMBERS : 집합의 데이터를 조회</p>
+
+<p>SREM : 집합의 데이터를 삭제</p>
+
+<h3 id="hashes">Hashes</h3>
+
+<p>HSET : hashes에 데이터를 추가</p>
+
+<p>HDEL : hashes의 데이터를 삭제</p>
+
+<p>HGETALL : hashes의 데이터를 조회</p>
+
+<h2 id="참조-사이트">참조 사이트</h2>
+
+<p><a href="http://www.redisgate.com/redis/command/sets.php">http://www.redisgate.com/redis/command/sets.php</a></p>
+
+<p><a href="https://ryu-e.tistory.com/m/9">https://ryu-e.tistory.com/m/9</a></p>
+
+<p><a href="https://codingmania.tistory.com/m/25">https://codingmania.tistory.com/m/25</a></p>
+
+<p><a href="https://redis.io/commands/">https://redis.io/commands/</a></p>
+
+<p><a href="http://www.redisgate.com/redis/command/sets.php">http://www.redisgate.com/redis/command/</a></p>
+:ET

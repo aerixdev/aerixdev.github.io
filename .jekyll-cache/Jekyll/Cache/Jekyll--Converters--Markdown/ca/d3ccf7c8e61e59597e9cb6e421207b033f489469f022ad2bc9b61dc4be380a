@@ -1,0 +1,104 @@
+I"�<h1 id="pm2-오프라인-설치">PM2 오프라인 설치</h1>
+
+<h2 id="0-개요">0. 개요</h2>
+
+<p>pm2를 폐쇄망 환경에서 설치하려고 하면, 각종 선행 패키지들을 모두 수동으로 설치하는 고통스러운 과정을 거쳐야합니다.
+하지만 위대한 선배 개발자의 도움을 통해 쉽게 설치하는 방법이 있어 공유해봅니다.</p>
+
+<p>pm2-installer를 통해 설치하게 되며, 인터넷이 가능한 PC에서 설치 파일 제작 후, 오프라인 PC로 옮겨서 설치하게 됩니다.</p>
+
+<p>pm2-installer 링크.</p>
+
+<p>https://github.com/jessety/pm2-installer</p>
+
+<h2 id="1-같은-버전의-nodejs-설치">1. 같은 버전의 NodeJS 설치</h2>
+
+<p>설치 파일 제작 시, 대상 PC와 파일 제작 PC의 node 및 npm 버전이 동일해야 합니다.</p>
+
+<p>노드 구버전은 다음 링크에서 구할 수 있습니다.
+<a href="https://nodejs.org/ko/download/releases/">https://nodejs.org/ko/download/releases/</a></p>
+
+<p>폐쇄망 PC에 노드와 npm이 없다면, 패키지 파일을 다운로드 후 다음과 같은 과정을 거쳐 설치 해줍니다.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 인터넷이 가능한 PC에서 다운로드</span>
+wget <span class="nv">$파</span>일링크
+
+<span class="c"># USB나 SCP 등을 이용해 설치 대상 PC로 파일을 옮겨줍니다.</span>
+
+<span class="c"># lib 폴더로 옮기기</span>
+<span class="nb">mv</span> <span class="nv">$파</span>일 /usr/local/lib
+
+<span class="c"># 파일 압축풀기</span>
+<span class="nb">tar </span>xvf <span class="nv">$파</span>일
+
+<span class="c"># 명령어를 통한 바로 실행을 위해 심볼릭 링크 등록</span>
+<span class="nb">ln</span> <span class="nt">-s</span> /usr/local/lib/<span class="nv">$노</span>드폴더/bin/<span class="k">*</span> /usr/local/bin/
+</code></pre></div></div>
+
+<h2 id="2-pm2-설치-파일-제작">2. PM2 설치 파일 제작</h2>
+
+<p>pm2-installer를 다운받고 압축을 풀어줍니다.  압축 푼 폴더로 이동 후 작업합니다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>pm2-installer-main
+
+npm run bundle
+
+<span class="c"># pm2 버전에 따라 지원하는 node 버전이 다르므로 확인이 필요합니다.</span>
+<span class="c"># pm2 버전 변경이 필요한 경우 다음과 같이 package.json 파일 수정 후에 bundle 명령을 내립니다.</span>
+
+<span class="nb">sudo </span>vi package.json
+
+<span class="s2">"dependencies"</span>: <span class="o">{</span>
+    <span class="s2">"@jessety/pm2-logrotate"</span>: <span class="s2">"^2.7.1"</span>,
+    <span class="s2">"node-windows"</span>: <span class="s2">"1.0.0-beta.6"</span>,
+    <span class="s2">"pm2"</span>: <span class="s2">"4.0.0"</span> &lt;&lt; 버전 변경
+  <span class="o">}</span>,
+  <span class="s2">"devDependencies"</span>: <span class="o">{</span>
+    <span class="s2">"@jessety/eslint-config"</span>: <span class="s2">"^1.0.8"</span>,
+    <span class="s2">"editorconfig-checker"</span>: <span class="s2">"^4.0.2"</span>,
+    <span class="s2">"eslint"</span>: <span class="s2">"5.16.0"</span> &lt;&lt; 버전 변경
+  <span class="o">}</span>
+</code></pre></div></div>
+
+<h2 id="3-설치-파일-배포">3. 설치 파일 배포</h2>
+
+<p>bundle 작업을 한 후 폴더 전체를 다시 압축하여 대상 pc로 옮겨줍니다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">tar</span> <span class="nt">-cvf</span> bundle.tar pm2-installer-main
+
+<span class="c"># 파일 옮기기</span>
+<span class="c"># 대상 PC에서 압축풀기</span>
+
+<span class="nb">tar</span> <span class="nt">-xvf</span> bundle.tar
+
+<span class="c"># 폴더로 이동</span>
+<span class="nb">cd </span>pm2-installer-main
+
+<span class="c"># 설치하기</span>
+npm run setup
+
+<span class="c"># 심볼릭 링크 등록</span>
+<span class="nb">ln</span> <span class="nt">-s</span> /usr/local/lib/<span class="nv">$노</span>드폴더/bin/<span class="k">*</span> /usr/local/bin/
+</code></pre></div></div>
+
+<p>설치가 완료되었습니다.</p>
+
+<h3 id="외전-docker-오프라인-설치">외전. Docker 오프라인 설치</h3>
+
+<p>폐쇄망에서 Docker를 설치하는 방법은 더욱 간단합니다.
+아래 링크에서 원하는 Dockere 패키지를 다운 받습니다.</p>
+
+<p>https://download.docker.com/linux/static/stable/x86_64/</p>
+
+<p>SCP나 USB등의 방법을 활용해 폐쇄망으로 패키지 파일을 옮겨준 후, 압축을 풀어줍니다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">tar</span> <span class="nt">-xvf</span> <span class="nv">$도</span>커압축파일
+</code></pre></div></div>
+
+<p>이후 압축 풀어서 나온 모든 파일을 /usr/bin/ 폴더로 옮겨주면 docker 실행이 가능합니다.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo mv</span> <span class="nv">$압</span>축해제한폴더/<span class="k">*</span> /usr/bin
+
+<span class="c">#도커 실행</span>
+<span class="nb">sudo </span>dockered &amp;
+</code></pre></div></div>
+
+:ET
