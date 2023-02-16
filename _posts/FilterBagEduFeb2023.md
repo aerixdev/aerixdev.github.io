@@ -1,5 +1,5 @@
 ---
-title: 포항: 뜻 밖의 여정 
+title: 포항-뜻 밖의 여정 
 subtitle: 개발부서의 여과집진기 교육
 layout: post
 author: 이상덕
