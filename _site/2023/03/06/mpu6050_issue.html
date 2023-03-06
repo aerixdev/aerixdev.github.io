@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    MPU6050 센서에서 이상증상 발견 - 에어릭스 환경시스템사업부 기술블로그
+    
+  </title>
+
+  <meta name="description" content="오늘은 아두이노 ESP32 보드에 MPU6050센서 모듈을 연결해서 진동의 크기를 측정하는 프로그램을 개발해서 테스트를 하다가 우연히 발견하게 된 I2C 통신장애 현상에 대한 포스팅입니다.">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/2023/03/06/mpu6050_issue.html">
+  <link rel="alternate" type="application/rss+xml" title="에어릭스 환경시스템사업부 기술블로그" href="/feed.xml">
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">에어릭스 환경시스템사업부 기술블로그</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">Tech Note</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/link">Link</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+  <header class="masthead">
+    
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>MPU6050 센서에서 이상증상 발견</h1>
+            
+            <h2 class="subheading">전기전도(electrical conduction)에 의한 I2C 통신장애</h2>
+            
+            <span class="meta">Posted by
+              <!--<a href="/author">이상훈</a>-->
+              <a href="/about">이상훈</a>
+              on March 06, 2023 &middot; <span class="reading-time" title="Estimated read time">
+  
+   2 mins  read </span>
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <p>오늘은 아두이노 ESP32 보드에 MPU6050센서 모듈을 연결해서 진동의 크기를 측정하는 프로그램을 개발해서
+테스트를 하다가 우연히 발견하게 된 I2C 통신장애 현상에 대한 포스팅입니다.</p>
+
+<h2 id="이상증상">이상증상</h2>
+<hr />
+
+<p>ESP32 보드에서 연결되어 있는 MPU6050센서 모듈로부터 일정한 시간간격(5ms)으로 측정된 중력가속도 값을
+가져와서 MQTT Broker로 전송해주는 프로그램을 개발했습니다. 제 책상 위에 진동센서를 올려놓고 테스트를 할때는
+아무 이상이 없었습니다. 그런데 진동을 발생시키기 위해서 회사에 있는 테스트용 베어링 기계에 센서 측정부를
+부착시킨 상태에서 테스트를 하면 처음에는 정상동작하던 프로그램이 금방 이상하게 동작하는 것처럼 보였습니다.</p>
+
+<p>I2C통신을 이용해서 MPU6050 센서모듈로부터 가져온 중력가속도 값이 계속 동일한 현상이었습니다. 처음에는
+제가 작성한 프로그램의 버그일 것이라 생각했지만, 아무리봐도 문제가 될만한 코드는 보이지 않았습니다.</p>
+
+<h2 id="하드웨어적인-문제일까">하드웨어적인 문제일까?</h2>
+<hr />
+
+<p>하드웨어팀에 자문을 구해보니 ESP32보드와 MPU6050 센서모듈을 연결하는 I2C 케이블의 길이가 너무 길어서
+신호 손실이 발생하는 것 같다고 했습니다. 친절하게 케이블 길이도 줄여주고, I2C통신을 위해서 사용하는
+SDA와 SCL단자에 풀업 저항도 달아줬습니다. 근데 그래도 문제는 해결되지 않았습니다.</p>
+
+<p>강한 진동발생에 의한 MPU6050센서모듈의 순간 오동작은 아닐까라는 의구심이 들어서 테스트용 베어링 기계에
+진동센서를 부착만 시키고, 진동은 발생시키지 않았습니다. 하지만, 그래도 결과는 동일했습니다.</p>
+
+<p><img src="/img/posts/2023-03-06/좌절.png" width="50%" /></p>
+
+<h2 id="정말-소프트웨어의-문제일까">정말 소프트웨어의 문제일까?</h2>
+<hr />
+
+<p>아무리 들여다봐도 제가 작성한 프로그램 소스코드에서도 특별히 문제가 될만한 부분은 보이지 않았기 때문에 
+I2C통신의 문제를 의심해볼 수 있었습니다. 그래서 프로그램의 소스코드를 살짝 수정해서 MPU6050센서모듈에서 
+중력가속도 값을 읽어오기 전에 매번 <code class="language-plaintext highlighter-rouge">WHO_AM_I</code> 레지스터(Register Address : 0x75)의 값을 읽어서
+정상적인 값(0x68)이 반환되는지 체크하도록 했습니다.</p>
+
+<p>그리고 마침내 문제 해결의 단서를 찾았습니다. 여러차례 실험을 반복해본 결과 책상이나 바닥에 센서 측정부를 
+두는 경우에는 아무런 문제가 없었으나 테스트용 베어링에 부착하는 경우에만 문제가 발생하는 것을 알 수 있었습니다.</p>
+
+<h2 id="결론">결론</h2>
+<hr />
+
+<p>우리회사에서는 MPU6050 센서모듈의 측정부를 아래 사진처럼 자석형으로 만들어서 사용하고 있습니다. 자석형으로
+만들어진 센서 측정부를 철판 위에 부착시키기 위함입니다.</p>
+
+<p><img src="/img/posts/2023-03-06/센서측정부.png" width="50%" /></p>
+
+<p>그런데 결국은 이게 문제였습니다. 아래는 진동을 발생시키기 위해서 회사에서 사용하고 있는 테스트용 베어링 기계에 
+센서 측정부를 부착한 모습입니다. 전기가 잘 통하게 생겼죠?</p>
+
+<p><img src="/img/posts/2023-03-06/진동베어링.jpg" width="50%" /></p>
+
+<p>테스트용 베어링 기계에서 자석의 힘으로 부착된 센서측정부로 전기가 흐르면서 I2C통신에 문제를 일으키는 것이었습니다. 
+하드웨어팀에 물어보니 전기전도 현상이라 한다고 하네요.</p>
+
+<p>이렇게 자석형으로 된 센서 측정부를 사용해서 만들어진 센서노드 디바이스를 설치했을때 몇몇 특정설비에서 진동값
+측정이 안되는 증상이 과거에도 있었다고 합니다. 그 당시에는 원인을 몰라서 대응을 제대로 못했던 것 같은데 지금이라도 원인을
+찾아 다행이라 생각합니다.</p>
+
+<h3 id="참고--전기전도-현상">참고 : <strong>전기전도 현상</strong></h3>
+
+<p>전기전도(electrical conduction)는 도체의 안에 전기장이 존재할 떄 전하가 이동을 하면서 전류가 발생되는
+상태를 말함. (출처 : 해시넷 위키)</p>
+
+
+        <hr>
+
+        <script src="https://utteranc.es/client.js"
+          repo="aerixdev/aerixdev.github.io"
+          issue-term="url"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+        </script>
+        
+        <div class="clearfix">
+
+          
+          <a class="btn btn-primary float-left" href="/2023/02/21/2023_senminar_6.html" data-toggle="tooltip" data-placement="top" title="2023년 여섯번째 내부세미나">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:aerix_es_dev@aerix.co.kr">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/aerixdev">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; (주)에어릭스 2023</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/startbootstrap-clean-blog/js/scripts.js"></script>
+
+<script src="/assets/scripts.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1WDQQYX0G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D1WDQQYX0G');
+</script>
+
+
+
+</body>
+
+</html>
