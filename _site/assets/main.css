@@ -2628,6 +2628,26 @@ article .container { padding: 0; column-gap: 40px; display: grid; grid-template-
 
 .comment { margin: 0.5em 0; font-size: 16px; font-weight: 500; }
 
+.profile-display {
+  display: flex;
+  gap: 10px;
+}
+
+.profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.date-label {
+  color: #9ea1a3;
+}
+
+.split {
+  margin: 30px 0;
+}
+
 /* 반응형 */
 @media (max-width: 767px) { /* 브라우저 사이즈 767px 이하일때*/ .col-lg-8 .col-md-10 .mx-auto { overflow: hidden; } article .container { display: flex; flex-direction: column; justify-content: center; } .container .img-box { margin: 0 auto; } .timeline-event-copy { width: 92%; } }
 

@@ -1,4 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-03-07T09:41:37+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">에어릭스 환경시스템사업부 기술블로그</title><subtitle>굴뚝산업 기업인 에어릭스에서 살아가고 있는 IT개발자들</subtitle><author><name>(주)에어릭스</name></author><entry><title type="html">MPU6050 센서에서 이상증상 발견</title><link href="http://localhost:4000/2023/03/06/mpu6050_issue.html" rel="alternate" type="text/html" title="MPU6050 센서에서 이상증상 발견" /><published>2023-03-06T00:00:00+09:00</published><updated>2023-03-06T00:00:00+09:00</updated><id>http://localhost:4000/2023/03/06/mpu6050_issue</id><content type="html" xml:base="http://localhost:4000/2023/03/06/mpu6050_issue.html"><![CDATA[<p>오늘은 아두이노 ESP32 보드에 MPU6050센서 모듈을 연결해서 진동의 크기를 측정하는 프로그램을 개발해서
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-05-21T16:24:55+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">에어릭스 환경시스템사업부 기술블로그</title><subtitle>굴뚝산업 기업인 에어릭스에서 살아가고 있는 IT개발자들</subtitle><author><name>(주)에어릭스</name></author><entry><title type="html">여과 집진기의 필터백 상태 진단</title><link href="http://localhost:4000/2024/04/02/filterback_manage.html" rel="alternate" type="text/html" title="여과 집진기의 필터백 상태 진단" /><published>2024-04-02T00:00:00+09:00</published><updated>2024-04-02T00:00:00+09:00</updated><id>http://localhost:4000/2024/04/02/filterback_manage</id><content type="html" xml:base="http://localhost:4000/2024/04/02/filterback_manage.html"><![CDATA[<h1 id="여과-집진기의-필터백-상태-진단">여과 집진기의 필터백 상태 진단</h1>
+
+<h2 id="0-개요">0. 개요</h2>
+
+<p>여과 집진기의 핵심 요소이자 소모성 부품인 <code class="language-plaintext highlighter-rouge">필터백</code>의 상태를 파악하는 기초적인 내용에 대해 작성해보았습니다.</p>
+
+<h2 id="1-차압값을-통한-상태-진단">1. 차압값을 통한 상태 진단</h2>
+
+<p><code class="language-plaintext highlighter-rouge">차압</code>은 필터백의 상태를 판단하는 가장 중요한 값으로 흡기부(In-Let)의 압력과 배기부(Out-Let) 압력의 차이를 나타냅니다.
+여과 집진기 가동 시 오염된 공기 속의 먼지를 필터백이 걸러주며 그 중 일부는 필터백에 달라붙어 공기 흐름을 방해합니다.</p>
+
+<p>이로 인해 점차 차압값이 상승하게 되며 원활한 가동을 위해 주기적 또는 차압값에 따라 먼지를 털어내는 작업을 하며 이를 <code class="language-plaintext highlighter-rouge">탈진</code>이라고 합니다.
+필터백을 오래 사용하면 탈진 작업을 하였음에도 필터백의 먼지가 완전히 제거되지 않고 쌓이게됩니다.
+먼지가 많이 쌓여 필터백이 제 기능을 하지 못하면 수명이 다 되었다고 판단되며 교체 작업을 실시합니다.</p>
+
+<p>평균 차압값은 필터백의 수명 주기에 따라 아래와 같은 특정한 패턴을 가집니다. 안정기가 지나 차압값이 급격히 상승하면 교체 시기가 도래했다고 볼 수 있습니다.</p>
+
+<p><img src="/img/posts/2024-04-02/filterbag_diffp.png" alt="filterbag_diffp" /></p>
+
+<ul>
+  <li>필터백 최초 설치 시 차압은 0이 아닌 50부근이며, 이후 급격히 상승해 안정기에 들어갑니다.</li>
+  <li>이후 수명의 대부분 환경부 기준치 내에서 서서히 상승합니다. 다만 집진기 별로 안정기 차압 범위가 다를 수 있습니다.</li>
+  <li>교체 시기가 다가오면 차압이 급격히 상승하며, 이를 통해 필터백의 교체 필요(수명 종료)여부를 판단합니다.</li>
+</ul>
+
+<p>다만 집진기 전체의 차압값만 확인 가능한 경우 정확도가 떨어지므로 챔버별로 차압 측정이 가능할 때 참고하면 좋을 것 같습니다.</p>
+
+<h2 id="2-스택굴뚝-먼지량을-통한-상태-진단">2. 스택(굴뚝) 먼지량을 통한 상태 진단</h2>
+
+<p>집진기는 공기 속 먼지량을 저감하기 위한 설비이기 때문에 굴뚝을 통해 배출되는 먼지량을 측정하여 집진기(필터백)의 상태를 진단할 수 있습니다.
+보통의 경우 초미세먼지량(PM2.5)을 기준점으로 잡으며, 환경부 기준은 15㎍/㎥ 이하 입니다.</p>
+
+<p>미세먼지가 스택에 검출된다는 것은 필터백 파공(구멍) 발생으로 인해 먼지가 걸러지지 않고 바로 배출된다는 것을 의미합니다. 실제 파공이 발생하는 15㎍/㎥ 값 이전에 문제가되는 필터백 교체를 실시합니다.</p>
+
+<p><img src="/img/posts/2024-04-02/filterbag_dust.png" alt="filterbag_dust" /></p>
+
+<h2 id="3-영향을-줄-수-있는-변수">3. 영향을 줄 수 있는 변수</h2>
+
+<p><img src="/img/posts/2024-04-02/filterbag_equipment.png" alt="filterbag_equipment" /></p>
+
+<ol>
+  <li>흡기부 덕트(Inlet Duct)에 파공(구멍)이 생기면 외부 공기 및 습기가 유입되어 필터백에 먼지가 많이 달라붙게 되어 차압이 상승할 수 있습니다.</li>
+  <li>스택(Stack) 댐퍼 개폐율에 따라 차압에 변화가 생길 수 있습니다. 개폐율이 높을수록 풍량(Air Volumr)이 강해지며 이는 곧 차압 상승으로 이어질 수 있습니다.</li>
+  <li>스택의 용량은 일반적으로  후드(Hood) 용량의 110%로 설계됩니다. 스택 용량이 이보다 모자라게 설계된 경우 풍량이 부족하여 차압이 낮게 나타날 수 있습니다.</li>
+</ol>]]></content><author><name>강민석</name></author><summary type="html"><![CDATA[여과 집진기의 필터백 상태 진단]]></summary></entry><entry><title type="html">MPU6050 센서에서 이상증상 발견</title><link href="http://localhost:4000/2023/03/06/mpu6050_issue.html" rel="alternate" type="text/html" title="MPU6050 센서에서 이상증상 발견" /><published>2023-03-06T00:00:00+09:00</published><updated>2023-03-06T00:00:00+09:00</updated><id>http://localhost:4000/2023/03/06/mpu6050_issue</id><content type="html" xml:base="http://localhost:4000/2023/03/06/mpu6050_issue.html"><![CDATA[<p>오늘은 아두이노 ESP32 보드에 MPU6050센서 모듈을 연결해서 진동의 크기를 측정하는 프로그램을 개발해서
 테스트를 하다가 우연히 발견하게 된 I2C 통신장애 현상에 대한 포스팅입니다.</p>
 
 <h2 id="이상증상">이상증상</h2>
@@ -973,105 +1017,4 @@ PLC 메모리 주소에 데이터를 작성하여 데이터를 변경시킵니�
 
 <p><strong><a href="https://velog.io/@devkangms/%EC%B1%95%ED%84%B01.-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B6%84%EC%84%9D%EC%9D%84-%EC%8B%9C%EC%9E%91%ED%95%98%EB%A9%B0">강민석 - 학습내용 포스팅</a></strong></p>
 
-<p><strong><a href="https://blog.naver.com/ekcapaper/222977397258">강민구 - 학습내용 포스팅</a></strong></p>]]></content><author><name>이상훈</name></author><summary type="html"><![CDATA[지난 포스팅에서 공지했던 것처럼 개발팀 1월과 2월 내부세미나는 한빛미디어에서 운영하는 혼공학습단 활동으로 대체하기로 했습니다. 혼공학습단 활동방법은 매주 정해진 범위를 스스로 공부하고 학습한 내용과 미션수행 내용을 정리해서 블로그에 포스팅하는 것입니다.]]></summary></entry><entry><title type="html">PM2 및 오프라인(폐쇄망) 설치</title><link href="http://localhost:4000/2023/01/09/offline_pm2_docker.html" rel="alternate" type="text/html" title="PM2 및 오프라인(폐쇄망) 설치" /><published>2023-01-09T00:00:00+09:00</published><updated>2023-01-09T00:00:00+09:00</updated><id>http://localhost:4000/2023/01/09/offline_pm2_docker</id><content type="html" xml:base="http://localhost:4000/2023/01/09/offline_pm2_docker.html"><![CDATA[<h1 id="pm2-오프라인-설치">PM2 오프라인 설치</h1>
-
-<h2 id="0-개요">0. 개요</h2>
-
-<p>pm2를 폐쇄망 환경에서 설치하려고 하면, 각종 선행 패키지들을 모두 수동으로 설치하는 고통스러운 과정을 거쳐야합니다.
-하지만 위대한 선배 개발자의 도움을 통해 쉽게 설치하는 방법이 있어 공유해봅니다.</p>
-
-<p>pm2-installer를 통해 설치하게 되며, 인터넷이 가능한 PC에서 설치 파일 제작 후, 오프라인 PC로 옮겨서 설치하게 됩니다.</p>
-
-<p>pm2-installer 링크.</p>
-
-<p>https://github.com/jessety/pm2-installer</p>
-
-<h2 id="1-같은-버전의-nodejs-설치">1. 같은 버전의 NodeJS 설치</h2>
-
-<p>설치 파일 제작 시, 대상 PC와 파일 제작 PC의 node 및 npm 버전이 동일해야 합니다.</p>
-
-<p>노드 구버전은 다음 링크에서 구할 수 있습니다.
-<a href="https://nodejs.org/ko/download/releases/">https://nodejs.org/ko/download/releases/</a></p>
-
-<p>폐쇄망 PC에 노드와 npm이 없다면, 패키지 파일을 다운로드 후 다음과 같은 과정을 거쳐 설치 해줍니다.</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 인터넷이 가능한 PC에서 다운로드</span>
-wget <span class="nv">$파</span>일링크
-
-<span class="c"># USB나 SCP 등을 이용해 설치 대상 PC로 파일을 옮겨줍니다.</span>
-
-<span class="c"># lib 폴더로 옮기기</span>
-<span class="nb">mv</span> <span class="nv">$파</span>일 /usr/local/lib
-
-<span class="c"># 파일 압축풀기</span>
-<span class="nb">tar </span>xvf <span class="nv">$파</span>일
-
-<span class="c"># 명령어를 통한 바로 실행을 위해 심볼릭 링크 등록</span>
-<span class="nb">ln</span> <span class="nt">-s</span> /usr/local/lib/<span class="nv">$노</span>드폴더/bin/<span class="k">*</span> /usr/local/bin/
-</code></pre></div></div>
-
-<h2 id="2-pm2-설치-파일-제작">2. PM2 설치 파일 제작</h2>
-
-<p>pm2-installer를 다운받고 압축을 풀어줍니다.  압축 푼 폴더로 이동 후 작업합니다.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>pm2-installer-main
-
-npm run bundle
-
-<span class="c"># pm2 버전에 따라 지원하는 node 버전이 다르므로 확인이 필요합니다.</span>
-<span class="c"># pm2 버전 변경이 필요한 경우 다음과 같이 package.json 파일 수정 후에 bundle 명령을 내립니다.</span>
-
-<span class="nb">sudo </span>vi package.json
-
-<span class="s2">"dependencies"</span>: <span class="o">{</span>
-    <span class="s2">"@jessety/pm2-logrotate"</span>: <span class="s2">"^2.7.1"</span>,
-    <span class="s2">"node-windows"</span>: <span class="s2">"1.0.0-beta.6"</span>,
-    <span class="s2">"pm2"</span>: <span class="s2">"4.0.0"</span> &lt;&lt; 버전 변경
-  <span class="o">}</span>,
-  <span class="s2">"devDependencies"</span>: <span class="o">{</span>
-    <span class="s2">"@jessety/eslint-config"</span>: <span class="s2">"^1.0.8"</span>,
-    <span class="s2">"editorconfig-checker"</span>: <span class="s2">"^4.0.2"</span>,
-    <span class="s2">"eslint"</span>: <span class="s2">"5.16.0"</span> &lt;&lt; 버전 변경
-  <span class="o">}</span>
-</code></pre></div></div>
-
-<h2 id="3-설치-파일-배포">3. 설치 파일 배포</h2>
-
-<p>bundle 작업을 한 후 폴더 전체를 다시 압축하여 대상 pc로 옮겨줍니다.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">tar</span> <span class="nt">-cvf</span> bundle.tar pm2-installer-main
-
-<span class="c"># 파일 옮기기</span>
-<span class="c"># 대상 PC에서 압축풀기</span>
-
-<span class="nb">tar</span> <span class="nt">-xvf</span> bundle.tar
-
-<span class="c"># 폴더로 이동</span>
-<span class="nb">cd </span>pm2-installer-main
-
-<span class="c"># 설치하기</span>
-npm run setup
-
-<span class="c"># 심볼릭 링크 등록</span>
-<span class="nb">ln</span> <span class="nt">-s</span> /usr/local/lib/<span class="nv">$노</span>드폴더/bin/<span class="k">*</span> /usr/local/bin/
-</code></pre></div></div>
-
-<p>설치가 완료되었습니다.</p>
-
-<h3 id="외전-docker-오프라인-설치">외전. Docker 오프라인 설치</h3>
-
-<p>폐쇄망에서 Docker를 설치하는 방법은 더욱 간단합니다.
-아래 링크에서 원하는 Dockere 패키지를 다운 받습니다.</p>
-
-<p>https://download.docker.com/linux/static/stable/x86_64/</p>
-
-<p>SCP나 USB등의 방법을 활용해 폐쇄망으로 패키지 파일을 옮겨준 후, 압축을 풀어줍니다.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">tar</span> <span class="nt">-xvf</span> <span class="nv">$도</span>커압축파일
-</code></pre></div></div>
-
-<p>이후 압축 풀어서 나온 모든 파일을 /usr/bin/ 폴더로 옮겨주면 docker 실행이 가능합니다.</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo mv</span> <span class="nv">$압</span>축해제한폴더/<span class="k">*</span> /usr/bin
-
-<span class="c">#도커 실행</span>
-<span class="nb">sudo </span>dockered &amp;
-</code></pre></div></div>]]></content><author><name>강민석</name></author><summary type="html"><![CDATA[PM2 오프라인 설치]]></summary></entry></feed>
+<p><strong><a href="https://blog.naver.com/ekcapaper/222977397258">강민구 - 학습내용 포스팅</a></strong></p>]]></content><author><name>이상훈</name></author><summary type="html"><![CDATA[지난 포스팅에서 공지했던 것처럼 개발팀 1월과 2월 내부세미나는 한빛미디어에서 운영하는 혼공학습단 활동으로 대체하기로 했습니다. 혼공학습단 활동방법은 매주 정해진 범위를 스스로 공부하고 학습한 내용과 미션수행 내용을 정리해서 블로그에 포스팅하는 것입니다.]]></summary></entry></feed>

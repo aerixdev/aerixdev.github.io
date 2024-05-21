@@ -33,6 +33,28 @@ layout: default
         {% for post in site.posts limit : 5 %}
 
         <article class="post-preview">
+          {% assign author = site.data.authors[post.author] %}
+          <div class="profile-display">
+            {% if author %}
+            <div>
+              <img src="{{ author.image }}" alt="{{ author.name }}" class="profile-image">
+            </div>
+            {% endif %}
+            <div>
+              <div>
+                <strong>
+                  {% if post.author %}
+                  {{ post.author }}
+                  {% else %}
+                  {{ site.author }}
+                  {% endif %}
+                </strong>
+              </div>
+              <div class="date-label">
+                {{ post.date | date: '%Y-%m-%d' }}
+              </div>
+            </div>
+          </div>
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
             <h2 class="post-title">{{ post.title }}</h2>
             {% if post.subtitle %}
@@ -41,7 +63,8 @@ layout: default
             <h4 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h4>
             {% endif %}
           </a>
-          <p class="post-meta">Posted by
+
+          <!-- <p class="post-meta">Posted by
             {% if post.author %}
             {{ post.author }}
             {% else %}
@@ -49,10 +72,10 @@ layout: default
             {% endif %}
             on
             {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
-          </p>
+          </p> -->
         </article>
 
-        <hr>
+        <hr class="split">
 
         {% endfor %}
 

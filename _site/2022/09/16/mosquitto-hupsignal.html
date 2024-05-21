@@ -68,9 +68,12 @@
             
             <h2 class="subheading">HUP signal을 전송시켜 설정정보를 Reload하는 방법</h2>
             
-            <span class="meta">Posted by
+            <span class="meta"
+              >Posted by
               <!--<a href="/author">이상훈</a>-->
-              <a href="/about">이상훈</a>
+              <a href="/about"
+                >이상훈</a
+              >
               on September 16, 2022 &middot; <span class="reading-time" title="Estimated read time">
   
    2 mins  read </span>
@@ -85,7 +88,6 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-
         <p>mosquitto는 open source기반의 대표적인 MQTT Broker로 저희 에어릭스에서도 센서 데이터를 수집하는 용도로 사용하고 있습니다.</p>
 
 <p>오늘은 mosquitto의 설정정보가 변경되었을 때, 서버를 직접 재시작시키지 않고 HUP signal을 전송하여 변경된 설정내용을 Reload하는 방법에 대해서 포스팅하려고 합니다.</p>
@@ -142,32 +144,42 @@ mosquitto의 로그 파일을 열어보면 아래 그림처럼 Reloading config�
 HUP Signal을 발생시켜서 mosquitto 프로세스가 정상적으로 종료되고 재시작될 수 있도록 하는 것이 중요할 것 같습니다.</p>
 
 
-        <hr>
+        <hr />
 
-        <script src="https://utteranc.es/client.js"
+        <script
+          src="https://utteranc.es/client.js"
           repo="aerixdev/aerixdev.github.io"
           issue-term="url"
           theme="github-light"
           crossorigin="anonymous"
-          async>
-        </script>
-        
+          async
+        ></script>
+
         <div class="clearfix">
-
           
-          <a class="btn btn-primary float-left" href="/2022/09/13/MQTT_security.html" data-toggle="tooltip" data-placement="top" title="MQTT 서버 보안성 강화하기">&larr; Previous<span class="d-none d-md-inline">
-              Post</span></a>
+          <a
+            class="btn btn-primary float-left"
+            href="/2022/09/13/MQTT_security.html"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="MQTT 서버 보안성 강화하기"
+            >&larr; Previous<span class="d-none d-md-inline"> Post</span></a
+          >
+           
+          <a
+            class="btn btn-primary float-right"
+            href="/2022/09/20/web_performance.html"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="웹 성능지표"
+            >Next<span class="d-none d-md-inline"> Post</span> &rarr;</a
+          >
           
-          
-          <a class="btn btn-primary float-right" href="/2022/09/20/web_performance.html" data-toggle="tooltip" data-placement="top" title="웹 성능지표">Next<span class="d-none d-md-inline">
-              Post</span> &rarr;</a>
-          
-
         </div>
-
       </div>
     </div>
   </div>
+</header>
 
 
   <!-- Footer -->
@@ -204,7 +216,7 @@ HUP Signal을 발생시켜서 mosquitto 프로세스가 정상적으로 종료�
           
           
         </ul>
-        <p class="copyright text-muted">Copyright &copy; (주)에어릭스 2023</p>
+        <p class="copyright text-muted">Copyright &copy; (주)에어릭스 2024</p>
       </div>
     </div>
   </div>

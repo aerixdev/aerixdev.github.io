@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    여과 집진기의 필터백 상태 진단 - 에어릭스 환경시스템사업부 기술블로그
+    
+  </title>
+
+  <meta name="description" content="여과 집진기의 필터백 상태 진단">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/2024/04/02/filterback_manage.html">
+  <link rel="alternate" type="application/rss+xml" title="에어릭스 환경시스템사업부 기술블로그" href="/feed.xml">
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">에어릭스 환경시스템사업부 기술블로그</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">Tech Note</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/link">Link</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+  <header class="masthead">
+    
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>여과 집진기의 필터백 상태 진단</h1>
+            
+            <h2 class="subheading">기초적인 진단 방법</h2>
+            
+            <span class="meta"
+              >Posted by
+              <!--<a href="/author">강민석</a>-->
+              <a href="/about"
+                >강민석</a
+              >
+              on April 02, 2024 &middot; <span class="reading-time" title="Estimated read time">
+  
+   2 mins  read </span>
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <h1 id="여과-집진기의-필터백-상태-진단">여과 집진기의 필터백 상태 진단</h1>
+
+<h2 id="0-개요">0. 개요</h2>
+
+<p>여과 집진기의 핵심 요소이자 소모성 부품인 <code class="language-plaintext highlighter-rouge">필터백</code>의 상태를 파악하는 기초적인 내용에 대해 작성해보았습니다.</p>
+
+<h2 id="1-차압값을-통한-상태-진단">1. 차압값을 통한 상태 진단</h2>
+
+<p><code class="language-plaintext highlighter-rouge">차압</code>은 필터백의 상태를 판단하는 가장 중요한 값으로 흡기부(In-Let)의 압력과 배기부(Out-Let) 압력의 차이를 나타냅니다.
+여과 집진기 가동 시 오염된 공기 속의 먼지를 필터백이 걸러주며 그 중 일부는 필터백에 달라붙어 공기 흐름을 방해합니다.</p>
+
+<p>이로 인해 점차 차압값이 상승하게 되며 원활한 가동을 위해 주기적 또는 차압값에 따라 먼지를 털어내는 작업을 하며 이를 <code class="language-plaintext highlighter-rouge">탈진</code>이라고 합니다.
+필터백을 오래 사용하면 탈진 작업을 하였음에도 필터백의 먼지가 완전히 제거되지 않고 쌓이게됩니다.
+먼지가 많이 쌓여 필터백이 제 기능을 하지 못하면 수명이 다 되었다고 판단되며 교체 작업을 실시합니다.</p>
+
+<p>평균 차압값은 필터백의 수명 주기에 따라 아래와 같은 특정한 패턴을 가집니다. 안정기가 지나 차압값이 급격히 상승하면 교체 시기가 도래했다고 볼 수 있습니다.</p>
+
+<p><img src="/img/posts/2024-04-02/filterbag_diffp.png" alt="filterbag_diffp" /></p>
+
+<ul>
+  <li>필터백 최초 설치 시 차압은 0이 아닌 50부근이며, 이후 급격히 상승해 안정기에 들어갑니다.</li>
+  <li>이후 수명의 대부분 환경부 기준치 내에서 서서히 상승합니다. 다만 집진기 별로 안정기 차압 범위가 다를 수 있습니다.</li>
+  <li>교체 시기가 다가오면 차압이 급격히 상승하며, 이를 통해 필터백의 교체 필요(수명 종료)여부를 판단합니다.</li>
+</ul>
+
+<p>다만 집진기 전체의 차압값만 확인 가능한 경우 정확도가 떨어지므로 챔버별로 차압 측정이 가능할 때 참고하면 좋을 것 같습니다.</p>
+
+<h2 id="2-스택굴뚝-먼지량을-통한-상태-진단">2. 스택(굴뚝) 먼지량을 통한 상태 진단</h2>
+
+<p>집진기는 공기 속 먼지량을 저감하기 위한 설비이기 때문에 굴뚝을 통해 배출되는 먼지량을 측정하여 집진기(필터백)의 상태를 진단할 수 있습니다.
+보통의 경우 초미세먼지량(PM2.5)을 기준점으로 잡으며, 환경부 기준은 15㎍/㎥ 이하 입니다.</p>
+
+<p>미세먼지가 스택에 검출된다는 것은 필터백 파공(구멍) 발생으로 인해 먼지가 걸러지지 않고 바로 배출된다는 것을 의미합니다. 실제 파공이 발생하는 15㎍/㎥ 값 이전에 문제가되는 필터백 교체를 실시합니다.</p>
+
+<p><img src="/img/posts/2024-04-02/filterbag_dust.png" alt="filterbag_dust" /></p>
+
+<h2 id="3-영향을-줄-수-있는-변수">3. 영향을 줄 수 있는 변수</h2>
+
+<p><img src="/img/posts/2024-04-02/filterbag_equipment.png" alt="filterbag_equipment" /></p>
+
+<ol>
+  <li>흡기부 덕트(Inlet Duct)에 파공(구멍)이 생기면 외부 공기 및 습기가 유입되어 필터백에 먼지가 많이 달라붙게 되어 차압이 상승할 수 있습니다.</li>
+  <li>스택(Stack) 댐퍼 개폐율에 따라 차압에 변화가 생길 수 있습니다. 개폐율이 높을수록 풍량(Air Volumr)이 강해지며 이는 곧 차압 상승으로 이어질 수 있습니다.</li>
+  <li>스택의 용량은 일반적으로  후드(Hood) 용량의 110%로 설계됩니다. 스택 용량이 이보다 모자라게 설계된 경우 풍량이 부족하여 차압이 낮게 나타날 수 있습니다.</li>
+</ol>
+
+
+        <hr />
+
+        <script
+          src="https://utteranc.es/client.js"
+          repo="aerixdev/aerixdev.github.io"
+          issue-term="url"
+          theme="github-light"
+          crossorigin="anonymous"
+          async
+        ></script>
+
+        <div class="clearfix">
+          
+          <a
+            class="btn btn-primary float-left"
+            href="/2023/03/06/mpu6050_issue.html"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="MPU6050 센서에서 이상증상 발견"
+            >&larr; Previous<span class="d-none d-md-inline"> Post</span></a
+          >
+           
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:aerix_es_dev@aerix.co.kr">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/aerixdev">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; (주)에어릭스 2024</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/startbootstrap-clean-blog/js/scripts.js"></script>
+
+<script src="/assets/scripts.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1WDQQYX0G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D1WDQQYX0G');
+</script>
+
+
+
+</body>
+
+</html>
