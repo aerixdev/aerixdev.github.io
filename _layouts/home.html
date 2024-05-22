@@ -50,8 +50,13 @@ layout: default
                   {% endif %}
                 </strong>
               </div>
-              <div class="date-label">
-                {{ post.date | date: '%Y-%m-%d' }}
+              <div>
+                <span class="date-label">
+                  {{ post.date | date: '%Y-%m-%d' }}
+                </span>
+                <span class="category-label">
+                  {{ post.category }}
+                </span>
               </div>
             </div>
           </div>

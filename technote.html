@@ -1,9 +1,14 @@
 ---
+title: Tech Note
+description: 에어릭스 환경시스템사업부 기술노트
+background: '/img/bg-who.jpg'
+category: technote
 layout: page
-title: Posts
 ---
 
-{% for post in site.posts %}
+{% assign category = page.category | default: page.title %}
+{% assign posts = site.categories[category] %}
+{% for post in posts %}
 
 <article class="post-preview">
   {% assign author = site.data.authors[post.author] %}
@@ -23,8 +28,13 @@ title: Posts
           {% endif %}
         </strong>
       </div>
-      <div class="date-label">
-        {{ post.date | date: '%Y-%m-%d' }}
+      <div>
+        <span class="date-label">
+          {{ post.date | date: '%Y-%m-%d' }}
+        </span>
+        <span class="category-label">
+          {{ post.category }}
+        </span>
       </div>
     </div>
   </div>
@@ -49,21 +59,3 @@ title: Posts
 <hr class="split">
 
 {% endfor %}
-
-<!-- Pager -->
-<!-- {% if paginator.total_pages > 1 %}
-
-<div class="clearfix">
-
-  {% if paginator.previous_page %}
-  <a class="btn btn-primary float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;
-    Newer<span class="d-none d-md-inline"> Posts</span></a>
-  {% endif %}
-
-  {% if paginator.next_page %}
-  <a class="btn btn-primary float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older<span class="d-none d-md-inline"> Posts</span> &rarr;</a>
-  {% endif %}
-
-</div>
-
-{% endif %} -->
