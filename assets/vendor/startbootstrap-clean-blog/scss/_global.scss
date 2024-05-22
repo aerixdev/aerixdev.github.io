@@ -1,6 +1,10 @@
 // Global styling for this template
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
 body {
+    font-family: $font-family-base;
     font-size: 18px;
+    letter-spacing: 0.3px;
     color: $gray-900;
 }
 

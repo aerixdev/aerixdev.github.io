@@ -55,7 +55,11 @@ layout: default
                   {{ post.date | date: '%Y-%m-%d' }}
                 </span>
                 <span class="category-label">
+                  {% if post.category %}
                   {{ post.category }}
+                  {% else %}
+                  카테고리 없음
+                  {% endif %}
                 </span>
               </div>
             </div>

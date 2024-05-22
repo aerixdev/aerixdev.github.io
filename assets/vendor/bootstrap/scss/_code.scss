@@ -1,7 +1,13 @@
 // Inline code
 code {
   @include font-size($code-font-size);
-  color: $code-color;
+  // color: $code-color;
+  color: #0681ef;
+  background: #e0f0ff;
+  font-weight: 600;
+  padding: 0.1em 0.5em;
+  margin: 0px 0.1em;
+  border-radius: 0.3em;
   word-wrap: break-word;
 
   // Streamline the style when inside anchors to avoid broken underline and more
