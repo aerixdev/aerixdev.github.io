@@ -16,7 +16,8 @@
     });
 
     // Show the navbar when the page is scrolled up
-    var MQL = 992;
+    var MQL = 991;
+    var headerHeight = $('#mainNav').height();
 
     if ($(window).width() > MQL) {
         $('#logo-aerix-black').removeClass('is-logo-visible');
@@ -29,17 +30,17 @@
 
     $(window).resize(function() {
         if ($(window).width() > MQL) {
-            $('#logo-aerix-black').removeClass('is-logo-visible');
-            $('#logo-aerix-white').addClass('is-logo-visible');
+            if ($(window).scrollTop() === 0) {
+                $('#logo-aerix-black').removeClass('is-logo-visible');
+                $('#logo-aerix-white').addClass('is-logo-visible');
+            }
         }
         if ($(window).width() < MQL) {
             $('#logo-aerix-white').removeClass('is-logo-visible');
             $('#logo-aerix-black').addClass('is-logo-visible');
         }
      });
-
     //primary navigation slide-in effect
-        var headerHeight = $('#mainNav').height();
         $(window).on('scroll', {
                 previousTop: 0
             },
