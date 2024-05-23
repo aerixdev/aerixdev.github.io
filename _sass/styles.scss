@@ -191,6 +191,11 @@ article  .container {
 
 @media (max-width: 767px){
   /* 브라우저 사이즈 767px 이하일때*/
+  .thumbnail-wrap {
+    width: 80px !important;
+    height: 60px !important;
+  }
+
   .col-lg-8 .col-md-10 .mx-auto{
     overflow: hidden;
   }
@@ -251,7 +256,7 @@ article  .container {
 
 .post-list-item {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   &:hover {
     cursor: pointer;
     & .thumbnail-wrap > img {

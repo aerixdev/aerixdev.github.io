@@ -2477,7 +2477,7 @@ footer .copyright { font-size: 14px; margin-bottom: 0; text-align: center; }
 
 header.masthead { margin-bottom: 50px; background: no-repeat center center; background-color: #6c757d; background-attachment: scroll; position: relative; background-size: cover; }
 
-header.masthead .overlay { position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-color: #384f5f; opacity: 0.6; }
+header.masthead .overlay { position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-color: #4f575f; opacity: 0.5; }
 
 header.masthead .page-heading, header.masthead .post-heading, header.masthead .site-heading { padding: 200px 0 150px; color: white; }
 
@@ -2633,7 +2633,7 @@ article .container { padding: 0; column-gap: 40px; display: grid; grid-template-
 .comment { margin: 0.5em 0; font-size: 16px; font-weight: 500; }
 
 /* 반응형 */
-@media (max-width: 767px) { /* 브라우저 사이즈 767px 이하일때*/ .col-lg-8 .col-md-10 .mx-auto { overflow: hidden; } article .container { display: flex; flex-direction: column; justify-content: center; } .container .img-box { margin: 0 auto; } .timeline-event-copy { width: 92%; } }
+@media (max-width: 767px) { /* 브라우저 사이즈 767px 이하일때*/ .thumbnail-wrap { width: 80px !important; height: 60px !important; } .col-lg-8 .col-md-10 .mx-auto { overflow: hidden; } article .container { display: flex; flex-direction: column; justify-content: center; } .container .img-box { margin: 0 auto; } .timeline-event-copy { width: 92%; } }
 
 .profile-display { display: flex; font-size: 16px; gap: 10px; }
 
@@ -2651,7 +2651,7 @@ article .container { padding: 0; column-gap: 40px; display: grid; grid-template-
 
 .is-logo-visible { display: block !important; }
 
-.post-list-item { display: flex; gap: 10px; }
+.post-list-item { display: flex; gap: 15px; }
 
 .post-list-item:hover { cursor: pointer; }
 
