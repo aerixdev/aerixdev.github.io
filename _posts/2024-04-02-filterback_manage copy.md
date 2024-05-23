@@ -4,6 +4,7 @@ subtitle: 기초적인 진단 방법
 layout: post
 category: technote
 author: 강민석
+thumbnail: /img/posts/2024-04-02/filterbag_diffp.png
 ---
 
 # 여과 집진기의 필터백 상태 진단

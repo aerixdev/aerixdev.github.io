@@ -5,46 +5,66 @@ title: Posts
 
 {% for post in site.posts %}
 
-<article class="post-preview">
-  {% assign author = site.data.authors[post.author] %}
-  <div class="profile-display">
-    {% if author %}
-    <div>
-      <img src="{{ author.image }}" alt="{{ author.name }}" class="profile-image">
-    </div>
-    {% endif %}
-    <div>
+<div class="post-list-item" onclick="location.href='{{ post.url | prepend: site.baseurl | replace: '//', '/' }}'">
+  <article class="post-preview">
+    {% assign author = site.data.authors[post.author] %}
+    <div class="profile-display">
+      {% if author %}
       <div>
-        <span class="author-label">
-          {% if post.author %}
-          {{ post.author }}
-          {% else %}
-          {{ site.author }}
-          {% endif %}
-        </span>
+        <img src="{{ author.image }}" alt="{{ author.name }}" class="profile-image">
       </div>
-      <div class="date-label">
-        {{ post.date | date: '%Y-%m-%d' }}
+      {% endif %}
+      <div>
+        <div>
+          <span class="author-label">
+            {% if post.author %}
+            {{ post.author }}
+            {% else %}
+            {{ site.author }}
+            {% endif %}
+          </span>
+        </div>
+        <div>
+          <span class="date-label">
+            {{ post.date | date: '%Y-%m-%d' }}
+          </span>
+          <span class="category-label">
+            {% if post.category %}
+            {{ post.category }}
+            {% else %}
+            카테고리 없음
+            {% endif %}
+          </span>
+        </div>
       </div>
     </div>
+    <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+      <h2 class="post-title">{{ post.title }}</h2>
+      {% if post.subtitle %}
+      <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+      {% else %}
+      <h4 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h4>
+      {% endif %}
+    </a>
+
+    <!-- <p class="post-meta">Posted by
+      {% if post.author %}
+      {{ post.author }}
+      {% else %}
+      {{ site.author }}
+      {% endif %}
+      on
+      {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
+    </p> -->
+  </article>
+  <div class="thumbnail-wrap">
+    {% if post.thumbnail %}
+      <img src="{{ post.thumbnail }}" alt="{{ post.title }}">
+    {% else %}
+      <img src="/img/logo_aerix.png" alt="Default Thumbnail">
+    {% endif %}
   </div>
-  <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-    <h2 class="post-title">{{ post.title }}</h2>
-    {% if post.subtitle %}
-    <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-    {% else %}
-    <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
-    {% endif %}
-  </a>
-  <!-- <p class="post-meta">Posted by
-    {% if post.author %}
-    {{ post.author }}
-    {% else %}
-    {{ site.author }}
-    {% endif %}
-    on {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
-  </p> -->
-</article>
+</div>
 
 <hr class="split">
 

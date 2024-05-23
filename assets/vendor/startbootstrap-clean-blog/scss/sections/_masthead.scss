@@ -14,8 +14,9 @@ header.masthead {
         left: 0;
         height: 100%;
         width: 100%;
-        background-color: $gray-900;
-        opacity: 0.5;
+        // background-color: $gray-900;
+        background-color: #384f5f;
+        opacity: 0.6;
     }
 
     .page-heading,
@@ -49,7 +50,7 @@ header.masthead {
 
         @media only screen and (min-width: 768px) {
             h1 {
-                font-size: 80px;
+                font-size: 70px;
             }
         }
     }
