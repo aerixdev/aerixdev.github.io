@@ -15,13 +15,13 @@ title: Posts
     {% endif %}
     <div>
       <div>
-        <strong>
+        <span class="author-label">
           {% if post.author %}
           {{ post.author }}
           {% else %}
           {{ site.author }}
           {% endif %}
-        </strong>
+        </span>
       </div>
       <div class="date-label">
         {{ post.date | date: '%Y-%m-%d' }}

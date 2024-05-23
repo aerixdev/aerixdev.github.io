@@ -275,7 +275,7 @@ $embed-responsive-aspect-ratios: join(
 
 // stylelint-disable value-keyword-case
 $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-monospace:       "Pretendard Variable", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-monospace:       "NanumSquare", "Pretendard Variable", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
 
@@ -1119,7 +1119,7 @@ $close-text-shadow:                 0 1px 0 $white !default;
 
 // Code
 
-$code-font-size:                    87.5% !default;
+$code-font-size:                    94.5% !default;
 $code-color:                        $pink !default;
 
 $kbd-padding-y:                     .2rem !default;
