@@ -2477,7 +2477,7 @@ footer .copyright { font-size: 14px; margin-bottom: 0; text-align: center; }
 
 header.masthead { margin-bottom: 50px; background: no-repeat center center; background-color: #6c757d; background-attachment: scroll; position: relative; background-size: cover; }
 
-header.masthead .overlay { position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-color: #4f575f; opacity: 0.5; }
+header.masthead .overlay { position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-color: #3a3e43; opacity: 0.5; }
 
 header.masthead .page-heading, header.masthead .post-heading, header.masthead .site-heading { padding: 200px 0 150px; color: white; }
 
