@@ -58,7 +58,7 @@ pre { margin-top: 0; margin-bottom: 1rem; overflow: auto; -ms-overflow-style: sc
 
 figure { margin: 0 0 1rem; }
 
-img { vertical-align: middle; border-style: none; }
+img { max-width: 100%; vertical-align: middle; border-style: none; }
 
 svg { overflow: hidden; vertical-align: middle; }
 

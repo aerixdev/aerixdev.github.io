@@ -8,6 +8,11 @@ layout: default
   class="masthead"
   style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')"
 >
+  {% else if page.thumbnail %}
+  <header
+    class="masthead"
+    style="background-image: url('{{ page.thumbnail | prepend: site.baseurl | replace: '//', '/' }}')"
+  >
   {% else %}
   <header class="masthead">
     {% endif %}

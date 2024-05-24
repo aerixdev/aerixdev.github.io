@@ -250,6 +250,7 @@ figure {
 //
 
 img {
+  max-width: 100%;
   vertical-align: middle;
   border-style: none; // Remove the border on images inside links in IE 10-.
 }
