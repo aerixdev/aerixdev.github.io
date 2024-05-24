@@ -79,11 +79,11 @@ article  .container {
   
     .timeline-event-icon {
       transform: rotate(-45deg);
-      background-color: rgb(168, 50, 121);
+      background-color: rgb(25, 123, 168);
     }
     
     .timeline-event-thumbnail {
-      box-shadow: inset 40em 0 0 0 rgb(168, 50, 121);
+      box-shadow: inset 40em 0 0 0 rgb(10, 112, 138);
     }
   }
 }
@@ -121,11 +121,12 @@ article  .container {
   color: white;
   font-size: 0.75em;
   background-color: black;
-  box-shadow: inset 0 0 0 0em #ef795a;
+  box-shadow: inset 0 0 0 0em #0c566d;
   display: inline-block;
   margin-top: 0.3em;
   margin-bottom: 0.9em;
   padding: 0.25em 1em 0.2em 1em;
+  border-radius: 6px;
 }
 
 /*
@@ -142,40 +143,35 @@ article  .container {
 
 .chip{
 	padding: 6px 10px;
-	border-radius: 3px;
-	font-weight: 600;
+	border-radius: 6px;
+	font-weight: 800;
 	font-size: 12px;
-	box-shadow: 0 2px 5px rgba(0,0,0,.25);
+  color: rgb(0, 0, 0);
+	box-shadow: 0 0px 10px rgba(0,0,0,.15);
 	margin: 0 10px;
 }
 
 .chip.primary{
-	background: #2F4058;
-	color: whitesmoke;
+	border: 2px solid #2F4058;
 }
 
 .chip.secondary{
-	background: #242933;
-	color: whitesmoke;
+	border: 2px solid #242933;
 }
 
 .chip.warning{
-	background:#FEB904;
-	color: whitesmoke;
+	border: 2px solid #FEB904;
 }
 .chip.danger{
-	background: #DA605B;
-	color: whitesmoke;
+	border: 2px solid #DA605B;
 }
 
 .chip.info{
-	background: #5FD6D4;
-	color: whitesmoke;
+	border: 2px solid #5c8df7;
 }
 
 .chip.green{
-	background: #22882a;
-	color: whitesmoke;
+	border: 2px solid #75b68e;
 }
 
 .comment {

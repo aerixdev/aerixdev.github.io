@@ -2599,9 +2599,9 @@ article .container { padding: 0; column-gap: 40px; display: grid; grid-template-
 
 .timeline-event { position: relative; }
 
-.timeline-event:hover .timeline-event-icon { transform: rotate(-45deg); background-color: #a83279; }
+.timeline-event:hover .timeline-event-icon { transform: rotate(-45deg); background-color: #197ba8; }
 
-.timeline-event:hover .timeline-event-thumbnail { box-shadow: inset 40em 0 0 0 #a83279; }
+.timeline-event:hover .timeline-event-thumbnail { box-shadow: inset 40em 0 0 0 #0a708a; }
 
 .timeline-event-copy { position: relative; left: 2em; }
 
@@ -2611,24 +2611,24 @@ article .container { padding: 0; column-gap: 40px; display: grid; grid-template-
 
 .timeline-event-icon { transition: transform 0.2s ease-in; transform: rotate(45deg); background-color: black; outline: 10px solid white; display: block; margin: 0.5em 0.5em 0.5em -0.5em; position: absolute; top: 0; left: 0.75em; width: 0.75em; height: 0.75em; }
 
-.timeline-event-thumbnail { transition: box-shadow 0.5s ease-in 0.1s; color: white; font-size: 0.75em; background-color: black; box-shadow: inset 0 0 0 0em #ef795a; display: inline-block; margin-top: 0.3em; margin-bottom: 0.9em; padding: 0.25em 1em 0.2em 1em; }
+.timeline-event-thumbnail { transition: box-shadow 0.5s ease-in 0.1s; color: white; font-size: 0.75em; background-color: black; box-shadow: inset 0 0 0 0em #0c566d; display: inline-block; margin-top: 0.3em; margin-bottom: 0.9em; padding: 0.25em 1em 0.2em 1em; border-radius: 6px; }
 
 /* 뱃지 */
 .badge-row { margin-top: 0.5em; margin-bottom: 1em; display: flex; justify-content: flex-start; align-items: center; }
 
-.chip { padding: 6px 10px; border-radius: 3px; font-weight: 600; font-size: 12px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25); margin: 0 10px; }
+.chip { padding: 6px 10px; border-radius: 6px; font-weight: 800; font-size: 12px; color: black; box-shadow: 0 0px 10px rgba(0, 0, 0, 0.15); margin: 0 10px; }
 
-.chip.primary { background: #2F4058; color: whitesmoke; }
+.chip.primary { border: 2px solid #2F4058; }
 
-.chip.secondary { background: #242933; color: whitesmoke; }
+.chip.secondary { border: 2px solid #242933; }
 
-.chip.warning { background: #FEB904; color: whitesmoke; }
+.chip.warning { border: 2px solid #FEB904; }
 
-.chip.danger { background: #DA605B; color: whitesmoke; }
+.chip.danger { border: 2px solid #DA605B; }
 
-.chip.info { background: #5FD6D4; color: whitesmoke; }
+.chip.info { border: 2px solid #5c8df7; }
 
-.chip.green { background: #22882a; color: whitesmoke; }
+.chip.green { border: 2px solid #75b68e; }
 
 .comment { margin: 0.5em 0; font-size: 16px; font-weight: 500; }
 
