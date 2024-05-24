@@ -284,3 +284,22 @@ article  .container {
     // object-fit: cover;
   }
 }
+
+.highlight {
+  padding: 7px;
+  border-radius: 7px;
+  margin-bottom: 20px;
+}
+
+pre.highlight {
+  margin: 0;
+}
+
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #777777;
+}
+
+.highlight > code {
+  background: none;
+  padding: 0;
+}
