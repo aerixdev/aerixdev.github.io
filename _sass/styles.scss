@@ -266,6 +266,12 @@ article  .container {
   }
 }
 
+.post-author {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
 .thumbnail-wrap {
   position: relative;
   width: 140px;
@@ -302,4 +308,10 @@ pre.highlight {
 .highlight > code {
   background: none;
   padding: 0;
+}
+
+.label-background {
+  background: #ffffffc7;
+  padding: 6px;
+  border-radius: 6px;
 }
