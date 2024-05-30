@@ -9,7 +9,7 @@
 
 .fixed-top {
   position: fixed;
-  top: 0;
+  top: 10;
   right: 0;
   left: 0;
   z-index: $zindex-fixed;
@@ -29,4 +29,14 @@
     top: 0;
     z-index: $zindex-sticky;
   }
+}
+
+.nav-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background: #cae3fb;
+  font-size: 15px;
+  height: 40px;
 }
